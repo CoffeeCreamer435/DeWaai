@@ -11,8 +11,7 @@ using System.Windows.Forms;
 namespace DeWaaiBeheer
 {
     public partial class frmHome : Form
-    {
-       
+    {  
         public frmHome()
         {
             InitializeComponent();
