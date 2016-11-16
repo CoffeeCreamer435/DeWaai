@@ -59,4 +59,17 @@
             </g>
             <path style="stroke: none; fill: rgb(255, 255, 255); fill-opacity: 1; visibility: visible;" p:name="mask" id="84b012bf936040c29a9ff8c1372a1701" d="M 2.5 108.375 L 295 108.375 L 295 120.375 L 2.5 120.375 z"/>
             <foreignObject x="0" y="105" width="297.5" height="18" p:name="text" id="c27e0c5d682141f981ecadf9e2c2cb25" style="font-family: 'Comic Sans MS'; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none; color: rgb(0, 0, 0); opacity: 1; text-align: center; visibility: visible;"><div xmlns="http://www.w3.org/1999/xhtml">298 x 229</div></foreignObject>
+        </g></Content></Page><Page><Properties><Property name="name">Programma en prijzen</Property><Property name="id">1479298834624_1072</Property><Property name="width">891</Property><Property name="height">792</Property><Property name="dimBackground"/><Property name="transparentBackground">true</Property><Property name="backgroundColor">#FFFFFFFF</Property><Property name="background">transparent</Property></Properties><Content><g xmlns="http://www.w3.org/2000/svg" p:type="Shape" xmlns:p="http://www.evolus.vn/Namespace/Pencil" p:def="Evolus.Common:RoundedRect" id="fd0b7b2e5677471fbb4049b79fc84988" transform="matrix(1,0,0,1,14,13)"><p:metadata><p:property name="box"><![CDATA[862,175]]></p:property><p:property name="withBlur"><![CDATA[false]]></p:property><p:property name="radius"><![CDATA[0,0]]></p:property><p:property name="textPadding"><![CDATA[0,21.875]]></p:property><p:property name="fillColor"><![CDATA[#4388CCFF]]></p:property><p:property name="strokeColor"><![CDATA[#1B3280FF]]></p:property><p:property name="strokeStyle"><![CDATA[2|]]></p:property><p:property name="textContent"><![CDATA[Header
+                ]]></p:property><p:property name="textFont"><![CDATA["Liberation Sans",Arial,sans-serif|normal|normal|13px|none]]></p:property><p:property name="textColor"><![CDATA[#000000FF]]></p:property><p:property name="textAlign"><![CDATA[1,1]]></p:property></p:metadata>
+
+            <defs>
+                <rect width="860" height="173" rx="0" ry="0" x="0" y="0" style="stroke-width: 2; fill: rgb(67, 136, 204); fill-opacity: 1; stroke: rgb(27, 50, 128); stroke-opacity: 1;" p:name="rrRect" id="48182207c34a4182b9113269a98d03fe" transform="translate(1,1)"/>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="shadingFilter" id="a5eca3e947784f7699f6d8070e857f05">
+                    <feGaussianBlur stdDeviation="1" in="SourceAlpha"/>
+                </filter>
+            </defs>
+            <use xlink:href="#48182207c34a4182b9113269a98d03fe" xmlns:xlink="http://www.w3.org/1999/xlink" transform="translate(2, 2)" p:filter="url(#a5eca3e947784f7699f6d8070e857f05)" style="opacity: 0.5; visibility: hidden; display: none;" p:heavy="true" p:name="bgCopy" id="0f39c6ee6c8640369041cf16b7c23b40"/>
+            <use xlink:href="#48182207c34a4182b9113269a98d03fe" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+            <foreignObject x="21.875" y="80" width="818.25" height="16" p:name="text" id="6c51d175fd3c46a995182367a4f07802" style="font-family: &quot;Liberation Sans&quot;,Arial,sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; color: rgb(0, 0, 0); opacity: 1; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml">Header
+                </div></foreignObject>
         </g></Content></Page></Pages></Document>
