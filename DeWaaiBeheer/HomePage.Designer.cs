@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnVerder = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnVerder
@@ -41,20 +42,30 @@
             this.btnVerder.UseVisualStyleBackColor = true;
             this.btnVerder.Click += new System.EventHandler(this.btnVerder_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(331, 249);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 448);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnVerder);
             this.Name = "HomePage";
             this.Text = "Homepage";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Button btnVerder;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
