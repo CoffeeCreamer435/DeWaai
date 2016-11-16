@@ -10,18 +10,19 @@ using System.Windows.Forms;
 
 namespace DeWaaiBeheer
 {
-    public partial class HomePage : Form
+    public partial class frmHome : Form
     {
-        public HomePage()
+       
+        public frmHome()
         {
             InitializeComponent();
         }
 
-        private void btnVerder_Click(object sender, EventArgs e)
+        private void frnHome_Load(object sender, EventArgs e)
         {
-            Overzicht overzicht = new Overzicht();
-            overzicht.Show();
-            this.Hide();
+            tlpMain.Hide();
+            Program.login.Owner = this;
+            Program.login.Show();
         }
     }
 }

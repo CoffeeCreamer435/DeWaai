@@ -8,6 +8,9 @@ namespace DeWaaiBeheer
 {
     static class Program
     {
+        public static frmLogin login = new frmLogin();
+        public static frmHome home = new frmHome();
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -15,8 +18,8 @@ namespace DeWaaiBeheer
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomePage());
+            Application.Run(home);
         }
+        
     }
 }
