@@ -26,7 +26,7 @@ namespace DeWaaiBeheer
         private void btnLogin_Click(object sender, EventArgs e)
         {          
             (this.Owner as frmHome).tlpMain.Show();
-            (this.Owner as frmHome).lblUsername.Text = ("Emre");
+            (this.Owner as frmHome).lblUsername.Text = ("Emre" + "▼");
             this.Close();
 
         }
