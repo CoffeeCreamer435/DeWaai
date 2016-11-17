@@ -28,7 +28,7 @@ namespace DeWaaiBeheer
         private void cmbName_SelectedIndexChanged(object sender, EventArgs e)
         {
             string item = cmbName.SelectedItem.ToString();
-
+            
             switch (item)
             {        
                 case "Mijn account":
