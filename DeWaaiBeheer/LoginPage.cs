@@ -12,8 +12,13 @@ namespace DeWaaiBeheer
 {
     public partial class frmLogin : Form
     {
+        /// <summary>
+        /// Gets the methods in this class
+        /// </summary>
+        private DatabaseMethods dm = new DatabaseMethods();
+
         public frmLogin()
-        {
+        {       
             ControlBox = false;
             InitializeComponent();
         }
@@ -25,12 +30,25 @@ namespace DeWaaiBeheer
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            (this.Owner as frmHome).tlpMain.Show();
-            (this.Owner as frmHome).cmbName.Text = "Emre";
-            (this.Owner as frmHome).cmbName.Items.Add("Mijn account");
-            (this.Owner as frmHome).cmbName.Items.Add("Uitloggen");
+            var email = txtEmail.Text;
+            var password = txtPassword.Text;
+            var user = dm.getUsers().SingleOrDefault(x => x.Email == email && x.Password == password);
 
-            this.Close();
+            if(user != null && (!String.IsNullOrEmpty(txtEmail.Text) && !String.IsNullOrEmpty(txtPassword.Text)))
+            {
+                (this.Owner as frmHome).tlpMain.Show();
+                (this.Owner as frmHome).cmbName.Text = "Emre";
+                (this.Owner as frmHome).cmbName.Items.Add("Mijn account");
+                (this.Owner as frmHome).cmbName.Items.Add("Uitloggen");
+
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Onjuiste gegevens!");
+            }
+
+            
 
         }
     }
