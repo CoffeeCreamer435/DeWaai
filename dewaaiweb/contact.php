@@ -17,7 +17,102 @@
     		<img class="img-responsive img visual" src="/images/banner_bed.jpg" alt="banner homepagina" />
             
             <!-- CONTENT !-->
-            <p>Hier komt tekst<p>
+            <!-- Adres gegevens -->
+            <div class="left_collum">
+            <p> Zijlschool de Waai is te vinden op dit adres: </p>
+            	<p> De waai <br />
+					De waaiweg 100<br />
+					7895 BV Amsterdam </p>
+            </div>
+			<!-- Openings tijden-->
+            <div class="right_collum">
+            	<p>
+                 De Waai is geopend op de volgende tijden
+                </p>
+                <table>
+                	<Tr>
+                    	<td>
+                        Maandag
+                        </td>
+                        <td>
+                        07:00 - 16:00
+                        </td>
+                    </Tr>
+                    <Tr>
+                    	<td>
+                        Dinsdag
+                        </td>
+                        <td>
+                        07:00 - 16:00
+                        </td>
+                    </Tr>                	
+                    <Tr>
+                    	<td>
+                        Woensdag
+                        </td>
+                        <td>
+                        07:00 - 16:00
+                        </td>
+                    </Tr>                	
+                    <Tr>
+                    	<td>
+                        Donderdag
+                        </td>
+                        <td>
+                        07:00 - 16:00
+                        </td>
+                    </Tr>                	
+                    <Tr>
+                    	<td>
+                        Vrijdag
+                        </td>
+                        <td>
+                        07:00 - 16:00
+                        </td>
+                    </Tr>                	
+                    <Tr>
+                    	<td>
+                        Zaterdag
+                        </td>
+                        <td>
+                        07:00 - 16:00
+                        </td>
+                    </Tr>
+                    <Tr>
+                    	<td>
+                        Zondag
+                        </td>
+                        <td>
+                        07:00 - 16:00
+                        </td>
+                    </Tr>
+                </table>
+            </div>
+            <!-- landkaart -->
+            <!-- Letop dit is nog zonder API -->
+             <div class="left_collum">
+            	<iframe src="https://www.google.nl/maps/@51.9643633,6.3034655,15z?hl=nl"> </iframe>
+             </div>
+             <div class="right_collum">
+             <P>	De waai klanten service is tebereiken via:<br />
+                Tel : 012312345678<br />
+				Email: info@dewaai.ga </P>
+             </div>
+             
+             <!--begeleiders-->
+              <div class="left_collum">
+            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sodales, tortor convallis faucibus fermentum, sem libero tincidunt risus, ut sollicitudin augue libero sed magna. Aliquam fringilla, velit a vulputate blandit, purus felis imperdiet augue, quis pellentesque nisl orci ut odio. Sed varius felis eu dolor semper, vitae bibendum arcu pretium. Integer blandit, velit in rutrum consectetur, mauris arcu sollicitudin augue, eget efficitur orci purus condimentum lorem. </p>
+             </div>
+             <div class="right_collum">
+    		<img  src=""/>
+            </div>
+                         <div class="left_collum">
+<img  src=""/>
+             </div>
+             <div class="right_collum">
+                         	            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sodales, tortor convallis faucibus fermentum, sem libero tincidunt risus, ut sollicitudin augue libero sed magna. Aliquam fringilla, velit a vulputate blandit, purus felis imperdiet augue, quis pellentesque nisl orci ut odio. Sed varius felis eu dolor semper, vitae bibendum arcu pretium. Integer blandit, velit in rutrum consectetur, mauris arcu sollicitudin augue, eget efficitur orci purus condimentum lorem. </p>
+    		
+            </div>
    	 	</div>
 	</div>
 </body>
