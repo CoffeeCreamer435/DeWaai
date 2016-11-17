@@ -33,9 +33,10 @@
             this.btnCourses = new System.Windows.Forms.Button();
             this.btnInscriptions = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cmbName = new System.Windows.Forms.ComboBox();
             this.tlpMain.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpMain
@@ -47,8 +48,7 @@
             this.tlpMain.Controls.Add(this.btnCourses, 0, 2);
             this.tlpMain.Controls.Add(this.btnInscriptions, 1, 1);
             this.tlpMain.Controls.Add(this.btnUsers, 0, 1);
-            this.tlpMain.Controls.Add(this.lblUsername, 0, 0);
-            this.tlpMain.Controls.Add(this.comboBox1, 1, 0);
+            this.tlpMain.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMain.Location = new System.Drawing.Point(0, 0);
             this.tlpMain.Name = "tlpMain";
@@ -103,24 +103,32 @@
             this.btnUsers.Text = "Gebruikers";
             this.btnUsers.UseVisualStyleBackColor = true;
             // 
-            // lblUsername
+            // tableLayoutPanel1
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(3, 0);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(418, 35);
-            this.lblUsername.TabIndex = 4;
-            this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.07656F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.92345F));
+            this.tableLayoutPanel1.Controls.Add(this.cmbName, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(418, 29);
+            this.tableLayoutPanel1.TabIndex = 6;
             // 
-            // comboBox1
+            // cmbName
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(427, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 5;
+            this.cmbName.BackColor = System.Drawing.SystemColors.Control;
+            this.cmbName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbName.FormattingEnabled = true;
+            this.cmbName.Location = new System.Drawing.Point(3, 3);
+            this.cmbName.Name = "cmbName";
+            this.cmbName.Size = new System.Drawing.Size(103, 39);
+            this.cmbName.TabIndex = 5;
+            this.cmbName.SelectedIndexChanged += new System.EventHandler(this.cmbName_SelectedIndexChanged);
             // 
             // frmHome
             // 
@@ -133,7 +141,7 @@
             this.Text = "Homepage";
             this.Load += new System.EventHandler(this.frnHome_Load);
             this.tlpMain.ResumeLayout(false);
-            this.tlpMain.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -145,8 +153,8 @@
         private System.Windows.Forms.Button btnReviews;
         private System.Windows.Forms.Button btnCourses;
         private System.Windows.Forms.Button btnInscriptions;
-        public System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox cmbName;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 

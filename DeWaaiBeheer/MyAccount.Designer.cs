@@ -1,6 +1,6 @@
 ﻿namespace DeWaaiBeheer
 {
-    partial class Overzicht
+    partial class frmMyAccount
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Overzicht
+            // frmMyAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 322);
-            this.Name = "Overzicht";
-            this.Text = "Overzicht";
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "frmMyAccount";
+            this.Text = "MyAccount";
             this.ResumeLayout(false);
 
         }
