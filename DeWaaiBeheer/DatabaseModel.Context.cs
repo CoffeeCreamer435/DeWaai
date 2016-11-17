@@ -26,5 +26,6 @@ namespace DeWaaiBeheer
         }
     
         public DbSet<User> Users { get; set; }
+        public DbSet<Cursussen> Cursussens { get; set; }
     }
 }
