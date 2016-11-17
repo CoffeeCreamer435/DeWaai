@@ -37,9 +37,9 @@ namespace DeWaaiBeheer
             if(user != null && (!String.IsNullOrEmpty(txtEmail.Text) && !String.IsNullOrEmpty(txtPassword.Text)))
             {
                 (this.Owner as frmHome).tlpMain.Show();
-                (this.Owner as frmHome).cmbName.Text = "Emre";
-                (this.Owner as frmHome).cmbName.Items.Add("Mijn account");
-                (this.Owner as frmHome).cmbName.Items.Add("Uitloggen");
+                (this.Owner as frmHome).nameToolStripMenuItem.Text = (user.FirstName);
+                (this.Owner as frmHome).myAccountToolStripMenuItem.Text = ("Mijn account");
+                (this.Owner as frmHome).logoutToolStripMenuItem.Text = ("Uitloggen");
 
                 this.Close();
             }

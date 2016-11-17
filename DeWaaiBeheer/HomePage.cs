@@ -16,6 +16,7 @@ namespace DeWaaiBeheer
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void frnHome_Load(object sender, EventArgs e)
@@ -25,19 +26,29 @@ namespace DeWaaiBeheer
             Program.login.Show();
         }
 
-        private void cmbName_SelectedIndexChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Gets the my account form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void myAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string item = cmbName.SelectedItem.ToString();
-            
-            switch (item)
-            {        
-                case "Mijn account":
-                    Program.account.ShowDialog();
-                    break;
-                case "Uitloggen":
-                    Application.Exit();
-                    break;
-            }
+            Program.account.ShowDialog();
+        }
+
+        /// <summary>
+        /// Logs out from user
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnCourses_Click(object sender, EventArgs e)
+        {
+            Program.courses.ShowDialog();
         }
     }
 }

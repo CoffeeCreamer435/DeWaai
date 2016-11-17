@@ -1,6 +1,6 @@
 ﻿namespace DeWaaiBeheer
 {
-    partial class CursussenForm
+    partial class frmCourses
     {
         /// <summary>
         /// Required designer variable.
@@ -60,13 +60,14 @@
             this.TableLayout.Size = new System.Drawing.Size(949, 495);
             this.TableLayout.TabIndex = 0;
             // 
-            // CursussenForm
+            // frmCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 501);
             this.Controls.Add(this.TableLayout);
-            this.Name = "CursussenForm";
+            this.Name = "frmCourses";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CursussenForm";
             this.ResumeLayout(false);
 

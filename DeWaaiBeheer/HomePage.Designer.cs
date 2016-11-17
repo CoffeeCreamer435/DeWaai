@@ -34,10 +34,13 @@
             this.btnInscriptions = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.cmbName = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.msName = new System.Windows.Forms.MenuStrip();
+            this.nameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.myAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tlpMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.msName.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpMain
@@ -50,7 +53,6 @@
             this.tlpMain.Controls.Add(this.btnInscriptions, 1, 1);
             this.tlpMain.Controls.Add(this.btnUsers, 0, 1);
             this.tlpMain.Controls.Add(this.tableLayoutPanel1, 0, 0);
-            this.tlpMain.Controls.Add(this.label1, 1, 0);
             this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMain.Location = new System.Drawing.Point(0, 0);
             this.tlpMain.Name = "tlpMain";
@@ -82,6 +84,7 @@
             this.btnCourses.TabIndex = 2;
             this.btnCourses.Text = "Cursussen";
             this.btnCourses.UseVisualStyleBackColor = true;
+            this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
             // 
             // btnInscriptions
             // 
@@ -108,9 +111,9 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.07656F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.92345F));
-            this.tableLayoutPanel1.Controls.Add(this.cmbName, 0, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.60287F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.39713F));
+            this.tableLayoutPanel1.Controls.Add(this.msName, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -119,27 +122,39 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(418, 29);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
-            // cmbName
+            // msName
             // 
-            this.cmbName.BackColor = System.Drawing.SystemColors.Control;
-            this.cmbName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmbName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbName.FormattingEnabled = true;
-            this.cmbName.Location = new System.Drawing.Point(3, 3);
-            this.cmbName.Name = "cmbName";
-            this.cmbName.Size = new System.Drawing.Size(103, 39);
-            this.cmbName.TabIndex = 5;
-            this.cmbName.SelectedIndexChanged += new System.EventHandler(this.cmbName_SelectedIndexChanged);
+            this.msName.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nameToolStripMenuItem});
+            this.msName.Location = new System.Drawing.Point(0, 0);
+            this.msName.Name = "msName";
+            this.msName.Size = new System.Drawing.Size(153, 29);
+            this.msName.TabIndex = 0;
+            this.msName.Text = "menuStrip1";
             // 
-            // label1
+            // nameToolStripMenuItem
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(427, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "label1";
+            this.nameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.myAccountToolStripMenuItem,
+            this.logoutToolStripMenuItem});
+            this.nameToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 24F);
+            this.nameToolStripMenuItem.Name = "nameToolStripMenuItem";
+            this.nameToolStripMenuItem.Size = new System.Drawing.Size(117, 25);
+            this.nameToolStripMenuItem.Text = "Name";
+            // 
+            // myAccountToolStripMenuItem
+            // 
+            this.myAccountToolStripMenuItem.Name = "myAccountToolStripMenuItem";
+            this.myAccountToolStripMenuItem.Size = new System.Drawing.Size(231, 42);
+            this.myAccountToolStripMenuItem.Text = "My account";
+            this.myAccountToolStripMenuItem.Click += new System.EventHandler(this.myAccountToolStripMenuItem_Click);
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(231, 42);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // frmHome
             // 
@@ -147,13 +162,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 448);
             this.Controls.Add(this.tlpMain);
+            this.MainMenuStrip = this.msName;
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Homepage";
             this.Load += new System.EventHandler(this.frnHome_Load);
             this.tlpMain.ResumeLayout(false);
-            this.tlpMain.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.msName.ResumeLayout(false);
+            this.msName.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -165,9 +183,11 @@
         private System.Windows.Forms.Button btnReviews;
         private System.Windows.Forms.Button btnCourses;
         private System.Windows.Forms.Button btnInscriptions;
-        public System.Windows.Forms.ComboBox cmbName;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.MenuStrip msName;
+        public System.Windows.Forms.ToolStripMenuItem nameToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem myAccountToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }
 

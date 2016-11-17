@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DeWaaiBeheer
 {
-    public partial class frmCourses : Form
+    public partial class frmUsers : Form
     {
-        public frmCourses()
+        public frmUsers()
         {
             InitializeComponent();
         }
