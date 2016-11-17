@@ -25,9 +25,10 @@ namespace DeWaaiBeheer
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Label label = new Label();  
             (this.Owner as frmHome).tlpMain.Show();
-            (this.Owner as frmHome).lblUsername.Text = ("Emre" + String.Format(new Font("Microsoft Sans Serif", 10) + "▼"));
+            (this.Owner as frmHome).cmbName.Text = "Emre";
+            (this.Owner as frmHome).cmbName.Items.Add("Mijn account");
+            (this.Owner as frmHome).cmbName.Items.Add("Uitloggen");
 
             this.Close();
 

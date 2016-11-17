@@ -15,6 +15,7 @@ namespace DeWaaiBeheer
         public frmHome()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
 
         private void frnHome_Load(object sender, EventArgs e)
@@ -24,9 +25,19 @@ namespace DeWaaiBeheer
             Program.login.Show();
         }
 
-        private void lblUsername_Click(object sender, EventArgs e)
+        private void cmbName_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            string item = cmbName.SelectedItem.ToString();
+            
+            switch (item)
+            {        
+                case "Mijn account":
+                    Program.account.ShowDialog();
+                    break;
+                case "Uitloggen":
+                    Application.Exit();
+                    break;
+            }
         }
     }
 }
