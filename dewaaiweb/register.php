@@ -14,10 +14,7 @@
         	<div class="bannertext">
             	<h1 class="bannertitle">Zeilplezier voor <strong style="color:white;">jong en oud</strong> bij De Waai</h1>
             </div>
-    		<img class="img-responsive img visual" src="/images/banner_bed.jpg" alt="banner homepagina" />
-            
-            <!-- CONTENT !-->
-            <p>Hier komt tekst<p>
+    		<img class="img-responsive img visual" src="/images/banner_home.jpg" alt="banner homepagina" />
    	 	</div>
 	</div>
 </body>
