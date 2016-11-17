@@ -34,6 +34,7 @@
             this.btnInscriptions = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tlpMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@
             this.tlpMain.Controls.Add(this.btnInscriptions, 1, 1);
             this.tlpMain.Controls.Add(this.btnUsers, 0, 1);
             this.tlpMain.Controls.Add(this.lblUsername, 0, 0);
+            this.tlpMain.Controls.Add(this.comboBox1, 1, 0);
             this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMain.Location = new System.Drawing.Point(0, 0);
             this.tlpMain.Name = "tlpMain";
@@ -110,6 +112,15 @@
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(418, 35);
             this.lblUsername.TabIndex = 4;
+            this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(427, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 5;
             // 
             // frmHome
             // 
@@ -135,6 +146,7 @@
         private System.Windows.Forms.Button btnCourses;
         private System.Windows.Forms.Button btnInscriptions;
         public System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

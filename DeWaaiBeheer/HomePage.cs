@@ -23,5 +23,10 @@ namespace DeWaaiBeheer
             Program.login.Owner = this;
             Program.login.Show();
         }
+
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
