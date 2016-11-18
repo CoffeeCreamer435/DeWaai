@@ -9,8 +9,8 @@ RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
 RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
 rewriteRule ^(.*) http://www.dewaai.ga/$1 [R=301,L] 
 
-ErrorDocument 404 http://dewaai.ga/error.php
-ErrorDocument 500 http://dewaai.ga/error.php
+ErrorDocument 404 http://dewaai.ga/error
+ErrorDocument 500 http://dewaai.ga/error
 
 RewriteBase /
 RewriteCond %{REQUEST_URI} ^/404/$
@@ -27,3 +27,4 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
+

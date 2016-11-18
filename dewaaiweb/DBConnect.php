@@ -1,9 +1,8 @@
 <?php
-$table = "Users";
-DBConnectionSetup($table);
-function DBConnectionSetup($table)
+//Setup data conneciton
+function DBConnectionSetup($page)
 {
-	
+	//create variable for db conneciton
 	$servername = "localhost";
 	$username = "pieter";
 	$password = "5CgwNv!?WGPU";
@@ -15,27 +14,55 @@ function DBConnectionSetup($table)
 	if ($conn->connect_error) {
 		 die("Connection failed: " . $conn->connect_error);
 	} 
-	
-	$sql = "SELECT * 
-FROM  $table
+	//check page
+	if ($page == "Cursussen")
+	{
+	Getcourses($conn);
+	}
+	if ($page == "Instructors")
+	{
+		GetInstructors($conn);
+	}
+}
+//set data for Curssesen
+function Getcourses($conn)
+{
+		$sql = "SELECT * 
+FROM  `Cursussen` 
 LIMIT 0 , 30";
 	$result = $conn->query($sql);
 	
 	if ($result->num_rows > 0) {
 		 // output data of each row
 		 while($row = $result->fetch_assoc()) {
-			 echo "<br> id: ". $row["id"]. " - Email: ". $row["Email"]. " - FirstName" . $row["FirstName"] . "<br>";
+			 echo $row["Title"] . $row["text"] . $row["Price"]. "<img src='" . $row["IMG"] . " '/><br>";
 		 }
 	} else {
 		 echo "0 results";
 	}
-	
+	//close db connection
 	$conn->close();
  
 }
-function getTable($tablename)
+//set data for Instructors
+function GetInstructors($conn)
 {
-	
+
+		$sql = "SELECT * 
+FROM  `Instructors` 
+LIMIT 0 , 30";
+	$result = $conn->query($sql);
+	if ($result->num_rows > 0) {
+		 // output data of each row
+		 while($row = $result->fetch_assoc()) {
+			 echo $row["Name"] . "<br>" .$row["Description"].  "<br>";
+		 }
+	} else {
+		 echo "0 results";
+	}
+	//close connection
+	$conn->close();
+ 
 }
 
 
