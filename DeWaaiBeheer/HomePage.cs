@@ -50,5 +50,10 @@ namespace DeWaaiBeheer
         {
             Program.courses.ShowDialog();
         }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            Program.users.ShowDialog();
+        }
     }
 }
