@@ -13,10 +13,10 @@ namespace DeWaaiBeheer
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EntityFramewok : DbContext
+    public partial class EntityFramework1 : DbContext
     {
-        public EntityFramewok()
-            : base("name=EntityFramewok")
+        public EntityFramework1()
+            : base("name=EntityFramework1")
         {
         }
     

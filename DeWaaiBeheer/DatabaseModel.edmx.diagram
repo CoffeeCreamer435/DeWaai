@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="bc004183534b4e8e82a4bc2f02b3299c" Name="Diagram1">
-        <EntityTypeShape EntityType="DeWaaiModel.BookedCursus" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="DeWaaiModel.Courses" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="DeWaaiModel.Fleet" Width="1.5" PointX="0.75" PointY="3.75" />
-        <EntityTypeShape EntityType="DeWaaiModel.Instructors" Width="1.5" PointX="2.75" PointY="3.75" />
-        <EntityTypeShape EntityType="DeWaaiModel.InstructorsAvailability" Width="1.5" PointX="4.75" PointY="0.75" />
-        <EntityTypeShape EntityType="DeWaaiModel.Invoice" Width="1.5" PointX="4.75" PointY="3.75" />
-        <EntityTypeShape EntityType="DeWaaiModel.Users" Width="1.5" PointX="6.75" PointY="0.75" />
+      <Diagram DiagramId="12014e1b8a43495889eea8d17e9f0653" Name="Diagram1">
+        <EntityTypeShape EntityType="pieter_DeWaaiModel.BookedCursus" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pieter_DeWaaiModel.Courses" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pieter_DeWaaiModel.Fleet" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pieter_DeWaaiModel.Instructors" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pieter_DeWaaiModel.InstructorsAvailability" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pieter_DeWaaiModel.Invoice" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pieter_DeWaaiModel.Users" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -47,11 +47,6 @@ namespace DeWaaiBeheer
             Program.login.Show();
         }
 
-        private void btnCourses_Click(object sender, EventArgs e)
-        {
-            Program.courses.ShowDialog();
-        }
-
         private void btnUsers_Click(object sender, EventArgs e)
         {
             Program.users.ShowDialog();

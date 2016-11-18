@@ -30,12 +30,16 @@ namespace DeWaaiBeheer
                 Price = Price,
                 Title = Title,
                 IMG = IMG,
-           };
-            if(Courses != null)
+            };
+            if (Courses != null)
+            {
+                ef.Courses.Add(Courses);
+            }
+        }
         public ObservableCollection<Courses> getCursussen()
         {
             return new ObservableCollection<Courses>(ef.Courses);
-                ef.Courses.Add(Courses);
+                
             }
         }
     }
