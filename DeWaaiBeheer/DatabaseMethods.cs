@@ -21,5 +21,20 @@ namespace DeWaaiBeheer
         {
             return new ObservableCollection<Cursussen>(ef.Cursussens);
         }
+
+        public void addCursussen(string Text, int Price, string Title, string IMG)
+        {
+            var Cursussen = new Cursussen()
+            {
+                text = Text,
+                Price = Price,
+                Title = Title,
+                IMG = IMG,
+           };
+            if(Cursussen != null)
+            {
+                ef.Cursussens.Add(Cursussen);
+            }
+        }
     }
 }

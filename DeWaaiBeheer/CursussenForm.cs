@@ -12,33 +12,45 @@ namespace DeWaaiBeheer
 {
     public partial class frmCourses : Form
     {
+
+        String Title;
+        String TextString;
+        int Price;
+        String Img;
+
         private DatabaseMethods dm = new DatabaseMethods();
         public frmCourses()
         {
             InitializeComponent();
-            FillListBox();
+            FillCursusBox();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            ReadTextbox();
-            
+          ReadTextbox();
+            dm.addCursussen(TextString, Price, Title, Img);
         }
 
-        public void FillListBox()
+        public void FillCursusBox()
         {
-            lstCursussen.DataSource = dm.getCursussen();
-            lstCursussen.DisplayMember = "Title";
-            lstCursussen.ValueMember = "ID";
+            cmbCursussen.DataSource = dm.getCursussen().ToList();
+            cmbCursussen.DisplayMember = "Title";
+            cmbCursussen.ValueMember = "ID";
+        }
 
+        public void FillNewAanmeldingen()
+        {
+            lstAanmeldingen.DataSource = dm.getCursussen();
+            lstAanmeldingen.DisplayMember = "Title";
+            lstAanmeldingen.ValueMember = "ID";
         }
 
         public void ReadTextbox()
         {
-            String Title = txtTitle.Text;
-            String Text = txtText.Text;
-            String Price = txtPrice.Text;
-            String Img = txtImg.Text;
+            Title = txtTitle.Text;
+            Text = txtText.Text;
+            Price = Int32.Parse(txtPrice.Text);
+            Img = txtImg.Text;
         }
     }
 }
