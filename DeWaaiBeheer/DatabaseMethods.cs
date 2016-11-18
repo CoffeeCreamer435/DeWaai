@@ -6,41 +6,20 @@ namespace DeWaaiBeheer
     
     public class DatabaseMethods
     {
-        private EntityFramewok ef = new EntityFramewok();
+        private EntityFramework ef = new EntityFramework();
 
         /// <summary>
         /// Gets all users of database
         /// </summary>
         /// <returns>Returns a list of all users</returns>
-        public ObservableCollection<Users> getUsers()
+        public ObservableCollection<User> getUsers()
         {
-            return new ObservableCollection<Users>(ef.Users);
+            return new ObservableCollection<User>(ef.Users);
         }
 
-        public ObservableCollection<Courses> getCourses()
+        public ObservableCollection<Cursussen> getCursussen()
         {
-            return new ObservableCollection<Courses>(ef.Courses);
-        }
-
-        public void addCursussen(string Description, int Price, string Title, string IMG)
-        {
-            var Courses = new Courses()
-            {
-                Description = Description,
-                Price = Price,
-                Title = Title,
-                IMG = IMG,
-            };
-            if (Courses != null)
-            {
-                ef.Courses.Add(Courses);
-            }
-        }
-        public ObservableCollection<Courses> getCursussen()
-        {
-            return new ObservableCollection<Courses>(ef.Courses);
-                
-            }
+            return new ObservableCollection<Cursussen>(ef.Cursussens);
         }
     }
-
+}

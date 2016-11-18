@@ -34,13 +34,12 @@ namespace DeWaaiBeheer
             var password = txtPassword.Text;
             var user = dm.getUsers().SingleOrDefault(x => x.Email == email && x.Password == password);
 
-            if(user != null && (!String.IsNullOrEmpty(email) && !String.IsNullOrEmpty(password)))
+            if(user != null && (!String.IsNullOrEmpty(txtEmail.Text) && !String.IsNullOrEmpty(txtPassword.Text)))
             {
                 (this.Owner as frmHome).tlpMain.Show();
                 (this.Owner as frmHome).nameToolStripMenuItem.Text = (user.FirstName);
                 (this.Owner as frmHome).myAccountToolStripMenuItem.Text = ("Mijn account");
                 (this.Owner as frmHome).logoutToolStripMenuItem.Text = ("Uitloggen");
-                (this.Owner as frmHome).exitToolStripMenuItem.Text = ("Afsluiten");
 
                 this.Close();
             }

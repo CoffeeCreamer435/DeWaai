@@ -43,18 +43,12 @@ namespace DeWaaiBeheer
         /// <param name="e"></param>
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Program.home.Owner = this;
-            Program.login.Show();
+            Application.Exit();
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
             Program.users.ShowDialog();
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

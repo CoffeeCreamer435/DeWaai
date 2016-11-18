@@ -38,7 +38,6 @@
             this.nameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tlpMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.msName.SuspendLayout();
@@ -137,8 +136,7 @@
             // 
             this.nameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.myAccountToolStripMenuItem,
-            this.logoutToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.logoutToolStripMenuItem});
             this.nameToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 24F);
             this.nameToolStripMenuItem.Name = "nameToolStripMenuItem";
             this.nameToolStripMenuItem.Size = new System.Drawing.Size(117, 25);
@@ -147,23 +145,16 @@
             // myAccountToolStripMenuItem
             // 
             this.myAccountToolStripMenuItem.Name = "myAccountToolStripMenuItem";
-            this.myAccountToolStripMenuItem.Size = new System.Drawing.Size(265, 50);
+            this.myAccountToolStripMenuItem.Size = new System.Drawing.Size(231, 42);
             this.myAccountToolStripMenuItem.Text = "My account";
             this.myAccountToolStripMenuItem.Click += new System.EventHandler(this.myAccountToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(265, 50);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(231, 42);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(265, 50);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // frmHome
             // 
@@ -197,7 +188,6 @@
         public System.Windows.Forms.ToolStripMenuItem nameToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem myAccountToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

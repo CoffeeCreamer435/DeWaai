@@ -13,10 +13,10 @@ namespace DeWaaiBeheer
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EntityFramework1 : DbContext
+    public partial class EntityFramework : DbContext
     {
-        public EntityFramework1()
-            : base("name=EntityFramework1")
+        public EntityFramework()
+            : base("name=EntityFramework")
         {
         }
     
@@ -25,12 +25,7 @@ namespace DeWaaiBeheer
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<BookedCursus> BookedCursus { get; set; }
-        public DbSet<Courses> Courses { get; set; }
-        public DbSet<Fleet> Fleet { get; set; }
-        public DbSet<Instructors> Instructors { get; set; }
-        public DbSet<InstructorsAvailability> InstructorsAvailability { get; set; }
-        public DbSet<Invoice> Invoice { get; set; }
-        public DbSet<Users> Users { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Cursussen> Cursussens { get; set; }
     }
 }
