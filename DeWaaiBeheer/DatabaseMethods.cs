@@ -12,28 +12,28 @@ namespace DeWaaiBeheer
         /// Gets all users of database
         /// </summary>
         /// <returns>Returns a list of all users</returns>
-        public ObservableCollection<User> getUsers()
+        public ObservableCollection<Users> getUsers()
         {
-            return new ObservableCollection<User>(ef.Users);
+            return new ObservableCollection<Users>(ef.Users);
         }
 
-        public ObservableCollection<Cursussen> getCursussen()
+        public ObservableCollection<Courses> getCourses()
         {
-            return new ObservableCollection<Cursussen>(ef.Cursussens);
+            return new ObservableCollection<Courses>(ef.Courses);
         }
 
-        public void addCursussen(string Text, int Price, string Title, string IMG)
+        public void addCursussen(string Description, int Price, string Title, string IMG)
         {
-            var Cursussen = new Cursussen()
+            var Courses = new Courses()
             {
-                text = Text,
+                Description = Description,
                 Price = Price,
                 Title = Title,
                 IMG = IMG,
            };
-            if(Cursussen != null)
+            if(Courses != null)
             {
-                ef.Cursussens.Add(Cursussen);
+                ef.Courses.Add(Courses);
             }
         }
     }

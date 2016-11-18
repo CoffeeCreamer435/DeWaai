@@ -5,8 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="bc004183534b4e8e82a4bc2f02b3299c" Name="Diagram1">
-        <EntityTypeShape EntityType="DeWaaiModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DeWaaiModel.Cursussen" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DeWaaiModel.BookedCursus" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DeWaaiModel.Courses" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DeWaaiModel.Fleet" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DeWaaiModel.Instructors" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DeWaaiModel.InstructorsAvailability" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DeWaaiModel.Invoice" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DeWaaiModel.Users" Width="1.5" PointX="6.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

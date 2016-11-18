@@ -23,6 +23,7 @@ namespace DeWaaiBeheer
         {
             InitializeComponent();
             FillCursusBox();
+            FillNewAanmeldingen();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -33,14 +34,14 @@ namespace DeWaaiBeheer
 
         public void FillCursusBox()
         {
-            cmbCursussen.DataSource = dm.getCursussen().ToList();
+            cmbCursussen.DataSource = dm.getCourses().ToList();
             cmbCursussen.DisplayMember = "Title";
             cmbCursussen.ValueMember = "ID";
         }
 
         public void FillNewAanmeldingen()
         {
-            lstAanmeldingen.DataSource = dm.getCursussen();
+            lstAanmeldingen.DataSource = dm.getCourses();
             lstAanmeldingen.DisplayMember = "Title";
             lstAanmeldingen.ValueMember = "ID";
         }

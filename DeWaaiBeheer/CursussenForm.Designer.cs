@@ -47,6 +47,7 @@
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbCursussen = new System.Windows.Forms.ComboBox();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.TableLayout.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -77,6 +78,7 @@
             this.TableLayout.Controls.Add(this.tableLayoutPanel1, 6, 3);
             this.TableLayout.Controls.Add(this.label2, 5, 2);
             this.TableLayout.Controls.Add(this.cmbCursussen, 7, 2);
+            this.TableLayout.Controls.Add(this.btnEdit, 7, 6);
             this.TableLayout.Location = new System.Drawing.Point(12, 3);
             this.TableLayout.Name = "TableLayout";
             this.TableLayout.RowCount = 10;
@@ -280,6 +282,16 @@
             this.cmbCursussen.Size = new System.Drawing.Size(182, 21);
             this.cmbCursussen.TabIndex = 12;
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(661, 297);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(88, 43);
+            this.btnEdit.TabIndex = 13;
+            this.btnEdit.Text = "Wijzig";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
             // frmCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,5 +335,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbCursussen;
+        private System.Windows.Forms.Button btnEdit;
     }
 }
