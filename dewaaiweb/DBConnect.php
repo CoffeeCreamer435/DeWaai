@@ -15,7 +15,7 @@ function DBConnectionSetup($page)
 		 die("Connection failed: " . $conn->connect_error);
 	} 
 	//check page
-	if ($page == "Cursussen")
+	if ($page == "Courses")
 	{
 	Getcourses($conn);
 	}
@@ -24,18 +24,18 @@ function DBConnectionSetup($page)
 		GetInstructors($conn);
 	}
 }
-//set data for Curssesen
+//set data for Courses
 function Getcourses($conn)
 {
 		$sql = "SELECT * 
-FROM  `Cursussen` 
+FROM  `Courses` 
 LIMIT 0 , 30";
 	$result = $conn->query($sql);
 	
 	if ($result->num_rows > 0) {
 		 // output data of each row
 		 while($row = $result->fetch_assoc()) {
-			 echo $row["Title"] . $row["text"] . $row["Price"]. "<img src='" . $row["IMG"] . " '/><br>";
+			 echo $row["Title"] . $row["Description"] . $row["Price"]. "<img src='" . $row["IMG"] . " '/><br>";
 		 }
 	} else {
 		 echo "0 results";

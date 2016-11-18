@@ -23,7 +23,7 @@
             <p>Tekst</p>
             <?php 
 				include 'DBConnect.php';
-				$page = "Cursussen";
+				$page = "Courses";
 				DBConnectionSetup($page);
 			?>
     	</div>

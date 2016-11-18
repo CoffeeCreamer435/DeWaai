@@ -15,6 +15,37 @@
             	<h1 class="bannertitle">Zeilplezier voor <strong style="color:white;">jong en oud</strong> bij De Waai</h1>
             </div>
     		<img class="img-responsive img visual" src="/images/banner_home.jpg" alt="banner homepagina" />
+            <div id="Content_Text">
+        	<p>test</p>
+            <form action="" method="post">
+            	<table>
+                	<tr>
+                    	<td>
+                        Email
+                        </td>
+                        <td>
+                        <input type="email" name="email"/>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td>
+                        Wachtwoord
+                        </td>
+                        <td>
+                        <input type="password" name="password"/>
+                        </td>
+                    </tr>
+                                    <tr>
+                    <td></td>
+                        <td>
+                        <input type="button" value="Login"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
    	 	</div>
+
 	</div>
+        <?php include 'footer.php';?>
 </body>

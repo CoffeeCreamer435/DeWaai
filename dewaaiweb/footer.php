@@ -10,9 +10,13 @@
 <body>
 	<div id="preFooter"></div>
 	<div id="Footer">
-     	<img style="width:20%;margin-top:-100px;z-index:202;position:absolute;" class="img-responsive img visual footerimage" src="http://www.dewaai.ga/images/footer.png" alt="footer image" />
+    	<div id="FooterImage">
+     	<img style="width:15em;margin-top:-100px;z-index:202;position:absolute;" class="img-responsive img visual footerimage" src="http://www.dewaai.ga/images/footer.png" alt="footer image" />
+        </div>
+        <div id="FooterContent">
     	<p>Copyright 2016 Zeilschool De Waai - Alle rechten voorbehouden</p>
-    	<p>De waai <br /> De Waaiweg 100 <br /> 7895 BV Amsterdam</p>
+    	<p style="text-align:start;margin-left:20em;margin-top:2em;">De waai <br /> De Waaiweg 100 <br /> 7895 BV Amsterdam</p>
+        </div>
     </div>
 </body>
 </html>
