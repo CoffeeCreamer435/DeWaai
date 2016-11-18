@@ -26,6 +26,11 @@ namespace DeWaaiBeheer
         }
     
         public DbSet<User> Users { get; set; }
-        public DbSet<Cursussen> Cursussens { get; set; }
+        public DbSet<BookedCursu> BookedCursus { get; set; }
+        public DbSet<Cours> Courses { get; set; }
+        public DbSet<Fleet> Fleets { get; set; }
+        public DbSet<Instructor> Instructors { get; set; }
+        public DbSet<InstructorsAvailability> InstructorsAvailabilities { get; set; }
+        public DbSet<Invoice> Invoices { get; set; }
     }
 }

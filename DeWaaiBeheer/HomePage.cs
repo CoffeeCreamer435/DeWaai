@@ -43,7 +43,8 @@ namespace DeWaaiBeheer
         /// <param name="e"></param>
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Program.home.Owner = this;
+            Program.login.Show();
         }
 
         private void btnCourses_Click(object sender, EventArgs e)
@@ -54,6 +55,11 @@ namespace DeWaaiBeheer
         private void btnUsers_Click(object sender, EventArgs e)
         {
             Program.users.ShowDialog();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

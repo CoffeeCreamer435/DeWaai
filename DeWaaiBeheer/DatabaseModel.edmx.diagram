@@ -6,7 +6,12 @@
     <edmx:Diagrams>
       <Diagram DiagramId="bc004183534b4e8e82a4bc2f02b3299c" Name="Diagram1">
         <EntityTypeShape EntityType="DeWaaiModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DeWaaiModel.Cursussen" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DeWaaiModel.BookedCursu" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DeWaaiModel.Cours" Width="1.5" PointX="3.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DeWaaiModel.Fleet" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DeWaaiModel.Instructor" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DeWaaiModel.InstructorsAvailability" Width="1.5" PointX="5.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DeWaaiModel.Invoice" Width="1.5" PointX="2.75" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -16,7 +16,7 @@ namespace DeWaaiBeheer
         public frmCourses()
         {
             InitializeComponent();
-            FillListBox();
+            //FillListBox();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

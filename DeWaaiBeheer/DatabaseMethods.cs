@@ -17,9 +17,9 @@ namespace DeWaaiBeheer
             return new ObservableCollection<User>(ef.Users);
         }
 
-        public ObservableCollection<Cursussen> getCursussen()
+        public ObservableCollection<Cours> getCursussen()
         {
-            return new ObservableCollection<Cursussen>(ef.Cursussens);
+            return new ObservableCollection<Cours>(ef.Courses);
         }
     }
 }
