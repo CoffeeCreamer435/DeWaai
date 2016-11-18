@@ -17,9 +17,26 @@ namespace DeWaaiBeheer
             return new ObservableCollection<Users>(ef.Users);
         }
 
+        public ObservableCollection<Courses> getCourses()
+        {
+            return new ObservableCollection<Courses>(ef.Courses);
+        }
+
+        public void addCursussen(string Description, int Price, string Title, string IMG)
+        {
+            var Courses = new Courses()
+            {
+                Description = Description,
+                Price = Price,
+                Title = Title,
+                IMG = IMG,
+           };
+            if(Courses != null)
         public ObservableCollection<Courses> getCursussen()
         {
             return new ObservableCollection<Courses>(ef.Courses);
+                ef.Courses.Add(Courses);
+            }
         }
     }
 }

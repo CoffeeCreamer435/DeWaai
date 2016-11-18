@@ -316,3 +316,67 @@
 [16-Nov-2016 14:01:09 UTC] PHP Warning:  include(): Failed opening 'footer.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/pieter/public_html/index.php on line 17
 [16-Nov-2016 14:01:37 UTC] PHP Warning:  include(footer.php): failed to open stream: No such file or directory in /home/pieter/public_html/index.php on line 17
 [16-Nov-2016 14:01:37 UTC] PHP Warning:  include(): Failed opening 'footer.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/pieter/public_html/index.php on line 17
+[17-Nov-2016 11:27:07 UTC] PHP Warning:  mysqli_close() expects exactly 1 parameter, 0 given in /home/pieter/public_html/DBConnect.php on line 21
+[17-Nov-2016 12:33:25 UTC] PHP Fatal error:  Function name must be a string in /home/pieter/public_html/DBConnect.php on line 7
+[17-Nov-2016 12:33:30 UTC] PHP Fatal error:  Function name must be a string in /home/pieter/public_html/DBConnect.php on line 7
+[17-Nov-2016 12:33:41 UTC] PHP Fatal error:  Call to undefined function test() in /home/pieter/public_html/DBConnect.php on line 7
+[18-Nov-2016 09:20:14 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1040): Too many connections in /home/pieter/public_html/DBConnect.php on line 11
+[18-Nov-2016 09:20:15 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1040): Too many connections in /home/pieter/public_html/DBConnect.php on line 11
+[18-Nov-2016 09:20:16 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1040): Too many connections in /home/pieter/public_html/DBConnect.php on line 11
+[18-Nov-2016 09:20:17 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1040): Too many connections in /home/pieter/public_html/DBConnect.php on line 11
+[18-Nov-2016 09:23:00 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1040): Too many connections in /home/pieter/public_html/DBConnect.php on line 11
+[18-Nov-2016 09:23:00 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1040): Too many connections in /home/pieter/public_html/DBConnect.php on line 11
+[18-Nov-2016 09:23:01 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1040): Too many connections in /home/pieter/public_html/DBConnect.php on line 11
+[18-Nov-2016 09:23:48 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1040): Too many connections in /home/pieter/public_html/DBConnect.php on line 11
+[18-Nov-2016 09:23:52 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:23:52 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:23:53 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:23:53 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:23:54 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:23:54 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:23:55 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:23:57 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:23:59 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:24:03 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:24:03 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:24:04 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:24:04 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:24:18 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:24:19 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:24:19 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:24:19 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:24:39 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:24:39 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:24:40 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:24:40 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:10 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:11 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:12 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:14 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:14 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:14 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:15 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:15 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:15 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:15 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:15 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:15 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:36 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:40 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:41 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:41 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:42 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:42 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:57 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:58 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:58 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:59 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:25:59 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:26:00 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:26:33 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:26:34 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 09:26:43 UTC] PHP Fatal error:  Call to a member function query() on null in /home/pieter/public_html/DBConnect.php on line 26
+[18-Nov-2016 10:09:07 UTC] PHP Catchable fatal error:  Object of class mysqli_result could not be converted to string in /home/pieter/public_html/DBConnect.php on line 53
+[18-Nov-2016 10:09:08 UTC] PHP Catchable fatal error:  Object of class mysqli_result could not be converted to string in /home/pieter/public_html/DBConnect.php on line 53
+[18-Nov-2016 10:09:10 UTC] PHP Catchable fatal error:  Object of class mysqli_result could not be converted to string in /home/pieter/public_html/DBConnect.php on line 53
+[18-Nov-2016 10:09:10 UTC] PHP Catchable fatal error:  Object of class mysqli_result could not be converted to string in /home/pieter/public_html/DBConnect.php on line 53
