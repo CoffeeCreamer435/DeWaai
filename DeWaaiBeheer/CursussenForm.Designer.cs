@@ -31,13 +31,13 @@
             this.TableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.lstCursussen = new System.Windows.Forms.ListBox();
             this.lblInschrijvinge = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.txtTitle = new System.Windows.Forms.TextBox();
-            this.txtText = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtText = new System.Windows.Forms.TextBox();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtImg = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.TableLayout.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -99,31 +99,6 @@
             this.lblInschrijvinge.TabIndex = 1;
             this.lblInschrijvinge.Text = "Nieuwe inschrijvingen";
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(755, 297);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(88, 43);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Voeg toe";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // txtTitle
-            // 
-            this.txtTitle.Location = new System.Drawing.Point(3, 3);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(270, 20);
-            this.txtTitle.TabIndex = 4;
-            // 
-            // txtText
-            // 
-            this.txtText.Location = new System.Drawing.Point(3, 24);
-            this.txtText.Name = "txtText";
-            this.txtText.Size = new System.Drawing.Size(270, 20);
-            this.txtText.TabIndex = 5;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -139,19 +114,19 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(276, 43);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
-            // txtImg
+            // txtText
             // 
-            this.txtImg.Location = new System.Drawing.Point(3, 24);
-            this.txtImg.Name = "txtImg";
-            this.txtImg.Size = new System.Drawing.Size(270, 20);
-            this.txtImg.TabIndex = 5;
+            this.txtText.Location = new System.Drawing.Point(3, 24);
+            this.txtText.Name = "txtText";
+            this.txtText.Size = new System.Drawing.Size(270, 20);
+            this.txtText.TabIndex = 5;
             // 
-            // txtPrice
+            // txtTitle
             // 
-            this.txtPrice.Location = new System.Drawing.Point(3, 3);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(270, 20);
-            this.txtPrice.TabIndex = 4;
+            this.txtTitle.Location = new System.Drawing.Point(3, 3);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(270, 20);
+            this.txtTitle.TabIndex = 4;
             // 
             // tableLayoutPanel2
             // 
@@ -167,6 +142,31 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(276, 43);
             this.tableLayoutPanel2.TabIndex = 7;
+            // 
+            // txtImg
+            // 
+            this.txtImg.Location = new System.Drawing.Point(3, 24);
+            this.txtImg.Name = "txtImg";
+            this.txtImg.Size = new System.Drawing.Size(270, 20);
+            this.txtImg.TabIndex = 5;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(3, 3);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(270, 20);
+            this.txtPrice.TabIndex = 4;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(755, 297);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(88, 43);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Text = "Voeg toe";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // frmCourses
             // 
