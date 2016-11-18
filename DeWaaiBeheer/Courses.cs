@@ -12,18 +12,13 @@ namespace DeWaaiBeheer
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class Courses
     {
-        public string ID { get; set; }
-        public string Email { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Password { get; set; }
-        public string Telephone { get; set; }
-        public string Mobile { get; set; }
-        public string Street { get; set; }
-        public string HouseNumber { get; set; }
-        public string City { get; set; }
-        public string Zip { get; set; }
+        public int ID { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string IMG { get; set; }
+        public System.DateTime Date { get; set; }
+        public int Price { get; set; }
     }
 }
