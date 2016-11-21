@@ -83,6 +83,7 @@
             this.btnCourses.Size = new System.Drawing.Size(418, 201);
             this.btnCourses.TabIndex = 4;
             this.btnCourses.Text = "Cursussen";
+            this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
             // 
             // btnInscriptions
             // 

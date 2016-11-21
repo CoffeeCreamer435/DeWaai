@@ -49,5 +49,10 @@ namespace DeWaaiBeheer
         private void btnUsers_Click(object sender, EventArgs e)
         {
         }
+
+        private void btnCourses_Click(object sender, EventArgs e)
+        {
+            Program.cursus.Show();
+        }
     }
 }

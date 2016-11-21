@@ -18,7 +18,7 @@ namespace DeWaaiBeheer
         public string Title { get; set; }
         public string Description { get; set; }
         public string IMG { get; set; }
-        public System.DateTime Date { get; set; }
+        public string Date { get; set; }
         public int Price { get; set; }
     }
 }

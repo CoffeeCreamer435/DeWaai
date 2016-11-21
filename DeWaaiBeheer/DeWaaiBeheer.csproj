@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
@@ -55,29 +59,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BookedCursus.cs">
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Courses.cs">
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CursusPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CursusPage.Designer.cs">
+      <DependentUpon>CursusPage.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseMethods.cs" />
-    <Compile Include="DatabaseModel.Context.cs">
+    <Compile Include="EntityBootModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseModel.Context.tt</DependentUpon>
+      <DependentUpon>EntityBootModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseModel.cs">
+    <Compile Include="EntityBootModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseModel.Designer.cs">
+    <Compile Include="EntityBootModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
+      <DependentUpon>EntityBootModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Fleet.cs">
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
@@ -86,13 +96,13 @@
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Instructors.cs">
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
     <Compile Include="InstructorsAvailability.cs">
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Invoice.cs">
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
@@ -109,8 +119,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users.cs">
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CursusPage.resx">
+      <DependentUpon>CursusPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,15 +142,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Users.resx">
-      <DependentUpon>Users.cs</DependentUpon>
-    </EmbeddedResource>
-    <EntityDeploy Include="DatabaseModel.edmx">
+    <EntityDeploy Include="EntityBootModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DatabaseModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>EntityBootModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DatabaseModel.edmx.diagram">
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
+    <None Include="EntityBootModel.edmx.diagram">
+      <DependentUpon>EntityBootModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -157,15 +167,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DatabaseModel.Context.tt">
+    <Content Include="EntityBootModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
-      <LastGenOutput>DatabaseModel.Context.cs</LastGenOutput>
+      <DependentUpon>EntityBootModel.edmx</DependentUpon>
+      <LastGenOutput>EntityBootModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DatabaseModel.tt">
+    <Content Include="EntityBootModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
-      <LastGenOutput>DatabaseModel.cs</LastGenOutput>
+      <DependentUpon>EntityBootModel.edmx</DependentUpon>
+      <LastGenOutput>EntityBootModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

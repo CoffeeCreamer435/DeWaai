@@ -6,7 +6,7 @@ namespace DeWaaiBeheer
     
     public class DatabaseMethods
     {
-        private EntityFramework ef = new EntityFramework();
+        private u480787545_dewaaEntities ef = new u480787545_dewaaEntities();
 
         /// <summary>
         /// Gets all users of database
