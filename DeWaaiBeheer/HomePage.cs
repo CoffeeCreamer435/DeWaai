@@ -52,7 +52,7 @@ namespace DeWaaiBeheer
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
-            Program.cursus.Show();
+            Program.cursus.Show();   
         }
     }
 }

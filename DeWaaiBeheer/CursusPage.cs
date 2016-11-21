@@ -16,15 +16,22 @@ namespace DeWaaiBeheer
         public CursusPage()
         {
             InitializeComponent();
-            FillCursussen();
-
+            FillCursussenList();
+            fillComboCursussen();
         }
 
-        public void FillCursussen()
+        public void FillCursussenList()
         {
             lstNieuweOverzichten.DataSource = ef.Courses.ToList();
             lstNieuweOverzichten.ValueMember = "ID";
             lstNieuweOverzichten.DisplayMember = "Title";
+        }
+
+        public void fillComboCursussen()
+        {
+            cmbCursussen.DataSource = ef.Courses.ToList();
+            cmbCursussen.ValueMember = "ID";
+            cmbCursussen.DisplayMember = "Title";
         }
 
         private void btnAccepteer_Click(object sender, EventArgs e)
@@ -35,6 +42,11 @@ namespace DeWaaiBeheer
         private void btnWeiger_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void CursusPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.cursus.Hide();
         }
     }
 }
