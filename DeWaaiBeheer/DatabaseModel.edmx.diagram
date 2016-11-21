@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="bc004183534b4e8e82a4bc2f02b3299c" Name="Diagram1">
-        <EntityTypeShape EntityType="DeWaaiModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DeWaaiModel.BookedCursu" Width="1.5" PointX="3.25" PointY="0.75" />
-        <EntityTypeShape EntityType="DeWaaiModel.Cours" Width="1.5" PointX="3.375" PointY="3.75" />
-        <EntityTypeShape EntityType="DeWaaiModel.Fleet" Width="1.5" PointX="5.75" PointY="0.75" />
-        <EntityTypeShape EntityType="DeWaaiModel.Instructor" Width="1.5" PointX="5.75" PointY="3.75" />
-        <EntityTypeShape EntityType="DeWaaiModel.InstructorsAvailability" Width="1.5" PointX="2.75" PointY="6.75" />
-        <EntityTypeShape EntityType="DeWaaiModel.Invoice" Width="1.5" PointX="4.75" PointY="6.75" />
+      <Diagram DiagramId="fb18605d0ed044b583c2670cfda43dd6" Name="Diagram1">
+        <EntityTypeShape EntityType="pieter_DeWaaiModel.BookedCursus" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pieter_DeWaaiModel.Courses" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pieter_DeWaaiModel.Fleet" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pieter_DeWaaiModel.Instructors" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pieter_DeWaaiModel.InstructorsAvailability" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pieter_DeWaaiModel.Invoice" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pieter_DeWaaiModel.Users" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

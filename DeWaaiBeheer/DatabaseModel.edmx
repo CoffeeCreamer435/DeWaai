@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DeWaaiModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="pieter_DeWaaiModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BookedCursus">
           <Key>
             <PropertyRef Name="ID" />
@@ -77,7 +77,7 @@
           <Property Name="City" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Zip" Type="varchar" MaxLength="255" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="DeWaaiModelStoreContainer">
+        <EntityContainer Name="pieter_DeWaaiModelStoreContainer">
           <EntitySet Name="BookedCursus" EntityType="Self.BookedCursus" Schema="pieter_DeWaai" store:Type="Tables" />
           <EntitySet Name="Courses" EntityType="Self.Courses" Schema="pieter_DeWaai" store:Type="Tables" />
           <EntitySet Name="Fleet" EntityType="Self.Fleet" Schema="pieter_DeWaai" store:Type="Tables" />
@@ -86,36 +86,12 @@
           <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="pieter_DeWaai" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="pieter_DeWaai" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DeWaaiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="User">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="Telephone" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="Mobile" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="Street" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="HouseNumber" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="City" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="Zip" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityContainer Name="EntityFramework" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Users" EntityType="Self.User" />
-          <EntitySet Name="BookedCursus" EntityType="DeWaaiModel.BookedCursu" />
-          <EntitySet Name="Courses" EntityType="DeWaaiModel.Cours" />
-          <EntitySet Name="Fleets" EntityType="DeWaaiModel.Fleet" />
-          <EntitySet Name="Instructors" EntityType="DeWaaiModel.Instructor" />
-          <EntitySet Name="InstructorsAvailabilities" EntityType="DeWaaiModel.InstructorsAvailability" />
-          <EntitySet Name="Invoices" EntityType="DeWaaiModel.Invoice" />
-        </EntityContainer>
-        <EntityType Name="BookedCursu">
+      <Schema Namespace="pieter_DeWaaiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BookedCursus">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -125,14 +101,14 @@
           <Property Name="UserID" Type="Int32" Nullable="false" />
           <Property Name="InstructorID" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityType Name="Cours">
+        <EntityType Name="Courses">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
-          <Property Name="Description" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
-          <Property Name="IMG" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IMG" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" />
           <Property Name="Price" Type="Int32" Nullable="false" />
         </EntityType>
@@ -143,16 +119,16 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Amount" Type="Int32" Nullable="false" />
           <Property Name="TypeID" Type="Int32" Nullable="false" />
-          <Property Name="Status" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityType Name="Instructor">
+        <EntityType Name="Instructors">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CursusID" Type="Int32" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
-          <Property Name="Description" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="InstructorsAvailability">
           <Key>
@@ -171,88 +147,113 @@
           <Property Name="InstructorID" Type="Int32" Nullable="false" />
           <Property Name="CourseID" Type="Int32" Nullable="false" />
         </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telephone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mobile" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Street" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HouseNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zip" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="EntityFramework" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BookedCursus" EntityType="Self.BookedCursus" />
+          <EntitySet Name="Courses" EntityType="Self.Courses" />
+          <EntitySet Name="Fleet" EntityType="Self.Fleet" />
+          <EntitySet Name="Instructors" EntityType="Self.Instructors" />
+          <EntitySet Name="InstructorsAvailability" EntityType="Self.InstructorsAvailability" />
+          <EntitySet Name="Invoice" EntityType="Self.Invoice" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DeWaaiModelStoreContainer" CdmEntityContainer="EntityFramework">
-          <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="DeWaaiModel.User">
-              <MappingFragment StoreEntitySet="Users">
-                <ScalarProperty Name="Zip" ColumnName="Zip" />
-                <ScalarProperty Name="City" ColumnName="City" />
-                <ScalarProperty Name="HouseNumber" ColumnName="HouseNumber" />
-                <ScalarProperty Name="Street" ColumnName="Street" />
-                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
-                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
+        <EntityContainerMapping StorageEntityContainer="pieter_DeWaaiModelStoreContainer" CdmEntityContainer="EntityFramework">
           <EntitySetMapping Name="BookedCursus">
-            <EntityTypeMapping TypeName="DeWaaiModel.BookedCursu">
+            <EntityTypeMapping TypeName="pieter_DeWaaiModel.BookedCursus">
               <MappingFragment StoreEntitySet="BookedCursus">
-                <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="FleetID" ColumnName="FleetID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FleetID" ColumnName="FleetID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Courses">
-            <EntityTypeMapping TypeName="DeWaaiModel.Cours">
+            <EntityTypeMapping TypeName="pieter_DeWaaiModel.Courses">
               <MappingFragment StoreEntitySet="Courses">
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="IMG" ColumnName="IMG" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IMG" ColumnName="IMG" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Fleets">
-            <EntityTypeMapping TypeName="DeWaaiModel.Fleet">
+          <EntitySetMapping Name="Fleet">
+            <EntityTypeMapping TypeName="pieter_DeWaaiModel.Fleet">
               <MappingFragment StoreEntitySet="Fleet">
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
-                <ScalarProperty Name="Amount" ColumnName="Amount" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Instructors">
-            <EntityTypeMapping TypeName="DeWaaiModel.Instructor">
+            <EntityTypeMapping TypeName="pieter_DeWaaiModel.Instructors">
               <MappingFragment StoreEntitySet="Instructors">
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="CursusID" ColumnName="CursusID" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="InstructorsAvailabilities">
-            <EntityTypeMapping TypeName="DeWaaiModel.InstructorsAvailability">
+          <EntitySetMapping Name="InstructorsAvailability">
+            <EntityTypeMapping TypeName="pieter_DeWaaiModel.InstructorsAvailability">
               <MappingFragment StoreEntitySet="InstructorsAvailability">
-                <ScalarProperty Name="AbsentDate" ColumnName="AbsentDate" />
-                <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
+                <ScalarProperty Name="AbsentDate" ColumnName="AbsentDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Invoices">
-            <EntityTypeMapping TypeName="DeWaaiModel.Invoice">
+          <EntitySetMapping Name="Invoice">
+            <EntityTypeMapping TypeName="pieter_DeWaaiModel.Invoice">
               <MappingFragment StoreEntitySet="Invoice">
-                <ScalarProperty Name="CourseID" ColumnName="CourseID" />
-                <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
+                <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="pieter_DeWaaiModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="HouseNumber" ColumnName="HouseNumber" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -270,7 +271,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="true" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
