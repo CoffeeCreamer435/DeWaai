@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Pieter\Documents\School2016\GithubExamen\DeWaai\DeWaaiBeheer\DatabaseModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Emre\Source\Repos\DeWaai\DeWaaiBeheer\DatabaseModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

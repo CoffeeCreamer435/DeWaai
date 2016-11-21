@@ -77,14 +77,12 @@
             // btnCourses
             // 
             this.btnCourses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.btnCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCourses.Location = new System.Drawing.Point(3, 244);
             this.btnCourses.Name = "btnCourses";
             this.btnCourses.Size = new System.Drawing.Size(418, 201);
-            this.btnCourses.TabIndex = 2;
+            this.btnCourses.TabIndex = 4;
             this.btnCourses.Text = "Cursussen";
-            this.btnCourses.UseVisualStyleBackColor = true;
-            this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
             // 
             // btnInscriptions
             // 
@@ -145,14 +143,14 @@
             // myAccountToolStripMenuItem
             // 
             this.myAccountToolStripMenuItem.Name = "myAccountToolStripMenuItem";
-            this.myAccountToolStripMenuItem.Size = new System.Drawing.Size(231, 42);
+            this.myAccountToolStripMenuItem.Size = new System.Drawing.Size(265, 50);
             this.myAccountToolStripMenuItem.Text = "My account";
             this.myAccountToolStripMenuItem.Click += new System.EventHandler(this.myAccountToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(231, 42);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(265, 50);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
