@@ -10,7 +10,7 @@ body {
 	margin:0 !Important;
 	padding:0 !Important;
 	font-family: 'Raleway', sans-serif;
-	background:url(http://www.dewaai.ga/images/bg-skin.png) no-repeat center 5px #acc7dc
+	/*background:url(http://www.dewaai.ga/images/bg-skin.png) no-repeat center 5px #acc7dc*/
 }
 
 p {
@@ -93,8 +93,8 @@ h2 {
 
 .Header_li {
 	float:right;
-	margin:0.5em;
-	width:auto;
+	margin:1em;
+	width:5em;
 	font-weight:400;
 	text-align:center;
 }
@@ -148,6 +148,7 @@ body ul {
 	background-color:white;
 	margin-top:-7em;
 	margin-bottom:-7em;
+	padding-bottom:7em;
 }
 
 #Content_Text {
@@ -162,13 +163,39 @@ body ul {
 	padding-left:5%;
 	float:left;
 	width:25%;
-	height:100%;
+	height:85%;
+}
+
+
+#FooterEnd {
+	width:100%;
+	height:15%;
+	float:left;
+	background:#111111;
+	color:#888888;
+	font-size:12px;
+	vertical-align:baseline;
+	padding-top:0.6%;
 }
 
 #FooterContent {
-	float:left;
-	width:70%;
+	width:90%;
+	height:85%;
+	padding-left:5%;
+	padding-right:5%;
+}
+
+#FooterContentLeft {
+	width:50%;
 	height:100%;
+	float:left;	
+}
+
+#FooterContentRight {
+	text-align:end;
+	width:50%;
+	height:100%;
+	float:left;	
 }
 
 #preFooter {
@@ -180,20 +207,20 @@ body ul {
 }
 
 #preFooter::after {
- 	background:#0e213f;
+ 	background:#222222;
 	margin-top:50px;
 	width:100%;
 	height:100px;
 	content:'';
 	display:block;
-	transform:rotate(2deg);
-	-webkit-transform:rotate(2deg);
+	/*transform:rotate(2deg);
+	-webkit-transform:rotate(2deg);*/
 	z-index:10;
 	position:relative;
 }
 
 #Footer {
-	background:#0e213f;
+	background:#222222;
 	width:100%;
 	float:left;
 	height:15em;
