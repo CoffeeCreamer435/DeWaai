@@ -12,9 +12,9 @@ namespace DeWaaiBeheer
         /// Gets all users of database
         /// </summary>
         /// <returns>Returns a list of all users</returns>
-        public ObservableCollection<User> getUsers()
+        public ObservableCollection<Users> getUsers()
         {
-            return new ObservableCollection<User>(ef.Users);
+            return new ObservableCollection<Users>(ef.Users);
         }
     }
 }
