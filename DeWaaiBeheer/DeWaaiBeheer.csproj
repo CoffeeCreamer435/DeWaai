@@ -95,6 +95,12 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstructeurPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructeurPage.Designer.cs">
+      <DependentUpon>InstructeurPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Instructors.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructeurPage.resx">
+      <DependentUpon>InstructeurPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>

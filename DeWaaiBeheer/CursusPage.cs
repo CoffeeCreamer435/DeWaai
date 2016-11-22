@@ -48,5 +48,16 @@ namespace DeWaaiBeheer
         {
             Program.cursus.Hide();
         }
+
+        private void btnGebruikers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInstructeurs_Click(object sender, EventArgs e)
+        {
+            InstructeurPage instructeurs = new InstructeurPage();
+            instructeurs.Show();
+        }
     }
 }
