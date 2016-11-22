@@ -24,5 +24,13 @@ namespace DeWaaiBeheer
             lstInstructeurs.ValueMember = "ID";
             lstInstructeurs.DisplayMember = "Name";
         }
+
+        public void fillComboCursusbox()
+        {
+            cmbCursussen.DataSource = ef.Courses.ToList();
+            cmbCursussen.ValueMember = "ID";
+            cmbCursussen.DisplayMember = "Name";
+        }
+
     }
 }
