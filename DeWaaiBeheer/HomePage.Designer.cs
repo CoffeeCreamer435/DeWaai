@@ -106,6 +106,7 @@
             this.btnUsers.TabIndex = 0;
             this.btnUsers.Text = "Gebruikers";
             this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // tableLayoutPanel1
             // 

@@ -32,19 +32,18 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.20705F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.79295F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.65134F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.34866F));
             this.tableLayoutPanel1.Controls.Add(this.txtPassword, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblUsername, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblPassword, 0, 1);
@@ -67,11 +66,11 @@
             // 
             // txtPassword
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.txtPassword, 2);
-            this.txtPassword.Location = new System.Drawing.Point(84, 29);
+            this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPassword.Location = new System.Drawing.Point(82, 29);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(167, 20);
-            this.txtPassword.TabIndex = 6;
+            this.txtPassword.Size = new System.Drawing.Size(176, 20);
+            this.txtPassword.TabIndex = 1;
             // 
             // lblUsername
             // 
@@ -80,7 +79,7 @@
             this.lblUsername.Location = new System.Drawing.Point(3, 5);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(75, 21);
+            this.lblUsername.Size = new System.Drawing.Size(73, 21);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "E-mail:";
             // 
@@ -91,47 +90,48 @@
             this.lblPassword.Location = new System.Drawing.Point(3, 31);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(75, 21);
+            this.lblPassword.Size = new System.Drawing.Size(73, 21);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Wachtwoord:";
             // 
-            // btnLogin
-            // 
-            this.btnLogin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnLogin.Location = new System.Drawing.Point(84, 55);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(121, 22);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Inloggen";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
             // txtEmail
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.txtEmail, 2);
-            this.txtEmail.Location = new System.Drawing.Point(84, 3);
+            this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtEmail.Location = new System.Drawing.Point(82, 3);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(167, 20);
-            this.txtEmail.TabIndex = 5;
+            this.txtEmail.Size = new System.Drawing.Size(176, 20);
+            this.txtEmail.TabIndex = 0;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.linkLabel1.Location = new System.Drawing.Point(84, 80);
+            this.linkLabel1.Location = new System.Drawing.Point(82, 80);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(121, 22);
-            this.linkLabel1.TabIndex = 7;
+            this.linkLabel1.Size = new System.Drawing.Size(176, 22);
+            this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Wachtwoord vergeten?";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLogin.Location = new System.Drawing.Point(82, 55);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(176, 22);
+            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Text = "Inloggen";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnExit
             // 
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnExit.Location = new System.Drawing.Point(84, 105);
+            this.btnExit.Location = new System.Drawing.Point(82, 105);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(121, 21);
-            this.btnExit.TabIndex = 8;
+            this.btnExit.Size = new System.Drawing.Size(176, 21);
+            this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);

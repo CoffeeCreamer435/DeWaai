@@ -11,7 +11,7 @@
         <EntityTypeShape EntityType="u480787545_dewaaModel.Instructors" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="u480787545_dewaaModel.InstructorsAvailability" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="u480787545_dewaaModel.Invoice" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u480787545_dewaaModel.Users" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u480787545_dewaaModel.Users" Width="1.5" PointX="7.5" PointY="1.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

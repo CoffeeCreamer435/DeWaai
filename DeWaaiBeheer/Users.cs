@@ -14,10 +14,12 @@ namespace DeWaaiBeheer
     
     public partial class Users
     {
-        public string ID { get; set; }
+        public int ID { get; set; }
         public string Email { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string Fullname { get; set; }
+        public string Firstname { get; set; }
+        public string Insertion { get; set; }
+        public string Surname { get; set; }
         public string Password { get; set; }
         public string Telephone { get; set; }
         public string Mobile { get; set; }
@@ -25,5 +27,6 @@ namespace DeWaaiBeheer
         public string HouseNumber { get; set; }
         public string City { get; set; }
         public string Zip { get; set; }
+        public string Country { get; set; }
     }
 }
