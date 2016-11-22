@@ -219,6 +219,7 @@
             this.btnVloten.TabIndex = 12;
             this.btnVloten.Text = "Vloten";
             this.btnVloten.UseVisualStyleBackColor = true;
+            this.btnVloten.Click += new System.EventHandler(this.btnVloten_Click);
             // 
             // CursusPage
             // 

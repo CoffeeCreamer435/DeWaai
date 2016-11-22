@@ -31,6 +31,7 @@ namespace DeWaaiBeheer
         public DbSet<Instructors> Instructors { get; set; }
         public DbSet<InstructorsAvailability> InstructorsAvailability { get; set; }
         public DbSet<Invoice> Invoice { get; set; }
+        public DbSet<Types> Types { get; set; }
         public DbSet<Users> Users { get; set; }
     }
 }
