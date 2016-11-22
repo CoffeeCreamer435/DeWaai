@@ -46,13 +46,14 @@ namespace DeWaaiBeheer
             Application.Exit();
         }
 
-        private void btnUsers_Click(object sender, EventArgs e)
-        {
-        }
-
         private void btnCourses_Click(object sender, EventArgs e)
         {
-            Program.cursus.Show();   
+            Program.cursus.Show();
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            Program.users.ShowDialog();
         }
     }
 }
