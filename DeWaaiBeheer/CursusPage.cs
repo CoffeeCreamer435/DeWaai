@@ -62,7 +62,8 @@ namespace DeWaaiBeheer
 
         private void btnVloten_Click(object sender, EventArgs e)
         {
-
+            VlotenPage vloten = new VlotenPage();
+            vloten.Show();
         }
     }
 }
