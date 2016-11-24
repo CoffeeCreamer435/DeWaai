@@ -16,6 +16,8 @@ namespace DeWaaiBeheer
         public InstructeurPage()
         {
             InitializeComponent();
+            fillComboCursusbox();
+            fillListBox();
         }
 
         public void fillListBox()
@@ -32,5 +34,9 @@ namespace DeWaaiBeheer
             cmbCursussen.DisplayMember = "Name";
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

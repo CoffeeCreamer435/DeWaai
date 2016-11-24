@@ -51,7 +51,8 @@ namespace DeWaaiBeheer
 
         private void btnGebruikers_Click(object sender, EventArgs e)
         {
-
+            frmUsers Users = new frmUsers();
+            Users.Show();
         }
 
         private void btnInstructeurs_Click(object sender, EventArgs e)
@@ -64,6 +65,12 @@ namespace DeWaaiBeheer
         {
             VlotenPage vloten = new VlotenPage();
             vloten.Show();
+        }
+
+        private void btnCursussen_Click(object sender, EventArgs e)
+        {
+            UserOverzichtPage overzicht = new UserOverzichtPage();
+            overzicht.Show();
         }
     }
 }
