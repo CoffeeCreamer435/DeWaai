@@ -1,6 +1,6 @@
 ﻿namespace DeWaaiBeheer
 {
-    partial class CursusPage
+    partial class frmCourses
     {
         /// <summary>
         /// Required designer variable.
@@ -124,6 +124,7 @@
             this.tableLayoutPanel1.SetRowSpan(this.lstNieuweOverzichten, 6);
             this.lstNieuweOverzichten.Size = new System.Drawing.Size(312, 316);
             this.lstNieuweOverzichten.TabIndex = 0;
+            this.lstNieuweOverzichten.SelectedIndexChanged += new System.EventHandler(this.lstNieuweOverzichten_SelectedIndexChanged);
             // 
             // cmbCursussen
             // 
@@ -326,13 +327,13 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
-            // CursusPage
+            // frmCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 651);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "CursusPage";
+            this.Name = "frmCourses";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CursusPage";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CursusPage_FormClosing);

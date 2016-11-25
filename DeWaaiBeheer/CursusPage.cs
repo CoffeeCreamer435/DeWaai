@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace DeWaaiBeheer
 {
-    public partial class CursusPage : Form
+    public partial class frmCourses : Form
     {
         u480787545_dewaaEntities ef = new u480787545_dewaaEntities();
-        public CursusPage()
+        public frmCourses()
         {
             InitializeComponent();
             FillCursussenList();
@@ -46,7 +46,7 @@ namespace DeWaaiBeheer
 
         private void CursusPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Program.cursus.Hide();
+            Program.courses.Hide();
         }
 
         private void btnGebruikers_Click(object sender, EventArgs e)
@@ -64,8 +64,8 @@ namespace DeWaaiBeheer
 
         private void btnVloten_Click(object sender, EventArgs e)
         {
-            VlotenPage vloten = new VlotenPage();
-            vloten.Show();
+            //VlotenPage vloten = new VlotenPage();
+            //vloten.Show();
         }
 
         private void btnCursussen_Click(object sender, EventArgs e)
