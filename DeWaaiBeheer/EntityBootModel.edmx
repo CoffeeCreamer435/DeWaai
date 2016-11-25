@@ -75,7 +75,6 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CoursesID" Type="int" />
           <Property Name="Email" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Firstname" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Insertion" Type="varchar" MaxLength="255" Nullable="false" />
@@ -88,6 +87,7 @@
           <Property Name="City" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Zip" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Country" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="CoursesID" Type="int" />
         </EntityType>
         <EntityContainer Name="u480787545_dewaaModelStoreContainer">
           <EntitySet Name="BookedCursus" EntityType="Self.BookedCursus" Schema="u480787545_dewaa" store:Type="Tables" />
@@ -183,7 +183,6 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CoursesID" Type="Int32" />
           <Property Name="Email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Firstname" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Insertion" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
@@ -196,6 +195,7 @@
           <Property Name="City" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Zip" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Country" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CoursesID" Type="Int32" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -278,6 +278,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="u480787545_dewaaModel.Users">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="CoursesID" ColumnName="CoursesID" />
                 <ScalarProperty Name="Country" ColumnName="Country" />
                 <ScalarProperty Name="Zip" ColumnName="Zip" />
                 <ScalarProperty Name="City" ColumnName="City" />
@@ -290,7 +291,6 @@
                 <ScalarProperty Name="Insertion" ColumnName="Insertion" />
                 <ScalarProperty Name="Firstname" ColumnName="Firstname" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="CoursesID" ColumnName="CoursesID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

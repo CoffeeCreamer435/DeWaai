@@ -32,11 +32,7 @@ namespace DeWaaiBeheer
                 if(!String.IsNullOrEmpty(txtFirstname.Text) || !String.IsNullOrEmpty(txtSurname.Text) || !String.IsNullOrEmpty(txtStreet.Text) || !String.IsNullOrEmpty(txtHousenr.Text) || !String.IsNullOrEmpty(txtZip.Text) || !String.IsNullOrEmpty(txtCity.Text) || !String.IsNullOrEmpty(txtCountry.Text) || !String.IsNullOrEmpty(txtMobile.Text) || !String.IsNullOrEmpty(txtEmail.Text) || !String.IsNullOrEmpty(txtPass.Text))
                 {
                     if (input != us.Email)
-                    {
-                        if (String.IsNullOrEmpty(txtInsertion.Text))
-                        {
-                            
-                        }         
+                    {     
                         user.Firstname = txtFirstname.Text;
                         user.Insertion = txtInsertion.Text;
                         user.Surname = txtSurname.Text;

@@ -17,6 +17,16 @@ namespace DeWaaiBeheer
             return new ObservableCollection<Users>(ef.Users);
         }
 
+        public ObservableCollection<Courses> getCourses()
+        {
+            return new ObservableCollection<Courses>(ef.Courses);
+        }
+
+        public ObservableCollection<Users> getUsersByCourse(int courseID)
+        {
+            return new ObservableCollection<Users>(ef.Users.Where(x => x.CoursesID == courseID));
+        }
+
         /// <summary>
         /// Method to add user to database
         /// </summary>
@@ -42,7 +52,7 @@ namespace DeWaaiBeheer
             }
             catch (DbEntityValidationException dbex)
             {
-                throw;
+                throw dbex;
             }
           
         }

@@ -15,7 +15,6 @@ namespace DeWaaiBeheer
     public partial class Users
     {
         public int ID { get; set; }
-        public Nullable<int> CoursesID { get; set; }
         public string Email { get; set; }
         public string Firstname { get; set; }
         public string Insertion { get; set; }
@@ -28,10 +27,6 @@ namespace DeWaaiBeheer
         public string City { get; set; }
         public string Zip { get; set; }
         public string Country { get; set; }
-
-        public string Fullname
-        {
-            get { return string.Format("{0} {1} {2}", this.Firstname, this.Insertion, this.Surname); }           
-        }
+        public Nullable<int> CoursesID { get; set; }
     }
 }

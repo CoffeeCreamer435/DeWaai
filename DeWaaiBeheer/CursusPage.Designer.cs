@@ -1,6 +1,6 @@
 ﻿namespace DeWaaiBeheer
 {
-    partial class CursusPage
+    partial class frmCourses
     {
         /// <summary>
         /// Required designer variable.
@@ -42,12 +42,12 @@
             this.btnGebruikers = new System.Windows.Forms.Button();
             this.btnVloten = new System.Windows.Forms.Button();
             this.btnInstructeurs = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -124,6 +124,7 @@
             this.tableLayoutPanel1.SetRowSpan(this.lstNieuweOverzichten, 6);
             this.lstNieuweOverzichten.Size = new System.Drawing.Size(312, 316);
             this.lstNieuweOverzichten.TabIndex = 0;
+            this.lstNieuweOverzichten.SelectedIndexChanged += new System.EventHandler(this.lstNieuweOverzichten_SelectedIndexChanged);
             // 
             // cmbCursussen
             // 
@@ -243,16 +244,6 @@
             this.btnInstructeurs.UseVisualStyleBackColor = true;
             this.btnInstructeurs.Click += new System.EventHandler(this.btnInstructeurs_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 20);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Gebruikers Beheren";
-            // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
@@ -267,15 +258,15 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(206, 59);
             this.tableLayoutPanel6.TabIndex = 17;
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 20);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Instructeurs Beheren";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 20);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Gebruikers Beheren";
             // 
             // tableLayoutPanel5
             // 
@@ -291,15 +282,15 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(206, 59);
             this.tableLayoutPanel5.TabIndex = 17;
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 20);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Vloten Beheren";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(159, 20);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Instructeurs Beheren";
             // 
             // tableLayoutPanel4
             // 
@@ -316,6 +307,16 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(206, 59);
             this.tableLayoutPanel4.TabIndex = 16;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(120, 20);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Vloten Beheren";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::DeWaaiBeheer.Properties.Resources.logo1;
@@ -326,13 +327,14 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
-            // CursusPage
+            // frmCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 651);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "CursusPage";
+            this.Name = "frmCourses";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CursusPage";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CursusPage_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);

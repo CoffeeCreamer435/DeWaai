@@ -11,12 +11,14 @@ using System.Windows.Forms;
 namespace DeWaaiBeheer
 {
     public partial class frmHome : Form
-    {  
+    {
+        private DatabaseMethods db = new DatabaseMethods();
+
         public frmHome()
         {
             InitializeComponent();
-            WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            FillCursussenList();
+            fillComboCursussen();
         }
 
         private void frnHome_Load(object sender, EventArgs e)
@@ -48,12 +50,43 @@ namespace DeWaaiBeheer
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
-            Program.cursus.Show();
+            Program.courses.Show();
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Program.users.ShowDialog();
+        }
+
+        public void FillCursussenList()
+        {
+            lstNewCharts.DataSource = db.getCourses();
+            lstNewCharts.ValueMember = "ID";
+            lstNewCharts.DisplayMember = "Title";
+        }
+
+        public void fillComboCursussen()
+        {
+            cmbCourses.DataSource = db.getCourses();
+            cmbCourses.ValueMember = "ID";
+            cmbCourses.DisplayMember = "Title";
+        }
+
+        private void cmbCourses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Courses course = cmbCourses.SelectedItem as Courses;
+            BindingSource user = new BindingSource { DataSource = db.getUsersByCourse(course.ID) };
+            cmbCourses.DataSource = user;
+            cmbCourses.DisplayMember = "Title";
+            ResetList(course);
+        }
+
+        private void ResetList(Courses course)
+        {
+            lstNewCharts.DataBindings.Clear();
+
+            lstNewCharts.DataBindings.Add(new Binding("Text", course, "Title"));
         }
     }
 }

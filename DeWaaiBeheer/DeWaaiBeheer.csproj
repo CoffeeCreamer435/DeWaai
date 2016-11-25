@@ -70,7 +70,7 @@
     <Compile Include="CursusPage.Designer.cs">
       <DependentUpon>CursusPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseMethods.cs" />
+    <Compile Include="Classes\DatabaseMethods.cs" />
     <Compile Include="EntityBootModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,10 +89,10 @@
     <Compile Include="Fleet.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="HomePage.cs">
+    <Compile Include="Home\HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomePage.Designer.cs">
+    <Compile Include="Home\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Instructors.cs">
@@ -104,22 +104,22 @@
     <Compile Include="Invoice.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="LoginPage.cs">
+    <Compile Include="Home\LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginPage.Designer.cs">
+    <Compile Include="Home\LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyAccount.cs">
+    <Compile Include="Admin\MyAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyAccount.Designer.cs">
+    <Compile Include="Admin\MyAccount.Designer.cs">
       <DependentUpon>MyAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewUserPage.cs">
+    <Compile Include="Users\NewUserPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewUserPage.Designer.cs">
+    <Compile Include="Users\NewUserPage.Designer.cs">
       <DependentUpon>NewUserPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -127,6 +127,7 @@
     <Compile Include="Types.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Classes\UserClass.cs" />
     <Compile Include="UserOverzichtPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,10 +137,10 @@
     <Compile Include="Users.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="UsersPage.cs">
+    <Compile Include="Users\UsersPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsersPage.designer.cs">
+    <Compile Include="Users\UsersPage.designer.cs">
       <DependentUpon>UsersPage.cs</DependentUpon>
     </Compile>
     <Compile Include="VlotenPage.cs">
@@ -151,16 +152,16 @@
     <EmbeddedResource Include="CursusPage.resx">
       <DependentUpon>CursusPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomePage.resx">
+    <EmbeddedResource Include="Home\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginPage.resx">
+    <EmbeddedResource Include="Home\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyAccount.resx">
+    <EmbeddedResource Include="Admin\MyAccount.resx">
       <DependentUpon>MyAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewUserPage.resx">
+    <EmbeddedResource Include="Users\NewUserPage.resx">
       <DependentUpon>NewUserPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -176,7 +177,7 @@
     <EmbeddedResource Include="UserOverzichtPage.resx">
       <DependentUpon>UserOverzichtPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsersPage.resx">
+    <EmbeddedResource Include="Users\UsersPage.resx">
       <DependentUpon>UsersPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VlotenPage.resx">

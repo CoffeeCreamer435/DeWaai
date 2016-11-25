@@ -32,10 +32,8 @@ namespace DeWaaiBeheer
         private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
             Users user = lstUsers.SelectedItem as Users;
-            resetUsersBySelected(user);
-
             lstUsers.DataSource = db.getUsers();
-            lstUsers.DisplayMember = "Fullname";
+            resetUsersBySelected(user);           
         }
 
         private void resetUsersBySelected(Users user)
@@ -70,11 +68,6 @@ namespace DeWaaiBeheer
                 txtEmail.DataBindings.Add("Text", user, "Email");
                 txtPass.DataBindings.Add("Text", user, "Password");
             }
-            else
-            {
-                MessageBox.Show("Er ging iets mis! Probeer het opnieuw.");
-            }
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -109,7 +102,24 @@ namespace DeWaaiBeheer
         {
             db.SaveChanges();
             MessageBox.Show("De gegevens zijn succesvol gewijzigd!");
-        }    
+        }
+
+        private void btnCharts_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHomepage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.home.Show();
+        }
+
+        private void btnCourses_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.courses.Show();
+        }
     }
 }
 
