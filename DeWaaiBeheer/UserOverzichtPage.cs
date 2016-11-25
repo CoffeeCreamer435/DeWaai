@@ -29,5 +29,12 @@ namespace DeWaaiBeheer
         {
             ef.SaveChanges();
         }
+
+        private void btnInstrucors_Click(object sender, EventArgs e)
+        {
+            InstructeurPage instructors = new InstructeurPage();
+            instructors.Show();
+            this.Close();
+        }
     }
 }

@@ -14,6 +14,8 @@ namespace DeWaaiBeheer
         public static CursusPage cursus = new CursusPage();
         public static frmUsers users = new frmUsers();
         public static frmNewUser newUser = new frmNewUser();
+        public static VlotenPage vloten = new VlotenPage();
+        public static InstructeurPage instructor = new InstructeurPage();
         
 
         /// <summary>
