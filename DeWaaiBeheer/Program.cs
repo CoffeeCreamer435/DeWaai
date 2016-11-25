@@ -13,6 +13,7 @@ namespace DeWaaiBeheer
         public static frmMyAccount account = new frmMyAccount();
         public static CursusPage cursus = new CursusPage();
         public static frmUsers users = new frmUsers();
+        public static frmNewUser newUser = new frmNewUser();
         
 
         /// <summary>

@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Data.Entity.Validation;
 using System.Linq;
 
 namespace DeWaaiBeheer
@@ -24,7 +25,7 @@ namespace DeWaaiBeheer
         {
             ef.Users.Add(user);
         }
-
+      
         public void RemoveUser(int userId)
         {
             ef.Users.Remove(getUsers().First(x => x.ID == userId));
@@ -35,7 +36,15 @@ namespace DeWaaiBeheer
         /// </summary>
         public void SaveChanges()
         {
-            ef.SaveChanges();
+            try
+            {
+                ef.SaveChanges();
+            }
+            catch (DbEntityValidationException dbex)
+            {
+                throw;
+            }
+          
         }
     }
 }

@@ -18,5 +18,6 @@ namespace DeWaaiBeheer
         public int Amount { get; set; }
         public int TypeID { get; set; }
         public string Status { get; set; }
+        public string Name { get; set; }
     }
 }

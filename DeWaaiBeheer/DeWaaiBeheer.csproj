@@ -12,21 +12,6 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -110,12 +95,6 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="InstructeurPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InstructeurPage.Designer.cs">
-      <DependentUpon>InstructeurPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Instructors.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
@@ -137,6 +116,12 @@
     <Compile Include="MyAccount.Designer.cs">
       <DependentUpon>MyAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewUserPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUserPage.Designer.cs">
+      <DependentUpon>NewUserPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Types.cs">
@@ -151,26 +136,20 @@
     <Compile Include="UsersPage.designer.cs">
       <DependentUpon>UsersPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="VlotenPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VlotenPage.Designer.cs">
-      <DependentUpon>VlotenPage.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="CursusPage.resx">
       <DependentUpon>CursusPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InstructeurPage.resx">
-      <DependentUpon>InstructeurPage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyAccount.resx">
       <DependentUpon>MyAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUserPage.resx">
+      <DependentUpon>NewUserPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -183,9 +162,6 @@
     </Compile>
     <EmbeddedResource Include="UsersPage.resx">
       <DependentUpon>UsersPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VlotenPage.resx">
-      <DependentUpon>VlotenPage.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="EntityBootModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -222,18 +198,6 @@
       <DependentUpon>EntityBootModel.edmx</DependentUpon>
       <LastGenOutput>EntityBootModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
