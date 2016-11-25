@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace DeWaaiBeheer
 {
-    public partial class UserOverzichtPage : Form
+    public partial class CoursesAddEditPage : Form
     {
         u480787545_dewaaEntities ef = new u480787545_dewaaEntities();
-        public UserOverzichtPage()
+        public CoursesAddEditPage()
         {
             InitializeComponent();
         }

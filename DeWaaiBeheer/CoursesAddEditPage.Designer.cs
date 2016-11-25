@@ -1,6 +1,6 @@
 ﻿namespace DeWaaiBeheer
 {
-    partial class UserOverzichtPage
+    partial class CoursesAddEditPage
     {
         /// <summary>
         /// Required designer variable.

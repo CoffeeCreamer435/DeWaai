@@ -133,11 +133,11 @@
     <Compile Include="Types.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserOverzichtPage.cs">
+    <Compile Include="CoursesAddEditPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserOverzichtPage.Designer.cs">
-      <DependentUpon>UserOverzichtPage.cs</DependentUpon>
+    <Compile Include="CoursesAddEditPage.Designer.cs">
+      <DependentUpon>CoursesAddEditPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Users.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
@@ -182,8 +182,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserOverzichtPage.resx">
-      <DependentUpon>UserOverzichtPage.cs</DependentUpon>
+    <EmbeddedResource Include="CoursesAddEditPage.resx">
+      <DependentUpon>CoursesAddEditPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsersPage.resx">
       <DependentUpon>UsersPage.cs</DependentUpon>

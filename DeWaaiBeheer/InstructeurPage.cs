@@ -36,12 +36,12 @@ namespace DeWaaiBeheer
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
-            UserOverzichtPage users = new UserOverzichtPage();
+            CoursesAddEditPage users = new CoursesAddEditPage();
             users.Show();
             this.Close();
 
