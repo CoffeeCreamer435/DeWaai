@@ -34,5 +34,15 @@ namespace DeWaaiBeheer
             lstBootSoorten.ValueMember = "ID";
 
         }
+
+        private void btnVlootSave_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void btnBootSave_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
