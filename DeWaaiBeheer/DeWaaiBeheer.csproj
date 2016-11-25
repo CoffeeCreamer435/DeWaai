@@ -142,6 +142,12 @@
     <Compile Include="UsersPage.designer.cs">
       <DependentUpon>UsersPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="VlotenPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VlotenPage.Designer.cs">
+      <DependentUpon>VlotenPage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CursusPage.resx">
       <DependentUpon>CursusPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsersPage.resx">
       <DependentUpon>UsersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VlotenPage.resx">
+      <DependentUpon>VlotenPage.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="EntityBootModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
