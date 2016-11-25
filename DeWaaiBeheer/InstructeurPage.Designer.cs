@@ -34,20 +34,24 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.lstInstructeurs = new System.Windows.Forms.ListBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cmbCursussen = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cmbCursussen = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCourses = new System.Windows.Forms.Button();
+            this.btnInstrucors = new System.Windows.Forms.Button();
+            this.btnFleet = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,12 +71,16 @@
             this.tableLayoutPanel1.Controls.Add(this.lblNieuweOpgaven, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.lstInstructeurs, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 5, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 6, 2);
-            this.tableLayoutPanel1.Controls.Add(this.cmbCursussen, 6, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 5, 5);
-            this.tableLayoutPanel1.Controls.Add(this.btnSave, 7, 6);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 9, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cmbCursussen, 5, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnSave, 6, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnCourses, 8, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnInstrucors, 8, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnFleet, 8, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnUsers, 8, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -145,71 +153,9 @@
             this.lstInstructeurs.FormattingEnabled = true;
             this.lstInstructeurs.Location = new System.Drawing.Point(3, 131);
             this.lstInstructeurs.Name = "lstInstructeurs";
-            this.tableLayoutPanel1.SetRowSpan(this.lstInstructeurs, 6);
-            this.lstInstructeurs.Size = new System.Drawing.Size(312, 381);
+            this.tableLayoutPanel1.SetRowSpan(this.lstInstructeurs, 8);
+            this.lstInstructeurs.Size = new System.Drawing.Size(312, 511);
             this.lstInstructeurs.TabIndex = 0;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel4, 2);
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.textBox1, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.textBox2, 0, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(639, 131);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel1.SetRowSpan(this.tableLayoutPanel4, 3);
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.31579F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.68421F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(206, 189);
-            this.tableLayoutPanel4.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(3, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 6;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(3, 33);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 153);
-            this.textBox1.TabIndex = 5;
-            // 
-            // cmbCursussen
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.cmbCursussen, 2);
-            this.cmbCursussen.FormattingEnabled = true;
-            this.cmbCursussen.Location = new System.Drawing.Point(639, 326);
-            this.cmbCursussen.Name = "cmbCursussen";
-            this.cmbCursussen.Size = new System.Drawing.Size(206, 21);
-            this.cmbCursussen.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(533, 323);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 20);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Cursussen";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(745, 391);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 23);
-            this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "Opslaan";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // tableLayoutPanel5
             // 
@@ -217,7 +163,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(533, 131);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(427, 131);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -245,6 +191,68 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Naam";
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel4, 2);
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.textBox1, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.textBox2, 0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(533, 131);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel1.SetRowSpan(this.tableLayoutPanel4, 3);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.31579F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.68421F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(206, 189);
+            this.tableLayoutPanel4.TabIndex = 7;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(3, 33);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 153);
+            this.textBox1.TabIndex = 5;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(3, 3);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(200, 20);
+            this.textBox2.TabIndex = 6;
+            // 
+            // cmbCursussen
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.cmbCursussen, 2);
+            this.cmbCursussen.FormattingEnabled = true;
+            this.cmbCursussen.Location = new System.Drawing.Point(533, 326);
+            this.cmbCursussen.Name = "cmbCursussen";
+            this.cmbCursussen.Size = new System.Drawing.Size(206, 21);
+            this.cmbCursussen.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(427, 323);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Cursussen";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(639, 391);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(100, 23);
+            this.btnSave.TabIndex = 12;
+            this.btnSave.Text = "Opslaan";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DeWaaiBeheer.Properties.Resources.logo1;
@@ -255,6 +263,47 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // btnCourses
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.btnCourses, 2);
+            this.btnCourses.Location = new System.Drawing.Point(851, 196);
+            this.btnCourses.Name = "btnCourses";
+            this.btnCourses.Size = new System.Drawing.Size(213, 59);
+            this.btnCourses.TabIndex = 14;
+            this.btnCourses.Text = "Cursussen";
+            this.btnCourses.UseVisualStyleBackColor = true;
+            this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
+            // 
+            // btnInstrucors
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.btnInstrucors, 2);
+            this.btnInstrucors.Location = new System.Drawing.Point(851, 261);
+            this.btnInstrucors.Name = "btnInstrucors";
+            this.btnInstrucors.Size = new System.Drawing.Size(213, 59);
+            this.btnInstrucors.TabIndex = 15;
+            this.btnInstrucors.Text = "Instructeurs";
+            this.btnInstrucors.UseVisualStyleBackColor = true;
+            // 
+            // btnFleet
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.btnFleet, 2);
+            this.btnFleet.Location = new System.Drawing.Point(851, 326);
+            this.btnFleet.Name = "btnFleet";
+            this.btnFleet.Size = new System.Drawing.Size(213, 59);
+            this.btnFleet.TabIndex = 16;
+            this.btnFleet.Text = "Vloten";
+            this.btnFleet.UseVisualStyleBackColor = true;
+            // 
+            // btnUsers
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.btnUsers, 2);
+            this.btnUsers.Location = new System.Drawing.Point(851, 391);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(213, 59);
+            this.btnUsers.TabIndex = 17;
+            this.btnUsers.Text = "Gebruikers";
+            this.btnUsers.UseVisualStyleBackColor = true;
+            // 
             // InstructeurPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,14 +311,15 @@
             this.ClientSize = new System.Drawing.Size(1067, 651);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "InstructeurPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InstructeurPage";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -293,5 +343,9 @@
         private System.Windows.Forms.ComboBox cmbCursussen;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnCourses;
+        private System.Windows.Forms.Button btnInstrucors;
+        private System.Windows.Forms.Button btnFleet;
+        private System.Windows.Forms.Button btnUsers;
     }
 }

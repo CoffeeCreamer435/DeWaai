@@ -38,5 +38,13 @@ namespace DeWaaiBeheer
         {
 
         }
+
+        private void btnCourses_Click(object sender, EventArgs e)
+        {
+            UserOverzichtPage users = new UserOverzichtPage();
+            users.Show();
+            this.Close();
+
+        }
     }
 }

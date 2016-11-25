@@ -57,8 +57,9 @@ namespace DeWaaiBeheer
 
         private void btnInstructeurs_Click(object sender, EventArgs e)
         {
-            //InstructeurPage instructeurs = new InstructeurPage();
-            //instructeurs.Show();
+            InstructeurPage instructors = new InstructeurPage();
+            instructors.Show();
+            this.Close();
         }
 
         private void btnVloten_Click(object sender, EventArgs e)
