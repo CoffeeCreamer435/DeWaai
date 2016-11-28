@@ -52,7 +52,7 @@ namespace DeWaaiBeheer
         {
             CoursesAddEditPage users = new CoursesAddEditPage();
             users.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
