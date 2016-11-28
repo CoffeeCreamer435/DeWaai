@@ -12,7 +12,7 @@ namespace DeWaaiBeheer
 {
     public partial class InstructeurPage : Form
     {
-        u480787545_dewaaEntities ef = new u480787545_dewaaEntities();
+        DatabaseMethods db = new DatabaseMethods();
         public InstructeurPage()
         {
             InitializeComponent();
@@ -22,21 +22,21 @@ namespace DeWaaiBeheer
 
         public void fillListBox()
         {
-            lstInstructeurs.DataSource = ef.Instructors.ToList();
+            lstInstructeurs.DataSource = db.GetInstructors();
             lstInstructeurs.ValueMember = "ID";
             lstInstructeurs.DisplayMember = "Name";
         }
 
         public void fillComboCursusbox()
         {
-            cmbCursussen.DataSource = ef.Courses.ToList();
+            cmbCursussen.DataSource = db.getCourses();
             cmbCursussen.ValueMember = "ID";
             cmbCursussen.DisplayMember = "Name";
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            
+            db.SaveChanges();
         }
 
         private void btnCourses_Click(object sender, EventArgs e)
@@ -44,6 +44,18 @@ namespace DeWaaiBeheer
             CoursesAddEditPage users = new CoursesAddEditPage();
             users.Show();
             this.Close();
+
+        }
+
+        private void btnFleet_Click(object sender, EventArgs e)
+        {
+            VlotenPage vloten = new VlotenPage();
+            vloten.Show();
+            this.Close();
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
 
         }
     }

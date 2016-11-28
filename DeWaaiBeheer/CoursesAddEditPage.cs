@@ -12,7 +12,7 @@ namespace DeWaaiBeheer
 {
     public partial class CoursesAddEditPage : Form
     {
-        u480787545_dewaaEntities ef = new u480787545_dewaaEntities();
+        DatabaseMethods db = new DatabaseMethods();
         public CoursesAddEditPage()
         {
             InitializeComponent();
@@ -20,20 +20,27 @@ namespace DeWaaiBeheer
 
         public void FillListCursussen()
         {
-            lstCursussen.DataSource = ef.Courses.ToList();
+            lstCursussen.DataSource = db.getCourses();
             lstCursussen.ValueMember = "ID";
             lstCursussen.DisplayMember = "Name";
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            ef.SaveChanges();
+            db.SaveChanges();
         }
 
         private void btnInstrucors_Click(object sender, EventArgs e)
         {
             InstructeurPage instructors = new InstructeurPage();
             instructors.Show();
+            this.Close();
+        }
+
+        private void btnFleet_Click(object sender, EventArgs e)
+        {
+            VlotenPage vloten = new VlotenPage();
+            vloten.Show();
             this.Close();
         }
     }

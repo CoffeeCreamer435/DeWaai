@@ -34,6 +34,7 @@
             this.txtPrijs = new System.Windows.Forms.TextBox();
             this.lblNieuweOpgaven = new System.Windows.Forms.Label();
             this.lstCursussen = new System.Windows.Forms.ListBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,17 +45,16 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCourses = new System.Windows.Forms.Button();
             this.btnInstrucors = new System.Windows.Forms.Button();
             this.btnFleet = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -154,6 +154,16 @@
             this.tableLayoutPanel1.SetRowSpan(this.lstCursussen, 6);
             this.lstCursussen.Size = new System.Drawing.Size(307, 355);
             this.lstCursussen.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DeWaaiBeheer.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(957, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 105);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel5
             // 
@@ -267,16 +277,6 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Image Link";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DeWaaiBeheer.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(957, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(100, 105);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnCourses
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.btnCourses, 2);
@@ -307,6 +307,7 @@
             this.btnFleet.TabIndex = 20;
             this.btnFleet.Text = "Vloten";
             this.btnFleet.UseVisualStyleBackColor = true;
+            this.btnFleet.Click += new System.EventHandler(this.btnFleet_Click);
             // 
             // btnUsers
             // 
@@ -318,26 +319,26 @@
             this.btnUsers.Text = "Gebruikers";
             this.btnUsers.UseVisualStyleBackColor = true;
             // 
-            // UserOverzichtPage
+            // CoursesAddEditPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 651);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "UserOverzichtPage";
+            this.Name = "CoursesAddEditPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserOverzichtPage";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

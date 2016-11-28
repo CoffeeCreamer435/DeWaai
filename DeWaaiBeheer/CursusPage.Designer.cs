@@ -124,7 +124,7 @@
             this.tableLayoutPanel1.SetRowSpan(this.lstNieuweOverzichten, 6);
             this.lstNieuweOverzichten.Size = new System.Drawing.Size(312, 316);
             this.lstNieuweOverzichten.TabIndex = 0;
-            this.lstNieuweOverzichten.SelectedIndexChanged += new System.EventHandler(this.lstNieuweOverzichten_SelectedIndexChanged);
+   
             // 
             // cmbCursussen
             // 

@@ -117,8 +117,9 @@ namespace DeWaaiBeheer
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Program.courses.Show();
+            CoursesAddEditPage users = new CoursesAddEditPage();
+            users.Show();
+            this.Close();
         }
     }
 }
