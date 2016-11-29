@@ -8,18 +8,10 @@ namespace DeWaaiBeheer
     {
         private u480787545_dewaaEntities ef = new u480787545_dewaaEntities();
 
-        /// <summary>
-        /// Gets all users of database
-        /// </summary>
-        /// <returns>Returns a list of all users</returns>
+        #region User Methods
         public ObservableCollection<Users> getUsers()
         {
             return new ObservableCollection<Users>(ef.Users);
-        }
-
-        public ObservableCollection<Courses> getCourses()
-        {
-            return new ObservableCollection<Courses>(ef.Courses);
         }
 
         public ObservableCollection<Users> getUsersByCourse(int courseID)
@@ -27,23 +19,21 @@ namespace DeWaaiBeheer
             return new ObservableCollection<Users>(ef.Users.Where(x => x.CoursesID == courseID));
         }
 
-        /// <summary>
-        /// Method to add user to database
-        /// </summary>
-        /// <param name="user">Variable that contains the user table</param>
+  
         public void AddUser(Users user)
         {
             ef.Users.Add(user);
         }
-      
+     
+
         public void RemoveUser(int userId)
         {
             ef.Users.Remove(getUsers().First(x => x.ID == userId));
         }
+        #endregion
 
-        /// <summary>
-        /// Method to save changes in database
-        /// </summary>
+        #region Savechanges
+        // Saves Changes
         public void SaveChanges()
         {
             try
@@ -56,5 +46,34 @@ namespace DeWaaiBeheer
             }
           
         }
+        #endregion
+
+        #region Courses Methods
+        public ObservableCollection<Courses> getCourses()
+        {
+            return new ObservableCollection<Courses>(ef.Courses);
+        }
+        #endregion
+
+        #region Fleet Methods
+        public ObservableCollection<Fleet> getFleet()
+        {
+            return new ObservableCollection<Fleet>(ef.Fleet);
+        }
+        #endregion
+
+        #region Instructors Methods
+        public ObservableCollection<Instructors> GetInstructors()
+        {
+            return new ObservableCollection<Instructors>(ef.Instructors);
+        }
+        #endregion
+
+        #region
+        public ObservableCollection<Types> GetBoatTypes()
+        {
+            return new ObservableCollection<Types>(ef.Types);
+        }
+        #endregion
     }
 }

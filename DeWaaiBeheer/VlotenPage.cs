@@ -12,7 +12,7 @@ namespace DeWaaiBeheer
 {
     public partial class VlotenPage : Form
     {
-        u480787545_dewaaEntities ef = new u480787545_dewaaEntities();
+        DatabaseMethods db = new DatabaseMethods();
         public VlotenPage()
         {
             InitializeComponent();
@@ -22,14 +22,14 @@ namespace DeWaaiBeheer
 
         public void fillVlotenBox()
         {
-            lstVloot.DataSource = ef.Fleet.ToList();
+            lstVloot.DataSource = db.getFleet();
             lstVloot.DisplayMember = "Name";
             lstVloot.ValueMember = "ID";
         }
 
         public void fillBootSoortenBox()
         {
-            lstBootSoorten.DataSource = ef.Types.ToList();
+            lstBootSoorten.DataSource = db.GetBoatTypes();
             lstBootSoorten.DisplayMember = "Name";
             lstBootSoorten.ValueMember = "ID";
 
@@ -37,12 +37,37 @@ namespace DeWaaiBeheer
 
         private void btnVlootSave_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            db.SaveChanges();
         }
 
         private void btnBootSave_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            db.SaveChanges();
+        }
+
+      
+        private void btnFleet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCourses_Click(object sender, EventArgs e)
+        {
+            CoursesAddEditPage users = new CoursesAddEditPage();
+            users.Show();
+            this.Close();
+        }
+
+        private void btnInstrucors_Click(object sender, EventArgs e)
+        {
+            InstructeurPage instructors = new InstructeurPage();
+            instructors.Show();
+            this.Close();
         }
     }
 }
