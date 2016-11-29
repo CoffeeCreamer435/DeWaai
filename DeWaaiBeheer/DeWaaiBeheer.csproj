@@ -101,15 +101,6 @@
     <Compile Include="InstructeurPage.Designer.cs">
       <DependentUpon>InstructeurPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Instructors.cs">
-      <DependentUpon>EntityBootModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="InstructorsAvailability.cs">
-      <DependentUpon>EntityBootModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Invoice.cs">
-      <DependentUpon>EntityBootModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Home\LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +112,18 @@
     </Compile>
     <Compile Include="Admin\MyAccount.Designer.cs">
       <DependentUpon>MyAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructors.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorsAvailability.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Users\NewUserPage.cs">
       <SubType>Form</SubType>
@@ -139,9 +142,6 @@
     </Compile>
     <Compile Include="UserOverzichtPage.Designer.cs">
       <DependentUpon>UserOverzichtPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Users.cs">
-      <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Users\UsersPage.cs">
       <SubType>Form</SubType>

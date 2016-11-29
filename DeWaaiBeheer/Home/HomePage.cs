@@ -17,8 +17,12 @@ namespace DeWaaiBeheer
         public frmHome()
         {
             InitializeComponent();
-            FillCursussenList();
-            fillComboCursussen();
+
+            Courses course = cmbCourses.SelectedItem as Courses;
+           // BindingSource user = new BindingSource { DataSource = db.getUsersByCourse(course.ID) };
+            //cmbCourses.DataSource = user;
+            //cmbCourses.DisplayMember = "Title";
+            //ResetList(course);
         }
 
         private void frnHome_Load(object sender, EventArgs e)
@@ -59,27 +63,23 @@ namespace DeWaaiBeheer
             Program.users.ShowDialog();
         }
 
-        public void FillCursussenList()
-        {
-            lstNewCharts.DataSource = db.getCourses();
-            lstNewCharts.ValueMember = "ID";
-            lstNewCharts.DisplayMember = "Title";
-        }
+        //public void FillCursussenList()
+        //{
+        //    lstNewCharts.DataSource = db.getCourses();
+        //    lstNewCharts.ValueMember = "ID";
+        //    lstNewCharts.DisplayMember = "Title";
+        //}
 
-        public void fillComboCursussen()
-        {
-            cmbCourses.DataSource = db.getCourses();
-            cmbCourses.ValueMember = "ID";
-            cmbCourses.DisplayMember = "Title";
-        }
+        //public void fillComboCursussen()
+        //{
+        //    cmbCourses.DataSource = db.getCourses();
+        //    cmbCourses.ValueMember = "ID";
+        //    cmbCourses.DisplayMember = "Title";
+        //}
 
         private void cmbCourses_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Courses course = cmbCourses.SelectedItem as Courses;
-            BindingSource user = new BindingSource { DataSource = db.getUsersByCourse(course.ID) };
-            cmbCourses.DataSource = user;
-            cmbCourses.DisplayMember = "Title";
-            ResetList(course);
+            
         }
 
         private void ResetList(Courses course)
