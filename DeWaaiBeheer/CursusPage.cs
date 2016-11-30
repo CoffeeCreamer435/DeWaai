@@ -70,8 +70,8 @@ namespace DeWaaiBeheer
 
         private void btnCursussen_Click(object sender, EventArgs e)
         {
-            CoursesAddEditPage overzicht = new CoursesAddEditPage();
-            overzicht.Show();
+            //CoursesAddEditPage overzicht = new CoursesAddEditPage();
+           // overzicht.Show();
         }
     }
 }

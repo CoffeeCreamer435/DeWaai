@@ -59,8 +59,8 @@
             // 
             this.tlpMain.ColumnCount = 3;
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.26887F));
-            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.21227F));
-            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.45454F));
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.89247F));
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.91398F));
             this.tlpMain.Controls.Add(this.btnReviews, 2, 3);
             this.tlpMain.Controls.Add(this.btnInscriptions, 2, 2);
             this.tlpMain.Controls.Add(this.tableLayoutPanel1, 0, 0);
@@ -86,9 +86,9 @@
             // 
             this.btnReviews.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnReviews.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold);
-            this.btnReviews.Location = new System.Drawing.Point(509, 238);
+            this.btnReviews.Location = new System.Drawing.Point(505, 238);
             this.btnReviews.Name = "btnReviews";
-            this.btnReviews.Size = new System.Drawing.Size(418, 109);
+            this.btnReviews.Size = new System.Drawing.Size(422, 109);
             this.btnReviews.TabIndex = 3;
             this.btnReviews.Text = "Overzichten";
             this.btnReviews.UseVisualStyleBackColor = true;
@@ -97,9 +97,9 @@
             // 
             this.btnInscriptions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnInscriptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold);
-            this.btnInscriptions.Location = new System.Drawing.Point(509, 123);
+            this.btnInscriptions.Location = new System.Drawing.Point(505, 123);
             this.btnInscriptions.Name = "btnInscriptions";
-            this.btnInscriptions.Size = new System.Drawing.Size(418, 109);
+            this.btnInscriptions.Size = new System.Drawing.Size(422, 109);
             this.btnInscriptions.TabIndex = 1;
             this.btnInscriptions.Text = "Inschrijvingen";
             this.btnInscriptions.UseVisualStyleBackColor = true;
@@ -123,38 +123,39 @@
             // msName
             // 
             this.msName.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.msName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.msName.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nameToolStripMenuItem});
             this.msName.Location = new System.Drawing.Point(0, 0);
             this.msName.Name = "msName";
-            this.msName.Size = new System.Drawing.Size(338, 45);
+            this.msName.Size = new System.Drawing.Size(338, 49);
             this.msName.TabIndex = 0;
             this.msName.Text = "menuStrip1";
             // 
             // nameToolStripMenuItem
             // 
+            this.nameToolStripMenuItem.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.nameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.myAccountToolStripMenuItem,
             this.logoutToolStripMenuItem});
-            this.nameToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Underline);
+            this.nameToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.nameToolStripMenuItem.Name = "nameToolStripMenuItem";
-            this.nameToolStripMenuItem.Size = new System.Drawing.Size(100, 40);
+            this.nameToolStripMenuItem.Size = new System.Drawing.Size(100, 45);
             this.nameToolStripMenuItem.Text = "Name";
-            this.nameToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // myAccountToolStripMenuItem
             // 
-            this.myAccountToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.myAccountToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.myAccountToolStripMenuItem.Name = "myAccountToolStripMenuItem";
-            this.myAccountToolStripMenuItem.Size = new System.Drawing.Size(231, 42);
+            this.myAccountToolStripMenuItem.Size = new System.Drawing.Size(217, 36);
             this.myAccountToolStripMenuItem.Text = "My account";
             this.myAccountToolStripMenuItem.Click += new System.EventHandler(this.myAccountToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
-            this.logoutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.logoutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(231, 42);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(217, 36);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -162,9 +163,9 @@
             // 
             this.btnCourses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCourses.Location = new System.Drawing.Point(509, 353);
+            this.btnCourses.Location = new System.Drawing.Point(505, 353);
             this.btnCourses.Name = "btnCourses";
-            this.btnCourses.Size = new System.Drawing.Size(418, 109);
+            this.btnCourses.Size = new System.Drawing.Size(422, 109);
             this.btnCourses.TabIndex = 4;
             this.btnCourses.Text = "Cursussen";
             this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
@@ -173,9 +174,9 @@
             // 
             this.btnUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold);
-            this.btnUsers.Location = new System.Drawing.Point(509, 468);
+            this.btnUsers.Location = new System.Drawing.Point(505, 468);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(418, 110);
+            this.btnUsers.Size = new System.Drawing.Size(422, 110);
             this.btnUsers.TabIndex = 0;
             this.btnUsers.Text = "Gebruikers";
             this.btnUsers.UseVisualStyleBackColor = true;
@@ -185,10 +186,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(509, 55);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(505, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(418, 65);
+            this.label1.Size = new System.Drawing.Size(422, 65);
             this.label1.TabIndex = 7;
             this.label1.Text = "Overzichten";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -198,10 +199,10 @@
             this.label2.AutoSize = true;
             this.tlpMain.SetColumnSpan(this.label2, 2);
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(3, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(500, 65);
+            this.label2.Size = new System.Drawing.Size(496, 65);
             this.label2.TabIndex = 8;
             this.label2.Text = "Nieuwe inschrijvingen";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -210,9 +211,9 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tlpMain.SetColumnSpan(this.tableLayoutPanel2, 2);
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.26846F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.73154F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 183F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.77778F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.22222F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 184F));
             this.tableLayoutPanel2.Controls.Add(this.lblCursussenSelecteer, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cmbCourses, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lstNewCharts, 0, 1);
@@ -236,7 +237,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(500, 455);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(496, 455);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
             // lblCursussenSelecteer
@@ -246,7 +247,7 @@
             this.lblCursussenSelecteer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lblCursussenSelecteer.Location = new System.Drawing.Point(3, 0);
             this.lblCursussenSelecteer.Name = "lblCursussenSelecteer";
-            this.lblCursussenSelecteer.Size = new System.Drawing.Size(121, 37);
+            this.lblCursussenSelecteer.Size = new System.Drawing.Size(111, 37);
             this.lblCursussenSelecteer.TabIndex = 8;
             this.lblCursussenSelecteer.Text = "Cursussen:";
             // 
@@ -255,9 +256,9 @@
             this.tableLayoutPanel2.SetColumnSpan(this.cmbCourses, 2);
             this.cmbCourses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbCourses.FormattingEnabled = true;
-            this.cmbCourses.Location = new System.Drawing.Point(130, 3);
+            this.cmbCourses.Location = new System.Drawing.Point(120, 3);
             this.cmbCourses.Name = "cmbCourses";
-            this.cmbCourses.Size = new System.Drawing.Size(367, 21);
+            this.cmbCourses.Size = new System.Drawing.Size(373, 21);
             this.cmbCourses.TabIndex = 9;
             this.cmbCourses.SelectedIndexChanged += new System.EventHandler(this.cmbCourses_SelectedIndexChanged);
             // 
@@ -269,7 +270,7 @@
             this.lstNewCharts.Location = new System.Drawing.Point(3, 40);
             this.lstNewCharts.Name = "lstNewCharts";
             this.tableLayoutPanel2.SetRowSpan(this.lstNewCharts, 3);
-            this.lstNewCharts.Size = new System.Drawing.Size(310, 412);
+            this.lstNewCharts.Size = new System.Drawing.Size(305, 412);
             this.lstNewCharts.TabIndex = 10;
             // 
             // tableLayoutPanel3
@@ -279,7 +280,7 @@
             this.tableLayoutPanel3.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button2, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.button3, 0, 2);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(319, 40);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(314, 40);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.25373F));

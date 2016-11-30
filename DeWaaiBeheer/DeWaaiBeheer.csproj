@@ -122,6 +122,7 @@
     <Compile Include="Invoice.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Classes\UserClass.cs" />
     <Compile Include="Users.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
