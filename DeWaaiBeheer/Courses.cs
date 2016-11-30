@@ -14,11 +14,16 @@ namespace DeWaaiBeheer
     
     public partial class Courses
     {
+        public Courses()
+        {
+            this.Users = new HashSet<Users>();
+        }
         public int ID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string IMG { get; set; }
         public string Date { get; set; }
         public int Price { get; set; }
+        public virtual ICollection<Users> Users { get; set; }
     }
 }

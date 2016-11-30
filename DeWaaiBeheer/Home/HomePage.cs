@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity.Validation;
 
 namespace DeWaaiBeheer
 {
@@ -18,15 +19,15 @@ namespace DeWaaiBeheer
         {
             InitializeComponent();
 
-            Courses course = cmbCourses.SelectedItem as Courses;
-           // BindingSource user = new BindingSource { DataSource = db.getUsersByCourse(course.ID) };
-            //cmbCourses.DataSource = user;
-            //cmbCourses.DisplayMember = "Title";
-            //ResetList(course);
+            
         }
 
         private void frnHome_Load(object sender, EventArgs e)
         {
+            BindingSource course = new BindingSource { DataSource = db.getCourses() };
+            cmbCourses.DataSource = course;
+            cmbCourses.DisplayMember = "Title";
+
             tlpMain.Hide();
             Program.login.Owner = this;
             Program.login.Show();
@@ -55,7 +56,7 @@ namespace DeWaaiBeheer
         private void btnCourses_Click(object sender, EventArgs e)
         {
             CoursesAddEditPage users = new CoursesAddEditPage();
-            users.Show();
+            users.ShowDialog();
             this.Hide();
         }
 
@@ -65,23 +66,13 @@ namespace DeWaaiBeheer
             Program.users.ShowDialog();
         }
 
-        //public void FillCursussenList()
-        //{
-        //    lstNewCharts.DataSource = db.getCourses();
-        //    lstNewCharts.ValueMember = "ID";
-        //    lstNewCharts.DisplayMember = "Title";
-        //}
-
-        //public void fillComboCursussen()
-        //{
-        //    cmbCourses.DataSource = db.getCourses();
-        //    cmbCourses.ValueMember = "ID";
-        //    cmbCourses.DisplayMember = "Title";
-        //}
-
         private void cmbCourses_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            //Courses course = cmbCourses.SelectedItem as Courses;
+            //BindingSource user = new BindingSource { DataSource = db.getUsersByCourse(course.ID) };
+            //cmbCourses.DataSource = user;
+            //cmbCourses.DisplayMember = "Fullname";
+            //ResetList(course);
         }
 
         private void ResetList(Courses course)

@@ -42,9 +42,9 @@ namespace DeWaaiBeheer
         #region SideMenu Buttons
         private void btnCourses_Click(object sender, EventArgs e)
         {
-            CoursesAddEditPage users = new CoursesAddEditPage();
-            users.Show();
-            this.Close();
+            //CoursesAddEditPage users = new CoursesAddEditPage();
+            //users.Show();
+            //this.Close();
 
         }
 

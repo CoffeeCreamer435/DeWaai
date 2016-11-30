@@ -27,8 +27,6 @@ namespace DeWaaiBeheer
             lstUsers.DisplayMember = "Fullname";
         }
 
-
-
         private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
             Users user = lstUsers.SelectedItem as Users;
@@ -117,9 +115,9 @@ namespace DeWaaiBeheer
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
-            CoursesAddEditPage users = new CoursesAddEditPage();
-            users.Show();
-            this.Close();
+            //CoursesAddEditPage users = new CoursesAddEditPage();
+            //users.Show();
+            //this.Close();
         }
     }
 }
