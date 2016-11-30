@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtImage = new System.Windows.Forms.TextBox();
             this.txtPrijs = new System.Windows.Forms.TextBox();
@@ -41,7 +44,6 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -70,13 +72,15 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Controls.Add(this.btnNew, 3, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnEdit, 4, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnDelete, 5, 6);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 4, 5);
             this.tableLayoutPanel1.Controls.Add(this.lblNieuweOpgaven, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lstCursussen, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 9, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnSave, 5, 7);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 3, 5);
             this.tableLayoutPanel1.Controls.Add(this.btnCourses, 8, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnInstrucors, 8, 4);
@@ -103,6 +107,39 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1067, 651);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // btnNew
+            // 
+            this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNew.Location = new System.Drawing.Point(321, 391);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(100, 59);
+            this.btnNew.TabIndex = 25;
+            this.btnNew.Text = "Nieuw";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEdit.Location = new System.Drawing.Point(427, 391);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(100, 59);
+            this.btnEdit.TabIndex = 23;
+            this.btnEdit.Text = "Wijzigen";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelete.Location = new System.Drawing.Point(533, 391);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 59);
+            this.btnDelete.TabIndex = 24;
+            this.btnDelete.Text = "Verwijderen";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -233,16 +270,6 @@
             this.txtName.Size = new System.Drawing.Size(198, 20);
             this.txtName.TabIndex = 6;
             // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(533, 456);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(99, 23);
-            this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "Opslaan";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
@@ -318,6 +345,7 @@
             this.btnUsers.TabIndex = 21;
             this.btnUsers.Text = "Gebruikers";
             this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // CoursesAddEditPage
             // 
@@ -354,7 +382,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox txtImage;
@@ -366,5 +393,8 @@
         private System.Windows.Forms.Button btnInstrucors;
         private System.Windows.Forms.Button btnFleet;
         private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

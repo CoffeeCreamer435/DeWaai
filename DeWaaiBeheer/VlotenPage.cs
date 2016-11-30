@@ -18,8 +18,11 @@ namespace DeWaaiBeheer
             InitializeComponent();
             fillVlotenBox();
             fillBootSoortenBox();
+            fillComboStatus();
+            fillComboSoorten();
         }
 
+        #region FillingCombo/Lists
         public void fillVlotenBox()
         {
             lstVloot.DataSource = db.getFleet();
@@ -35,6 +38,21 @@ namespace DeWaaiBeheer
 
         }
 
+        public void fillComboSoorten()
+        {
+            cmbSoortSchip.DataSource = db.GetBoatTypes();
+            cmbSoortSchip.ValueMember = "ID";
+            cmbSoortSchip.DisplayMember = "Name";
+        }
+
+        public void fillComboStatus()
+        {
+            cmbStatus.DataSource = db.getFleet();
+            cmbStatus.ValueMember = "Status";
+            cmbStatus.DisplayMember = "Status";
+        }
+        #endregion
+
         private void btnVlootSave_Click(object sender, EventArgs e)
         {
             db.SaveChanges();
@@ -45,15 +63,17 @@ namespace DeWaaiBeheer
             db.SaveChanges();
         }
 
-      
+        #region SideMenu Buttons
         private void btnFleet_Click(object sender, EventArgs e)
         {
-
+            //not needed
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-
+            frmUsers users = new frmUsers();
+            users.Show();
+            this.Close();
         }
 
         private void btnCourses_Click(object sender, EventArgs e)
@@ -69,5 +89,6 @@ namespace DeWaaiBeheer
             instructors.Show();
             this.Close();
         }
+        #endregion
     }
 }

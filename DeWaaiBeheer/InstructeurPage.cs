@@ -31,7 +31,7 @@ namespace DeWaaiBeheer
         {
             cmbCursussen.DataSource = db.getCourses();
             cmbCursussen.ValueMember = "ID";
-            cmbCursussen.DisplayMember = "Name";
+            cmbCursussen.DisplayMember = "Title";
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -39,6 +39,7 @@ namespace DeWaaiBeheer
             db.SaveChanges();
         }
 
+        #region SideMenu Buttons
         private void btnCourses_Click(object sender, EventArgs e)
         {
             CoursesAddEditPage users = new CoursesAddEditPage();
@@ -56,7 +57,15 @@ namespace DeWaaiBeheer
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
+            frmUsers users = new frmUsers();
+            users.Show();
+            this.Close();
+        }
 
+        #endregion
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

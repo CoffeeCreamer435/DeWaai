@@ -138,7 +138,7 @@
             this.logoutToolStripMenuItem});
             this.nameToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Underline);
             this.nameToolStripMenuItem.Name = "nameToolStripMenuItem";
-            this.nameToolStripMenuItem.Size = new System.Drawing.Size(100, 40);
+            this.nameToolStripMenuItem.Size = new System.Drawing.Size(100, 41);
             this.nameToolStripMenuItem.Text = "Name";
             this.nameToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -212,7 +212,7 @@
             this.tlpMain.SetColumnSpan(this.tableLayoutPanel2, 2);
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.26846F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.73154F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 183F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 184F));
             this.tableLayoutPanel2.Controls.Add(this.lblCursussenSelecteer, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cmbCourses, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lstNewCharts, 0, 1);
@@ -269,7 +269,7 @@
             this.lstNewCharts.Location = new System.Drawing.Point(3, 40);
             this.lstNewCharts.Name = "lstNewCharts";
             this.tableLayoutPanel2.SetRowSpan(this.lstNewCharts, 3);
-            this.lstNewCharts.Size = new System.Drawing.Size(310, 412);
+            this.lstNewCharts.Size = new System.Drawing.Size(309, 412);
             this.lstNewCharts.TabIndex = 10;
             // 
             // tableLayoutPanel3
@@ -279,7 +279,7 @@
             this.tableLayoutPanel3.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button2, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.button3, 0, 2);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(319, 40);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(318, 40);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.25373F));

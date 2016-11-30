@@ -16,20 +16,23 @@ namespace DeWaaiBeheer
         public CoursesAddEditPage()
         {
             InitializeComponent();
+            FillListCursussen();
         }
-
+        #region FillList
         public void FillListCursussen()
         {
             lstCursussen.DataSource = db.getCourses();
             lstCursussen.ValueMember = "ID";
-            lstCursussen.DisplayMember = "Name";
+            lstCursussen.DisplayMember = "Title";
         }
+        #endregion
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             db.SaveChanges();
         }
 
+        #region Mernu Buttons
         private void btnInstrucors_Click(object sender, EventArgs e)
         {
             InstructeurPage instructors = new InstructeurPage();
@@ -43,5 +46,29 @@ namespace DeWaaiBeheer
             vloten.Show();
             this.Close();
         }
+
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            frmUsers users = new frmUsers();
+            users.Show();
+            this.Hide();
+        }
+        #endregion
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
