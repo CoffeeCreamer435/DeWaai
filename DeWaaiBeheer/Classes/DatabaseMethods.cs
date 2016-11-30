@@ -19,7 +19,7 @@ namespace DeWaaiBeheer
             return new ObservableCollection<Users>(ef.Users.Where(x => x.CoursesID == courseID));
         }
 
-  
+
         public void AddUser(Users user)
         {
             ef.Users.Add(user);
