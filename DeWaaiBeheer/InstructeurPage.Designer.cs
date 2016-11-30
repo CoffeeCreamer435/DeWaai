@@ -43,11 +43,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.cmbCursussen = new System.Windows.Forms.ComboBox();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnCourses = new System.Windows.Forms.Button();
             this.btnInstrucors = new System.Windows.Forms.Button();
             this.btnFleet = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,6 +70,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Controls.Add(this.btnNew, 4, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnEdit, 5, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnDelete, 6, 6);
             this.tableLayoutPanel1.Controls.Add(this.lblNieuweOpgaven, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.lstInstructeurs, 0, 2);
@@ -76,7 +81,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 4, 5);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 5, 2);
             this.tableLayoutPanel1.Controls.Add(this.cmbCursussen, 5, 5);
-            this.tableLayoutPanel1.Controls.Add(this.btnSave, 6, 6);
             this.tableLayoutPanel1.Controls.Add(this.btnCourses, 8, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnInstrucors, 8, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnFleet, 8, 5);
@@ -253,16 +257,6 @@
             this.cmbCursussen.Size = new System.Drawing.Size(206, 21);
             this.cmbCursussen.TabIndex = 10;
             // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(639, 391);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 23);
-            this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "Opslaan";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // btnCourses
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.btnCourses, 2);
@@ -306,6 +300,37 @@
             this.btnUsers.UseVisualStyleBackColor = true;
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
+            // btnNew
+            // 
+            this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNew.Location = new System.Drawing.Point(427, 391);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(100, 59);
+            this.btnNew.TabIndex = 28;
+            this.btnNew.Text = "Nieuw";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEdit.Location = new System.Drawing.Point(533, 391);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(100, 59);
+            this.btnEdit.TabIndex = 26;
+            this.btnEdit.Text = "Wijzigen";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelete.Location = new System.Drawing.Point(639, 391);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 59);
+            this.btnDelete.TabIndex = 27;
+            this.btnDelete.Text = "Verwijderen";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
             // InstructeurPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,11 +368,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbCursussen;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCourses;
         private System.Windows.Forms.Button btnInstrucors;
         private System.Windows.Forms.Button btnFleet;
         private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
