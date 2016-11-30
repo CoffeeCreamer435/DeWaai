@@ -10,7 +10,7 @@ namespace DeWaaiBeheer
     {
         public string Fullname
         {
-            get { return string.Format("{0} {1}",this.Firstname,string.Format("{0} {1}",this.Insertion,this.Surname)).Trim(); }
+            get { return string.Format("{0} {1}", this.Firstname, string.Format("{0} {1}", this.Insertion, this.Surname)).Trim(); }
         }
     }
 }
