@@ -64,10 +64,6 @@ namespace DeWaaiBeheer
         }
 
         #region SideMenu Buttons
-        private void btnFleet_Click(object sender, EventArgs e)
-        {
-            //not needed
-        }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
