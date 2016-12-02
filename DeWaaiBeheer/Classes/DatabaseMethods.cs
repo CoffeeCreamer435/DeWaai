@@ -53,6 +53,21 @@ namespace DeWaaiBeheer
         {
             return new ObservableCollection<Courses>(ef.Courses);
         }
+
+        public ObservableCollection<Courses> GetCoursesbyID(int courseID)
+        {
+            return new ObservableCollection<Courses>(ef.Courses.Where(x => x.ID == courseID));
+        }
+
+        public void AddCourse(Courses course)
+        {
+            ef.Courses.Add(course);
+        }
+
+        public void RemoveCourse(int courseid)
+        {
+            ef.Courses.Remove(getCourses().First(x => x.ID == courseid));
+        }
         #endregion
 
         #region Fleet Methods
@@ -69,10 +84,15 @@ namespace DeWaaiBeheer
         }
         #endregion
 
-        #region
+        #region Boats
         public ObservableCollection<Types> GetBoatTypes()
         {
             return new ObservableCollection<Types>(ef.Types);
+        }
+
+        public void AddBoatType(Types type)
+        {
+            ef.Types.Add(type);
         }
         #endregion
     }
