@@ -55,9 +55,9 @@ namespace DeWaaiBeheer
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
-            CoursesAddEditPage users = new CoursesAddEditPage();
-            users.ShowDialog();
-            this.Hide();
+            //CoursesAddEditPage users = new CoursesAddEditPage();
+            //users.ShowDialog();
+            //this.Hide();
         }
 
         private void btnUsers_Click(object sender, EventArgs e)

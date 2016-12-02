@@ -213,7 +213,7 @@
             this.tlpMain.SetColumnSpan(this.tableLayoutPanel2, 2);
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.77778F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.22222F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 184F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
             this.tableLayoutPanel2.Controls.Add(this.lblCursussenSelecteer, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cmbCourses, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lstNewCharts, 0, 1);
@@ -270,7 +270,7 @@
             this.lstNewCharts.Location = new System.Drawing.Point(3, 40);
             this.lstNewCharts.Name = "lstNewCharts";
             this.tableLayoutPanel2.SetRowSpan(this.lstNewCharts, 3);
-            this.lstNewCharts.Size = new System.Drawing.Size(305, 412);
+            this.lstNewCharts.Size = new System.Drawing.Size(304, 412);
             this.lstNewCharts.TabIndex = 10;
             // 
             // tableLayoutPanel3
@@ -280,7 +280,7 @@
             this.tableLayoutPanel3.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button2, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.button3, 0, 2);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(314, 40);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(313, 40);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.25373F));

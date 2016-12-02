@@ -70,5 +70,9 @@ namespace DeWaaiBeheer
             throw new NotImplementedException();
         }
 
+        private void lstCursussen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           //
+        }
     }
 }

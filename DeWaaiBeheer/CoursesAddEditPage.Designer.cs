@@ -191,6 +191,7 @@
             this.tableLayoutPanel1.SetRowSpan(this.lstCursussen, 6);
             this.lstCursussen.Size = new System.Drawing.Size(307, 355);
             this.lstCursussen.TabIndex = 0;
+            this.lstCursussen.SelectedIndexChanged += new System.EventHandler(this.lstCursussen_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
