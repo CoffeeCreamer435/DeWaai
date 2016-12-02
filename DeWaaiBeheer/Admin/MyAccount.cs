@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace DeWaaiBeheer
 {
-    public partial class frmHome : Form
-    {  
-        public frmHome()
+    public partial class frmMyAccount : Form
+    {
+        public frmMyAccount()
         {
             InitializeComponent();
-        }
-
-        private void frnHome_Load(object sender, EventArgs e)
-        {
-            tlpMain.Hide();
-            Program.login.Owner = this;
-            Program.login.Show();
         }
     }
 }

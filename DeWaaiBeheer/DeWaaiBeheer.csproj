@@ -32,9 +32,21 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,25 +58,123 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HomePage.cs">
+    <Compile Include="BookedCursus.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Courses.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DatabaseMethods.cs" />
+    <Compile Include="EntityBootModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityBootModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityBootModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityBootModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityBootModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Fleet.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Home\HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomePage.Designer.cs">
+    <Compile Include="Home\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Overzicht.cs">
+    <Compile Include="Instructor\InstructeurPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Overzicht.Designer.cs">
-      <DependentUpon>Overzicht.cs</DependentUpon>
+    <Compile Include="Instructor\InstructeurPage.Designer.cs">
+      <DependentUpon>InstructeurPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home\LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MyAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\MyAccount.Designer.cs">
+      <DependentUpon>MyAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructors.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorsAvailability.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor\InstructorsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor\InstructorsPage.Designer.cs">
+      <DependentUpon>InstructorsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\UserClass.cs" />
+    <Compile Include="Registrations.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User\NewUserPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\NewUserPage.Designer.cs">
+      <DependentUpon>NewUserPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="HomePage.resx">
+    <Compile Include="Types.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Course\CoursesPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course\CoursesPage.Designer.cs">
+      <DependentUpon>CoursesPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UsersPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UsersPage.designer.cs">
+      <DependentUpon>UsersPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VlotenPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VlotenPage.Designer.cs">
+      <DependentUpon>VlotenPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Home\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Overzicht.resx">
-      <DependentUpon>Overzicht.cs</DependentUpon>
+    <EmbeddedResource Include="Home\LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor\InstructeurPage.resx">
+      <DependentUpon>InstructeurPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\MyAccount.resx">
+      <DependentUpon>MyAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor\InstructorsPage.resx">
+      <DependentUpon>InstructorsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\NewUserPage.resx">
+      <DependentUpon>NewUserPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -74,7 +184,25 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Course\CoursesPage.resx">
+      <DependentUpon>CoursesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UsersPage.resx">
+      <DependentUpon>UsersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VlotenPage.resx">
+      <DependentUpon>VlotenPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="EntityBootModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntityBootModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EntityBootModel.edmx.diagram">
+      <DependentUpon>EntityBootModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,6 +216,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EntityBootModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityBootModel.edmx</DependentUpon>
+      <LastGenOutput>EntityBootModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntityBootModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityBootModel.edmx</DependentUpon>
+      <LastGenOutput>EntityBootModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\logo1.png" />
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -10,6 +10,14 @@ namespace DeWaaiBeheer
     {
         public static frmLogin login = new frmLogin();
         public static frmHome home = new frmHome();
+        public static frmMyAccount account = new frmMyAccount();
+        public static frmCourses courses = new frmCourses();
+        public static frmUsers users = new frmUsers();
+        public static frmNewUser newUser = new frmNewUser();
+        public static VlotenPage vloten = new VlotenPage();
+        public static InstructeurPage instructor = new InstructeurPage();
+        public static frmInstructorsPage instructors = new frmInstructorsPage();
+
 
         /// <summary>
         /// The main entry point for the application.
