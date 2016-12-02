@@ -1,25 +1,30 @@
+# .htaccess
+# Examen Project - 2016 ( Zeilschool de Waai)
+
 RewriteEngine On
 
 rewritecond %{http_host} ^dewaai.ga
 
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
 rewriteRule ^(.*) http://www.dewaai.ga/$1 [R=301,L] 
 
-ErrorDocument 404 http://dewaai.ga
-ErrorDocument 500 http://dewaai.ga
-# or map them to one error document:
-# ErrorDocument 404 /pages/errors/error_redirect.php
-# ErrorDocument 500 /pages/errors/error_redirect.php
+ErrorDocument 404 http://dewaai.ga/error
+ErrorDocument 500 http://dewaai.ga/error
 
-RewriteEngine On
 RewriteBase /
-
 RewriteCond %{REQUEST_URI} ^/404/$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
 RewriteRule ^(.*)$ /index.php [L]
-
 RewriteCond %{REQUEST_URI} ^/500/$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
 RewriteRule ^(.*)$ /index.php [L]
 
-# or map them to one error document:
-#RewriteCond %{REQUEST_URI} ^/404/$ [OR]
-#RewriteCond %{REQUEST_URI} ^/500/$
-#RewriteRule ^(.*)$ /index.php [L]
+Options +MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
