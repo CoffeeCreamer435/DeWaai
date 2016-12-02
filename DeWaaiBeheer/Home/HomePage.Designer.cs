@@ -48,6 +48,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.btnInstructors = new System.Windows.Forms.Button();
             this.tlpMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.msName.SuspendLayout();
@@ -58,9 +59,9 @@
             // tlpMain
             // 
             this.tlpMain.ColumnCount = 3;
-            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.26887F));
-            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.89247F));
-            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.91398F));
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.25813F));
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.86245F));
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.87943F));
             this.tlpMain.Controls.Add(this.btnReviews, 2, 3);
             this.tlpMain.Controls.Add(this.btnInscriptions, 2, 2);
             this.tlpMain.Controls.Add(this.tableLayoutPanel1, 0, 0);
@@ -69,16 +70,18 @@
             this.tlpMain.Controls.Add(this.label1, 2, 1);
             this.tlpMain.Controls.Add(this.label2, 0, 1);
             this.tlpMain.Controls.Add(this.tableLayoutPanel2, 0, 2);
+            this.tlpMain.Controls.Add(this.btnInstructors, 2, 6);
             this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMain.Location = new System.Drawing.Point(0, 0);
             this.tlpMain.Name = "tlpMain";
-            this.tlpMain.RowCount = 6;
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.504863F));
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.27321F));
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.80548F));
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.80548F));
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.80548F));
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.80548F));
+            this.tlpMain.RowCount = 7;
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.93328F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.40924F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.53074F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.53074F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.53074F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.53074F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.53451F));
             this.tlpMain.Size = new System.Drawing.Size(930, 581);
             this.tlpMain.TabIndex = 0;
             // 
@@ -86,20 +89,21 @@
             // 
             this.btnReviews.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnReviews.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold);
-            this.btnReviews.Location = new System.Drawing.Point(505, 238);
+            this.btnReviews.Location = new System.Drawing.Point(505, 199);
             this.btnReviews.Name = "btnReviews";
-            this.btnReviews.Size = new System.Drawing.Size(422, 109);
+            this.btnReviews.Size = new System.Drawing.Size(422, 90);
             this.btnReviews.TabIndex = 3;
             this.btnReviews.Text = "Overzichten";
             this.btnReviews.UseVisualStyleBackColor = true;
+            this.btnReviews.Click += new System.EventHandler(this.btnReviews_Click);
             // 
             // btnInscriptions
             // 
             this.btnInscriptions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnInscriptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold);
-            this.btnInscriptions.Location = new System.Drawing.Point(505, 123);
+            this.btnInscriptions.Location = new System.Drawing.Point(505, 103);
             this.btnInscriptions.Name = "btnInscriptions";
-            this.btnInscriptions.Size = new System.Drawing.Size(422, 109);
+            this.btnInscriptions.Size = new System.Drawing.Size(422, 90);
             this.btnInscriptions.TabIndex = 1;
             this.btnInscriptions.Text = "Inschrijvingen";
             this.btnInscriptions.UseVisualStyleBackColor = true;
@@ -117,7 +121,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(924, 49);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(924, 40);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // msName
@@ -128,7 +132,7 @@
             this.nameToolStripMenuItem});
             this.msName.Location = new System.Drawing.Point(0, 0);
             this.msName.Name = "msName";
-            this.msName.Size = new System.Drawing.Size(338, 49);
+            this.msName.Size = new System.Drawing.Size(338, 40);
             this.msName.TabIndex = 0;
             this.msName.Text = "menuStrip1";
             // 
@@ -140,8 +144,9 @@
             this.logoutToolStripMenuItem});
             this.nameToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.nameToolStripMenuItem.Name = "nameToolStripMenuItem";
-            this.nameToolStripMenuItem.Size = new System.Drawing.Size(100, 45);
+            this.nameToolStripMenuItem.Size = new System.Drawing.Size(100, 36);
             this.nameToolStripMenuItem.Text = "Name";
+            this.nameToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // myAccountToolStripMenuItem
             // 
@@ -163,9 +168,9 @@
             // 
             this.btnCourses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCourses.Location = new System.Drawing.Point(505, 353);
+            this.btnCourses.Location = new System.Drawing.Point(505, 295);
             this.btnCourses.Name = "btnCourses";
-            this.btnCourses.Size = new System.Drawing.Size(422, 109);
+            this.btnCourses.Size = new System.Drawing.Size(422, 90);
             this.btnCourses.TabIndex = 4;
             this.btnCourses.Text = "Cursussen";
             this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
@@ -174,11 +179,11 @@
             // 
             this.btnUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold);
-            this.btnUsers.Location = new System.Drawing.Point(505, 468);
+            this.btnUsers.Location = new System.Drawing.Point(505, 391);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(422, 110);
+            this.btnUsers.Size = new System.Drawing.Size(422, 90);
             this.btnUsers.TabIndex = 0;
-            this.btnUsers.Text = "Gebruikers";
+            this.btnUsers.Text = "Klanten";
             this.btnUsers.UseVisualStyleBackColor = true;
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
@@ -187,9 +192,9 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(505, 55);
+            this.label1.Location = new System.Drawing.Point(505, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(422, 65);
+            this.label1.Size = new System.Drawing.Size(422, 54);
             this.label1.TabIndex = 7;
             this.label1.Text = "Overzichten";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -200,9 +205,9 @@
             this.tlpMain.SetColumnSpan(this.label2, 2);
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(3, 55);
+            this.label2.Location = new System.Drawing.Point(3, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(496, 65);
+            this.label2.Size = new System.Drawing.Size(496, 54);
             this.label2.TabIndex = 8;
             this.label2.Text = "Nieuwe inschrijvingen";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -211,15 +216,15 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tlpMain.SetColumnSpan(this.tableLayoutPanel2, 2);
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.77778F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.22222F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 184F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.26846F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.73154F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
             this.tableLayoutPanel2.Controls.Add(this.lblCursussenSelecteer, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cmbCourses, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lstNewCharts, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 2, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 123);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 103);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tlpMain.SetRowSpan(this.tableLayoutPanel2, 4);
@@ -237,7 +242,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(496, 455);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(496, 378);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
             // lblCursussenSelecteer
@@ -247,7 +252,7 @@
             this.lblCursussenSelecteer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lblCursussenSelecteer.Location = new System.Drawing.Point(3, 0);
             this.lblCursussenSelecteer.Name = "lblCursussenSelecteer";
-            this.lblCursussenSelecteer.Size = new System.Drawing.Size(111, 37);
+            this.lblCursussenSelecteer.Size = new System.Drawing.Size(117, 23);
             this.lblCursussenSelecteer.TabIndex = 8;
             this.lblCursussenSelecteer.Text = "Cursussen:";
             // 
@@ -256,9 +261,9 @@
             this.tableLayoutPanel2.SetColumnSpan(this.cmbCourses, 2);
             this.cmbCourses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbCourses.FormattingEnabled = true;
-            this.cmbCourses.Location = new System.Drawing.Point(120, 3);
+            this.cmbCourses.Location = new System.Drawing.Point(126, 3);
             this.cmbCourses.Name = "cmbCourses";
-            this.cmbCourses.Size = new System.Drawing.Size(373, 21);
+            this.cmbCourses.Size = new System.Drawing.Size(367, 21);
             this.cmbCourses.TabIndex = 9;
             this.cmbCourses.SelectedIndexChanged += new System.EventHandler(this.cmbCourses_SelectedIndexChanged);
             // 
@@ -267,10 +272,10 @@
             this.tableLayoutPanel2.SetColumnSpan(this.lstNewCharts, 2);
             this.lstNewCharts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstNewCharts.FormattingEnabled = true;
-            this.lstNewCharts.Location = new System.Drawing.Point(3, 40);
+            this.lstNewCharts.Location = new System.Drawing.Point(3, 26);
             this.lstNewCharts.Name = "lstNewCharts";
             this.tableLayoutPanel2.SetRowSpan(this.lstNewCharts, 3);
-            this.lstNewCharts.Size = new System.Drawing.Size(305, 412);
+            this.lstNewCharts.Size = new System.Drawing.Size(300, 349);
             this.lstNewCharts.TabIndex = 10;
             // 
             // tableLayoutPanel3
@@ -280,13 +285,14 @@
             this.tableLayoutPanel3.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button2, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.button3, 0, 2);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(314, 40);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(309, 26);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.25373F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.74627F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(173, 100);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(184, 94);
             this.tableLayoutPanel3.TabIndex = 11;
             // 
             // button1
@@ -294,7 +300,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 27);
+            this.button1.Size = new System.Drawing.Size(178, 24);
             this.button1.TabIndex = 0;
             this.button1.Text = "Accepteren";
             this.button1.UseVisualStyleBackColor = true;
@@ -302,9 +308,9 @@
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(3, 36);
+            this.button2.Location = new System.Drawing.Point(3, 33);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(167, 28);
+            this.button2.Size = new System.Drawing.Size(178, 25);
             this.button2.TabIndex = 1;
             this.button2.Text = "Wijzigen";
             this.button2.UseVisualStyleBackColor = true;
@@ -312,12 +318,24 @@
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(3, 70);
+            this.button3.Location = new System.Drawing.Point(3, 64);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(167, 27);
+            this.button3.Size = new System.Drawing.Size(178, 27);
             this.button3.TabIndex = 2;
             this.button3.Text = "Stuur factuur";
             this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btnInstructors
+            // 
+            this.btnInstructors.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnInstructors.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold);
+            this.btnInstructors.Location = new System.Drawing.Point(505, 487);
+            this.btnInstructors.Name = "btnInstructors";
+            this.btnInstructors.Size = new System.Drawing.Size(422, 91);
+            this.btnInstructors.TabIndex = 10;
+            this.btnInstructors.Text = "Instructeurs";
+            this.btnInstructors.UseVisualStyleBackColor = true;
+            this.btnInstructors.Click += new System.EventHandler(this.btnInstructors_Click);
             // 
             // frmHome
             // 
@@ -365,6 +383,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnInstructors;
     }
 }
 

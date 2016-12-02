@@ -10,34 +10,42 @@ using System.Windows.Forms;
 
 namespace DeWaaiBeheer
 {
-    public partial class CoursesAddEditPage : Form
-    {
+    public partial class InstructeurPage : Form
+    {       
         DatabaseMethods db = new DatabaseMethods();
-        public CoursesAddEditPage()
+        public InstructeurPage()
         {
             InitializeComponent();
-            FillListCursussen();
+            fillComboCursusbox();
+            fillListBox();
         }
-        #region FillList
-        public void FillListCursussen()
+
+        public void fillListBox()
         {
-            lstCursussen.DataSource = db.getCourses();
-            lstCursussen.ValueMember = "ID";
-            lstCursussen.DisplayMember = "Title";
+            lstInstructeurs.DataSource = db.GetInstructors();
+            lstInstructeurs.ValueMember = "ID";
+            lstInstructeurs.DisplayMember = "Name";
         }
-        #endregion
+
+        public void fillComboCursusbox()
+        {
+            cmbCursussen.DataSource = db.getCourses();
+            cmbCursussen.ValueMember = "ID";
+            cmbCursussen.DisplayMember = "Title";
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             db.SaveChanges();
         }
 
-        #region Mernu Buttons
-        private void btnInstrucors_Click(object sender, EventArgs e)
+        #region SideMenu Buttons
+        private void btnCourses_Click(object sender, EventArgs e)
         {
-            InstructeurPage instructors = new InstructeurPage();
-            instructors.Show();
-            this.Close();
+            //CoursesAddEditPage users = new CoursesAddEditPage();
+            //users.Show();
+            //this.Close();
+
         }
 
         private void btnFleet_Click(object sender, EventArgs e)
@@ -47,28 +55,17 @@ namespace DeWaaiBeheer
             this.Close();
         }
 
-
         private void btnUsers_Click(object sender, EventArgs e)
         {
             frmUsers users = new frmUsers();
             users.Show();
-            this.Hide();
+            this.Close();
         }
+
         #endregion
         private void btnNew_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
         }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
     }
 }

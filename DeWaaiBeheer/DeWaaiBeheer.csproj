@@ -64,12 +64,6 @@
     <Compile Include="Courses.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CursusPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CursusPage.Designer.cs">
-      <DependentUpon>CursusPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Classes\DatabaseMethods.cs" />
     <Compile Include="EntityBootModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -95,10 +89,10 @@
     <Compile Include="Home\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="InstructeurPage.cs">
+    <Compile Include="Instructor\InstructeurPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InstructeurPage.Designer.cs">
+    <Compile Include="Instructor\InstructeurPage.Designer.cs">
       <DependentUpon>InstructeurPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Home\LoginPage.cs">
@@ -119,17 +113,26 @@
     <Compile Include="InstructorsAvailability.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Instructor\InstructorsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor\InstructorsPage.Designer.cs">
+      <DependentUpon>InstructorsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Invoice.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Classes\UserClass.cs" />
+    <Compile Include="Registrations.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Users.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Users\NewUserPage.cs">
+    <Compile Include="User\NewUserPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Users\NewUserPage.Designer.cs">
+    <Compile Include="User\NewUserPage.Designer.cs">
       <DependentUpon>NewUserPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -137,16 +140,16 @@
     <Compile Include="Types.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CoursesAddEditPage.cs">
+    <Compile Include="Course\CoursesPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CoursesAddEditPage.Designer.cs">
-      <DependentUpon>CoursesAddEditPage.cs</DependentUpon>
+    <Compile Include="Course\CoursesPage.Designer.cs">
+      <DependentUpon>CoursesPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Users\UsersPage.cs">
+    <Compile Include="User\UsersPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Users\UsersPage.designer.cs">
+    <Compile Include="User\UsersPage.designer.cs">
       <DependentUpon>UsersPage.cs</DependentUpon>
     </Compile>
     <Compile Include="VlotenPage.cs">
@@ -155,22 +158,22 @@
     <Compile Include="VlotenPage.Designer.cs">
       <DependentUpon>VlotenPage.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CursusPage.resx">
-      <DependentUpon>CursusPage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Home\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InstructeurPage.resx">
+    <EmbeddedResource Include="Instructor\InstructeurPage.resx">
       <DependentUpon>InstructeurPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\MyAccount.resx">
       <DependentUpon>MyAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Users\NewUserPage.resx">
+    <EmbeddedResource Include="Instructor\InstructorsPage.resx">
+      <DependentUpon>InstructorsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\NewUserPage.resx">
       <DependentUpon>NewUserPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -183,10 +186,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="CoursesAddEditPage.resx">
-      <DependentUpon>CoursesAddEditPage.cs</DependentUpon>
+    <EmbeddedResource Include="Course\CoursesPage.resx">
+      <DependentUpon>CoursesPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Users\UsersPage.resx">
+    <EmbeddedResource Include="User\UsersPage.resx">
       <DependentUpon>UsersPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VlotenPage.resx">
@@ -230,6 +233,7 @@
     <None Include="Resources\logo1.png" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

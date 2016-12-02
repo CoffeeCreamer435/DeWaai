@@ -15,8 +15,18 @@ namespace DeWaaiBeheer
     public partial class Instructors
     {
         public int ID { get; set; }
+        public string Firstname { get; set; }
+        public string Insertion { get; set; }
+        public string Surname { get; set; }
+        public string Password { get; set; }
+        public int Telephone { get; set; }
+        public int Mobile { get; set; }
+        public string Street { get; set; }
+        public int HouseNumber { get; set; }
+        public string City { get; set; }
+        public string Zip { get; set; }
+        public string Country { get; set; }
         public Nullable<int> CursusID { get; set; }
-        public string Name { get; set; }
         public string Description { get; set; }
     }
 }

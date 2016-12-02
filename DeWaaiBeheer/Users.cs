@@ -28,6 +28,5 @@ namespace DeWaaiBeheer
         public string Zip { get; set; }
         public string Country { get; set; }
         public Nullable<int> CoursesID { get; set; }
-        public virtual Courses Course { get; set; }
     }
 }

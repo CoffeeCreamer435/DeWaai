@@ -17,9 +17,7 @@ namespace DeWaaiBeheer
 
         public frmHome()
         {
-            InitializeComponent();
-
-            
+            InitializeComponent();        
         }
 
         private void frnHome_Load(object sender, EventArgs e)
@@ -55,9 +53,8 @@ namespace DeWaaiBeheer
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
-            CoursesAddEditPage users = new CoursesAddEditPage();
-            users.ShowDialog();
             this.Hide();
+            Program.courses.ShowDialog();
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
@@ -80,6 +77,17 @@ namespace DeWaaiBeheer
             lstNewCharts.DataBindings.Clear();
 
             lstNewCharts.DataBindings.Add(new Binding("Text", course, "Title"));
+        }
+
+        private void btnInstructors_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.instructors.ShowDialog();
+        }
+
+        private void btnReviews_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

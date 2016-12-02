@@ -16,7 +16,8 @@ namespace DeWaaiBeheer
         public static frmNewUser newUser = new frmNewUser();
         public static VlotenPage vloten = new VlotenPage();
         public static InstructeurPage instructor = new InstructeurPage();
-        
+        public static frmInstructorsPage instructors = new frmInstructorsPage();
+
 
         /// <summary>
         /// The main entry point for the application.
