@@ -29,10 +29,16 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.lstVloot = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAantal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbSoortSchip = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,8 +48,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lstBootSoorten = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCapaciteit = new System.Windows.Forms.TextBox();
+            this.txtNaam = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,12 +57,6 @@
             this.btnInstrucors = new System.Windows.Forms.Button();
             this.btnFleet = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -119,6 +119,66 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1067, 651);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Location = new System.Drawing.Point(215, 523);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 59);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Nieuw";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.Location = new System.Drawing.Point(321, 523);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 59);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "Wijzigen";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.Location = new System.Drawing.Point(427, 523);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 59);
+            this.button3.TabIndex = 30;
+            this.button3.Text = "Verwijderen";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btnNew
+            // 
+            this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNew.Location = new System.Drawing.Point(215, 328);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(100, 59);
+            this.btnNew.TabIndex = 28;
+            this.btnNew.Text = "Nieuw";
+            this.btnNew.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEdit.Location = new System.Drawing.Point(321, 328);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(100, 59);
+            this.btnEdit.TabIndex = 26;
+            this.btnEdit.Text = "Wijzigen";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelete.Location = new System.Drawing.Point(427, 328);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 59);
+            this.btnDelete.TabIndex = 27;
+            this.btnDelete.Text = "Verwijderen";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
             // lstVloot
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.lstVloot, 2);
@@ -128,6 +188,7 @@
             this.tableLayoutPanel1.SetRowSpan(this.lstVloot, 4);
             this.lstVloot.Size = new System.Drawing.Size(206, 251);
             this.lstVloot.TabIndex = 0;
+            this.lstVloot.SelectedIndexChanged += new System.EventHandler(this.lstVloot_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -145,7 +206,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel2, 3);
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtAantal, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cmbSoortSchip, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 1);
@@ -157,12 +218,12 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(312, 59);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
-            // textBox1
+            // txtAantal
             // 
-            this.textBox1.Location = new System.Drawing.Point(104, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(205, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtAantal.Location = new System.Drawing.Point(104, 3);
+            this.txtAantal.Name = "txtAantal";
+            this.txtAantal.Size = new System.Drawing.Size(205, 20);
+            this.txtAantal.TabIndex = 0;
             // 
             // label3
             // 
@@ -253,8 +314,8 @@
             this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel4, 3);
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
-            this.tableLayoutPanel4.Controls.Add(this.textBox3, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.textBox2, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txtCapaciteit, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.txtNaam, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.label7, 0, 1);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(215, 458);
@@ -265,19 +326,19 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(312, 59);
             this.tableLayoutPanel4.TabIndex = 8;
             // 
-            // textBox3
+            // txtCapaciteit
             // 
-            this.textBox3.Location = new System.Drawing.Point(104, 32);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(205, 20);
-            this.textBox3.TabIndex = 4;
+            this.txtCapaciteit.Location = new System.Drawing.Point(104, 32);
+            this.txtCapaciteit.Name = "txtCapaciteit";
+            this.txtCapaciteit.Size = new System.Drawing.Size(205, 20);
+            this.txtCapaciteit.TabIndex = 4;
             // 
-            // textBox2
+            // txtNaam
             // 
-            this.textBox2.Location = new System.Drawing.Point(104, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(205, 20);
-            this.textBox2.TabIndex = 0;
+            this.txtNaam.Location = new System.Drawing.Point(104, 3);
+            this.txtNaam.Name = "txtNaam";
+            this.txtNaam.Size = new System.Drawing.Size(205, 20);
+            this.txtNaam.TabIndex = 0;
             // 
             // label6
             // 
@@ -352,66 +413,6 @@
             this.btnUsers.UseVisualStyleBackColor = true;
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
-            // btnNew
-            // 
-            this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNew.Location = new System.Drawing.Point(215, 328);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(100, 59);
-            this.btnNew.TabIndex = 28;
-            this.btnNew.Text = "Nieuw";
-            this.btnNew.UseVisualStyleBackColor = true;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEdit.Location = new System.Drawing.Point(321, 328);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(100, 59);
-            this.btnEdit.TabIndex = 26;
-            this.btnEdit.Text = "Wijzigen";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDelete.Location = new System.Drawing.Point(427, 328);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 59);
-            this.btnDelete.TabIndex = 27;
-            this.btnDelete.Text = "Verwijderen";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(215, 523);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 59);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Nieuw";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(321, 523);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 59);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Wijzigen";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(427, 523);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 59);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "Verwijderen";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // VlotenPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,7 +443,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAantal;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbSoortSchip;
         private System.Windows.Forms.Label label4;
@@ -450,8 +451,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCapaciteit;
+        private System.Windows.Forms.TextBox txtNaam;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -22,6 +22,20 @@ namespace DeWaaiBeheer
             fillComboSoorten();
         }
 
+        private void fillBoatsBySelectedBoat(Fleet fleet)
+        {
+            if(fleet != null)
+            {
+                txtAantal.DataBindings.Clear();
+                cmbSoortSchip.DataBindings.Clear();
+                cmbStatus.DataBindings.Clear();
+
+                txtAantal.DataBindings.Add("Text", fleet, "Amount");
+                cmbSoortSchip.DataBindings.Add("Text", fleet, "TypeID");
+                cmbStatus.DataBindings.Add("Text", fleet, "Status");
+            }
+        }
+
         #region FillingCombo/Lists
         public void fillVlotenBox()
         {
@@ -86,5 +100,12 @@ namespace DeWaaiBeheer
             this.Close();
         }
         #endregion
+
+        private void lstVloot_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Fleet fleet = lstVloot.SelectedItem as Fleet;
+            lstVloot.DataSource = db.getFleet();
+            fillBoatsBySelectedBoat(fleet);
+        }
     }
 }
