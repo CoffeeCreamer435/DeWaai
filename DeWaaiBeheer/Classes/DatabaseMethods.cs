@@ -14,10 +14,10 @@ namespace DeWaaiBeheer
             return new ObservableCollection<Users>(ef.Users);
         }
 
-        public ObservableCollection<Users> getUsersByCourse(int courseID)
-        {
-            return new ObservableCollection<Users>(ef.Users.Where(x => x.CoursesID == courseID));
-        }
+        //public ObservableCollection<Users> getUsersByCourse(int courseID)
+        //{
+        //    return new ObservableCollection<Users>(ef.Users.Where(x => x.CoursesID == courseID));
+        //}
 
 
         public void AddUser(Users user)
@@ -88,11 +88,11 @@ namespace DeWaaiBeheer
         #endregion
 
         #region BoatTypes
-        public ObservableCollection<Types> getBoatTypes()
+        public ObservableCollection<Types> GetBoatTypes()
         {
             return new ObservableCollection<Types>(ef.Types);
         }
-        
+
         public void AddBoatType(Types types)
         {
             ef.Types.Add(types);
@@ -100,7 +100,7 @@ namespace DeWaaiBeheer
 
         public void RemoveBoatType(int typeid)
         {
-            ef.Types.Remove(getBoatTypes().First(x => x.ID == typeid));
+            ef.Types.Remove(GetBoatTypes().First(x => x.ID == typeid));
         }
         #endregion
         #region Instructors Methods
@@ -109,13 +109,5 @@ namespace DeWaaiBeheer
             return new ObservableCollection<Instructors>(ef.Instructors);
         }
         #endregion
-
-        #region Boats
-        public ObservableCollection<Types> GetBoatTypes()
-        {
-            return new ObservableCollection<Types>(ef.Types);
-        }
-
-       #endregion
     }
 }
