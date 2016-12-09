@@ -13,10 +13,10 @@ namespace DeWaaiBeheer
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class u480787545_dewaaEntities : DbContext
+    public partial class EntityFramework : DbContext
     {
-        public u480787545_dewaaEntities()
-            : base("name=u480787545_dewaaEntities")
+        public EntityFramework()
+            : base("name=EntityFramework")
         {
         }
     

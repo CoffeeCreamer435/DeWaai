@@ -19,5 +19,6 @@ namespace DeWaaiBeheer
         public System.DateTime Date { get; set; }
         public int UserID { get; set; }
         public int InstructorID { get; set; }
+        public int CoursesID { get; set; }
     }
 }

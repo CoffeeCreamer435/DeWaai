@@ -14,21 +14,30 @@ namespace DeWaaiBeheer
     public partial class frmHome : Form
     {
         private DatabaseMethods db = new DatabaseMethods();
+        private BindingSource course;
 
         public frmHome()
         {
-            InitializeComponent();        
+            InitializeComponent();
         }
 
         private void frnHome_Load(object sender, EventArgs e)
         {
-            BindingSource course = new BindingSource { DataSource = db.getCourses() };
+            course = new BindingSource { DataSource = db.getCourses() };
             cmbCourses.DataSource = course;
-            cmbCourses.DisplayMember = "Title";
+            cmbCourses.DisplayMember = "Name";
 
             tlpMain.Hide();
             Program.login.Owner = this;
             Program.login.Show();
+        }
+        private void cmbCourses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Registrations regis = cmbCourses.SelectedItem as Registrations;
+            BindingSource user = new BindingSource { DataSource = db.getUsersByCourse() };
+            cmbCourses.DataSource = user;
+            cmbCourses.DisplayMember = "Name";
+            ResetList(regis);
         }
 
         /// <summary>
@@ -63,20 +72,13 @@ namespace DeWaaiBeheer
             Program.users.ShowDialog();
         }
 
-        private void cmbCourses_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Courses course = cmbCourses.SelectedItem as Courses;
-            //BindingSource user = new BindingSource { DataSource = db.getUsersByCourse(course.ID) };
-            //cmbCourses.DataSource = user;
-            //cmbCourses.DisplayMember = "Fullname";
-            //ResetList(course);
-        }
+        
 
-        private void ResetList(Courses course)
+        private void ResetList(Registrations course)
         {
-            lstNewCharts.DataBindings.Clear();
+            //lstNewCharts.DataBindings.Clear();
 
-            lstNewCharts.DataBindings.Add(new Binding("Text", course, "Title"));
+            //lstNewCharts.DataBindings.Add(new Binding("Text", course, "Name"));
         }
 
         private void btnInstructors_Click(object sender, EventArgs e)

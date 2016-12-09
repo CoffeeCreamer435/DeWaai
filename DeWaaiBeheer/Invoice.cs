@@ -14,9 +14,10 @@ namespace DeWaaiBeheer
     
     public partial class Invoice
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
         public int UserID { get; set; }
         public int InstructorID { get; set; }
         public int CourseID { get; set; }
+        public string Status { get; set; }
     }
 }

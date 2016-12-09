@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,5 +13,12 @@ namespace DeWaaiBeheer
         {
             get { return string.Format("{0} {1}", this.Firstname, string.Format("{0} {1}", this.Insertion, this.Surname)).Trim(); }
         }
+
+
+
+        [DataType(DataType.EmailAddress)]
+        [Required]
+        public string Achternaam {get;set;}
+
     }
 }

@@ -6,17 +6,29 @@ namespace DeWaaiBeheer
 {
     public class DatabaseMethods
     {
-        private u480787545_dewaaEntities ef = new u480787545_dewaaEntities();
+        private EntityFramework ef = new EntityFramework();
 
         #region User Methods
+
+        /// <summary>
+        /// Method to get all users
+        /// </summary>
+        /// <returns></returns>
         public ObservableCollection<Users> getUsers()
         {
             return new ObservableCollection<Users>(ef.Users);
         }
 
-        public ObservableCollection<Users> getUsersByCourse(int courseID)
+        public ObservableCollection<Registrations> getUsersByCourse()
         {
-            return new ObservableCollection<Users>(ef.Users.Where(x => x.CoursesID == courseID));
+            var query = from x in ef.Registrations                       
+                        join xa in ef.Courses                       
+                        on x.CourseID equals xa.ID
+                        join xx in ef.Users                       
+                        on x.UserID equals xx.ID                       
+                        select x;
+
+            return new ObservableCollection<Registrations>(query);
         }
 
 
@@ -33,7 +45,9 @@ namespace DeWaaiBeheer
         #endregion
 
         #region Savechanges
-        // Saves Changes
+        /// <summary>
+        /// Method who saves something into database
+        /// </summary>
         public void SaveChanges()
         {
             try

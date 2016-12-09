@@ -15,8 +15,11 @@ namespace DeWaaiBeheer
     public partial class Registrations
     {
         public int ID { get; set; }
-        public Nullable<int> KlantID { get; set; }
-        public Nullable<int> OrderID { get; set; }
+        public Nullable<int> UserID { get; set; }
+        public string InvoiceID { get; set; }
         public Nullable<int> CourseID { get; set; }
+        public string Status { get; set; }
+        public short Year { get; set; }
+        public int Booking_month { get; set; }
     }
 }
