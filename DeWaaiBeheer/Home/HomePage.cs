@@ -89,7 +89,9 @@ namespace DeWaaiBeheer
 
         private void btnReviews_Click(object sender, EventArgs e)
         {
-
+            VlotenPage vloten = new VlotenPage();
+            vloten.ShowDialog();
+            this.Hide();
         }
     }
 }

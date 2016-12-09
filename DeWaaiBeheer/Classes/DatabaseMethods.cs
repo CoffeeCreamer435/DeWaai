@@ -89,24 +89,39 @@ namespace DeWaaiBeheer
         {
             return new ObservableCollection<Fleet>(ef.Fleet);
         }
+
+        public void AddFleet(Fleet fleet)
+        {
+            ef.Fleet.Add(fleet);
+        }
+
+        public void RemoveFleet(int fleetid)
+        {
+            ef.Fleet.Remove(getFleet().First(x => x.ID == fleetid));
+        }
+        #endregion
+
+        #region BoatTypes
+        public ObservableCollection<Types> GetBoatTypes()
+        {
+            return new ObservableCollection<Types>(ef.Types);
+        }
+
+        public void AddBoatType(Types types)
+        {
+            ef.Types.Add(types);
+        }
+
+        public void RemoveBoatType(int typeid)
+        {
+            ef.Types.Remove(GetBoatTypes().First(x => x.ID == typeid));
+        }
         #endregion
 
         #region Instructors Methods
         public ObservableCollection<Instructors> GetInstructors()
         {
             return new ObservableCollection<Instructors>(ef.Instructors);
-        }
-        #endregion
-
-        #region Boats
-        public ObservableCollection<Types> GetBoatTypes()
-        {
-            return new ObservableCollection<Types>(ef.Types);
-        }
-
-        public void AddBoatType(Types type)
-        {
-            ef.Types.Add(type);
         }
         #endregion
     }
