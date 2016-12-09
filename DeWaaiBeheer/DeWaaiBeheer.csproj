@@ -61,10 +61,16 @@
     <Compile Include="BookedCursus.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Classes\DatabaseMethods.cs" />
     <Compile Include="Courses.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Classes\DatabaseMethods.cs" />
+    <Compile Include="Course\NewCoursePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course\NewCoursePage.Designer.cs">
+      <DependentUpon>NewCoursePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="EntityBootModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,12 +94,6 @@
     </Compile>
     <Compile Include="Home\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Instructor\InstructeurPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Instructor\InstructeurPage.Designer.cs">
-      <DependentUpon>InstructeurPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Home\LoginPage.cs">
       <SubType>Form</SubType>
@@ -119,11 +119,14 @@
     <Compile Include="Instructor\InstructorsPage.Designer.cs">
       <DependentUpon>InstructorsPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\UserClass.cs" />
     <Compile Include="Invoice.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Classes\UserClass.cs" />
     <Compile Include="Registrations.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Types.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Users.cs">
@@ -137,9 +140,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Types.cs">
-      <DependentUpon>EntityBootModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Course\CoursesPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,20 +152,20 @@
     <Compile Include="User\UsersPage.designer.cs">
       <DependentUpon>UsersPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="VlotenPage.cs">
+    <Compile Include="Fleet\VlotenPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VlotenPage.Designer.cs">
+    <Compile Include="Fleet\VlotenPage.Designer.cs">
       <DependentUpon>VlotenPage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Course\NewCoursePage.resx">
+      <DependentUpon>NewCoursePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Instructor\InstructeurPage.resx">
-      <DependentUpon>InstructeurPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\MyAccount.resx">
       <DependentUpon>MyAccount.cs</DependentUpon>
@@ -192,7 +192,7 @@
     <EmbeddedResource Include="User\UsersPage.resx">
       <DependentUpon>UsersPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VlotenPage.resx">
+    <EmbeddedResource Include="Fleet\VlotenPage.resx">
       <DependentUpon>VlotenPage.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="EntityBootModel.edmx">
@@ -220,6 +220,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logo1.png" />
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="EntityBootModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EntityBootModel.edmx</DependentUpon>
@@ -230,10 +234,7 @@
       <DependentUpon>EntityBootModel.edmx</DependentUpon>
       <LastGenOutput>EntityBootModel.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\logo1.png" />
-    <None Include="Resources\logo.png" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

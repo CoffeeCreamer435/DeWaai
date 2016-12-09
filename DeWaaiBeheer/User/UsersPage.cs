@@ -93,7 +93,6 @@ namespace DeWaaiBeheer
         private void btnNew_Click(object sender, EventArgs e)
         {
             Program.newUser.ShowDialog();
-
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -115,9 +114,14 @@ namespace DeWaaiBeheer
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
-            //CoursesAddEditPage users = new CoursesAddEditPage();
-            //users.Show();
-            //this.Close();
+            this.Close();
+            Program.courses.Show();
+        }
+
+        private void btnInstructors_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.instructors.Show();
         }
     }
 }

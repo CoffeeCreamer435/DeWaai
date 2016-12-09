@@ -33,5 +33,16 @@ namespace DeWaaiBeheer
             this.Close();
             Program.courses.Show();
         }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.users.Show();
+        }
+
+        private void frmInstructorsPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

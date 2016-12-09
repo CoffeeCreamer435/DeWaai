@@ -12,22 +12,22 @@
 namespace DeWaaiBeheer
 {
 
-using System;
+    using System;
     using System.Collections.Generic;
     
-public partial class Invoice
-{
+    public partial class Invoice
+    {
 
     public string ID { get; set; }
 
-    public int UserID { get; set; }
+        public int UserID { get; set; }
 
-    public int InstructorID { get; set; }
+        public int InstructorID { get; set; }
 
-    public int CourseID { get; set; }
+        public int CourseID { get; set; }
 
     public string Status { get; set; }
 
-}
+    }
 
 }

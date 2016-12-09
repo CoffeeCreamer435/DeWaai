@@ -159,16 +159,14 @@ namespace DeWaaiBeheer
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
-            //CoursesAddEditPage users = new CoursesAddEditPage();
-            //users.Show();
-            //this.Close();
+            this.Close();
+            Program.courses.Show();
         }
 
         private void btnInstrucors_Click(object sender, EventArgs e)
         {
-            InstructeurPage instructors = new InstructeurPage();
-            instructors.Show();
             this.Close();
+            Program.instructors.Show();
         }
         #endregion
 

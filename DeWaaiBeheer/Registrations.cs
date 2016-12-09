@@ -12,19 +12,19 @@
 namespace DeWaaiBeheer
 {
 
-using System;
+    using System;
     using System.Collections.Generic;
     
-public partial class Registrations
-{
+    public partial class Registrations
+    {
 
-    public int ID { get; set; }
+        public int ID { get; set; }
 
     public Nullable<int> UserID { get; set; }
 
     public string InvoiceID { get; set; }
 
-    public Nullable<int> CourseID { get; set; }
+        public Nullable<int> CourseID { get; set; }
 
     public string Status { get; set; }
 
@@ -32,6 +32,6 @@ public partial class Registrations
 
     public int Booking_month { get; set; }
 
-}
+    }
 
 }
