@@ -30,7 +30,7 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnNewType = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSaveTypes = new System.Windows.Forms.Button();
             this.btnDeleteType = new System.Windows.Forms.Button();
             this.btnNewFleet = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -82,26 +82,26 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Controls.Add(this.btnNewType, 2, 8);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 3, 8);
-            this.tableLayoutPanel1.Controls.Add(this.btnDeleteType, 4, 8);
-            this.tableLayoutPanel1.Controls.Add(this.btnNewFleet, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.btnEdit, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.btnDelete, 4, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lstVloot, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnNewType, 4, 8);
+            this.tableLayoutPanel1.Controls.Add(this.btnSaveTypes, 5, 8);
+            this.tableLayoutPanel1.Controls.Add(this.btnDeleteType, 6, 8);
+            this.tableLayoutPanel1.Controls.Add(this.btnNewFleet, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnEdit, 5, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnDelete, 6, 5);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 9, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lstBootSoorten, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.btnCourses, 8, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnInstrucors, 8, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnFleet, 8, 5);
             this.tableLayoutPanel1.Controls.Add(this.btnUsers, 8, 6);
             this.tableLayoutPanel1.Controls.Add(this.lblID, 7, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblIDTypes, 7, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 4, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lstVloot, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lstBootSoorten, 0, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -128,7 +128,7 @@
             // btnNewType
             // 
             this.btnNewType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNewType.Location = new System.Drawing.Point(215, 523);
+            this.btnNewType.Location = new System.Drawing.Point(427, 523);
             this.btnNewType.Name = "btnNewType";
             this.btnNewType.Size = new System.Drawing.Size(100, 59);
             this.btnNewType.TabIndex = 31;
@@ -136,20 +136,21 @@
             this.btnNewType.UseVisualStyleBackColor = true;
             this.btnNewType.Click += new System.EventHandler(this.btnNewType_Click);
             // 
-            // button2
+            // btnSaveTypes
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(321, 523);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 59);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Wijzigen";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSaveTypes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSaveTypes.Location = new System.Drawing.Point(533, 523);
+            this.btnSaveTypes.Name = "btnSaveTypes";
+            this.btnSaveTypes.Size = new System.Drawing.Size(100, 59);
+            this.btnSaveTypes.TabIndex = 29;
+            this.btnSaveTypes.Text = "Wijzigen";
+            this.btnSaveTypes.UseVisualStyleBackColor = true;
+            this.btnSaveTypes.Click += new System.EventHandler(this.btnSaveTypes_Click);
             // 
             // btnDeleteType
             // 
             this.btnDeleteType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDeleteType.Location = new System.Drawing.Point(427, 523);
+            this.btnDeleteType.Location = new System.Drawing.Point(639, 523);
             this.btnDeleteType.Name = "btnDeleteType";
             this.btnDeleteType.Size = new System.Drawing.Size(100, 59);
             this.btnDeleteType.TabIndex = 30;
@@ -160,7 +161,7 @@
             // btnNewFleet
             // 
             this.btnNewFleet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNewFleet.Location = new System.Drawing.Point(215, 328);
+            this.btnNewFleet.Location = new System.Drawing.Point(427, 328);
             this.btnNewFleet.Name = "btnNewFleet";
             this.btnNewFleet.Size = new System.Drawing.Size(100, 59);
             this.btnNewFleet.TabIndex = 28;
@@ -171,7 +172,7 @@
             // btnEdit
             // 
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEdit.Location = new System.Drawing.Point(321, 328);
+            this.btnEdit.Location = new System.Drawing.Point(533, 328);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(100, 59);
             this.btnEdit.TabIndex = 26;
@@ -181,7 +182,7 @@
             // btnDelete
             // 
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDelete.Location = new System.Drawing.Point(427, 328);
+            this.btnDelete.Location = new System.Drawing.Point(639, 328);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 59);
             this.btnDelete.TabIndex = 27;
@@ -191,12 +192,13 @@
             // 
             // lstVloot
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.lstVloot, 2);
+            this.tableLayoutPanel1.SetColumnSpan(this.lstVloot, 3);
+            this.lstVloot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstVloot.FormattingEnabled = true;
-            this.lstVloot.Location = new System.Drawing.Point(3, 133);
+            this.lstVloot.Location = new System.Drawing.Point(3, 68);
             this.lstVloot.Name = "lstVloot";
             this.tableLayoutPanel1.SetRowSpan(this.lstVloot, 4);
-            this.lstVloot.Size = new System.Drawing.Size(206, 251);
+            this.lstVloot.Size = new System.Drawing.Size(312, 254);
             this.lstVloot.TabIndex = 0;
             this.lstVloot.SelectedIndexChanged += new System.EventHandler(this.lstVloot_SelectedIndexChanged);
             // 
@@ -204,7 +206,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 65);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 2;
@@ -220,7 +222,8 @@
             this.tableLayoutPanel2.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.txtAantal, 1, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(215, 198);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(427, 198);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -231,6 +234,7 @@
             // 
             // txtNaamVloot
             // 
+            this.txtNaamVloot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNaamVloot.Location = new System.Drawing.Point(104, 3);
             this.txtNaamVloot.Name = "txtNaamVloot";
             this.txtNaamVloot.Size = new System.Drawing.Size(205, 20);
@@ -249,15 +253,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 20);
+            this.label3.Size = new System.Drawing.Size(95, 30);
             this.label3.TabIndex = 1;
             this.label3.Text = "Aantal";
             // 
             // txtAantal
             // 
+            this.txtAantal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtAantal.Location = new System.Drawing.Point(104, 32);
             this.txtAantal.Name = "txtAantal";
             this.txtAantal.Size = new System.Drawing.Size(205, 20);
@@ -273,7 +279,8 @@
             this.tableLayoutPanel3.Controls.Add(this.cmbStatus, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.cmbSoortSchip, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(215, 263);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(427, 263);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -293,6 +300,7 @@
             // 
             // cmbStatus
             // 
+            this.cmbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(104, 32);
             this.cmbStatus.Name = "cmbStatus";
@@ -301,6 +309,7 @@
             // 
             // cmbSoortSchip
             // 
+            this.cmbSoortSchip.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbSoortSchip.FormattingEnabled = true;
             this.cmbSoortSchip.Location = new System.Drawing.Point(104, 3);
             this.cmbSoortSchip.Name = "cmbSoortSchip";
@@ -330,12 +339,13 @@
             // 
             // lstBootSoorten
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.lstBootSoorten, 2);
+            this.tableLayoutPanel1.SetColumnSpan(this.lstBootSoorten, 3);
+            this.lstBootSoorten.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstBootSoorten.FormattingEnabled = true;
-            this.lstBootSoorten.Location = new System.Drawing.Point(3, 458);
+            this.lstBootSoorten.Location = new System.Drawing.Point(3, 393);
             this.lstBootSoorten.Name = "lstBootSoorten";
-            this.tableLayoutPanel1.SetRowSpan(this.lstBootSoorten, 2);
-            this.lstBootSoorten.Size = new System.Drawing.Size(206, 121);
+            this.tableLayoutPanel1.SetRowSpan(this.lstBootSoorten, 3);
+            this.lstBootSoorten.Size = new System.Drawing.Size(312, 189);
             this.lstBootSoorten.TabIndex = 1;
             this.lstBootSoorten.SelectedIndexChanged += new System.EventHandler(this.lstBootSoorten_SelectedIndexChanged);
             // 
@@ -349,7 +359,8 @@
             this.tableLayoutPanel4.Controls.Add(this.txtNaam, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.label7, 0, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(215, 458);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(427, 458);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -359,6 +370,7 @@
             // 
             // txtCapaciteit
             // 
+            this.txtCapaciteit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtCapaciteit.Location = new System.Drawing.Point(104, 32);
             this.txtCapaciteit.Name = "txtCapaciteit";
             this.txtCapaciteit.Size = new System.Drawing.Size(205, 20);
@@ -366,6 +378,7 @@
             // 
             // txtNaam
             // 
+            this.txtNaam.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNaam.Location = new System.Drawing.Point(104, 3);
             this.txtNaam.Name = "txtNaam";
             this.txtNaam.Size = new System.Drawing.Size(205, 20);
@@ -395,7 +408,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 390);
+            this.label2.Location = new System.Drawing.Point(3, 325);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 20);
             this.label2.TabIndex = 3;
@@ -511,7 +524,7 @@
         private System.Windows.Forms.Button btnFleet;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnNewType;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSaveTypes;
         private System.Windows.Forms.Button btnDeleteType;
         private System.Windows.Forms.Button btnNewFleet;
         private System.Windows.Forms.Button btnEdit;

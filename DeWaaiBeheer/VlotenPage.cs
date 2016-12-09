@@ -140,6 +140,12 @@ namespace DeWaaiBeheer
             lstBootSoorten_SelectedIndexChanged(this, EventArgs.Empty);
         }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            db.SaveChanges();
+            lstBootSoorten_SelectedIndexChanged(this, EventArgs.Empty);
+        }
+
         #endregion
 
         #region SideMenu Buttons
@@ -216,33 +222,27 @@ namespace DeWaaiBeheer
         }
         #endregion
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            db.SaveChanges();
-            lstBootSoorten_SelectedIndexChanged(this, EventArgs.Empty);
-        }
-
-        private void VlotenPage_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        #region new Vloot
-      
-        #endregion
-
-
         private void VlotenPage_FormClosed_1(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
+        #region Boat Type buttons
         private void btnNewType_Click(object sender, EventArgs e)
         {
                 types.Name = "Voer nieuwe naam in.";
                 types.Capacity = 0;
                 db.AddBoatType(types);
                 db.SaveChanges();
+
+            lstBootSoorten_SelectedIndexChanged(this, EventArgs.Empty);
         }
+
+        private void btnSaveTypes_Click(object sender, EventArgs e)
+        {
+            db.SaveChanges();
+            lstBootSoorten_SelectedIndexChanged(this, EventArgs.Empty);
+        }
+        #endregion
     }
 }

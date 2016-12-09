@@ -103,6 +103,7 @@ namespace DeWaaiBeheer
             ef.Types.Remove(GetBoatTypes().First(x => x.ID == typeid));
         }
         #endregion
+
         #region Instructors Methods
         public ObservableCollection<Instructors> GetInstructors()
         {
