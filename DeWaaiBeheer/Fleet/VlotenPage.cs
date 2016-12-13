@@ -16,6 +16,8 @@ namespace DeWaaiBeheer
         private BindingSource boattypes;
         Fleet fleet = new Fleet();
         Types types = new Types();
+        int ID;
+        int TypeID;
         private DatabaseMethods db = new DatabaseMethods();
 
         public VlotenPage()
@@ -25,6 +27,7 @@ namespace DeWaaiBeheer
             fillBootSoortenBox();
             fillComboStatus();
             fillComboSoorten();
+            tblNavigation.Visible = false;
            
         }
 
@@ -168,6 +171,18 @@ namespace DeWaaiBeheer
             this.Close();
             Program.instructors.Show();
         }
+
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.home.Show();
+        }
+
+        private void btnInschrijvingen_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.instructors.Show();
+        }
         #endregion
 
         #region selected index changed
@@ -222,7 +237,7 @@ namespace DeWaaiBeheer
 
         private void VlotenPage_FormClosed_1(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Program.home.Show();
         }
 
         #region Boat Type buttons
@@ -242,5 +257,17 @@ namespace DeWaaiBeheer
             lstBootSoorten_SelectedIndexChanged(this, EventArgs.Empty);
         }
         #endregion
+
+        private void lblNavigation_Click(object sender, EventArgs e)
+        {
+            if (tblNavigation.Visible == true)
+            {
+                tblNavigation.Visible = false;
+            }
+            else
+            {
+                tblNavigation.Visible = true;
+            }
+            }
     }
 }
