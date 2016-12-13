@@ -29,11 +29,6 @@ namespace DeWaaiBeheer
             
         }
 
-        private void frmCourses_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Program.home.Show();
-        }
-
         private void lstCourses_SelectedIndexChanged(object sender, EventArgs e)
         {       
             Courses course = lstCourses.SelectedItem as Courses;

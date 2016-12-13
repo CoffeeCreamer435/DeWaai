@@ -250,6 +250,7 @@
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(320, 20);
             this.txtMobile.TabIndex = 9;
+            this.txtMobile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMobile_KeyPress);
             // 
             // txtTelephonenumber
             // 
@@ -259,6 +260,7 @@
             this.txtTelephonenumber.Name = "txtTelephonenumber";
             this.txtTelephonenumber.Size = new System.Drawing.Size(320, 20);
             this.txtTelephonenumber.TabIndex = 8;
+            this.txtTelephonenumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelephonenumber_KeyPress);
             // 
             // txtCountry
             // 
@@ -302,6 +304,7 @@
             this.txtHousenr.Name = "txtHousenr";
             this.txtHousenr.Size = new System.Drawing.Size(71, 20);
             this.txtHousenr.TabIndex = 4;
+            this.txtHousenr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHousenr_KeyPress);
             // 
             // txtSurname
             // 
