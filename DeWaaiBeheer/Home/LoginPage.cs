@@ -21,6 +21,7 @@ namespace DeWaaiBeheer
         {       
             ControlBox = false;
             InitializeComponent();
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -46,6 +47,14 @@ namespace DeWaaiBeheer
             else
             {
                 MessageBox.Show("Onjuiste gegevens!");
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(this, new EventArgs());
             }
         }
     }

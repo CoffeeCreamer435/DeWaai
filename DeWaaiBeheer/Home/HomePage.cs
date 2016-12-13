@@ -14,30 +14,30 @@ namespace DeWaaiBeheer
     public partial class frmHome : Form
     {
         private DatabaseMethods db = new DatabaseMethods();
-        private BindingSource course;
+       
 
         public frmHome()
         {
-            InitializeComponent();
+            InitializeComponent();          
         }
 
         private void frnHome_Load(object sender, EventArgs e)
         {
-            course = new BindingSource { DataSource = db.getCourses() };
-            cmbCourses.DataSource = course;
+            BindingSource binding = new BindingSource { DataSource = db.getCourse() };
+            cmbCourses.DataSource = binding;
             cmbCourses.DisplayMember = "Name";
 
             tlpMain.Hide();
+
             Program.login.Owner = this;
             Program.login.Show();
         }
         private void cmbCourses_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Registrations regis = cmbCourses.SelectedItem as Registrations;
+            //Courses co = cmbCourses.SelectedItem as Courses;
             BindingSource user = new BindingSource { DataSource = db.getUsersByCourse() };
-            cmbCourses.DataSource = user;
-            cmbCourses.DisplayMember = "Name";
-            ResetList(regis);
+            lstNewCharts.DataSource = user;
+            lstNewCharts.DisplayMember = "ID";
         }
 
         /// <summary>
@@ -70,15 +70,6 @@ namespace DeWaaiBeheer
         {
             this.Hide();
             Program.users.ShowDialog();
-        }
-
-        
-
-        private void ResetList(Registrations course)
-        {
-            //lstNewCharts.DataBindings.Clear();
-
-            //lstNewCharts.DataBindings.Add(new Binding("Text", course, "Name"));
         }
 
         private void btnInstructors_Click(object sender, EventArgs e)

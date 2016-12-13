@@ -68,5 +68,30 @@ namespace DeWaaiBeheer
                 
             }
         }
+      
+        private void txtTelephonenumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NumberOnly(sender, e);
+        }
+
+        private void txtHousenr_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NumberOnly(sender, e);
+        }
+
+        private void txtMobile_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NumberOnly(sender, e);
+        }
+
+        #region Methods
+        public void NumberOnly(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsControl(e.KeyChar) && !Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        #endregion
     }
 }

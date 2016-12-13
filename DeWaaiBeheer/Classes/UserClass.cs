@@ -13,12 +13,5 @@ namespace DeWaaiBeheer
         {
             get { return string.Format("{0} {1}", this.Firstname, string.Format("{0} {1}", this.Insertion, this.Surname)).Trim(); }
         }
-
-
-
-        [DataType(DataType.EmailAddress)]
-        [Required]
-        public string Achternaam {get;set;}
-
     }
 }

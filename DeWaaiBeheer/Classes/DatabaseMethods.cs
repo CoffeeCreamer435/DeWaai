@@ -19,25 +19,37 @@ namespace DeWaaiBeheer
             return new ObservableCollection<Users>(ef.Users);
         }
 
-        public ObservableCollection<Registrations> getUsersByCourse()
-        {
-            var query = from x in ef.Registrations                       
-                        join xa in ef.Courses                       
-                        on x.CourseID equals xa.ID
-                        join xx in ef.Users                       
-                        on x.UserID equals xx.ID                       
-                        select x;
+       
 
-            return new ObservableCollection<Registrations>(query);
+        /// <summary>
+        /// Method that gets users of a specific course
+        /// </summary>
+        /// <returns>Returns a list users of a course</returns>
+        public object getUsersByCourse()
+        {
+            var result = (from x in ef.Registrations                         
+                          join cd in ef.Users
+                          on x.UserID equals cd.ID
+                          join xd in ef.Courses
+                          on x.CourseID equals xd.ID
+                          select cd.Firstname).Distinct().ToList();
+
+            return result;
         }
 
-
+        /// <summary>
+        /// Method that sets users into database
+        /// </summary>
+        /// <param name="user">Parameter of user</param>
         public void AddUser(Users user)
         {
             ef.Users.Add(user);
         }
      
-
+        /// <summary>
+        /// Method that removes a user of the database table
+        /// </summary>
+        /// <param name="userId">Parameter of userId</param>
         public void RemoveUser(int userId)
         {
             ef.Users.Remove(getUsers().First(x => x.ID == userId));
@@ -63,6 +75,21 @@ namespace DeWaaiBeheer
         #endregion
 
         #region Courses Methods
+
+        /// <summary>
+        /// Method that gets courses
+        /// </summary>
+        /// <returns>Returns a list users of a course</returns>
+        public object getCourse()
+        {
+            var result = (from x in ef.Registrations
+                          join xd in ef.Courses
+                          on x.CourseID equals xd.ID
+                          select xd.Name).Distinct().ToList();
+
+            return result;
+        }
+
         public ObservableCollection<Courses> getCourses()
         {
             return new ObservableCollection<Courses>(ef.Courses);
