@@ -17,7 +17,7 @@ namespace DeWaaiBeheer
         public static VlotenPage vloten = new VlotenPage();
         public static frmInstructorsPage instructors = new frmInstructorsPage();
         public static frmNewCourse newCourse = new frmNewCourse();
-
+        public static Inschrijvingen.InschrijvingenPage inschrijvingen = new Inschrijvingen.InschrijvingenPage();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

@@ -176,5 +176,22 @@ namespace DeWaaiBeheer
             ef.Instructors.Remove(getInstructors().First(x => x.ID == intstructorId));
         }
         #endregion
+
+        #region Inschrijvingen
+        public ObservableCollection<Registrations> getInschrijvingen()
+        {
+            return new ObservableCollection<Registrations>(ef.Registrations);
+        }
+
+        public object getUsersbyRegistration()
+        {
+            var results = from u in ef.Users
+                          join re in ef.Registrations
+                          on u.ID equals re.UserID
+                          select u.Fullname.ToList();
+
+            return results;
+        }
+        #endregion
     }
 }

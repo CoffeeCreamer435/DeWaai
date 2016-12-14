@@ -85,5 +85,11 @@ namespace DeWaaiBeheer
             this.Close();
             Program.vloten.Show();
         }
+
+        private void btnTenders_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.inschrijvingen.Show();
+        }
     }
 }

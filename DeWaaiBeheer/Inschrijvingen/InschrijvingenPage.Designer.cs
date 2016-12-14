@@ -28,21 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtCapaciteit = new System.Windows.Forms.TextBox();
-            this.txtNaam = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lstVloot = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lstBootSoorten = new System.Windows.Forms.ListBox();
+            this.lstInschrijvingen = new System.Windows.Forms.ListBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.lblIDTypes = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.tblNavigation = new System.Windows.Forms.TableLayoutPanel();
             this.BtnHome = new System.Windows.Forms.Button();
             this.btnCourses = new System.Windows.Forms.Button();
@@ -53,11 +43,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblNavigation = new System.Windows.Forms.Label();
-            this.btnNewType = new System.Windows.Forms.Button();
-            this.btnSaveTypes = new System.Windows.Forms.Button();
-            this.btnDeleteType = new System.Windows.Forms.Button();
             this.btnNewFleet = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtNaamVloot = new System.Windows.Forms.TextBox();
@@ -66,70 +52,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.cmbSoortSchip = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel4.SuspendLayout();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tblNavigation.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel4, 3);
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel4.Controls.Add(this.txtCapaciteit, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.txtNaam, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label7, 0, 1);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(364, 458);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(402, 59);
-            this.tableLayoutPanel4.TabIndex = 8;
-            // 
-            // txtCapaciteit
-            // 
-            this.txtCapaciteit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCapaciteit.Location = new System.Drawing.Point(103, 32);
-            this.txtCapaciteit.Name = "txtCapaciteit";
-            this.txtCapaciteit.Size = new System.Drawing.Size(296, 20);
-            this.txtCapaciteit.TabIndex = 4;
-            // 
-            // txtNaam
-            // 
-            this.txtNaam.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNaam.Location = new System.Drawing.Point(103, 3);
-            this.txtNaam.Name = "txtNaam";
-            this.txtNaam.Size = new System.Drawing.Size(296, 20);
-            this.txtNaam.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Naam";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 20);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Capaciteit";
             // 
             // label1
             // 
@@ -145,41 +75,16 @@
             this.label1.Text = "Inschrijvingen";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lstVloot
+            // lstInschrijvingen
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.lstVloot, 3);
-            this.lstVloot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstVloot.FormattingEnabled = true;
-            this.lstVloot.Location = new System.Drawing.Point(3, 68);
-            this.lstVloot.Name = "lstVloot";
-            this.tableLayoutPanel1.SetRowSpan(this.lstVloot, 4);
-            this.lstVloot.Size = new System.Drawing.Size(333, 254);
-            this.lstVloot.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label2, 3);
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(3, 325);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(333, 65);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Soort boten";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lstBootSoorten
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.lstBootSoorten, 3);
-            this.lstBootSoorten.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstBootSoorten.FormattingEnabled = true;
-            this.lstBootSoorten.Location = new System.Drawing.Point(3, 393);
-            this.lstBootSoorten.Name = "lstBootSoorten";
-            this.tableLayoutPanel1.SetRowSpan(this.lstBootSoorten, 3);
-            this.lstBootSoorten.Size = new System.Drawing.Size(333, 189);
-            this.lstBootSoorten.TabIndex = 1;
+            this.tableLayoutPanel1.SetColumnSpan(this.lstInschrijvingen, 3);
+            this.lstInschrijvingen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstInschrijvingen.FormattingEnabled = true;
+            this.lstInschrijvingen.Location = new System.Drawing.Point(3, 68);
+            this.lstInschrijvingen.Name = "lstInschrijvingen";
+            this.tableLayoutPanel1.SetRowSpan(this.lstInschrijvingen, 7);
+            this.lstInschrijvingen.Size = new System.Drawing.Size(333, 449);
+            this.lstInschrijvingen.TabIndex = 0;
             // 
             // label9
             // 
@@ -203,24 +108,6 @@
             this.label10.Size = new System.Drawing.Size(16, 520);
             this.label10.TabIndex = 35;
             // 
-            // lblIDTypes
-            // 
-            this.lblIDTypes.AutoSize = true;
-            this.lblIDTypes.Location = new System.Drawing.Point(3, 585);
-            this.lblIDTypes.Name = "lblIDTypes";
-            this.lblIDTypes.Size = new System.Drawing.Size(50, 13);
-            this.lblIDTypes.TabIndex = 33;
-            this.lblIDTypes.Text = "lblidtypes";
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(116, 585);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(28, 13);
-            this.lblID.TabIndex = 32;
-            this.lblID.Text = "lblID";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -234,20 +121,6 @@
             this.label11.TabIndex = 36;
             this.label11.Text = "Navigeren";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label13, 3);
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label13.Location = new System.Drawing.Point(364, 325);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(402, 65);
-            this.label13.TabIndex = 38;
-            this.label13.Text = "Gegevens";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tblNavigation
             // 
@@ -272,6 +145,7 @@
             this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tblNavigation.Size = new System.Drawing.Size(270, 384);
             this.tblNavigation.TabIndex = 42;
+            this.tblNavigation.Visible = false;
             // 
             // BtnHome
             // 
@@ -282,6 +156,7 @@
             this.BtnHome.TabIndex = 41;
             this.BtnHome.Text = "Home";
             this.BtnHome.UseVisualStyleBackColor = true;
+            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
             // btnCourses
             // 
@@ -362,26 +237,16 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.68109F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.69441F));
             this.tableLayoutPanel1.Controls.Add(this.lblNavigation, 8, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnNewType, 4, 8);
-            this.tableLayoutPanel1.Controls.Add(this.btnSaveTypes, 5, 8);
-            this.tableLayoutPanel1.Controls.Add(this.btnDeleteType, 6, 8);
-            this.tableLayoutPanel1.Controls.Add(this.btnNewFleet, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.btnEdit, 5, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnNewFleet, 5, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnDelete, 6, 4);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 4, 7);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lstVloot, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lstBootSoorten, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lstInschrijvingen, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label9, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.label10, 7, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblIDTypes, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.lblID, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.label11, 8, 0);
             this.tableLayoutPanel1.Controls.Add(this.label12, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label13, 4, 5);
             this.tableLayoutPanel1.Controls.Add(this.tblNavigation, 8, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -448,55 +313,15 @@
             this.lblNavigation.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblNavigation.Click += new System.EventHandler(this.lblNavigation_Click);
             // 
-            // btnNewType
-            // 
-            this.btnNewType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNewType.Location = new System.Drawing.Point(364, 523);
-            this.btnNewType.Name = "btnNewType";
-            this.btnNewType.Size = new System.Drawing.Size(130, 59);
-            this.btnNewType.TabIndex = 31;
-            this.btnNewType.Text = "Nieuw";
-            this.btnNewType.UseVisualStyleBackColor = true;
-            // 
-            // btnSaveTypes
-            // 
-            this.btnSaveTypes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSaveTypes.Location = new System.Drawing.Point(500, 523);
-            this.btnSaveTypes.Name = "btnSaveTypes";
-            this.btnSaveTypes.Size = new System.Drawing.Size(130, 59);
-            this.btnSaveTypes.TabIndex = 29;
-            this.btnSaveTypes.Text = "Wijzigen";
-            this.btnSaveTypes.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteType
-            // 
-            this.btnDeleteType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDeleteType.Location = new System.Drawing.Point(636, 523);
-            this.btnDeleteType.Name = "btnDeleteType";
-            this.btnDeleteType.Size = new System.Drawing.Size(130, 59);
-            this.btnDeleteType.TabIndex = 30;
-            this.btnDeleteType.Text = "Verwijderen";
-            this.btnDeleteType.UseVisualStyleBackColor = true;
-            // 
             // btnNewFleet
             // 
             this.btnNewFleet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNewFleet.Location = new System.Drawing.Point(364, 263);
+            this.btnNewFleet.Location = new System.Drawing.Point(500, 263);
             this.btnNewFleet.Name = "btnNewFleet";
             this.btnNewFleet.Size = new System.Drawing.Size(130, 59);
             this.btnNewFleet.TabIndex = 28;
-            this.btnNewFleet.Text = "Nieuw";
+            this.btnNewFleet.Text = "Weigeren";
             this.btnNewFleet.UseVisualStyleBackColor = true;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEdit.Location = new System.Drawing.Point(500, 263);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(130, 59);
-            this.btnEdit.TabIndex = 26;
-            this.btnEdit.Text = "Wijzigen";
-            this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
@@ -505,7 +330,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(130, 59);
             this.btnDelete.TabIndex = 27;
-            this.btnDelete.Text = "Verwijderen";
+            this.btnDelete.Text = "Opslaan";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
@@ -544,7 +369,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 30);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Aantal";
+            this.label3.Text = "Invoice";
             // 
             // txtAantal
             // 
@@ -571,9 +396,9 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel3.Controls.Add(this.label5, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.cmbStatus, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.cmbSoortSchip, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(364, 198);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -589,18 +414,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 29);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 20);
+            this.label5.Size = new System.Drawing.Size(57, 20);
             this.label5.TabIndex = 1;
-            this.label5.Text = "Status";
-            // 
-            // cmbStatus
-            // 
-            this.cmbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(103, 32);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(296, 21);
-            this.cmbStatus.TabIndex = 3;
+            this.label5.Text = "Datum";
             // 
             // cmbSoortSchip
             // 
@@ -617,9 +433,17 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 20);
+            this.label4.Size = new System.Drawing.Size(59, 20);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Schip soort";
+            this.label4.Text = "Cursus";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePicker1.Location = new System.Drawing.Point(103, 32);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(296, 20);
+            this.dateTimePicker1.TabIndex = 4;
             // 
             // InschrijvingenPage
             // 
@@ -628,9 +452,8 @@
             this.ClientSize = new System.Drawing.Size(1067, 651);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "InschrijvingenPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InschrijvingenPage";
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
             this.tblNavigation.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -643,15 +466,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblNavigation;
-        private System.Windows.Forms.Button btnNewType;
-        private System.Windows.Forms.Button btnSaveTypes;
-        private System.Windows.Forms.Button btnDeleteType;
         private System.Windows.Forms.Button btnNewFleet;
-        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox txtNaamVloot;
@@ -660,20 +477,14 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.ComboBox cmbSoortSchip;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox lstVloot;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox lstBootSoorten;
+        private System.Windows.Forms.ListBox lstInschrijvingen;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblIDTypes;
-        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TableLayoutPanel tblNavigation;
         private System.Windows.Forms.Button BtnHome;
         private System.Windows.Forms.Button btnCourses;
@@ -681,9 +492,6 @@
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnInstrucors;
         private System.Windows.Forms.Button btnFleet;
-        private System.Windows.Forms.TextBox txtCapaciteit;
-        private System.Windows.Forms.TextBox txtNaam;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
