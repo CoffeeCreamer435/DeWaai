@@ -15,10 +15,12 @@ namespace DeWaaiBeheer
     {
         private DatabaseMethods db = new DatabaseMethods();
        
-
         public frmHome()
         {
-            InitializeComponent();          
+            InitializeComponent();
+            myAccountToolStripMenuItem.Text = ("Mijn account");
+            logoutToolStripMenuItem.Text = ("Uitloggen");
+            nameToolStripMenuItem.Text = ("Admin paneel");
         }
 
         private void frnHome_Load(object sender, EventArgs e)
@@ -26,15 +28,10 @@ namespace DeWaaiBeheer
             BindingSource binding = new BindingSource { DataSource = db.getCourse() };
             cmbCourses.DataSource = binding;
             cmbCourses.DisplayMember = "Name";
-
-            tlpMain.Hide();
-
-            Program.login.Owner = this;
-            Program.login.Show();
         }
+
         private void cmbCourses_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Courses co = cmbCourses.SelectedItem as Courses;
             BindingSource user = new BindingSource { DataSource = db.getUsersByCourse() };
             lstNewCharts.DataSource = user;
             lstNewCharts.DisplayMember = "ID";
@@ -62,27 +59,31 @@ namespace DeWaaiBeheer
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Program.courses.ShowDialog();
+            this.Close();
+            Program.courses.Show();
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Program.users.ShowDialog();
+            this.Close();
+            Program.users.Show();
         }
 
         private void btnInstructors_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Program.instructors.ShowDialog();
+            this.Close();
+            Program.instructors.Show();
         }
 
         private void btnReviews_Click(object sender, EventArgs e)
         {
-            VlotenPage vloten = new VlotenPage();
-            vloten.ShowDialog();
-            this.Hide();
+            //
+        }
+
+        private void btnFleets_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.vloten.Show();
         }
     }
 }

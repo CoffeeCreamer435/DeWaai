@@ -18,7 +18,6 @@ namespace DeWaaiBeheer
         public static frmInstructorsPage instructors = new frmInstructorsPage();
         public static frmNewCourse newCourse = new frmNewCourse();
 
-
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -26,7 +25,7 @@ namespace DeWaaiBeheer
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.Run(home);
+            Application.Run(login);
         }
         
     }

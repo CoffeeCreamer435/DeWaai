@@ -19,14 +19,15 @@ namespace DeWaaiBeheer
         public string Insertion { get; set; }
         public string Surname { get; set; }
         public string Password { get; set; }
-        public int Telephone { get; set; }
-        public int Mobile { get; set; }
+        public string Telephone { get; set; }
+        public string Mobile { get; set; }
         public string Street { get; set; }
-        public int HouseNumber { get; set; }
+        public string HouseNumber { get; set; }
         public string City { get; set; }
         public string Zip { get; set; }
         public string Country { get; set; }
         public Nullable<int> CursusID { get; set; }
         public string Description { get; set; }
+        public string Email { get; set; }
     }
 }

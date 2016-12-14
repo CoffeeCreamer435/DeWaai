@@ -62,6 +62,7 @@
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Classes\DatabaseMethods.cs" />
+    <Compile Include="Classes\InstructorClass.cs" />
     <Compile Include="Courses.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
@@ -70,6 +71,9 @@
     </Compile>
     <Compile Include="Course\NewCoursePage.Designer.cs">
       <DependentUpon>NewCoursePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerFeedback.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EntityBootModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -126,6 +130,15 @@
     <Compile Include="Registrations.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Status.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tender\TenderPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tender\TenderPage.Designer.cs">
+      <DependentUpon>TenderPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Types.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
@@ -172,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Instructor\InstructorsPage.resx">
       <DependentUpon>InstructorsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tender\TenderPage.resx">
+      <DependentUpon>TenderPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\NewUserPage.resx">
       <DependentUpon>NewUserPage.cs</DependentUpon>
@@ -235,9 +251,7 @@
       <LastGenOutput>EntityBootModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tenders\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

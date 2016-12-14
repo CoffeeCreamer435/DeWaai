@@ -17,9 +17,7 @@ namespace DeWaaiBeheer
         public ObservableCollection<Users> getUsers()
         {
             return new ObservableCollection<Users>(ef.Users);
-        }
-
-       
+        }   
 
         /// <summary>
         /// Method that gets users of a specific course
@@ -153,10 +151,28 @@ namespace DeWaaiBeheer
         }
         #endregion
 
-        #region Instructors Methods
-        public ObservableCollection<Instructors> GetInstructors()
+        #region Instructor Methods
+        public ObservableCollection<Instructors> getInstructors()
         {
             return new ObservableCollection<Instructors>(ef.Instructors);
+        }
+
+        /// <summary>
+        /// Method that sets users into database
+        /// </summary>
+        /// <param name="user">Parameter of user</param>
+        public void AddInstructor(Instructors instructor)
+        {
+            ef.Instructors.Add(instructor);
+        }
+
+        /// <summary>
+        /// Method that removes a user of the database table
+        /// </summary>
+        /// <param name="userId">Parameter of userId</param>
+        public void RemoveInstructor(int intstructorId)
+        {
+            ef.Instructors.Remove(getInstructors().First(x => x.ID == intstructorId));
         }
         #endregion
     }

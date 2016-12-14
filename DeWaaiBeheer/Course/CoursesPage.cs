@@ -60,6 +60,7 @@ namespace DeWaaiBeheer
         {
             NumberOnly(sender, e);
         }
+
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
             NumberOnly(sender, e);
@@ -134,7 +135,7 @@ namespace DeWaaiBeheer
         private void btnUsers_Click(object sender, EventArgs e)
         {
             this.Close();
-            Program.users.Show();
+            Program.users.ShowDialog();
         }
 
         private void btnInstructors_Click(object sender, EventArgs e)

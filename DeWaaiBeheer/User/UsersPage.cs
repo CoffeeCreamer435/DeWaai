@@ -13,19 +13,24 @@ namespace DeWaaiBeheer
     public partial class frmUsers : Form
     {
         private DatabaseMethods db = new DatabaseMethods();
-        private BindingSource users;
+        private BindingSource binding;
         private Users user;
 
         public frmUsers()
         {
             InitializeComponent();
-            user = new Users();
-            users = new BindingSource { DataSource = db.getUsers() };
+            tlpNavigation.Hide();
 
-            lstUsers.DataSource = users;
+            user = new Users();
+            binding = new BindingSource { DataSource = db.getUsers() };
+
+            lstUsers.DataSource = binding;
             lstUsers.ValueMember = "ID";
             lstUsers.DisplayMember = "Fullname";
-        }
+
+            cmbFunction.Text = "Cursist";
+            cmbFunction.Text = "Instructeur";
+        }       
 
         private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -68,6 +73,14 @@ namespace DeWaaiBeheer
             }
         }
 
+
+        #region User methods
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            Program.newUser.ShowDialog();
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtId.Text);
@@ -82,31 +95,23 @@ namespace DeWaaiBeheer
                         db.SaveChanges();
 
                         lstUsers.DataSource = null;
-                        users = new BindingSource { DataSource = db.getUsers() };
-                        lstUsers.DataSource = users;
+                        binding = new BindingSource { DataSource = db.getUsers() };
+                        lstUsers.DataSource = binding;
                         lstUsers.DisplayMember = "Fullname";
                     }
                 }
             }
         }
-
-        private void btnNew_Click(object sender, EventArgs e)
-        {
-            Program.newUser.ShowDialog();
-        }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             db.SaveChanges();
             MessageBox.Show("De gegevens zijn succesvol gewijzigd!");
         }
 
-        private void btnCharts_Click(object sender, EventArgs e)
-        {
+        #endregion
 
-        }
-
-        private void btnHomepage_Click(object sender, EventArgs e)
+        #region Menu buttons
+        private void btnHome_Click(object sender, EventArgs e)
         {
             this.Hide();
             Program.home.Show();
@@ -114,14 +119,43 @@ namespace DeWaaiBeheer
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             Program.courses.Show();
         }
 
         private void btnInstructors_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             Program.instructors.Show();
+        }
+
+        private void btnFleets_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.vloten.Show();
+        }
+
+        #endregion
+
+        #region Navigation label methods
+        private void lblNavigation_MouseEnter(object sender, EventArgs e)
+        {
+            lblNavigation.Font = new Font(lblNavigation.Font.Name, lblNavigation.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void lblNavigation_MouseLeave(object sender, EventArgs e)
+        {
+            lblNavigation.Font = new Font(lblNavigation.Font.Name, lblNavigation.Font.SizeInPoints, FontStyle.Regular);
+        }
+        private void lblNavigation_Click(object sender, EventArgs e)
+        {
+            tlpNavigation.Show();
+        }
+        #endregion
+
+        private void frmUsers_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

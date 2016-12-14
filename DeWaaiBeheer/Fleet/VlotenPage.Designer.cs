@@ -35,8 +35,13 @@
             this.btnNewFleet = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.lstVloot = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCourses = new System.Windows.Forms.Button();
+            this.btnInstrucors = new System.Windows.Forms.Button();
+            this.btnFleet = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblIDTypes = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtNaamVloot = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,24 +52,19 @@
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.cmbSoortSchip = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lstBootSoorten = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.txtCapaciteit = new System.Windows.Forms.TextBox();
             this.txtNaam = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lstVloot = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnCourses = new System.Windows.Forms.Button();
-            this.btnInstrucors = new System.Windows.Forms.Button();
-            this.btnFleet = new System.Windows.Forms.Button();
-            this.btnUsers = new System.Windows.Forms.Button();
-            this.lblID = new System.Windows.Forms.Label();
-            this.lblIDTypes = new System.Windows.Forms.Label();
+            this.lstBootSoorten = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -190,27 +190,77 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // lstVloot
+            // pictureBox1
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.lstVloot, 3);
-            this.lstVloot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstVloot.FormattingEnabled = true;
-            this.lstVloot.Location = new System.Drawing.Point(3, 68);
-            this.lstVloot.Name = "lstVloot";
-            this.tableLayoutPanel1.SetRowSpan(this.lstVloot, 4);
-            this.lstVloot.Size = new System.Drawing.Size(312, 254);
-            this.lstVloot.TabIndex = 0;
-            this.lstVloot.SelectedIndexChanged += new System.EventHandler(this.lstVloot_SelectedIndexChanged);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::DeWaaiBeheer.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(957, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
+            this.pictureBox1.Size = new System.Drawing.Size(107, 124);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // btnCourses
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Vloten";
+            this.tableLayoutPanel1.SetColumnSpan(this.btnCourses, 2);
+            this.btnCourses.Location = new System.Drawing.Point(851, 198);
+            this.btnCourses.Name = "btnCourses";
+            this.btnCourses.Size = new System.Drawing.Size(213, 59);
+            this.btnCourses.TabIndex = 18;
+            this.btnCourses.Text = "Cursussen";
+            this.btnCourses.UseVisualStyleBackColor = true;
+            this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
+            // 
+            // btnInstrucors
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.btnInstrucors, 2);
+            this.btnInstrucors.Location = new System.Drawing.Point(851, 263);
+            this.btnInstrucors.Name = "btnInstrucors";
+            this.btnInstrucors.Size = new System.Drawing.Size(213, 59);
+            this.btnInstrucors.TabIndex = 19;
+            this.btnInstrucors.Text = "Instructeurs";
+            this.btnInstrucors.UseVisualStyleBackColor = true;
+            this.btnInstrucors.Click += new System.EventHandler(this.btnInstrucors_Click);
+            // 
+            // btnFleet
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.btnFleet, 2);
+            this.btnFleet.Location = new System.Drawing.Point(851, 328);
+            this.btnFleet.Name = "btnFleet";
+            this.btnFleet.Size = new System.Drawing.Size(213, 59);
+            this.btnFleet.TabIndex = 20;
+            this.btnFleet.Text = "Vloten";
+            this.btnFleet.UseVisualStyleBackColor = true;
+            // 
+            // btnUsers
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.btnUsers, 2);
+            this.btnUsers.Location = new System.Drawing.Point(851, 393);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(213, 59);
+            this.btnUsers.TabIndex = 21;
+            this.btnUsers.Text = "Gebruikers";
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(745, 0);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(28, 13);
+            this.lblID.TabIndex = 32;
+            this.lblID.Text = "lblID";
+            // 
+            // lblIDTypes
+            // 
+            this.lblIDTypes.AutoSize = true;
+            this.lblIDTypes.Location = new System.Drawing.Point(745, 65);
+            this.lblIDTypes.Name = "lblIDTypes";
+            this.lblIDTypes.Size = new System.Drawing.Size(50, 13);
+            this.lblIDTypes.TabIndex = 33;
+            this.lblIDTypes.Text = "lblidtypes";
             // 
             // tableLayoutPanel2
             // 
@@ -326,29 +376,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Schip soort";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::DeWaaiBeheer.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(957, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(107, 124);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lstBootSoorten
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.lstBootSoorten, 3);
-            this.lstBootSoorten.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstBootSoorten.FormattingEnabled = true;
-            this.lstBootSoorten.Location = new System.Drawing.Point(3, 393);
-            this.lstBootSoorten.Name = "lstBootSoorten";
-            this.tableLayoutPanel1.SetRowSpan(this.lstBootSoorten, 3);
-            this.lstBootSoorten.Size = new System.Drawing.Size(312, 189);
-            this.lstBootSoorten.TabIndex = 1;
-            this.lstBootSoorten.SelectedIndexChanged += new System.EventHandler(this.lstBootSoorten_SelectedIndexChanged);
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
@@ -404,6 +431,28 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "Capaciteit";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Vloten";
+            // 
+            // lstVloot
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.lstVloot, 3);
+            this.lstVloot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstVloot.FormattingEnabled = true;
+            this.lstVloot.Location = new System.Drawing.Point(3, 68);
+            this.lstVloot.Name = "lstVloot";
+            this.tableLayoutPanel1.SetRowSpan(this.lstVloot, 4);
+            this.lstVloot.Size = new System.Drawing.Size(312, 254);
+            this.lstVloot.TabIndex = 0;
+            this.lstVloot.SelectedIndexChanged += new System.EventHandler(this.lstVloot_SelectedIndexChanged);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -414,66 +463,17 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Soort boten";
             // 
-            // btnCourses
+            // lstBootSoorten
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.btnCourses, 2);
-            this.btnCourses.Location = new System.Drawing.Point(851, 198);
-            this.btnCourses.Name = "btnCourses";
-            this.btnCourses.Size = new System.Drawing.Size(213, 59);
-            this.btnCourses.TabIndex = 18;
-            this.btnCourses.Text = "Cursussen";
-            this.btnCourses.UseVisualStyleBackColor = true;
-            this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
-            // 
-            // btnInstrucors
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.btnInstrucors, 2);
-            this.btnInstrucors.Location = new System.Drawing.Point(851, 263);
-            this.btnInstrucors.Name = "btnInstrucors";
-            this.btnInstrucors.Size = new System.Drawing.Size(213, 59);
-            this.btnInstrucors.TabIndex = 19;
-            this.btnInstrucors.Text = "Instructeurs";
-            this.btnInstrucors.UseVisualStyleBackColor = true;
-            this.btnInstrucors.Click += new System.EventHandler(this.btnInstrucors_Click);
-            // 
-            // btnFleet
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.btnFleet, 2);
-            this.btnFleet.Location = new System.Drawing.Point(851, 328);
-            this.btnFleet.Name = "btnFleet";
-            this.btnFleet.Size = new System.Drawing.Size(213, 59);
-            this.btnFleet.TabIndex = 20;
-            this.btnFleet.Text = "Vloten";
-            this.btnFleet.UseVisualStyleBackColor = true;
-            // 
-            // btnUsers
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.btnUsers, 2);
-            this.btnUsers.Location = new System.Drawing.Point(851, 393);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(213, 59);
-            this.btnUsers.TabIndex = 21;
-            this.btnUsers.Text = "Gebruikers";
-            this.btnUsers.UseVisualStyleBackColor = true;
-            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(745, 0);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(28, 13);
-            this.lblID.TabIndex = 32;
-            this.lblID.Text = "lblID";
-            // 
-            // lblIDTypes
-            // 
-            this.lblIDTypes.AutoSize = true;
-            this.lblIDTypes.Location = new System.Drawing.Point(745, 65);
-            this.lblIDTypes.Name = "lblIDTypes";
-            this.lblIDTypes.Size = new System.Drawing.Size(50, 13);
-            this.lblIDTypes.TabIndex = 33;
-            this.lblIDTypes.Text = "lblidtypes";
+            this.tableLayoutPanel1.SetColumnSpan(this.lstBootSoorten, 3);
+            this.lstBootSoorten.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstBootSoorten.FormattingEnabled = true;
+            this.lstBootSoorten.Location = new System.Drawing.Point(3, 393);
+            this.lstBootSoorten.Name = "lstBootSoorten";
+            this.tableLayoutPanel1.SetRowSpan(this.lstBootSoorten, 3);
+            this.lstBootSoorten.Size = new System.Drawing.Size(312, 189);
+            this.lstBootSoorten.TabIndex = 1;
+            this.lstBootSoorten.SelectedIndexChanged += new System.EventHandler(this.lstBootSoorten_SelectedIndexChanged);
             // 
             // VlotenPage
             // 
@@ -487,11 +487,11 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VlotenPage_FormClosed_1);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
