@@ -34,9 +34,15 @@ namespace DeWaaiBeheer
 
         private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Users user = lstUsers.SelectedItem as Users;
-            lstUsers.DataSource = db.getUsers();
+            Users user = lstUsers.SelectedItem as Users;                
             resetUsersBySelected(user);           
+        }
+
+        public void updateListbox()
+        {
+            lstUsers.DataSource = null;
+            lstUsers.DataSource = db.getUsers();
+            lstUsers.DisplayMember = "Fullname";
         }
 
         private void resetUsersBySelected(Users user)
@@ -105,6 +111,7 @@ namespace DeWaaiBeheer
         private void btnEdit_Click(object sender, EventArgs e)
         {
             db.SaveChanges();
+
             MessageBox.Show("De gegevens zijn succesvol gewijzigd!");
         }
 

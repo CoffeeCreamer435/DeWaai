@@ -32,7 +32,6 @@ namespace DeWaaiBeheer
         private void lstCourses_SelectedIndexChanged(object sender, EventArgs e)
         {       
             Courses course = lstCourses.SelectedItem as Courses;
-            lstCourses.DataSource = db.getCourses();
             ResetList(course);          
         }
            
@@ -54,7 +53,14 @@ namespace DeWaaiBeheer
                 txtPrice.DataBindings.Add("Text", course, "Price");
                 //dtpDate.DataBindings.Add("Text", course, "Date");
             }                 
-        } 
+        }
+
+        public void updateListbox()
+        {
+            lstCourses.DataSource = null;
+            lstCourses.DataSource = db.getCourses();
+            lstCourses.DisplayMember = "Name";
+        }
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {

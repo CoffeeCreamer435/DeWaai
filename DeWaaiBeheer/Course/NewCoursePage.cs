@@ -43,6 +43,7 @@ namespace DeWaaiBeheer
                       
                         db.AddCourse(co);
                         db.SaveChanges();
+                        Program.courses.updateListbox();
 
                         MessageBox.Show("Cursus is succesvol toegevoegd!");
                         this.Close();

@@ -62,7 +62,7 @@ namespace DeWaaiBeheer
                             //Save user to database
                             db.AddUser(user);
                             db.SaveChanges();
-
+                            Program.users.updateListbox();
                             break;
 
                         case "Instructeur":
@@ -84,7 +84,8 @@ namespace DeWaaiBeheer
 
                                 //Save instructor to database
                                 db.AddInstructor(instructor);
-                                db.SaveChanges();                            
+                                db.SaveChanges();
+                                Program.instructors.updateListbox();
                             }
                             else
                             {

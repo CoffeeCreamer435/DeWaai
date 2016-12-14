@@ -49,8 +49,6 @@ namespace DeWaaiBeheer
             tlpNavigation.Show();
         }
 
-        
-
         #region Menu buttons
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -114,7 +112,6 @@ namespace DeWaaiBeheer
         private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
             Instructors instructor = lstUsers.SelectedItem as Instructors;
-            lstUsers.DataSource = db.getInstructors();
             resetInstructorsBySelected(instructor);
         }
 
@@ -152,6 +149,13 @@ namespace DeWaaiBeheer
                 txtPass.DataBindings.Add("Text", instructor, "Password");
                 txtDescription.DataBindings.Add("Text", instructor, "Description");
             }
+        }
+
+        public void updateListbox()
+        {
+            lstUsers.DataSource = null;
+            lstUsers.DataSource = db.getInstructors();
+            lstUsers.DisplayMember = "Fullname";
         }
     }
 }
