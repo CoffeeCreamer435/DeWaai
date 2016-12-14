@@ -62,7 +62,6 @@
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Classes\DatabaseMethods.cs" />
-    <Compile Include="Classes\InstructorClass.cs" />
     <Compile Include="Courses.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
@@ -111,6 +110,12 @@
     <Compile Include="Admin\MyAccount.Designer.cs">
       <DependentUpon>MyAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inschrijvingen\InschrijvingenPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inschrijvingen\InschrijvingenPage.Designer.cs">
+      <DependentUpon>InschrijvingenPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Instructors.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
@@ -132,12 +137,6 @@
     </Compile>
     <Compile Include="Status.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tender\TenderPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tender\TenderPage.Designer.cs">
-      <DependentUpon>TenderPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Types.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
@@ -183,11 +182,11 @@
     <EmbeddedResource Include="Admin\MyAccount.resx">
       <DependentUpon>MyAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inschrijvingen\InschrijvingenPage.resx">
+      <DependentUpon>InschrijvingenPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Instructor\InstructorsPage.resx">
       <DependentUpon>InstructorsPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tender\TenderPage.resx">
-      <DependentUpon>TenderPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\NewUserPage.resx">
       <DependentUpon>NewUserPage.cs</DependentUpon>
@@ -251,7 +250,9 @@
       <LastGenOutput>EntityBootModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Tenders\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

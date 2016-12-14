@@ -125,13 +125,14 @@ namespace DeWaaiBeheer
             ef.Fleet.Remove(getFleet().First(x => x.ID == fleetid));
         }
 
-        //public ObservableCollection<Types> getUniqueBoats()
-        //{
-        //    var result = (from bt in ef.Types
-        //                  where bt.Name 
-        //                  select bt.Name).Distinct();
-        //    return new ObservableCollection<Types>(result);
-        //}
+       public object GetUniqueBoats()
+        {
+            var results = (from t in ef.Types
+                           join bt in ef.Fleet
+                           on t.ID equals bt.TypeID
+                           select t.Name).Distinct().ToList();
+            return results;
+        }
         #endregion
 
         #region BoatTypes

@@ -17,7 +17,7 @@ namespace DeWaaiBeheer
         Fleet fleet = new Fleet();
         Types types = new Types();
         private DatabaseMethods db = new DatabaseMethods();
-
+        
         public VlotenPage()
         {
             InitializeComponent();
@@ -25,6 +25,8 @@ namespace DeWaaiBeheer
             fillBootSoortenBox();
             fillComboStatus();
             fillComboSoorten();
+            tblNavigation.Visible = false;
+            Program.home.Hide();
            
         }
 
@@ -78,16 +80,17 @@ namespace DeWaaiBeheer
 
         public void fillComboSoorten()
         {
-            cmbSoortSchip.DataSource = db.GetBoatTypes();
-            cmbSoortSchip.ValueMember = "ID";
-            cmbSoortSchip.DisplayMember = "Name";
+           BindingSource BoatTypes = new BindingSource { DataSource = db.GetUniqueBoats() };
+           cmbSoortSchip.DataSource = BoatTypes;
+           cmbSoortSchip.DisplayMember = "Name";
         }
 
         public void fillComboStatus()
         {
-            cmbStatus.DataSource = db.getFleet();
-            cmbStatus.ValueMember = "Status";
-            cmbStatus.DisplayMember = "Status";
+            cmbStatus.Items.Add("Gereed");
+            cmbStatus.Items.Add("Reparatie");
+            cmbStatus.Items.Add("In gebruik");
+           
         }
         #endregion
 
@@ -96,6 +99,11 @@ namespace DeWaaiBeheer
         {
             db.SaveChanges();
             lstBootSoorten_SelectedIndexChanged(this, EventArgs.Empty);
+        }
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+            db.SaveChanges();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -168,6 +176,18 @@ namespace DeWaaiBeheer
             this.Close();
             Program.instructors.Show();
         }
+
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.home.Show();
+        }
+
+        private void btnInschrijvingen_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.instructors.Show();
+        }
         #endregion
 
         #region selected index changed
@@ -220,11 +240,6 @@ namespace DeWaaiBeheer
         }
         #endregion
 
-        private void VlotenPage_FormClosed_1(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
         #region Boat Type buttons
         private void btnNewType_Click(object sender, EventArgs e)
         {
@@ -242,5 +257,17 @@ namespace DeWaaiBeheer
             lstBootSoorten_SelectedIndexChanged(this, EventArgs.Empty);
         }
         #endregion
+
+        private void lblNavigation_Click(object sender, EventArgs e)
+        {
+            if (tblNavigation.Visible == true)
+            {
+                tblNavigation.Visible = false;
+            }
+            else
+            {
+                tblNavigation.Visible = true;
+            }
+            }
     }
 }
