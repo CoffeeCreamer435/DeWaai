@@ -71,6 +71,9 @@
     <Compile Include="Course\NewCoursePage.Designer.cs">
       <DependentUpon>NewCoursePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerFeedback.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="EntityBootModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -107,6 +110,12 @@
     <Compile Include="Admin\MyAccount.Designer.cs">
       <DependentUpon>MyAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inschrijvingen\InschrijvingenPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inschrijvingen\InschrijvingenPage.Designer.cs">
+      <DependentUpon>InschrijvingenPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Instructors.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
@@ -124,6 +133,9 @@
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Registrations.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Status.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Types.cs">
@@ -169,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\MyAccount.resx">
       <DependentUpon>MyAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inschrijvingen\InschrijvingenPage.resx">
+      <DependentUpon>InschrijvingenPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Instructor\InstructorsPage.resx">
       <DependentUpon>InstructorsPage.cs</DependentUpon>

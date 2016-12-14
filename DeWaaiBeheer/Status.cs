@@ -15,20 +15,12 @@ namespace DeWaaiBeheer
 using System;
     using System.Collections.Generic;
     
-public partial class BookedCursus
+public partial class Status
 {
 
     public int ID { get; set; }
 
-    public int FleetID { get; set; }
-
-    public System.DateTime Date { get; set; }
-
-    public int UserID { get; set; }
-
-    public int InstructorID { get; set; }
-
-    public int CoursesID { get; set; }
+    public string StatusName { get; set; }
 
 }
 
