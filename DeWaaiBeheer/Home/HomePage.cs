@@ -88,5 +88,11 @@ namespace DeWaaiBeheer
             //lstUsers.Items.Add(string.Format("{0}       |       {1}       |       {2}", "Emre Atasoy", "11-10-2970", "Gevorderden"));
             //lstUsers.Items.Add(string.Format("{0}       |       {1}       |       {2}", "Emre Atasoy", "11-10-2970", "Gevorderden"));
         }
+
+        private void btnTenders_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.inschrijvingen.Show();
+        }
     }
 }

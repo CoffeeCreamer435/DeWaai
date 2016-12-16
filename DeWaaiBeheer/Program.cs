@@ -12,7 +12,8 @@ namespace DeWaaiBeheer
         public static frmMyAccount account = new frmMyAccount();
         public static frmUsersPage users = new frmUsersPage();
         public static frmInstructorsPage instructors = new frmInstructorsPage();
-
+        public static frmNewCourse newCourse = new frmNewCourse();
+        public static Inschrijvingen.InschrijvingenPage inschrijvingen = new Inschrijvingen.InschrijvingenPage();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
