@@ -44,6 +44,14 @@ public partial class Users
 
     public string Country { get; set; }
 
+    public Nullable<System.DateTime> Created { get; set; }
+
+    public Nullable<System.DateTime> Updated { get; set; }
+
+    public string Function { get; set; }
+
+    public bool Passreset { get; set; }
+
 }
 
 }

@@ -10,7 +10,7 @@
         <EntityTypeShape EntityType="u480787545_dewaaModel.CustomerFeedback" Width="1.5" PointX="4.75" PointY="0.75" />
         <EntityTypeShape EntityType="u480787545_dewaaModel.Fleet" Width="1.5" PointX="0.75" PointY="4.75" />
         <EntityTypeShape EntityType="u480787545_dewaaModel.Instructors" Width="1.5" PointX="2.75" PointY="4.75" />
-        <EntityTypeShape EntityType="u480787545_dewaaModel.InstructorsAvailability" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="u480787545_dewaaModel.InstructorsAvailability" Width="1.5" PointX="4.75" PointY="4.75" />
         <EntityTypeShape EntityType="u480787545_dewaaModel.Invoice" Width="1.5" PointX="6.75" PointY="0.75" />
         <EntityTypeShape EntityType="u480787545_dewaaModel.Registrations" Width="1.5" PointX="6.75" PointY="3.75" />
         <EntityTypeShape EntityType="u480787545_dewaaModel.Status" Width="1.5" PointX="4.75" PointY="7.75" />

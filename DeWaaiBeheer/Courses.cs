@@ -32,6 +32,10 @@ public partial class Courses
 
     public string Color { get; set; }
 
+    public Nullable<System.DateTime> Created { get; set; }
+
+    public Nullable<System.DateTime> Updated { get; set; }
+
 }
 
 }

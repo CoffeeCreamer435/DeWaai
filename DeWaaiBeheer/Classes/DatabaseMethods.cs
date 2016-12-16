@@ -183,14 +183,27 @@ namespace DeWaaiBeheer
             return new ObservableCollection<Registrations>(ef.Registrations);
         }
 
-        public object getUsersbyRegistration()
+        //Alle users + cursuss voor in list box.
+        public object getUsersAndCoursesbyRegistration()
         {
-            var results = from u in ef.Users
-                          join re in ef.Registrations
-                          on u.ID equals re.UserID
-                          select u.Fullname.ToList();
+            var result = 
+                //(from x in ef.Registrations
+                //          join cd in ef.Users
+                //          on x.UserID equals cd.ID
+                //          join xd in ef.Courses
+                //          on x.CourseID equals xd.ID
+                //          select x).ToList();
 
-            return results;
+           (from x in ef.Registrations
+                    join cd in ef.Users
+                    on x.UserID equals cd.ID
+                    join xd in ef.Courses
+                     on x.CourseID equals xd.ID
+                    join c in ef.Courses
+                     on x.CourseID equals c.ID
+                   
+              select cd.Firstname + " " + cd.Surname + " " + xd.Name + " Cursus - Datum " + xd.Date).ToList();
+            return result;
         }
         #endregion
     }
