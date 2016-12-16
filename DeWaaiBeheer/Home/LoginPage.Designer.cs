@@ -61,16 +61,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.70543F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.05426F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(261, 129);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(277, 147);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // txtPassword
             // 
             this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPassword.Location = new System.Drawing.Point(82, 29);
+            this.txtPassword.Location = new System.Drawing.Point(87, 32);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(176, 20);
+            this.txtPassword.Size = new System.Drawing.Size(187, 20);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
@@ -81,7 +81,7 @@
             this.lblUsername.Location = new System.Drawing.Point(3, 5);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(73, 21);
+            this.lblUsername.Size = new System.Drawing.Size(78, 24);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "E-mail:";
             // 
@@ -89,28 +89,28 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPassword.Location = new System.Drawing.Point(3, 31);
+            this.lblPassword.Location = new System.Drawing.Point(3, 34);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(73, 21);
+            this.lblPassword.Size = new System.Drawing.Size(78, 24);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Wachtwoord:";
             // 
             // txtEmail
             // 
             this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtEmail.Location = new System.Drawing.Point(82, 3);
+            this.txtEmail.Location = new System.Drawing.Point(87, 3);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(176, 20);
+            this.txtEmail.Size = new System.Drawing.Size(187, 20);
             this.txtEmail.TabIndex = 0;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.linkLabel1.Location = new System.Drawing.Point(82, 80);
+            this.linkLabel1.Location = new System.Drawing.Point(87, 90);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(176, 22);
+            this.linkLabel1.Size = new System.Drawing.Size(187, 25);
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Wachtwoord vergeten?";
@@ -119,9 +119,9 @@
             // btnLogin
             // 
             this.btnLogin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnLogin.Location = new System.Drawing.Point(82, 55);
+            this.btnLogin.Location = new System.Drawing.Point(87, 61);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(176, 22);
+            this.btnLogin.Size = new System.Drawing.Size(187, 26);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Inloggen";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -130,9 +130,9 @@
             // btnExit
             // 
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnExit.Location = new System.Drawing.Point(82, 105);
+            this.btnExit.Location = new System.Drawing.Point(87, 118);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(176, 21);
+            this.btnExit.Size = new System.Drawing.Size(187, 26);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 129);
+            this.ClientSize = new System.Drawing.Size(277, 147);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

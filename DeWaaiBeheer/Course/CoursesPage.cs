@@ -10,23 +10,21 @@ using System.Windows.Forms;
 
 namespace DeWaaiBeheer
 {
-    public partial class frmCourses : Form
+    public partial class frmCoursesPage : Form
     {
         private static DatabaseMethods db = new DatabaseMethods();
 
         private BindingSource courses = new BindingSource { DataSource = db.getCourses() };
         private Courses course = new Courses();
 
-        public frmCourses()
+        public frmCoursesPage()
         {
             InitializeComponent();
             tlpNavigation.Hide();         
             
             lstCourses.DataSource = courses;
             lstCourses.ValueMember = "ID";
-            lstCourses.DisplayMember = "Name";         
-
-            
+            lstCourses.DisplayMember = "Name";                    
         }
 
         private void lstCourses_SelectedIndexChanged(object sender, EventArgs e)
@@ -34,8 +32,7 @@ namespace DeWaaiBeheer
             Courses course = lstCourses.SelectedItem as Courses;
             ResetList(course);          
         }
-           
-        
+                 
 
         public void ResetList(Courses course)
         {
@@ -53,14 +50,7 @@ namespace DeWaaiBeheer
                 txtPrice.DataBindings.Add("Text", course, "Price");
                 //dtpDate.DataBindings.Add("Text", course, "Date");
             }                 
-        }
-
-        public void updateListbox()
-        {
-            lstCourses.DataSource = null;
-            lstCourses.DataSource = db.getCourses();
-            lstCourses.DisplayMember = "Name";
-        }
+        }   
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -80,7 +70,9 @@ namespace DeWaaiBeheer
         #region User methods
         private void btnNew_Click(object sender, EventArgs e)
         {
-            Program.newCourse.ShowDialog();
+            this.Close();
+            frmNewCourse frmNewCourse = new frmNewCourse();
+            frmNewCourse.Show();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -121,11 +113,12 @@ namespace DeWaaiBeheer
         }
         #endregion
 
-        #region Menu buttons
+        #region SideMenu buttons
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.home.Show();
+            frmHome home = new frmHome();
+            home.Show();
         }
 
         private void btnCharts_Click(object sender, EventArgs e)
@@ -140,21 +133,23 @@ namespace DeWaaiBeheer
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Program.users.ShowDialog();
+            this.Hide();
+            frmUsersPage frmUsers = new frmUsersPage();
+            frmUsers.Show();
         }
 
         private void btnInstructors_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Program.instructors.Show();
+            this.Hide();
+            frmInstructorsPage frmInstructor = new frmInstructorsPage();
+            frmInstructor.Show();
         }  
 
         private void btnFleets_Click(object sender, EventArgs e)
         {
-            VlotenPage vloten = new VlotenPage();
-            vloten.Show();
-            this.Close();
+            this.Hide();
+            VlotenPage frmFleets = new VlotenPage();
+            frmFleets.Show();
         }
         #endregion
 
@@ -177,6 +172,15 @@ namespace DeWaaiBeheer
         private void lblNavigation_MouseLeave(object sender, EventArgs e)
         {
             lblNavigation.Font = new Font(lblNavigation.Font.Name, lblNavigation.Font.SizeInPoints, FontStyle.Regular);
+        }
+        #endregion
+
+        #region Listbox method
+        public void updateListbox()
+        {
+            lstCourses.DataSource = null;
+            lstCourses.DataSource = db.getCourses();
+            lstCourses.DisplayMember = "Name";
         }
         #endregion
     }

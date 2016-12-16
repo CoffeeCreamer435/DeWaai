@@ -8,15 +8,10 @@ namespace DeWaaiBeheer
 {
     static class Program
     {
-        public static frmLogin login = new frmLogin();
-        public static frmHome home = new frmHome();
+        public static frmCoursesPage courses = new frmCoursesPage();
         public static frmMyAccount account = new frmMyAccount();
-        public static frmCourses courses = new frmCourses();
-        public static frmUsers users = new frmUsers();
-        public static frmNewUser newUser = new frmNewUser();
-        public static VlotenPage vloten = new VlotenPage();
+        public static frmUsersPage users = new frmUsersPage();
         public static frmInstructorsPage instructors = new frmInstructorsPage();
-        public static frmNewCourse newCourse = new frmNewCourse();
 
         /// <summary>
         /// The main entry point for the application.
@@ -25,7 +20,7 @@ namespace DeWaaiBeheer
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.Run(login);
+            Application.Run(new frmLogin());
         }
         
     }

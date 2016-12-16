@@ -25,9 +25,7 @@ namespace DeWaaiBeheer
             fillBootSoortenBox();
             fillComboStatus();
             fillComboSoorten();
-            tblNavigation.Visible = false;
-            Program.home.Hide();
-           
+            tblNavigation.Visible = false;           
         }
 
         #region fillboatbyselectedboat
@@ -160,33 +158,35 @@ namespace DeWaaiBeheer
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            frmUsers users = new frmUsers();
-            users.Show();
-            this.Close();
+            this.Hide();
+            frmUsersPage frmUsers = new frmUsersPage();
+            frmUsers.Show();
         }
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Program.courses.Show();
+            this.Hide();
+            frmCoursesPage frmCourses = new frmCoursesPage();
+            frmCourses.Show();
         }
 
         private void btnInstrucors_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Program.instructors.Show();
+            this.Hide();
+            frmInstructorsPage frmInstructors = new frmInstructorsPage();
+            frmInstructors.Show();
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.home.Show();
+            frmHome home = new frmHome();
+            home.Show();
         }
 
         private void btnInschrijvingen_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Program.instructors.Show();
+            //
         }
         #endregion
 

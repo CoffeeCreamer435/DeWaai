@@ -36,8 +36,16 @@ namespace DeWaaiBeheer
 
             if(user != null && (!String.IsNullOrEmpty(txtEmail.Text) && !String.IsNullOrEmpty(txtPassword.Text)))
             {
-                this.Hide();
-                Program.home.ShowDialog();
+                if(user.Function == "Admin")
+                {
+                    this.Hide();
+                    frmHome home = new frmHome();                  
+                    home.Show();
+                }
+                else
+                {
+                    MessageBox.Show("U bent niet bevoegd deze applicatie te gebruiken!");
+                }
             }
             else
             {

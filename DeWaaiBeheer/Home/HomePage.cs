@@ -14,27 +14,14 @@ namespace DeWaaiBeheer
     public partial class frmHome : Form
     {
         private DatabaseMethods db = new DatabaseMethods();
-       
+
         public frmHome()
         {
             InitializeComponent();
             myAccountToolStripMenuItem.Text = ("Mijn account");
             logoutToolStripMenuItem.Text = ("Uitloggen");
-            nameToolStripMenuItem.Text = ("Admin paneel");
-        }
-
-        private void frnHome_Load(object sender, EventArgs e)
-        {
-            BindingSource binding = new BindingSource { DataSource = db.getCourse() };
-            cmbCourses.DataSource = binding;
-            cmbCourses.DisplayMember = "Name";
-        }
-
-        private void cmbCourses_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            BindingSource user = new BindingSource { DataSource = db.getUsersByCourse() };
-            lstNewCharts.DataSource = user;
-            lstNewCharts.DisplayMember = "ID";
+            nameToolStripMenuItem.Text = ("Admin");
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
         /// <summary>
@@ -57,25 +44,30 @@ namespace DeWaaiBeheer
             Application.Exit();
         }
 
+        #region SideMenu buttons
         private void btnCourses_Click(object sender, EventArgs e)
         {
             this.Close();
-            Program.courses.Show();
+            frmCoursesPage frmCourse = new frmCoursesPage();
+            frmCourse.Show();
+            
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
             this.Close();
-            Program.users.Show();
+            frmUsersPage frmUser = new frmUsersPage();
+            frmUser.Show();
         }
 
         private void btnInstructors_Click(object sender, EventArgs e)
         {
             this.Close();
-            Program.instructors.Show();
+            frmInstructorsPage frmInstructor = new frmInstructorsPage();
+            frmInstructor.Show();
         }
 
-        private void btnReviews_Click(object sender, EventArgs e)
+        private void btnCharts_Click(object sender, EventArgs e)
         {
             //
         }
@@ -83,7 +75,18 @@ namespace DeWaaiBeheer
         private void btnFleets_Click(object sender, EventArgs e)
         {
             this.Close();
-            Program.vloten.Show();
+            VlotenPage frmFleets = new VlotenPage();
+            frmFleets.Show();
+        }
+        #endregion
+
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+            BindingSource registrations = new BindingSource { DataSource = db.getUsersByCourse() };
+            lstUsers.DataSource = registrations;
+            lstUsers.DisplayMember = "ID";
+            //lstUsers.Items.Add(string.Format("{0}       |       {1}       |       {2}", "Emre Atasoy", "11-10-2970", "Gevorderden"));
+            //lstUsers.Items.Add(string.Format("{0}       |       {1}       |       {2}", "Emre Atasoy", "11-10-2970", "Gevorderden"));
         }
     }
 }

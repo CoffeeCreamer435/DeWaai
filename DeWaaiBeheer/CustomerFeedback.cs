@@ -20,5 +20,6 @@ namespace DeWaaiBeheer
         public string Name { get; set; }
         public System.DateTime Date { get; set; }
         public int Stars { get; set; }
+        public bool Approved { get; set; }
     }
 }

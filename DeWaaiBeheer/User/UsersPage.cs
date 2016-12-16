@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace DeWaaiBeheer
 {
-    public partial class frmUsers : Form
+    public partial class frmUsersPage : Form
     {
         private DatabaseMethods db = new DatabaseMethods();
         private BindingSource binding;
         private Users user;
 
-        public frmUsers()
+        public frmUsersPage()
         {
             InitializeComponent();
             tlpNavigation.Hide();
@@ -28,23 +28,27 @@ namespace DeWaaiBeheer
             lstUsers.ValueMember = "ID";
             lstUsers.DisplayMember = "Fullname";
 
-            cmbFunction.Text = "Cursist";
-            cmbFunction.Text = "Instructeur";
+            cmbFunction.Items.Insert(0, "Cursist");
+            cmbFunction.Items.Insert(1, "Instructeur");
+            cmbFunction.Items.Insert(2, "Admin");
         }       
 
         private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Users user = lstUsers.SelectedItem as Users;                
+            Users user = lstUsers.SelectedItem as Users;           
             resetUsersBySelected(user);           
         }
 
+        #region Methods
         public void updateListbox()
         {
             lstUsers.DataSource = null;
             lstUsers.DataSource = db.getUsers();
             lstUsers.DisplayMember = "Fullname";
         }
+        #endregion
 
+        #region Resetbinding
         private void resetUsersBySelected(Users user)
         {
             if (user != null)
@@ -78,13 +82,15 @@ namespace DeWaaiBeheer
                 txtPass.DataBindings.Add("Text", user, "Password");
             }
         }
-
+        #endregion
 
         #region User methods
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            Program.newUser.ShowDialog();
+            this.Close();
+            frmNewUser frmNewUsers = new frmNewUser();
+            frmNewUsers.Show();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -117,29 +123,33 @@ namespace DeWaaiBeheer
 
         #endregion
 
-        #region Menu buttons
+        #region SideMenu buttons
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.home.Show();
+            frmHome home = new frmHome();
+            home.Show();
         }
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.courses.Show();
+            frmCoursesPage frmCourses = new frmCoursesPage();
+            frmCourses.Show();
         }
 
         private void btnInstructors_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.instructors.Show();
+            frmInstructorsPage frmInstructors = new frmInstructorsPage();
+            frmInstructors.Show();
         }
 
         private void btnFleets_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.vloten.Show();
+            VlotenPage frmFleets = new VlotenPage();
+            frmFleets.Show();
         }
 
         #endregion

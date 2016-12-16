@@ -49,36 +49,42 @@ namespace DeWaaiBeheer
             tlpNavigation.Show();
         }
 
-        #region Menu buttons
+        #region SideMenu buttons
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.home.Show();
+            frmHome home = new frmHome();
+            home.Show();
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.users.Show();
+            frmUsersPage frmUsers = new frmUsersPage();
+            frmUsers.Show();
         }
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.courses.Show();
+            frmCoursesPage frmCourses = new frmCoursesPage();
+            frmCourses.Show();
         }
 
         private void btnFleets_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.vloten.Show();
+            VlotenPage frmFleets = new VlotenPage();
+            frmFleets.Show();
         }
         #endregion
 
         #region User methods
         private void btnNew_Click(object sender, EventArgs e)
         {
-            Program.newUser.ShowDialog();
+            this.Close();
+            frmNewUser frmNewUsers = new frmNewUser();
+            frmNewUsers.Show();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

@@ -28,51 +28,45 @@ namespace DeWaaiBeheer
             string date = dtpDate.Value.ToShortDateString();
             string name = txtName.Text;
 
-            foreach (Courses co in db.getCourses())
+            if (!String.IsNullOrEmpty(txtName.Text) && !String.IsNullOrEmpty(txtDescription.Text) && !String.IsNullOrEmpty(txtPrice.Text) && !String.IsNullOrEmpty(txtAmount.Text) && !String.IsNullOrEmpty(txtColor.Text))
             {
-                if (!String.IsNullOrEmpty(txtName.Text) || !String.IsNullOrEmpty(txtDescription.Text) || !String.IsNullOrEmpty(dtpDate.Text) || !String.IsNullOrEmpty(txtPrice.Text) || !String.IsNullOrEmpty(txtAmount.Text) || !String.IsNullOrEmpty(txtColor.Text))
+                if (name != course.Name)
                 {
-                    if (name != co.Name)
-                    {
-                        co.Name = txtName.Text;
-                        co.Description = txtDescription.Text;
-                        co.Date = date;
-                        co.Price = Convert.ToInt32(txtPrice.Text);
-                        co.Amount = Convert.ToInt32(txtAmount.Text);
-                        co.Color = txtColor.Text;
-                      
-                        db.AddCourse(co);
-                        db.SaveChanges();
-                        Program.courses.updateListbox();
+                    course.Name = txtName.Text;
+                    course.Description = txtDescription.Text;
+                    course.Date = date;
+                    course.Price = Convert.ToInt32(txtPrice.Text);
+                    course.Amount = Convert.ToInt32(txtAmount.Text);
+                    course.Color = txtColor.Text;
 
-                        MessageBox.Show("Cursus is succesvol toegevoegd!");
-                        this.Close();
-                        break;
+                    db.AddCourse(course);
+                    db.SaveChanges();
+                    Program.courses.updateListbox();
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Deze cursus bestaat al!", "Informatie", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Cursus is succesvol toegevoegd!");
+                    this.Close();
+
                 }
                 else
                 {
-                    MessageBox.Show("U heeft een aantal verplichte velden niet ingevuld!");
-                    break;
+                    MessageBox.Show("Deze cursus bestaat al!", "Informatie", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
+            }
+            else
+            {
+                MessageBox.Show("U heeft een aantal verplichte velden niet ingevuld!");
             }
 
         }
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly(sender, e);
+           NumberOnly(sender, e);
         }
 
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly(sender, e);
+           NumberOnly(sender, e);
         }
 
         public void NumberOnly(object sender, KeyPressEventArgs e)
