@@ -30,7 +30,7 @@
         {
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.btnCharts = new System.Windows.Forms.Button();
-            this.btnTenders = new System.Windows.Forms.Button();
+            this.btnRegistrations = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.msName = new System.Windows.Forms.MenuStrip();
             this.nameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,7 +74,7 @@
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.669449F));
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.8798F));
             this.tlpMain.Controls.Add(this.btnCharts, 4, 3);
-            this.tlpMain.Controls.Add(this.btnTenders, 4, 2);
+            this.tlpMain.Controls.Add(this.btnRegistrations, 4, 2);
             this.tlpMain.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tlpMain.Controls.Add(this.btnCourses, 4, 4);
             this.tlpMain.Controls.Add(this.btnUsers, 4, 5);
@@ -111,16 +111,17 @@
             this.btnCharts.UseVisualStyleBackColor = true;
             this.btnCharts.Click += new System.EventHandler(this.btnCharts_Click);
             // 
-            // btnTenders
+            // btnRegistrations
             // 
-            this.btnTenders.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnTenders.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTenders.Location = new System.Drawing.Point(866, 78);
-            this.btnTenders.Name = "btnTenders";
-            this.btnTenders.Size = new System.Drawing.Size(329, 76);
-            this.btnTenders.TabIndex = 1;
-            this.btnTenders.Text = "Inschrijvingen";
-            this.btnTenders.UseVisualStyleBackColor = true;
+            this.btnRegistrations.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRegistrations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrations.Location = new System.Drawing.Point(866, 78);
+            this.btnRegistrations.Name = "btnRegistrations";
+            this.btnRegistrations.Size = new System.Drawing.Size(329, 76);
+            this.btnRegistrations.TabIndex = 1;
+            this.btnRegistrations.Text = "Inschrijvingen";
+            this.btnRegistrations.UseVisualStyleBackColor = true;
+            this.btnRegistrations.Click += new System.EventHandler(this.btnRegistrations_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -508,7 +509,7 @@
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnCharts;
         private System.Windows.Forms.Button btnCourses;
-        private System.Windows.Forms.Button btnTenders;
+        private System.Windows.Forms.Button btnRegistrations;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnInstructors;

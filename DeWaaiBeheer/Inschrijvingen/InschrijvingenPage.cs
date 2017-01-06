@@ -19,8 +19,8 @@ namespace DeWaaiBeheer.Inschrijvingen
         {
             InitializeComponent();
             FillInschrijvingenList();
-            //FillCursusBox();
-            //FillStatusBox();
+            FillCursusBox();
+            FillStatusBox();
         }
         #region side menu lbl
         private void lblNavigation_Click(object sender, EventArgs e)
@@ -40,7 +40,8 @@ namespace DeWaaiBeheer.Inschrijvingen
         {
             BindingSource inschrijvingen = new BindingSource { DataSource = db.getUsersAndCoursesbyRegistration() };
             lstInschrijvingen.DataSource = inschrijvingen;
-           // lstInschrijvingen.DisplayMember = "ID";
+            //lstInschrijvingen.ValueMember = "x.ID";
+           // lstInschrijvingen.DisplayMember = "cd.Firstname + ' ' + cd.Surname + ' ' + xd.Name + '  Cursus - Datum ' + xd.Date";
         }
 
         public void FillStatusBox()
@@ -60,7 +61,8 @@ namespace DeWaaiBeheer.Inschrijvingen
         private void BtnHome_Click(object sender, EventArgs e)
         {
             this.Close();
-            Program.home.Show();
+            frmHome home = new frmHome();
+            home.Show();
         }
         #endregion
         #region selected index changed

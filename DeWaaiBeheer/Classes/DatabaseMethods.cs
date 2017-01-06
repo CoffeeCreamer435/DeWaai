@@ -201,9 +201,30 @@ namespace DeWaaiBeheer
                      on x.CourseID equals xd.ID
                     join c in ef.Courses
                      on x.CourseID equals c.ID
-                   
+      
               select cd.Firstname + " " + cd.Surname + " " + xd.Name + " Cursus - Datum " + xd.Date).ToList();
             return result;
+        }
+        #endregion
+
+        #region Recensies
+        public ObservableCollection<CustomerFeedback> getFeedback()
+        {
+            return new ObservableCollection<CustomerFeedback>(ef.CustomerFeedback);
+        }
+
+        public object getNotApprovedFeedback()
+        {
+            var result = (from x in ef.CustomerFeedback
+                         where x.Approved == false
+                          select x).ToList();
+
+            return result;
+        }
+
+        public ObservableCollection<CustomerFeedback> getFeedbackById(int ID)
+        {
+            return new ObservableCollection<CustomerFeedback>(ef.CustomerFeedback.Where(x => x.ID == ID));
         }
         #endregion
     }

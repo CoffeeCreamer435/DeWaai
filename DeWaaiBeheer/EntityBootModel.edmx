@@ -13,7 +13,7 @@
           <Property Name="FleetID" Type="int" Nullable="false" />
           <Property Name="Date" Type="date" Nullable="false" />
           <Property Name="UserID" Type="int" Nullable="false" />
-          <Property Name="InstructorID" Type="int" Nullable="false" />
+          <Property Name="InstructorID" Type="int" />
           <Property Name="CoursesID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Courses">
@@ -183,7 +183,7 @@
           <Property Name="FleetID" Type="Int32" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" />
           <Property Name="UserID" Type="Int32" Nullable="false" />
-          <Property Name="InstructorID" Type="Int32" Nullable="false" />
+          <Property Name="InstructorID" Type="Int32" />
           <Property Name="CoursesID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Courses">

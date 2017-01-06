@@ -12,24 +12,26 @@
 namespace DeWaaiBeheer
 {
 
-    using System;
+using System;
     using System.Collections.Generic;
     
-    public partial class CustomerFeedback
-    {
+public partial class CustomerFeedback
+{
 
-        public int ID { get; set; }
+    public int ID { get; set; }
 
-        public string Title { get; set; }
+    public string Title { get; set; }
 
-        public string Description { get; set; }
+    public string Description { get; set; }
 
-        public string Name { get; set; }
+    public string Name { get; set; }
 
-        public System.DateTime Date { get; set; }
+    public System.DateTime Date { get; set; }
 
-        public int Stars { get; set; }
-        public bool Approved { get; set; }
-    }
+    public int Stars { get; set; }
+
+    public bool Approved { get; set; }
+
+}
 
 }

@@ -69,7 +69,16 @@ namespace DeWaaiBeheer
 
         private void btnCharts_Click(object sender, EventArgs e)
         {
-            //
+            this.Close();
+            Overzicht.OverzichtPage overzicht = new Overzicht.OverzichtPage();
+            overzicht.Show();
+        }
+
+        private void btnRegistrations_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Inschrijvingen.InschrijvingenPage inschrijvingen = new Inschrijvingen.InschrijvingenPage();
+            inschrijvingen.Show();
         }
 
         private void btnFleets_Click(object sender, EventArgs e)
@@ -87,12 +96,6 @@ namespace DeWaaiBeheer
             lstUsers.DisplayMember = "ID";
             //lstUsers.Items.Add(string.Format("{0}       |       {1}       |       {2}", "Emre Atasoy", "11-10-2970", "Gevorderden"));
             //lstUsers.Items.Add(string.Format("{0}       |       {1}       |       {2}", "Emre Atasoy", "11-10-2970", "Gevorderden"));
-        }
-
-        private void btnTenders_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Program.inschrijvingen.Show();
         }
     }
 }
