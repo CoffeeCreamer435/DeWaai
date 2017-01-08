@@ -32,9 +32,11 @@ public partial class Registrations
 
     public int Booking_month { get; set; }
 
-    public Nullable<System.DateTime> Created { get; set; }
+    public System.DateTime Created { get; set; }
 
     public Nullable<System.DateTime> Updated { get; set; }
+
+    public int Accepted { get; set; }
 
 }
 

@@ -36,6 +36,8 @@ public partial class Courses
 
     public Nullable<System.DateTime> Updated { get; set; }
 
+    public int FleedID { get; set; }
+
 }
 
 }

@@ -57,9 +57,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtGeboektemaand = new System.Windows.Forms.TextBox();
+            this.btnAccepteren = new System.Windows.Forms.Button();
             this.tblNavigation.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -256,6 +255,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label12, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.tblNavigation, 8, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnAccepteren, 4, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -461,10 +461,8 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.25253F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.37374F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.37374F));
-            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.cmbStatus, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txtGeboektemaand, 2, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txtGeboektemaand, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(371, 267);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -479,39 +477,30 @@
             this.label2.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label2, 2);
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 30);
+            this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Geboekte maand";
             // 
-            // cmbStatus
-            // 
-            this.tableLayoutPanel4.SetColumnSpan(this.cmbStatus, 2);
-            this.cmbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(106, 3);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(299, 21);
-            this.cmbStatus.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 20);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Status";
-            // 
             // txtGeboektemaand
             // 
             this.txtGeboektemaand.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtGeboektemaand.Location = new System.Drawing.Point(258, 33);
+            this.txtGeboektemaand.Location = new System.Drawing.Point(258, 3);
             this.txtGeboektemaand.Name = "txtGeboektemaand";
             this.txtGeboektemaand.Size = new System.Drawing.Size(147, 20);
             this.txtGeboektemaand.TabIndex = 4;
+            // 
+            // btnAccepteren
+            // 
+            this.btnAccepteren.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAccepteren.Location = new System.Drawing.Point(371, 333);
+            this.btnAccepteren.Name = "btnAccepteren";
+            this.btnAccepteren.Size = new System.Drawing.Size(132, 60);
+            this.btnAccepteren.TabIndex = 44;
+            this.btnAccepteren.Text = "Accepteren";
+            this.btnAccepteren.UseVisualStyleBackColor = true;
+            this.btnAccepteren.Click += new System.EventHandler(this.btnAccepteren_Click);
             // 
             // InschrijvingenPage
             // 
@@ -565,8 +554,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbStatus;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtGeboektemaand;
+        private System.Windows.Forms.Button btnAccepteren;
     }
 }

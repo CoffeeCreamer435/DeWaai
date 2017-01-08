@@ -43,6 +43,14 @@ namespace DeWaaiBeheer
         {
             ef.Users.Add(user);
         }
+
+        public object getUserByID(int ID)
+        {
+            var result = (from us in ef.Users
+                          where us.ID.Equals(ID)
+                          select us.Firstname + " " + us.Surname);
+                return result;
+        }
      
         /// <summary>
         /// Method that removes a user of the database table
@@ -186,25 +194,21 @@ namespace DeWaaiBeheer
         //Alle users + cursuss voor in list box.
         public object getUsersAndCoursesbyRegistration()
         {
-            var result = 
-                //(from x in ef.Registrations
-                //          join cd in ef.Users
-                //          on x.UserID equals cd.ID
-                //          join xd in ef.Courses
-                //          on x.CourseID equals xd.ID
-                //          select x).ToList();
-
-           (from x in ef.Registrations
-                    join cd in ef.Users
-                    on x.UserID equals cd.ID
-                    join xd in ef.Courses
-                     on x.CourseID equals xd.ID
-                    join c in ef.Courses
-                     on x.CourseID equals c.ID
-      
-              select cd.Firstname + " " + cd.Surname + " " + xd.Name + " Cursus - Datum " + xd.Date).ToList();
+            var result = (from re in ef.Registrations
+                          join us in ef.Users
+                          on re.UserID equals us.ID
+                          join co in ef.Courses
+                          on re.CourseID equals co.ID
+                          where re.Accepted.Equals(0)
+                          select new { Display = us.Firstname + " " +  us.Surname + " " +  co.Name + " Cursus - Datum:" +  co.Date, re.ID }).ToList();                         
             return result;
         }
+
+        public ObservableCollection<Registrations> GetRegistrationsByID(int ID)
+        {
+            return new ObservableCollection<Registrations>(ef.Registrations.Where(x => x.ID == ID));
+        }
+
         #endregion
 
         #region Recensies

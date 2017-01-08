@@ -15,6 +15,7 @@
           <Property Name="UserID" Type="int" Nullable="false" />
           <Property Name="InstructorID" Type="int" />
           <Property Name="CoursesID" Type="int" Nullable="false" />
+          <Property Name="InvoiceID" Type="varchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="Courses">
           <Key>
@@ -29,6 +30,7 @@
           <Property Name="Color" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Created" Type="date" />
           <Property Name="Updated" Type="date" />
+          <Property Name="FleedID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="CustomerFeedback">
           <Key>
@@ -93,6 +95,8 @@
           <Property Name="InstructorID" Type="int" Nullable="false" />
           <Property Name="CourseID" Type="int" Nullable="false" />
           <Property Name="Status" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Booking_month" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Registrations">
           <Key>
@@ -100,13 +104,14 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" />
-          <Property Name="InvoiceID" Type="varchar" MaxLength="11" />
+          <Property Name="InvoiceID" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="CourseID" Type="int" />
           <Property Name="Status" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Year" Type="year" Nullable="false" />
           <Property Name="Booking_month" Type="int" Nullable="false" />
-          <Property Name="Created" Type="date" />
+          <Property Name="Created" Type="date" Nullable="false" />
           <Property Name="Updated" Type="date" />
+          <Property Name="Accepted" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Status">
           <Key>
@@ -185,6 +190,7 @@
           <Property Name="UserID" Type="Int32" Nullable="false" />
           <Property Name="InstructorID" Type="Int32" />
           <Property Name="CoursesID" Type="Int32" Nullable="false" />
+          <Property Name="InvoiceID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Courses">
           <Key>
@@ -199,6 +205,7 @@
           <Property Name="Color" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Created" Type="DateTime" />
           <Property Name="Updated" Type="DateTime" />
+          <Property Name="FleedID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="CustomerFeedback">
           <Key>
@@ -263,6 +270,8 @@
           <Property Name="InstructorID" Type="Int32" Nullable="false" />
           <Property Name="CourseID" Type="Int32" Nullable="false" />
           <Property Name="Status" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Booking_month" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Registrations">
           <Key>
@@ -270,13 +279,14 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserID" Type="Int32" />
-          <Property Name="InvoiceID" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="InvoiceID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="CourseID" Type="Int32" />
           <Property Name="Status" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Year" Type="Int16" Nullable="false" />
           <Property Name="Booking_month" Type="Int32" Nullable="false" />
-          <Property Name="Created" Type="DateTime" />
+          <Property Name="Created" Type="DateTime" Nullable="false" />
           <Property Name="Updated" Type="DateTime" />
+          <Property Name="Accepted" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Status">
           <Key>
@@ -324,6 +334,7 @@
           <EntitySetMapping Name="BookedCursus">
             <EntityTypeMapping TypeName="u480787545_dewaaModel.BookedCursus">
               <MappingFragment StoreEntitySet="BookedCursus">
+                <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
                 <ScalarProperty Name="CoursesID" ColumnName="CoursesID" />
                 <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -336,6 +347,7 @@
           <EntitySetMapping Name="Courses">
             <EntityTypeMapping TypeName="u480787545_dewaaModel.Courses">
               <MappingFragment StoreEntitySet="Courses">
+                <ScalarProperty Name="FleedID" ColumnName="FleedID" />
                 <ScalarProperty Name="Updated" ColumnName="Updated" />
                 <ScalarProperty Name="Created" ColumnName="Created" />
                 <ScalarProperty Name="Color" ColumnName="Color" />
@@ -409,6 +421,8 @@
           <EntitySetMapping Name="Invoice">
             <EntityTypeMapping TypeName="u480787545_dewaaModel.Invoice">
               <MappingFragment StoreEntitySet="Invoice">
+                <ScalarProperty Name="Booking_month" ColumnName="Booking_month" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="CourseID" ColumnName="CourseID" />
                 <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
@@ -420,6 +434,7 @@
           <EntitySetMapping Name="Registrations">
             <EntityTypeMapping TypeName="u480787545_dewaaModel.Registrations">
               <MappingFragment StoreEntitySet="Registrations">
+                <ScalarProperty Name="Accepted" ColumnName="Accepted" />
                 <ScalarProperty Name="Updated" ColumnName="Updated" />
                 <ScalarProperty Name="Created" ColumnName="Created" />
                 <ScalarProperty Name="Booking_month" ColumnName="Booking_month" />

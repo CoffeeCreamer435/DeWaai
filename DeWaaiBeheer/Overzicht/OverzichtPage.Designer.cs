@@ -51,10 +51,10 @@
             this.btnFleet = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.txtStars = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.lbltest = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.tblNavigation.SuspendLayout();
@@ -415,6 +415,28 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(408, 60);
             this.tableLayoutPanel3.TabIndex = 43;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 30);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Sterren";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 30);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Titel";
+            // 
             // txtTitle
             // 
             this.txtTitle.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -430,28 +452,6 @@
             this.txtStars.Name = "txtStars";
             this.txtStars.Size = new System.Drawing.Size(300, 20);
             this.txtStars.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 30);
-            this.label2.TabIndex = 36;
-            this.label2.Text = "Titel";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 30);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Sterren";
             // 
             // lbltest
             // 

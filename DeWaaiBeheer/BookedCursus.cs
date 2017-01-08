@@ -30,6 +30,8 @@ public partial class BookedCursus
 
     public int CoursesID { get; set; }
 
+    public string InvoiceID { get; set; }
+
 }
 
 }
