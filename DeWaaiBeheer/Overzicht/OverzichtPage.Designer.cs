@@ -123,6 +123,7 @@
             this.btnDecline.TabIndex = 28;
             this.btnDecline.Text = "Weigeren";
             this.btnDecline.UseVisualStyleBackColor = true;
+            this.btnDecline.Click += new System.EventHandler(this.btnDecline_Click);
             // 
             // btnAccept
             // 

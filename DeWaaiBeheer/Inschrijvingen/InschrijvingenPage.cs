@@ -13,8 +13,6 @@ namespace DeWaaiBeheer.Inschrijvingen
     public partial class InschrijvingenPage : Form
     {
         DatabaseMethods db = new DatabaseMethods();
-        int cursusid;
-        //private BindingSource UserbyRegistration;
         public InschrijvingenPage()
         {
             InitializeComponent();
@@ -60,11 +58,15 @@ namespace DeWaaiBeheer.Inschrijvingen
         }
         #endregion
         #region selected index changed
-        private void lstInschrijvingen_SelectedIndexChanged(object sender, EventArgs e)
+        private void lstInschrijvingen_MouseClick(object sender, MouseEventArgs e)
         {
-            //Registrations registration = lstInschrijvingen.SelectedItem as Registrations;
-            //lstInschrijvingen.DataSource = db.getUsersAndCoursesbyRegistration();
-            //FillRegistration(registration);
+            Registrations registration = lstInschrijvingen.SelectedItem as Registrations;
+            int ID = Convert.ToInt32(lstInschrijvingen.SelectedValue);
+            if (ID != 0)
+            {
+                FillRegistration(db.GetRegistrationsByID(ID));
+            }
+            FillInschrijvingenList();
         }
         #endregion
 
@@ -73,19 +75,19 @@ namespace DeWaaiBeheer.Inschrijvingen
         {
             if (registration != null)
             {
-                cmbCursus.DataBindings.Clear();
-                txtInvoice.DataBindings.Clear();
                 txtNaam.DataBindings.Clear();
-                dateTimePicker1.DataBindings.Clear();
+                txtInvoice.DataBindings.Clear();
                 txtGeboektemaand.DataBindings.Clear();
-                //cmbStatus.DataBindings.Clear();
+                lblCursus.DataBindings.Clear();
+                lblRegID.DataBindings.Clear();
+                cmbCursus.DataBindings.Clear();
 
-                cursusid = registration.CourseID.Value;
-                cmbCursus.DataBindings.Add("Text", db.GetCoursesbyID(cursusid), "Name");
-                txtNaam.DataBindings.Add("Text", registration, "UserID");
+                cmbCursus.DataBindings.Add("Text", db.GetCoursesbyID(registration.CourseID.Value), "Name");
+                lblRegID.DataBindings.Add("Text", registration, "ID");
+                lblCursus.DataBindings.Add("Text", registration, "CourseID");
+                txtNaam.DataBindings.Add("Text", db.getRegistrationUsersByID(registration.UserID.Value), "Firstname");
                 txtInvoice.DataBindings.Add("Text", registration, "InvoiceID");
-                txtGeboektemaand.DataBindings.Add("Text", registration, "Booking_Month");
-                //cmbStatus.DataBindings.Add("Text", registration, "Status");
+                txtGeboektemaand.DataBindings.Add("Text", registration, "Booking_month");
             }
         }
         #endregion
@@ -93,12 +95,17 @@ namespace DeWaaiBeheer.Inschrijvingen
         private void btnAccepteren_Click(object sender, EventArgs e)
         {
             int ID = Convert.ToInt32(lstInschrijvingen.SelectedValue);
-            foreach (Registrations re in db.GetRegistrationsByID(ID))
-            {
-                re.Accepted = 1;
-                db.SaveChanges();
-                break;
-            }
+            Registrations registration = db.GetRegistrationsByID(ID);
+            registration.Accepted = 1;
+            db.SaveChanges();
+        }
+
+        private void btnWeigeren_Click(object sender, EventArgs e)
+        {
+            int ID = Convert.ToInt32(lstInschrijvingen.SelectedValue);
+            db.RemoveRegistrationByID(ID);
+            db.SaveChanges();
+            FillInschrijvingenList();
         }
     }
 }

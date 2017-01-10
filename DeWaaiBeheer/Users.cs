@@ -52,6 +52,8 @@ public partial class Users
 
     public bool Passreset { get; set; }
 
+    public string Sex { get; set; }
+
 }
 
 }

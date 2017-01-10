@@ -81,5 +81,14 @@ namespace DeWaaiBeheer.Overzicht
             lstRecensies_SelectedIndexChanged(this, EventArgs.Empty);
         }
 
+        private void btnDecline_Click(object sender, EventArgs e)
+        {
+            int ID = int.Parse(lbltest.Text);
+            foreach (CustomerFeedback fb in db.getFeedbackById(ID))
+            {
+                db.RemoveFeedback(ID);
+                lstRecensies_SelectedIndexChanged(this, EventArgs.Empty);
+            }
+        }
     }
 }

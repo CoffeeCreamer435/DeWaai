@@ -204,11 +204,20 @@ namespace DeWaaiBeheer
             return result;
         }
 
-        public ObservableCollection<Registrations> GetRegistrationsByID(int ID)
+        public Registrations GetRegistrationsByID(int ID)
         {
-            return new ObservableCollection<Registrations>(ef.Registrations.Where(x => x.ID == ID));
+           return ef.Registrations.FirstOrDefault(x => x.ID == ID);
         }
 
+        public void RemoveRegistrationByID(int RegistrationID)
+        {
+            ef.Registrations.Remove(getInschrijvingen().First(x => x.ID == RegistrationID));
+        }
+
+        public Users getRegistrationUsersByID(int UserID)
+        {
+            return ef.Users.FirstOrDefault(x => x.ID == UserID);
+        }
         #endregion
 
         #region Recensies
@@ -224,6 +233,12 @@ namespace DeWaaiBeheer
                           select x).ToList();
 
             return result;
+        }
+
+        public void RemoveFeedback(int ID)
+        {
+            ef.CustomerFeedback.Remove(getFeedback().First(x => x.ID == ID));
+            ef.SaveChanges();
         }
 
         public ObservableCollection<CustomerFeedback> getFeedbackById(int ID)

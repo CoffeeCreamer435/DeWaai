@@ -43,7 +43,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblNavigation = new System.Windows.Forms.Label();
-            this.btnNewFleet = new System.Windows.Forms.Button();
+            this.btnWeigeren = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtNaam = new System.Windows.Forms.TextBox();
@@ -59,6 +59,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtGeboektemaand = new System.Windows.Forms.TextBox();
             this.btnAccepteren = new System.Windows.Forms.Button();
+            this.lblCursus = new System.Windows.Forms.Label();
+            this.lblRegID = new System.Windows.Forms.Label();
             this.tblNavigation.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -90,7 +92,7 @@
             this.tableLayoutPanel1.SetRowSpan(this.lstInschrijvingen, 7);
             this.lstInschrijvingen.Size = new System.Drawing.Size(339, 456);
             this.lstInschrijvingen.TabIndex = 0;
-            this.lstInschrijvingen.SelectedIndexChanged += new System.EventHandler(this.lstInschrijvingen_SelectedIndexChanged);
+            this.lstInschrijvingen.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstInschrijvingen_MouseClick);
             // 
             // label9
             // 
@@ -243,7 +245,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.68109F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.69441F));
             this.tableLayoutPanel1.Controls.Add(this.lblNavigation, 8, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnNewFleet, 5, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnWeigeren, 5, 5);
             this.tableLayoutPanel1.Controls.Add(this.btnDelete, 6, 5);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 3, 3);
@@ -256,6 +258,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tblNavigation, 8, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 4, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnAccepteren, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lblRegID, 6, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -321,15 +324,16 @@
             this.lblNavigation.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblNavigation.Click += new System.EventHandler(this.lblNavigation_Click);
             // 
-            // btnNewFleet
+            // btnWeigeren
             // 
-            this.btnNewFleet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNewFleet.Location = new System.Drawing.Point(509, 333);
-            this.btnNewFleet.Name = "btnNewFleet";
-            this.btnNewFleet.Size = new System.Drawing.Size(132, 60);
-            this.btnNewFleet.TabIndex = 28;
-            this.btnNewFleet.Text = "Weigeren";
-            this.btnNewFleet.UseVisualStyleBackColor = true;
+            this.btnWeigeren.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnWeigeren.Location = new System.Drawing.Point(509, 333);
+            this.btnWeigeren.Name = "btnWeigeren";
+            this.btnWeigeren.Size = new System.Drawing.Size(132, 60);
+            this.btnWeigeren.TabIndex = 28;
+            this.btnWeigeren.Text = "Weigeren";
+            this.btnWeigeren.UseVisualStyleBackColor = true;
+            this.btnWeigeren.Click += new System.EventHandler(this.btnWeigeren_Click);
             // 
             // btnDelete
             // 
@@ -365,6 +369,7 @@
             this.txtNaam.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNaam.Location = new System.Drawing.Point(105, 3);
             this.txtNaam.Name = "txtNaam";
+            this.txtNaam.ReadOnly = true;
             this.txtNaam.Size = new System.Drawing.Size(300, 20);
             this.txtNaam.TabIndex = 34;
             // 
@@ -384,6 +389,7 @@
             this.txtInvoice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtInvoice.Location = new System.Drawing.Point(105, 33);
             this.txtInvoice.Name = "txtInvoice";
+            this.txtInvoice.ReadOnly = true;
             this.txtInvoice.Size = new System.Drawing.Size(300, 20);
             this.txtInvoice.TabIndex = 0;
             // 
@@ -463,6 +469,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.37374F));
             this.tableLayoutPanel4.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtGeboektemaand, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lblCursus, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(371, 267);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -488,6 +495,7 @@
             this.txtGeboektemaand.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtGeboektemaand.Location = new System.Drawing.Point(258, 3);
             this.txtGeboektemaand.Name = "txtGeboektemaand";
+            this.txtGeboektemaand.ReadOnly = true;
             this.txtGeboektemaand.Size = new System.Drawing.Size(147, 20);
             this.txtGeboektemaand.TabIndex = 4;
             // 
@@ -501,6 +509,24 @@
             this.btnAccepteren.Text = "Accepteren";
             this.btnAccepteren.UseVisualStyleBackColor = true;
             this.btnAccepteren.Click += new System.EventHandler(this.btnAccepteren_Click);
+            // 
+            // lblCursus
+            // 
+            this.lblCursus.AutoSize = true;
+            this.lblCursus.Location = new System.Drawing.Point(3, 30);
+            this.lblCursus.Name = "lblCursus";
+            this.lblCursus.Size = new System.Drawing.Size(35, 13);
+            this.lblCursus.TabIndex = 5;
+            this.lblCursus.Text = "label6";
+            // 
+            // lblRegID
+            // 
+            this.lblRegID.AutoSize = true;
+            this.lblRegID.Location = new System.Drawing.Point(647, 66);
+            this.lblRegID.Name = "lblRegID";
+            this.lblRegID.Size = new System.Drawing.Size(35, 13);
+            this.lblRegID.TabIndex = 45;
+            this.lblRegID.Text = "label6";
             // 
             // InschrijvingenPage
             // 
@@ -527,7 +553,7 @@
         #endregion
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblNavigation;
-        private System.Windows.Forms.Button btnNewFleet;
+        private System.Windows.Forms.Button btnWeigeren;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox txtNaam;
@@ -556,5 +582,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtGeboektemaand;
         private System.Windows.Forms.Button btnAccepteren;
+        private System.Windows.Forms.Label lblCursus;
+        private System.Windows.Forms.Label lblRegID;
     }
 }
