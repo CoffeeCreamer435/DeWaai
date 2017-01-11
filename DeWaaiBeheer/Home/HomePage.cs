@@ -69,18 +69,18 @@ namespace DeWaaiBeheer
             frmInstructor.Show();
         }
 
-        private void btnCharts_Click(object sender, EventArgs e)
+        private void btnReviews_Click(object sender, EventArgs e)
         {
             this.Close();
-            //Overzicht.OverzichtPage overzicht = new Overzicht.OverzichtPage();
-            //overzicht.Show();
+            frmReviews reviews = new frmReviews();
+            reviews.Show();
         }
 
-        private void btnRegistrations_Click(object sender, EventArgs e)
+        private void btnTenders_Click(object sender, EventArgs e)
         {
             this.Close();
-            Inschrijvingen.InschrijvingenPage inschrijvingen = new Inschrijvingen.InschrijvingenPage();
-            inschrijvingen.Show();
+            frmTenders tenders = new frmTenders();
+            tenders.Show();
         }
 
         private void btnFleets_Click(object sender, EventArgs e)
@@ -110,5 +110,7 @@ namespace DeWaaiBeheer
             }
 
         }
+
+
     }
 }

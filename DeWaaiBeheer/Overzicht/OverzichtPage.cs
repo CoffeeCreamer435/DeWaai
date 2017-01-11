@@ -8,14 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DeWaaiBeheer.Overzicht
+namespace DeWaaiBeheer
 {
-    public partial class OverzichtPage : Form
+    public partial class frmReviews : Form
     {
         
         DatabaseMethods db = new DatabaseMethods();
         
-        public OverzichtPage()
+        public frmReviews()
         {
             InitializeComponent();
             FillListbox();
@@ -81,11 +81,6 @@ namespace DeWaaiBeheer.Overzicht
             lstRecensies_SelectedIndexChanged(this, EventArgs.Empty);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void btnDecline_Click(object sender, EventArgs e)
         {
             int ID = int.Parse(lbltest.Text);
@@ -94,6 +89,11 @@ namespace DeWaaiBeheer.Overzicht
                 db.RemoveFeedback(ID);
                 lstRecensies_SelectedIndexChanged(this, EventArgs.Empty);
             }
+        }
+
+        private void btnPlanning_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
