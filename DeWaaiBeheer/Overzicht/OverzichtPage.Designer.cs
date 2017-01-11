@@ -56,6 +56,7 @@
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.txtStars = new System.Windows.Forms.TextBox();
             this.lbltest = new System.Windows.Forms.Label();
+            this.btnPlanning = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.tblNavigation.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -239,6 +240,7 @@
             this.tblNavigation.ColumnCount = 1;
             this.tableLayoutPanel1.SetColumnSpan(this.tblNavigation, 2);
             this.tblNavigation.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblNavigation.Controls.Add(this.btnPlanning, 0, 6);
             this.tblNavigation.Controls.Add(this.BtnHome, 0, 0);
             this.tblNavigation.Controls.Add(this.btnCourses, 0, 1);
             this.tblNavigation.Controls.Add(this.btnInschrijvingen, 0, 2);
@@ -247,14 +249,15 @@
             this.tblNavigation.Controls.Add(this.btnFleet, 0, 5);
             this.tblNavigation.Location = new System.Drawing.Point(808, 135);
             this.tblNavigation.Name = "tblNavigation";
-            this.tblNavigation.RowCount = 6;
+            this.tblNavigation.RowCount = 7;
             this.tableLayoutPanel1.SetRowSpan(this.tblNavigation, 6);
-            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
             this.tblNavigation.Size = new System.Drawing.Size(270, 384);
             this.tblNavigation.TabIndex = 42;
             this.tblNavigation.Visible = false;
@@ -264,7 +267,7 @@
             this.BtnHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnHome.Location = new System.Drawing.Point(3, 3);
             this.BtnHome.Name = "BtnHome";
-            this.BtnHome.Size = new System.Drawing.Size(264, 57);
+            this.BtnHome.Size = new System.Drawing.Size(264, 48);
             this.BtnHome.TabIndex = 41;
             this.BtnHome.Text = "Home";
             this.BtnHome.UseVisualStyleBackColor = true;
@@ -272,9 +275,9 @@
             // btnCourses
             // 
             this.btnCourses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCourses.Location = new System.Drawing.Point(3, 66);
+            this.btnCourses.Location = new System.Drawing.Point(3, 57);
             this.btnCourses.Name = "btnCourses";
-            this.btnCourses.Size = new System.Drawing.Size(264, 57);
+            this.btnCourses.Size = new System.Drawing.Size(264, 48);
             this.btnCourses.TabIndex = 18;
             this.btnCourses.Text = "Overzicht";
             this.btnCourses.UseVisualStyleBackColor = true;
@@ -282,9 +285,9 @@
             // btnInschrijvingen
             // 
             this.btnInschrijvingen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnInschrijvingen.Location = new System.Drawing.Point(3, 129);
+            this.btnInschrijvingen.Location = new System.Drawing.Point(3, 111);
             this.btnInschrijvingen.Name = "btnInschrijvingen";
-            this.btnInschrijvingen.Size = new System.Drawing.Size(264, 57);
+            this.btnInschrijvingen.Size = new System.Drawing.Size(264, 48);
             this.btnInschrijvingen.TabIndex = 40;
             this.btnInschrijvingen.Text = "Inschrijvingen";
             this.btnInschrijvingen.UseVisualStyleBackColor = true;
@@ -292,9 +295,9 @@
             // btnUsers
             // 
             this.btnUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUsers.Location = new System.Drawing.Point(3, 192);
+            this.btnUsers.Location = new System.Drawing.Point(3, 165);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(264, 57);
+            this.btnUsers.Size = new System.Drawing.Size(264, 48);
             this.btnUsers.TabIndex = 21;
             this.btnUsers.Text = "Klanten";
             this.btnUsers.UseVisualStyleBackColor = true;
@@ -302,9 +305,9 @@
             // btnInstrucors
             // 
             this.btnInstrucors.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnInstrucors.Location = new System.Drawing.Point(3, 255);
+            this.btnInstrucors.Location = new System.Drawing.Point(3, 219);
             this.btnInstrucors.Name = "btnInstrucors";
-            this.btnInstrucors.Size = new System.Drawing.Size(264, 57);
+            this.btnInstrucors.Size = new System.Drawing.Size(264, 48);
             this.btnInstrucors.TabIndex = 19;
             this.btnInstrucors.Text = "Instructeurs";
             this.btnInstrucors.UseVisualStyleBackColor = true;
@@ -312,9 +315,9 @@
             // btnFleet
             // 
             this.btnFleet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnFleet.Location = new System.Drawing.Point(3, 318);
+            this.btnFleet.Location = new System.Drawing.Point(3, 273);
             this.btnFleet.Name = "btnFleet";
-            this.btnFleet.Size = new System.Drawing.Size(264, 63);
+            this.btnFleet.Size = new System.Drawing.Size(264, 48);
             this.btnFleet.TabIndex = 20;
             this.btnFleet.Text = "Vloten";
             this.btnFleet.UseVisualStyleBackColor = true;
@@ -463,6 +466,16 @@
             this.lbltest.TabIndex = 44;
             this.lbltest.Text = "label5";
             // 
+            // btnPlanning
+            // 
+            this.btnPlanning.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPlanning.Location = new System.Drawing.Point(3, 327);
+            this.btnPlanning.Name = "btnPlanning";
+            this.btnPlanning.Size = new System.Drawing.Size(264, 54);
+            this.btnPlanning.TabIndex = 42;
+            this.btnPlanning.Text = "Planning";
+            this.btnPlanning.UseVisualStyleBackColor = true;
+            // 
             // OverzichtPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -512,5 +525,6 @@
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.TextBox txtStars;
         private System.Windows.Forms.Label lbltest;
+        private System.Windows.Forms.Button btnPlanning;
     }
 }

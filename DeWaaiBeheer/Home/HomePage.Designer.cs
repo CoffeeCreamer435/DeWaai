@@ -107,7 +107,7 @@
             this.btnCharts.Name = "btnCharts";
             this.btnCharts.Size = new System.Drawing.Size(329, 72);
             this.btnCharts.TabIndex = 3;
-            this.btnCharts.Text = "Overzichten";
+            this.btnCharts.Text = "Recensies";
             this.btnCharts.UseVisualStyleBackColor = true;
             this.btnCharts.Click += new System.EventHandler(this.btnCharts_Click);
             // 
