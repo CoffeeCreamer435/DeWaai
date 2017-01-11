@@ -15,7 +15,7 @@
           <Property Name="UserID" Type="int" Nullable="false" />
           <Property Name="InstructorID" Type="int" />
           <Property Name="CoursesID" Type="int" Nullable="false" />
-          <Property Name="InvoiceID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="InvoiceID" Type="text" Nullable="false" />
         </EntityType>
         <EntityType Name="Courses">
           <Key>
@@ -96,7 +96,6 @@
           <Property Name="CourseID" Type="int" Nullable="false" />
           <Property Name="Status" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Year" Type="int" Nullable="false" />
-          <Property Name="Booking_month" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Registrations">
           <Key>
@@ -104,12 +103,12 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" />
-          <Property Name="InvoiceID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="InvoiceID" Type="varchar" MaxLength="20" />
           <Property Name="CourseID" Type="int" />
           <Property Name="Status" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Year" Type="year" Nullable="false" />
           <Property Name="Booking_month" Type="int" Nullable="false" />
-          <Property Name="Created" Type="date" Nullable="false" />
+          <Property Name="Created" Type="date" />
           <Property Name="Updated" Type="date" />
           <Property Name="Accepted" Type="int" Nullable="false" />
         </EntityType>
@@ -150,6 +149,7 @@
           <Property Name="Function" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Passreset" Type="bool" Nullable="false" />
           <Property Name="Sex" Type="char" MaxLength="11" Nullable="false" />
+          <Property Name="NewUserDate" Type="date" Nullable="false" />
         </EntityType>
         <EntityContainer Name="u480787545_dewaaModelStoreContainer">
           <EntitySet Name="BookedCursus" EntityType="Self.BookedCursus" Schema="u480787545_dewaa" store:Type="Tables" />
@@ -191,7 +191,7 @@
           <Property Name="UserID" Type="Int32" Nullable="false" />
           <Property Name="InstructorID" Type="Int32" />
           <Property Name="CoursesID" Type="Int32" Nullable="false" />
-          <Property Name="InvoiceID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="InvoiceID" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Courses">
           <Key>
@@ -272,7 +272,6 @@
           <Property Name="CourseID" Type="Int32" Nullable="false" />
           <Property Name="Status" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Year" Type="Int32" Nullable="false" />
-          <Property Name="Booking_month" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Registrations">
           <Key>
@@ -280,12 +279,12 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserID" Type="Int32" />
-          <Property Name="InvoiceID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="InvoiceID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="CourseID" Type="Int32" />
           <Property Name="Status" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Year" Type="Int16" Nullable="false" />
           <Property Name="Booking_month" Type="Int32" Nullable="false" />
-          <Property Name="Created" Type="DateTime" Nullable="false" />
+          <Property Name="Created" Type="DateTime" />
           <Property Name="Updated" Type="DateTime" />
           <Property Name="Accepted" Type="Int32" Nullable="false" />
         </EntityType>
@@ -326,6 +325,7 @@
           <Property Name="Function" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Passreset" Type="Boolean" Nullable="false" />
           <Property Name="Sex" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="NewUserDate" Type="DateTime" Nullable="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -423,7 +423,6 @@
           <EntitySetMapping Name="Invoice">
             <EntityTypeMapping TypeName="u480787545_dewaaModel.Invoice">
               <MappingFragment StoreEntitySet="Invoice">
-                <ScalarProperty Name="Booking_month" ColumnName="Booking_month" />
                 <ScalarProperty Name="Year" ColumnName="Year" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="CourseID" ColumnName="CourseID" />
@@ -469,6 +468,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="u480787545_dewaaModel.Users">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="NewUserDate" ColumnName="NewUserDate" />
                 <ScalarProperty Name="Sex" ColumnName="Sex" />
                 <ScalarProperty Name="Passreset" ColumnName="Passreset" />
                 <ScalarProperty Name="Function" ColumnName="Function" />

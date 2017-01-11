@@ -28,7 +28,7 @@ namespace DeWaaiBeheer
             string date = dtpDate.Value.ToShortDateString();
             string name = txtName.Text;
 
-            if (!String.IsNullOrEmpty(txtName.Text) && !String.IsNullOrEmpty(txtDescription.Text) && !String.IsNullOrEmpty(txtPrice.Text) && !String.IsNullOrEmpty(txtAmount.Text) && !String.IsNullOrEmpty(txtColor.Text))
+            if (!String.IsNullOrEmpty(txtName.Text) && !String.IsNullOrEmpty(txtDescription.Text) && !String.IsNullOrEmpty(txtPrice.Text) && !String.IsNullOrEmpty(txtAmount.Text))
             {
                 if (name != course.Name)
                 {
@@ -37,14 +37,18 @@ namespace DeWaaiBeheer
                     course.Date = date;
                     course.Price = Convert.ToInt32(txtPrice.Text);
                     course.Amount = Convert.ToInt32(txtAmount.Text);
-                    course.Color = txtColor.Text;
+                    course.Created = DateTime.Now;
 
                     db.AddCourse(course);
                     db.SaveChanges();
                     Program.courses.updateListbox();
 
                     MessageBox.Show("Cursus is succesvol toegevoegd!");
+
                     this.Close();
+                    frmCoursesPage page = new frmCoursesPage();
+                    page.Show();
+
 
                 }
                 else

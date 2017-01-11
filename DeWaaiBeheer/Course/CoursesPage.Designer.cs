@@ -43,8 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCoursenumber = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtColor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
@@ -107,8 +105,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtCoursenumber, 6, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtPrice, 6, 7);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 5, 10);
-            this.tableLayoutPanel1.Controls.Add(this.txtColor, 6, 10);
             this.tableLayoutPanel1.Controls.Add(this.label4, 5, 9);
             this.tableLayoutPanel1.Controls.Add(this.txtAmount, 6, 9);
             this.tableLayoutPanel1.Controls.Add(this.dtpDate, 6, 6);
@@ -281,26 +277,6 @@
             this.txtPrice.Size = new System.Drawing.Size(310, 20);
             this.txtPrice.TabIndex = 21;
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(375, 336);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 29);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Kleur";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtColor
-            // 
-            this.txtColor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtColor.Location = new System.Drawing.Point(499, 339);
-            this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(310, 20);
-            this.txtColor.TabIndex = 30;
             // 
             // label4
             // 
@@ -519,8 +495,6 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtColor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Label label8;

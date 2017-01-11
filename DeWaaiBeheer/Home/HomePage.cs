@@ -41,7 +41,9 @@ namespace DeWaaiBeheer
         /// <param name="e"></param>
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
         }
 
         #region SideMenu buttons
@@ -70,8 +72,8 @@ namespace DeWaaiBeheer
         private void btnCharts_Click(object sender, EventArgs e)
         {
             this.Close();
-            Overzicht.OverzichtPage overzicht = new Overzicht.OverzichtPage();
-            overzicht.Show();
+            //Overzicht.OverzichtPage overzicht = new Overzicht.OverzichtPage();
+            //overzicht.Show();
         }
 
         private void btnRegistrations_Click(object sender, EventArgs e)
@@ -91,11 +93,22 @@ namespace DeWaaiBeheer
 
         private void frmHome_Load(object sender, EventArgs e)
         {
-            BindingSource registrations = new BindingSource { DataSource = db.getUsersByCourse() };
+            Users user = new Users();
+
+            BindingSource registrations = new BindingSource { DataSource = db.getUsersAndCoursesbyRegistration() };
             lstUsers.DataSource = registrations;
-            lstUsers.DisplayMember = "ID";
-            //lstUsers.Items.Add(string.Format("{0}       |       {1}       |       {2}", "Emre Atasoy", "11-10-2970", "Gevorderden"));
-            //lstUsers.Items.Add(string.Format("{0}       |       {1}       |       {2}", "Emre Atasoy", "11-10-2970", "Gevorderden"));
+
+            lblNewUserDate.Text = DateTime.Now.ToShortDateString();
+            lblNewTenderDate.Text = DateTime.Now.ToShortDateString();
+
+            
+            user.NewUserDate = Convert.ToDateTime(lblNewUserDate.Text);
+            if (user.NewUserDate < DateTime.Now)
+            {
+                lblPreviousUserDate.Text = Convert.ToString(user.NewUserDate);
+                lblNewUserDate.Text = DateTime.Now.ToShortDateString();
+            }
+
         }
     }
 }
