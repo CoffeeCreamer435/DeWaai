@@ -62,6 +62,7 @@
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Classes\DatabaseMethods.cs" />
+    <Compile Include="Classes\InstructorClass.cs" />
     <Compile Include="Courses.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
@@ -268,9 +269,7 @@
       <LastGenOutput>EntityBootModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tenders\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

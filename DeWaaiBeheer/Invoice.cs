@@ -20,5 +20,6 @@ namespace DeWaaiBeheer
         public int CourseID { get; set; }
         public string Status { get; set; }
         public int Year { get; set; }
+        public int Booking_month { get; set; }
     }
 }

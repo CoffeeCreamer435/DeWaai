@@ -76,7 +76,7 @@ namespace DeWaaiBeheer
             reviews.Show();
         }
 
-        private void btnTenders_Click(object sender, EventArgs e)
+        private void btnRegistrations_Click(object sender, EventArgs e)
         {
             this.Close();
             frmTenders tenders = new frmTenders();
@@ -95,7 +95,7 @@ namespace DeWaaiBeheer
         {
             Users user = new Users();
 
-            BindingSource registrations = new BindingSource { DataSource = db.getUsersAndCoursesbyRegistration() };
+            BindingSource registrations = new BindingSource { DataSource = db.getUsersByRegistration() };
             lstUsers.DataSource = registrations;
 
             lblNewUserDate.Text = DateTime.Now.ToShortDateString();
@@ -105,12 +105,25 @@ namespace DeWaaiBeheer
             user.NewUserDate = Convert.ToDateTime(lblNewUserDate.Text);
             if (user.NewUserDate < DateTime.Now)
             {
-                lblPreviousUserDate.Text = Convert.ToString(user.NewUserDate);
+                lblPreviousUserDate.Text = Convert.ToString(user.NewUserDate.ToShortDateString());
                 lblNewUserDate.Text = DateTime.Now.ToShortDateString();
             }
 
         }
 
+        private void btnTenders_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmTenders frm = new frmTenders();
+            frm.Show();
+        }
 
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            //int ID = Convert.ToInt32(lstUsers.SelectedValue);
+            //Registrations registration = db.GetRegistrationsByID(ID);
+            //registration.Accepted = 1;
+            //db.SaveChanges();
+        }
     }
 }

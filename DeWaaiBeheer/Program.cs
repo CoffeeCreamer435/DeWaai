@@ -13,7 +13,7 @@ namespace DeWaaiBeheer
         public static frmUsersPage users = new frmUsersPage();
         public static frmInstructorsPage instructors = new frmInstructorsPage();
         public static frmNewCourse newCourse = new frmNewCourse();
-        public static frmTenders tenders = new frmTenders();
+        public static frmTenders tenderns = new frmTenders();
         //public static Overzicht.OverzichtPage overzicht = new Overzicht.OverzichtPage();
         /// <summary>
         /// The main entry point for the application.

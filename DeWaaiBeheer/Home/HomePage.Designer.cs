@@ -111,20 +111,18 @@
             this.btnReviews.Name = "btnReviews";
             this.btnReviews.Size = new System.Drawing.Size(301, 60);
             this.btnReviews.TabIndex = 3;
-            this.btnReviews.Text = "Overzichten";
+            this.btnReviews.Text = "Recensies";
             this.btnReviews.UseVisualStyleBackColor = true;
             this.btnReviews.Click += new System.EventHandler(this.btnReviews_Click);
             // 
             // btnTenders
             // 
             this.btnTenders.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnTenders.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTenders.Location = new System.Drawing.Point(787, 66);
             this.btnTenders.Name = "btnTenders";
             this.btnTenders.Size = new System.Drawing.Size(301, 63);
-            this.btnTenders.TabIndex = 1;
+            this.btnTenders.TabIndex = 4;
             this.btnTenders.Text = "Inschrijvingen";
-            this.btnTenders.UseVisualStyleBackColor = true;
             this.btnTenders.Click += new System.EventHandler(this.btnTenders_Click);
             // 
             // tableLayoutPanel1
@@ -495,6 +493,7 @@
             this.btnAccept.TabIndex = 0;
             this.btnAccept.Text = "Accepteer";
             this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // btnCancel
             // 

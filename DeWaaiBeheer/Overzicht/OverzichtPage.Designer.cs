@@ -271,7 +271,6 @@
             this.btnPlanning.TabIndex = 42;
             this.btnPlanning.Text = "Planning";
             this.btnPlanning.UseVisualStyleBackColor = true;
-            this.btnPlanning.Click += new System.EventHandler(this.btnPlanning_Click);
             // 
             // BtnHome
             // 
@@ -290,7 +289,7 @@
             this.btnCourses.Name = "btnCourses";
             this.btnCourses.Size = new System.Drawing.Size(264, 48);
             this.btnCourses.TabIndex = 18;
-            this.btnCourses.Text = "Overzicht";
+            this.btnCourses.Text = "Recensies";
             this.btnCourses.UseVisualStyleBackColor = true;
             // 
             // btnInschrijvingen

@@ -96,6 +96,7 @@
           <Property Name="CourseID" Type="int" Nullable="false" />
           <Property Name="Status" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Booking_month" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Registrations">
           <Key>
@@ -272,6 +273,7 @@
           <Property Name="CourseID" Type="Int32" Nullable="false" />
           <Property Name="Status" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Booking_month" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Registrations">
           <Key>
@@ -423,6 +425,7 @@
           <EntitySetMapping Name="Invoice">
             <EntityTypeMapping TypeName="u480787545_dewaaModel.Invoice">
               <MappingFragment StoreEntitySet="Invoice">
+                <ScalarProperty Name="Booking_month" ColumnName="Booking_month" />
                 <ScalarProperty Name="Year" ColumnName="Year" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="CourseID" ColumnName="CourseID" />
