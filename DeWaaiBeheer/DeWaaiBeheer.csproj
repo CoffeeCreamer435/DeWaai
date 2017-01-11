@@ -138,6 +138,12 @@
     <Compile Include="Overzicht\OverzichtPage.Designer.cs">
       <DependentUpon>OverzichtPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Planning\PlanningPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planning\PlanningPage.Designer.cs">
+      <DependentUpon>PlanningPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registrations.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Overzicht\OverzichtPage.resx">
       <DependentUpon>OverzichtPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planning\PlanningPage.resx">
+      <DependentUpon>PlanningPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\NewUserPage.resx">
       <DependentUpon>NewUserPage.cs</DependentUpon>

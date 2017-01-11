@@ -16,6 +16,7 @@ namespace DeWaaiBeheer.Planning
         public PlanningPage()
         {
             InitializeComponent();
+            FillListBox();
         }
 
         #region Fill ListBox
@@ -25,6 +26,12 @@ namespace DeWaaiBeheer.Planning
             lstPlanning.DataSource = inschrijvingen;
             lstPlanning.ValueMember = "ID";
             lstPlanning.DisplayMember = "Display";
+        }
+
+        public void FillCalendar()
+        {
+            BindingSource courses = new BindingSource { DataSource = db.getCourses() };
+            //MonthCalendar.DataBindings = courses;
         }
         #endregion
     }

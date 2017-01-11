@@ -44,6 +44,7 @@
             this.btnCourses = new System.Windows.Forms.Button();
             this.btnInschrijvingen = new System.Windows.Forms.Button();
             this.btnInstrucors = new System.Windows.Forms.Button();
+            this.MonthCalendar = new System.Windows.Forms.MonthCalendar();
             this.tableLayoutPanel1.SuspendLayout();
             this.tblNavigation.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +91,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label11, 8, 0);
             this.tableLayoutPanel1.Controls.Add(this.label12, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.tblNavigation, 8, 2);
+            this.tableLayoutPanel1.Controls.Add(this.MonthCalendar, 4, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -306,6 +308,16 @@
             this.btnInstrucors.Text = "Instructeurs";
             this.btnInstrucors.UseVisualStyleBackColor = true;
             // 
+            // MonthCalendar
+            // 
+            this.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 2);
+            this.tableLayoutPanel1.SetColumnSpan(this.MonthCalendar, 3);
+            this.MonthCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MonthCalendar.Location = new System.Drawing.Point(377, 75);
+            this.MonthCalendar.Name = "MonthCalendar";
+            this.tableLayoutPanel1.SetRowSpan(this.MonthCalendar, 5);
+            this.MonthCalendar.TabIndex = 44;
+            // 
             // PlanningPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,5 +351,6 @@
         private System.Windows.Forms.Button btnCourses;
         private System.Windows.Forms.Button btnInschrijvingen;
         private System.Windows.Forms.Button btnInstrucors;
+        private System.Windows.Forms.MonthCalendar MonthCalendar;
     }
 }
