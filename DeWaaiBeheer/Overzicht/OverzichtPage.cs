@@ -81,6 +81,11 @@ namespace DeWaaiBeheer.Overzicht
             lstRecensies_SelectedIndexChanged(this, EventArgs.Empty);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDecline_Click(object sender, EventArgs e)
         {
             int ID = int.Parse(lbltest.Text);
