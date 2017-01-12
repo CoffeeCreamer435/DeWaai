@@ -71,7 +71,16 @@ namespace DeWaaiBeheer
 
         private void btnCharts_Click(object sender, EventArgs e)
         {
-            //
+            this.Close();
+            //Overzicht.OverzichtPage overzicht = new Overzicht.OverzichtPage();
+            //overzicht.Show();
+        }
+
+        private void btnRegistrations_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Inschrijvingen.InschrijvingenPage inschrijvingen = new Inschrijvingen.InschrijvingenPage();
+            inschrijvingen.Show();
         }
 
         private void btnFleets_Click(object sender, EventArgs e)
@@ -100,12 +109,6 @@ namespace DeWaaiBeheer
                 lblNewUserDate.Text = DateTime.Now.ToShortDateString();
             }
 
-        }
-
-        private void btnTenders_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Program.inschrijvingen.Show();
         }
     }
 }

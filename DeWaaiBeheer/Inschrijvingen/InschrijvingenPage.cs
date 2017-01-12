@@ -13,14 +13,11 @@ namespace DeWaaiBeheer.Inschrijvingen
     public partial class InschrijvingenPage : Form
     {
         DatabaseMethods db = new DatabaseMethods();
-        int cursusid;
-        //private BindingSource UserbyRegistration;
         public InschrijvingenPage()
         {
             InitializeComponent();
             FillInschrijvingenList();
-            //FillCursusBox();
-            //FillStatusBox();
+            FillCursusBox();
         }
         #region side menu lbl
         private void lblNavigation_Click(object sender, EventArgs e)
@@ -40,13 +37,9 @@ namespace DeWaaiBeheer.Inschrijvingen
         {
             BindingSource inschrijvingen = new BindingSource { DataSource = db.getUsersAndCoursesbyRegistration() };
             lstInschrijvingen.DataSource = inschrijvingen;
-           // lstInschrijvingen.DisplayMember = "ID";
-        }
-
-        public void FillStatusBox()
-        {
-            cmbStatus.Items.Add("Goedgekeurd");
-            cmbStatus.Items.Add("Afgekeurd");
+            lstInschrijvingen.ValueMember = "ID";
+            lstInschrijvingen.DisplayMember = "Display";
+            
         }
 
         public void FillCursusBox()
@@ -59,17 +52,21 @@ namespace DeWaaiBeheer.Inschrijvingen
         #region menu buttons   
         private void BtnHome_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             frmHome home = new frmHome();
             home.Show();
         }
         #endregion
         #region selected index changed
-        private void lstInschrijvingen_SelectedIndexChanged(object sender, EventArgs e)
+        private void lstInschrijvingen_MouseClick(object sender, MouseEventArgs e)
         {
             Registrations registration = lstInschrijvingen.SelectedItem as Registrations;
-            lstInschrijvingen.DataSource = db.getUsersAndCoursesbyRegistration();
-            FillRegistration(registration);
+            int ID = Convert.ToInt32(lstInschrijvingen.SelectedValue);
+            if (ID != 0)
+            {
+                FillRegistration(db.GetRegistrationsByID(ID));
+            }
+            FillInschrijvingenList();
         }
         #endregion
 
@@ -78,19 +75,37 @@ namespace DeWaaiBeheer.Inschrijvingen
         {
             if (registration != null)
             {
-                cmbCursus.DataBindings.Clear();
-                txtInvoice.DataBindings.Clear();
                 txtNaam.DataBindings.Clear();
-                dateTimePicker1.DataBindings.Clear();
-                //cmbStatus.DataBindings.Clear();
+                txtInvoice.DataBindings.Clear();
+                txtGeboektemaand.DataBindings.Clear();
+                lblCursus.DataBindings.Clear();
+                lblRegID.DataBindings.Clear();
+                cmbCursus.DataBindings.Clear();
 
-                cursusid = registration.CourseID.Value;
-                cmbCursus.DataBindings.Add("Text", db.GetCoursesbyID(cursusid), "Name");
-                txtNaam.DataBindings.Add("Text", registration, "UserID");
+                cmbCursus.DataBindings.Add("Text", db.GetCoursesbyID(registration.CourseID.Value), "Name");
+                lblRegID.DataBindings.Add("Text", registration, "ID");
+                lblCursus.DataBindings.Add("Text", registration, "CourseID");
+                txtNaam.DataBindings.Add("Text", db.getRegistrationUsersByID(registration.UserID.Value), "Firstname");
                 txtInvoice.DataBindings.Add("Text", registration, "InvoiceID");
-                //cmbStatus.DataBindings.Add("Text", registration, "Status");
+                txtGeboektemaand.DataBindings.Add("Text", registration, "Booking_month");
             }
         }
         #endregion
+
+        private void btnAccepteren_Click(object sender, EventArgs e)
+        {
+            int ID = Convert.ToInt32(lstInschrijvingen.SelectedValue);
+            Registrations registration = db.GetRegistrationsByID(ID);
+            registration.Accepted = 1;
+            db.SaveChanges();
+        }
+
+        private void btnWeigeren_Click(object sender, EventArgs e)
+        {
+            int ID = Convert.ToInt32(lstInschrijvingen.SelectedValue);
+            db.RemoveRegistrationByID(ID);
+            db.SaveChanges();
+            FillInschrijvingenList();
+        }
     }
 }

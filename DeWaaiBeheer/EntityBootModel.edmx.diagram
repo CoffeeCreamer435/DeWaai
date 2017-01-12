@@ -12,10 +12,10 @@
         <EntityTypeShape EntityType="u480787545_dewaaModel.Instructors" Width="1.5" PointX="2.75" PointY="4.75" />
         <EntityTypeShape EntityType="u480787545_dewaaModel.InstructorsAvailability" Width="1.5" PointX="4.75" PointY="4.75" />
         <EntityTypeShape EntityType="u480787545_dewaaModel.Invoice" Width="1.5" PointX="6.75" PointY="0.75" />
-        <EntityTypeShape EntityType="u480787545_dewaaModel.Registrations" Width="1.5" PointX="6.75" PointY="3.75" />
-        <EntityTypeShape EntityType="u480787545_dewaaModel.Status" Width="1.5" PointX="4.75" PointY="7.75" />
-        <EntityTypeShape EntityType="u480787545_dewaaModel.Types" Width="1.5" PointX="6.75" PointY="7.75" />
-        <EntityTypeShape EntityType="u480787545_dewaaModel.Users" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="u480787545_dewaaModel.Registrations" Width="1.5" PointX="6.75" PointY="4.75" />
+        <EntityTypeShape EntityType="u480787545_dewaaModel.Status" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="u480787545_dewaaModel.Types" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="u480787545_dewaaModel.Users" Width="1.5" PointX="4.75" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

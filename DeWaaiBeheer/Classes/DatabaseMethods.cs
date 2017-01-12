@@ -28,6 +28,14 @@ namespace DeWaaiBeheer
             ef.Users.Add(user);
         }
      
+        public object getUserByID(int ID)
+        {
+            var result = (from us in ef.Users
+                          where us.ID.Equals(ID)
+                          select us.Firstname + " " + us.Surname);
+                return result;
+        }
+     
         /// <summary>
         /// Method that removes a user of the database table
         /// </summary>
@@ -167,20 +175,80 @@ namespace DeWaaiBeheer
             return new ObservableCollection<Registrations>(ef.Registrations);
         }
 
+        public object getAcceptRegistrations()
+        {
+            var result = (from re in ef.Registrations
+                          join us in ef.Users
+                          on re.UserID equals us.ID
+                          join co in ef.Courses
+                          on re.CourseID equals co.ID
+                          where re.Accepted.Equals(1)
+                          select new { Display = us.Firstname + " " + us.Surname + " " + co.Name + " Cursus - Datum:" + co.Date, re.ID }).ToList();
+            return result;
+        }
+
         //Alle users + cursuss voor in list box.
         public object getUsersAndCoursesbyRegistration()
         {
-            var result = 
-                      (from x in ef.Registrations
-                        join cd in ef.Users
-                        on x.UserID equals cd.ID
-                        join xd in ef.Courses
-                         on x.CourseID equals xd.ID
-                        join c in ef.Courses
-                         on x.CourseID equals c.ID
-                   
-              select cd.Firstname + " " + cd.Surname + " - " + xd.Name + " - " + xd.Date).Distinct().ToList();
+            var result = (from re in ef.Registrations
+                          join us in ef.Users
+                          on re.UserID equals us.ID
+                          join co in ef.Courses
+                          on re.CourseID equals co.ID
+                          where re.Accepted.Equals(0)
+                          select new { Display = us.Firstname + " " +  us.Surname + " " +  co.Name + " Cursus - Datum:" +  co.Date, re.ID }).ToList();                         
             return result;
+        }
+
+        public Registrations GetRegistrationsByID(int ID)
+        {
+           return ef.Registrations.FirstOrDefault(x => x.ID == ID);
+        }
+
+        public void RemoveRegistrationByID(int RegistrationID)
+        {
+            ef.Registrations.Remove(getInschrijvingen().First(x => x.ID == RegistrationID));
+        }
+
+        public Users getRegistrationUsersByID(int UserID)
+        {
+            return ef.Users.FirstOrDefault(x => x.ID == UserID);
+        }
+        #endregion
+
+        #region Recensies
+        public ObservableCollection<CustomerFeedback> getFeedback()
+        {
+            return new ObservableCollection<CustomerFeedback>(ef.CustomerFeedback);
+        }
+
+        public object getNotApprovedFeedback()
+        {
+            var result = (from x in ef.CustomerFeedback
+                         where x.Approved == false
+                          select x).ToList();
+            //var result = 
+            //          (from x in ef.Registrations
+            //            join cd in ef.Users
+            //            on x.UserID equals cd.ID
+            //            join xd in ef.Courses
+            //             on x.CourseID equals xd.ID
+            //            join c in ef.Courses
+            //             on x.CourseID equals c.ID
+                   
+            //  select cd.Firstname + " " + cd.Surname + " - " + xd.Name + " - " + xd.Date).Distinct().ToList();
+            return result;
+        }
+
+        public void RemoveFeedback(int ID)
+        {
+            ef.CustomerFeedback.Remove(getFeedback().First(x => x.ID == ID));
+            ef.SaveChanges();
+        }
+
+        public ObservableCollection<CustomerFeedback> getFeedbackById(int ID)
+        {
+            return new ObservableCollection<CustomerFeedback>(ef.CustomerFeedback.Where(x => x.ID == ID));
         }
         #endregion
     }
