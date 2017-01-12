@@ -1,6 +1,6 @@
-﻿namespace DeWaaiBeheer.Overzicht
+﻿namespace DeWaaiBeheer
 {
-    partial class OverzichtPage
+    partial class frmReviews
     {
         /// <summary>
         /// Required designer variable.
@@ -43,6 +43,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tblNavigation = new System.Windows.Forms.TableLayoutPanel();
+            this.btnPlanning = new System.Windows.Forms.Button();
             this.BtnHome = new System.Windows.Forms.Button();
             this.btnCourses = new System.Windows.Forms.Button();
             this.btnInschrijvingen = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.txtStars = new System.Windows.Forms.TextBox();
             this.lbltest = new System.Windows.Forms.Label();
-            this.btnPlanning = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.tblNavigation.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -262,6 +262,16 @@
             this.tblNavigation.TabIndex = 42;
             this.tblNavigation.Visible = false;
             // 
+            // btnPlanning
+            // 
+            this.btnPlanning.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPlanning.Location = new System.Drawing.Point(3, 327);
+            this.btnPlanning.Name = "btnPlanning";
+            this.btnPlanning.Size = new System.Drawing.Size(264, 54);
+            this.btnPlanning.TabIndex = 42;
+            this.btnPlanning.Text = "Planning";
+            this.btnPlanning.UseVisualStyleBackColor = true;
+            // 
             // BtnHome
             // 
             this.BtnHome.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -279,7 +289,7 @@
             this.btnCourses.Name = "btnCourses";
             this.btnCourses.Size = new System.Drawing.Size(264, 48);
             this.btnCourses.TabIndex = 18;
-            this.btnCourses.Text = "Overzicht";
+            this.btnCourses.Text = "Recensies";
             this.btnCourses.UseVisualStyleBackColor = true;
             // 
             // btnInschrijvingen
@@ -466,23 +476,13 @@
             this.lbltest.TabIndex = 44;
             this.lbltest.Text = "label5";
             // 
-            // btnPlanning
-            // 
-            this.btnPlanning.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPlanning.Location = new System.Drawing.Point(3, 327);
-            this.btnPlanning.Name = "btnPlanning";
-            this.btnPlanning.Size = new System.Drawing.Size(264, 54);
-            this.btnPlanning.TabIndex = 42;
-            this.btnPlanning.Text = "Planning";
-            this.btnPlanning.UseVisualStyleBackColor = true;
-            // 
-            // OverzichtPage
+            // frmReviews
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 661);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "OverzichtPage";
+            this.Name = "frmReviews";
             this.Text = "OverzichtPage";
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

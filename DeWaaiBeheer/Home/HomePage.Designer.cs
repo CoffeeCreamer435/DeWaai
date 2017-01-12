@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCharts = new System.Windows.Forms.Button();
+            this.btnReviews = new System.Windows.Forms.Button();
             this.btnTenders = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.msName = new System.Windows.Forms.MenuStrip();
@@ -58,10 +58,10 @@
             this.lblNewTenderDate = new System.Windows.Forms.Label();
             this.lblNewTenderProcessing = new System.Windows.Forms.Label();
             this.lstUsers = new System.Windows.Forms.ListBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
             this.tlpMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.msName.SuspendLayout();
@@ -77,7 +77,7 @@
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.88982F));
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.669449F));
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.8798F));
-            this.tlpMain.Controls.Add(this.btnCharts, 4, 3);
+            this.tlpMain.Controls.Add(this.btnReviews, 4, 3);
             this.tlpMain.Controls.Add(this.btnTenders, 4, 2);
             this.tlpMain.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tlpMain.Controls.Add(this.btnCourses, 4, 4);
@@ -103,28 +103,27 @@
             this.tlpMain.Size = new System.Drawing.Size(1091, 438);
             this.tlpMain.TabIndex = 0;
             // 
-            // btnCharts
+            // btnReviews
             // 
-            this.btnCharts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCharts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCharts.Location = new System.Drawing.Point(787, 135);
-            this.btnCharts.Name = "btnCharts";
-            this.btnCharts.Size = new System.Drawing.Size(301, 60);
-            this.btnCharts.TabIndex = 3;
-            this.btnCharts.Text = "Overzichten";
-            this.btnCharts.UseVisualStyleBackColor = true;
-            this.btnCharts.Click += new System.EventHandler(this.btnCharts_Click);
+            this.btnReviews.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnReviews.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReviews.Location = new System.Drawing.Point(787, 135);
+            this.btnReviews.Name = "btnReviews";
+            this.btnReviews.Size = new System.Drawing.Size(301, 60);
+            this.btnReviews.TabIndex = 3;
+            this.btnReviews.Text = "Recensies";
+            this.btnReviews.UseVisualStyleBackColor = true;
+            this.btnReviews.Click += new System.EventHandler(this.btnReviews_Click);
             // 
             // btnTenders
             // 
             this.btnTenders.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnTenders.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTenders.Location = new System.Drawing.Point(787, 66);
             this.btnTenders.Name = "btnTenders";
             this.btnTenders.Size = new System.Drawing.Size(301, 63);
-            this.btnTenders.TabIndex = 1;
+            this.btnTenders.TabIndex = 4;
             this.btnTenders.Text = "Inschrijvingen";
-            this.btnTenders.UseVisualStyleBackColor = true;
+            this.btnTenders.Click += new System.EventHandler(this.btnTenders_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -470,17 +469,6 @@
             this.lstUsers.Size = new System.Drawing.Size(429, 274);
             this.lstUsers.TabIndex = 2;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.DarkCyan;
-            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Location = new System.Drawing.Point(769, 63);
-            this.label17.Name = "label17";
-            this.tlpMain.SetRowSpan(this.label17, 6);
-            this.label17.Size = new System.Drawing.Size(12, 375);
-            this.label17.TabIndex = 13;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -505,6 +493,7 @@
             this.btnAccept.TabIndex = 0;
             this.btnAccept.Text = "Accepteer";
             this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // btnCancel
             // 
@@ -515,6 +504,17 @@
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Weiger";
             this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.DarkCyan;
+            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label17.Location = new System.Drawing.Point(769, 63);
+            this.label17.Name = "label17";
+            this.tlpMain.SetRowSpan(this.label17, 6);
+            this.label17.Size = new System.Drawing.Size(12, 375);
+            this.label17.TabIndex = 13;
             // 
             // frmHome
             // 
@@ -545,7 +545,7 @@
 
         public System.Windows.Forms.TableLayoutPanel tlpMain;
         private System.Windows.Forms.Button btnUsers;
-        private System.Windows.Forms.Button btnCharts;
+        private System.Windows.Forms.Button btnReviews;
         private System.Windows.Forms.Button btnCourses;
         private System.Windows.Forms.Button btnTenders;
         private System.Windows.Forms.Label label1;

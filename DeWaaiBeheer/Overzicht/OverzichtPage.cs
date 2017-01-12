@@ -8,14 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DeWaaiBeheer.Overzicht
+namespace DeWaaiBeheer
 {
-    public partial class OverzichtPage : Form
+    public partial class frmReviews : Form
     {
         
         DatabaseMethods db = new DatabaseMethods();
         
-        public OverzichtPage()
+        public frmReviews()
         {
             InitializeComponent();
             FillListbox();

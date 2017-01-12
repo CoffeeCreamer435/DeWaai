@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DeWaaiBeheer.Inschrijvingen
+namespace DeWaaiBeheer
 {
-    public partial class InschrijvingenPage : Form
+    public partial class frmTenders : Form
     {
         DatabaseMethods db = new DatabaseMethods();
-        public InschrijvingenPage()
+        public frmTenders()
         {
             InitializeComponent();
             FillInschrijvingenList();

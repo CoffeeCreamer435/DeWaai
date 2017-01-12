@@ -17,7 +17,20 @@ namespace DeWaaiBeheer
         public ObservableCollection<Users> getUsers()
         {
             return new ObservableCollection<Users>(ef.Users);
-        }   
+        }
+
+        //Alle users + cursuss voor in list box.
+        public object getUsersByRegistration()
+        {
+            var result = (from re in ef.Registrations
+                          join us in ef.Users
+                          on re.UserID equals us.ID
+                          join co in ef.Courses
+                          on re.CourseID equals co.ID
+                           where re.Accepted.Equals(0)
+                          select us.Firstname + " " + us.Surname + " - " + co.Name + " - " + co.Date).Distinct().ToList();
+            return result;
+        }
 
         /// <summary>
         /// Method that sets users into database
@@ -196,7 +209,7 @@ namespace DeWaaiBeheer
                           join co in ef.Courses
                           on re.CourseID equals co.ID
                           where re.Accepted.Equals(0)
-                          select new { Display = us.Firstname + " " +  us.Surname + " " +  co.Name + " Cursus - Datum:" +  co.Date, re.ID }).ToList();                         
+                          select new { Display = us.Firstname + " " + us.Surname + " - " + co.Name + " - " + co.Date, re.ID }).Distinct().ToList();                         
             return result;
         }
 

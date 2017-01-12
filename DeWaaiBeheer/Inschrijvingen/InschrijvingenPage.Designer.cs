@@ -1,6 +1,6 @@
-﻿namespace DeWaaiBeheer.Inschrijvingen
+﻿namespace DeWaaiBeheer
 {
-    partial class InschrijvingenPage
+    partial class frmTenders
     {
         /// <summary>
         /// Required designer variable.
@@ -58,8 +58,8 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtGeboektemaand = new System.Windows.Forms.TextBox();
-            this.btnAccepteren = new System.Windows.Forms.Button();
             this.lblCursus = new System.Windows.Forms.Label();
+            this.btnAccepteren = new System.Windows.Forms.Button();
             this.lblRegID = new System.Windows.Forms.Label();
             this.tblNavigation.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -499,6 +499,15 @@
             this.txtGeboektemaand.Size = new System.Drawing.Size(147, 20);
             this.txtGeboektemaand.TabIndex = 4;
             // 
+            // lblCursus
+            // 
+            this.lblCursus.AutoSize = true;
+            this.lblCursus.Location = new System.Drawing.Point(3, 30);
+            this.lblCursus.Name = "lblCursus";
+            this.lblCursus.Size = new System.Drawing.Size(35, 13);
+            this.lblCursus.TabIndex = 5;
+            this.lblCursus.Text = "label6";
+            // 
             // btnAccepteren
             // 
             this.btnAccepteren.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -510,15 +519,6 @@
             this.btnAccepteren.UseVisualStyleBackColor = true;
             this.btnAccepteren.Click += new System.EventHandler(this.btnAccepteren_Click);
             // 
-            // lblCursus
-            // 
-            this.lblCursus.AutoSize = true;
-            this.lblCursus.Location = new System.Drawing.Point(3, 30);
-            this.lblCursus.Name = "lblCursus";
-            this.lblCursus.Size = new System.Drawing.Size(35, 13);
-            this.lblCursus.TabIndex = 5;
-            this.lblCursus.Text = "label6";
-            // 
             // lblRegID
             // 
             this.lblRegID.AutoSize = true;
@@ -528,13 +528,13 @@
             this.lblRegID.TabIndex = 45;
             this.lblRegID.Text = "label6";
             // 
-            // InschrijvingenPage
+            // frmTenders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 661);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "InschrijvingenPage";
+            this.Name = "frmTenders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InschrijvingenPage";
             this.tblNavigation.ResumeLayout(false);
