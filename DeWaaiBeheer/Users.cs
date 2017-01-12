@@ -31,5 +31,7 @@ namespace DeWaaiBeheer
         public Nullable<System.DateTime> Updated { get; set; }
         public string Function { get; set; }
         public bool Passreset { get; set; }
+        public string Sex { get; set; }
+        public System.DateTime NewUserDate { get; set; }
     }
 }

@@ -20,22 +20,6 @@ namespace DeWaaiBeheer
         }   
 
         /// <summary>
-        /// Method that gets users of a specific course
-        /// </summary>
-        /// <returns>Returns a list users of a course</returns>
-        public object getUsersByCourse()
-        {
-            var result = (from x in ef.Registrations                         
-                          join cd in ef.Users
-                          on x.UserID equals cd.ID
-                          join xd in ef.Courses
-                          on x.CourseID equals xd.ID
-                          select cd.Firstname).Distinct().ToList();
-
-            return result;
-        }
-
-        /// <summary>
         /// Method that sets users into database
         /// </summary>
         /// <param name="user">Parameter of user</param>
@@ -187,22 +171,15 @@ namespace DeWaaiBeheer
         public object getUsersAndCoursesbyRegistration()
         {
             var result = 
-                //(from x in ef.Registrations
-                //          join cd in ef.Users
-                //          on x.UserID equals cd.ID
-                //          join xd in ef.Courses
-                //          on x.CourseID equals xd.ID
-                //          select x).ToList();
-
-           (from x in ef.Registrations
-                    join cd in ef.Users
-                    on x.UserID equals cd.ID
-                    join xd in ef.Courses
-                     on x.CourseID equals xd.ID
-                    join c in ef.Courses
-                     on x.CourseID equals c.ID
+                      (from x in ef.Registrations
+                        join cd in ef.Users
+                        on x.UserID equals cd.ID
+                        join xd in ef.Courses
+                         on x.CourseID equals xd.ID
+                        join c in ef.Courses
+                         on x.CourseID equals c.ID
                    
-              select cd.Firstname + " " + cd.Surname + " " + xd.Name + " Cursus - Datum " + xd.Date).ToList();
+              select cd.Firstname + " " + cd.Surname + " - " + xd.Name + " - " + xd.Date).Distinct().ToList();
             return result;
         }
         #endregion

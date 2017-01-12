@@ -90,7 +90,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 17F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 12F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 252F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 256F));
             this.tableLayoutPanel1.Controls.Add(this.lstUsers, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label13, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label12, 5, 12);
@@ -157,7 +157,7 @@
             this.lstUsers.Location = new System.Drawing.Point(3, 36);
             this.lstUsers.Name = "lstUsers";
             this.tableLayoutPanel1.SetRowSpan(this.lstUsers, 12);
-            this.lstUsers.Size = new System.Drawing.Size(296, 364);
+            this.lstUsers.Size = new System.Drawing.Size(293, 364);
             this.lstUsers.TabIndex = 7;
             this.lstUsers.SelectedIndexChanged += new System.EventHandler(this.lstUsers_SelectedIndexChanged);
             // 
@@ -170,7 +170,7 @@
             this.label13.ForeColor = System.Drawing.Color.DarkCyan;
             this.label13.Location = new System.Drawing.Point(3, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(296, 33);
+            this.label13.Size = new System.Drawing.Size(293, 33);
             this.label13.TabIndex = 21;
             this.label13.Text = "Cursisten";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -179,9 +179,9 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Location = new System.Drawing.Point(341, 372);
+            this.label12.Location = new System.Drawing.Point(338, 372);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(112, 31);
+            this.label12.Size = new System.Drawing.Size(111, 31);
             this.label12.TabIndex = 18;
             this.label12.Text = "Functie:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,7 +192,7 @@
             this.cmbFunction.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbFunction.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFunction.FormattingEnabled = true;
-            this.cmbFunction.Location = new System.Drawing.Point(459, 375);
+            this.cmbFunction.Location = new System.Drawing.Point(455, 375);
             this.cmbFunction.Name = "cmbFunction";
             this.cmbFunction.Size = new System.Drawing.Size(344, 21);
             this.cmbFunction.TabIndex = 19;
@@ -202,9 +202,9 @@
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label10.Location = new System.Drawing.Point(341, 341);
+            this.label10.Location = new System.Drawing.Point(338, 341);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(112, 31);
+            this.label10.Size = new System.Drawing.Size(111, 31);
             this.label10.TabIndex = 5;
             this.label10.Text = "Wachtwoord:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,7 +213,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtPass, 3);
             this.txtPass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPass.Location = new System.Drawing.Point(459, 344);
+            this.txtPass.Location = new System.Drawing.Point(455, 344);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(344, 20);
             this.txtPass.TabIndex = 11;
@@ -222,7 +222,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtEmail, 3);
             this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtEmail.Location = new System.Drawing.Point(459, 313);
+            this.txtEmail.Location = new System.Drawing.Point(455, 313);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(344, 20);
             this.txtEmail.TabIndex = 10;
@@ -232,9 +232,9 @@
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label9.Location = new System.Drawing.Point(341, 310);
+            this.label9.Location = new System.Drawing.Point(338, 310);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 31);
+            this.label9.Size = new System.Drawing.Size(111, 31);
             this.label9.TabIndex = 5;
             this.label9.Text = "Email:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -244,9 +244,9 @@
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label8.Location = new System.Drawing.Point(341, 279);
+            this.label8.Location = new System.Drawing.Point(338, 279);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 31);
+            this.label8.Size = new System.Drawing.Size(111, 31);
             this.label8.TabIndex = 5;
             this.label8.Text = "Mobiel:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -255,7 +255,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtMobile, 3);
             this.txtMobile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMobile.Location = new System.Drawing.Point(459, 282);
+            this.txtMobile.Location = new System.Drawing.Point(455, 282);
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(344, 20);
             this.txtMobile.TabIndex = 9;
@@ -265,9 +265,9 @@
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label7.Location = new System.Drawing.Point(341, 248);
+            this.label7.Location = new System.Drawing.Point(338, 248);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 31);
+            this.label7.Size = new System.Drawing.Size(111, 31);
             this.label7.TabIndex = 5;
             this.label7.Text = "Telefoonnummer:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -276,7 +276,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtTelephonenumber, 3);
             this.txtTelephonenumber.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTelephonenumber.Location = new System.Drawing.Point(459, 251);
+            this.txtTelephonenumber.Location = new System.Drawing.Point(455, 251);
             this.txtTelephonenumber.Name = "txtTelephonenumber";
             this.txtTelephonenumber.Size = new System.Drawing.Size(344, 20);
             this.txtTelephonenumber.TabIndex = 8;
@@ -285,7 +285,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtCountry, 3);
             this.txtCountry.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCountry.Location = new System.Drawing.Point(459, 220);
+            this.txtCountry.Location = new System.Drawing.Point(455, 220);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(344, 20);
             this.txtCountry.TabIndex = 7;
@@ -295,9 +295,9 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label6.Location = new System.Drawing.Point(341, 217);
+            this.label6.Location = new System.Drawing.Point(338, 217);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 31);
+            this.label6.Size = new System.Drawing.Size(111, 31);
             this.label6.TabIndex = 5;
             this.label6.Text = "Land:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -305,7 +305,7 @@
             // txtZip
             // 
             this.txtZip.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtZip.Location = new System.Drawing.Point(459, 189);
+            this.txtZip.Location = new System.Drawing.Point(455, 189);
             this.txtZip.Name = "txtZip";
             this.txtZip.Size = new System.Drawing.Size(81, 20);
             this.txtZip.TabIndex = 5;
@@ -314,7 +314,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtCity, 2);
             this.txtCity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCity.Location = new System.Drawing.Point(546, 189);
+            this.txtCity.Location = new System.Drawing.Point(542, 189);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(257, 20);
             this.txtCity.TabIndex = 6;
@@ -324,9 +324,9 @@
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label4.Location = new System.Drawing.Point(341, 186);
+            this.label4.Location = new System.Drawing.Point(338, 186);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 31);
+            this.label4.Size = new System.Drawing.Size(111, 31);
             this.label4.TabIndex = 5;
             this.label4.Text = "Postcode + Plaats:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -336,9 +336,9 @@
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label5.Location = new System.Drawing.Point(341, 155);
+            this.label5.Location = new System.Drawing.Point(338, 155);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 31);
+            this.label5.Size = new System.Drawing.Size(111, 31);
             this.label5.TabIndex = 5;
             this.label5.Text = "Straat + Huisnr:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -347,7 +347,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtStreet, 2);
             this.txtStreet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtStreet.Location = new System.Drawing.Point(459, 158);
+            this.txtStreet.Location = new System.Drawing.Point(455, 158);
             this.txtStreet.Name = "txtStreet";
             this.txtStreet.Size = new System.Drawing.Size(282, 20);
             this.txtStreet.TabIndex = 3;
@@ -355,7 +355,7 @@
             // txtHousenr
             // 
             this.txtHousenr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtHousenr.Location = new System.Drawing.Point(747, 158);
+            this.txtHousenr.Location = new System.Drawing.Point(743, 158);
             this.txtHousenr.Name = "txtHousenr";
             this.txtHousenr.Size = new System.Drawing.Size(56, 20);
             this.txtHousenr.TabIndex = 4;
@@ -364,7 +364,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtSurname, 3);
             this.txtSurname.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSurname.Location = new System.Drawing.Point(459, 127);
+            this.txtSurname.Location = new System.Drawing.Point(455, 127);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(344, 20);
             this.txtSurname.TabIndex = 2;
@@ -374,9 +374,9 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label3.Location = new System.Drawing.Point(341, 124);
+            this.label3.Location = new System.Drawing.Point(338, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 31);
+            this.label3.Size = new System.Drawing.Size(111, 31);
             this.label3.TabIndex = 4;
             this.label3.Text = "Achternaam:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -386,9 +386,9 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label2.Location = new System.Drawing.Point(341, 93);
+            this.label2.Location = new System.Drawing.Point(338, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 31);
+            this.label2.Size = new System.Drawing.Size(111, 31);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tussevoegsel:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -397,7 +397,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtInsertion, 3);
             this.txtInsertion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtInsertion.Location = new System.Drawing.Point(459, 96);
+            this.txtInsertion.Location = new System.Drawing.Point(455, 96);
             this.txtInsertion.Name = "txtInsertion";
             this.txtInsertion.Size = new System.Drawing.Size(344, 20);
             this.txtInsertion.TabIndex = 1;
@@ -407,9 +407,9 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label1.Location = new System.Drawing.Point(341, 62);
+            this.label1.Location = new System.Drawing.Point(338, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 31);
+            this.label1.Size = new System.Drawing.Size(111, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "Voornaam:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -418,7 +418,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtFirstname, 3);
             this.txtFirstname.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtFirstname.Location = new System.Drawing.Point(459, 65);
+            this.txtFirstname.Location = new System.Drawing.Point(455, 65);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Size = new System.Drawing.Size(344, 20);
             this.txtFirstname.TabIndex = 0;
@@ -428,9 +428,9 @@
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label11.Location = new System.Drawing.Point(341, 33);
+            this.label11.Location = new System.Drawing.Point(338, 33);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(112, 29);
+            this.label11.Size = new System.Drawing.Size(111, 29);
             this.label11.TabIndex = 12;
             this.label11.Text = "Gebruikersnummer:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -438,7 +438,7 @@
             // txtId
             // 
             this.txtId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtId.Location = new System.Drawing.Point(459, 36);
+            this.txtId.Location = new System.Drawing.Point(455, 36);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(81, 20);
@@ -451,10 +451,10 @@
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label14.Location = new System.Drawing.Point(341, 0);
+            this.label14.Location = new System.Drawing.Point(338, 0);
             this.label14.Name = "label14";
             this.label14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label14.Size = new System.Drawing.Size(462, 33);
+            this.label14.Size = new System.Drawing.Size(461, 33);
             this.label14.TabIndex = 22;
             this.label14.Text = "Gegevens";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -465,10 +465,10 @@
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label15.Location = new System.Drawing.Point(838, 0);
+            this.label15.Location = new System.Drawing.Point(834, 0);
             this.label15.Name = "label15";
             this.label15.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label15.Size = new System.Drawing.Size(250, 33);
+            this.label15.Size = new System.Drawing.Size(254, 33);
             this.label15.TabIndex = 22;
             this.label15.Text = "Navigeer";
             this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -478,7 +478,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.DarkCyan;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Location = new System.Drawing.Point(317, 33);
+            this.label16.Location = new System.Drawing.Point(314, 33);
             this.label16.Name = "label16";
             this.tableLayoutPanel1.SetRowSpan(this.label16, 12);
             this.label16.Size = new System.Drawing.Size(18, 370);
@@ -489,7 +489,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.DarkCyan;
             this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Location = new System.Drawing.Point(809, 33);
+            this.label17.Location = new System.Drawing.Point(805, 33);
             this.label17.Name = "label17";
             this.tableLayoutPanel1.SetRowSpan(this.label17, 12);
             this.label17.Size = new System.Drawing.Size(11, 370);
@@ -506,7 +506,7 @@
             this.tlpNavigation.Controls.Add(this.btnInstructors, 0, 4);
             this.tlpNavigation.Controls.Add(this.btnFleets, 0, 5);
             this.tlpNavigation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpNavigation.Location = new System.Drawing.Point(838, 65);
+            this.tlpNavigation.Location = new System.Drawing.Point(834, 65);
             this.tlpNavigation.Name = "tlpNavigation";
             this.tlpNavigation.RowCount = 6;
             this.tableLayoutPanel1.SetRowSpan(this.tlpNavigation, 11);
@@ -516,7 +516,7 @@
             this.tlpNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tlpNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tlpNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpNavigation.Size = new System.Drawing.Size(250, 335);
+            this.tlpNavigation.Size = new System.Drawing.Size(254, 335);
             this.tlpNavigation.TabIndex = 37;
             // 
             // btnHome
@@ -525,7 +525,7 @@
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnHome.Location = new System.Drawing.Point(3, 3);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(244, 49);
+            this.btnHome.Size = new System.Drawing.Size(248, 49);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
@@ -536,7 +536,7 @@
             this.btnCharts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCharts.Location = new System.Drawing.Point(3, 58);
             this.btnCharts.Name = "btnCharts";
-            this.btnCharts.Size = new System.Drawing.Size(244, 49);
+            this.btnCharts.Size = new System.Drawing.Size(248, 49);
             this.btnCharts.TabIndex = 1;
             this.btnCharts.Text = "Overzicht";
             this.btnCharts.UseVisualStyleBackColor = true;
@@ -546,7 +546,7 @@
             this.btnRegistrations.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRegistrations.Location = new System.Drawing.Point(3, 113);
             this.btnRegistrations.Name = "btnRegistrations";
-            this.btnRegistrations.Size = new System.Drawing.Size(244, 49);
+            this.btnRegistrations.Size = new System.Drawing.Size(248, 49);
             this.btnRegistrations.TabIndex = 2;
             this.btnRegistrations.Text = "Inschrijvingen";
             this.btnRegistrations.UseVisualStyleBackColor = true;
@@ -556,7 +556,7 @@
             this.btnCourses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCourses.Location = new System.Drawing.Point(3, 168);
             this.btnCourses.Name = "btnCourses";
-            this.btnCourses.Size = new System.Drawing.Size(244, 49);
+            this.btnCourses.Size = new System.Drawing.Size(248, 49);
             this.btnCourses.TabIndex = 3;
             this.btnCourses.Text = "Cursussen";
             this.btnCourses.UseVisualStyleBackColor = true;
@@ -567,7 +567,7 @@
             this.btnInstructors.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnInstructors.Location = new System.Drawing.Point(3, 223);
             this.btnInstructors.Name = "btnInstructors";
-            this.btnInstructors.Size = new System.Drawing.Size(244, 49);
+            this.btnInstructors.Size = new System.Drawing.Size(248, 49);
             this.btnInstructors.TabIndex = 4;
             this.btnInstructors.Text = "Instructeurs";
             this.btnInstructors.UseVisualStyleBackColor = true;
@@ -578,7 +578,7 @@
             this.btnFleets.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFleets.Location = new System.Drawing.Point(3, 278);
             this.btnFleets.Name = "btnFleets";
-            this.btnFleets.Size = new System.Drawing.Size(244, 54);
+            this.btnFleets.Size = new System.Drawing.Size(248, 54);
             this.btnFleets.TabIndex = 5;
             this.btnFleets.Text = "Vloten";
             this.btnFleets.UseVisualStyleBackColor = true;
@@ -589,7 +589,7 @@
             this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnNew.Location = new System.Drawing.Point(3, 406);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(94, 29);
+            this.btnNew.Size = new System.Drawing.Size(93, 29);
             this.btnNew.TabIndex = 13;
             this.btnNew.Text = "Nieuw";
             this.btnNew.UseVisualStyleBackColor = true;
@@ -598,9 +598,9 @@
             // btnEdit
             // 
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEdit.Location = new System.Drawing.Point(103, 406);
+            this.btnEdit.Location = new System.Drawing.Point(102, 406);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(87, 29);
+            this.btnEdit.Size = new System.Drawing.Size(86, 29);
             this.btnEdit.TabIndex = 13;
             this.btnEdit.Text = "Wijzigen";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -609,9 +609,9 @@
             // btnDelete
             // 
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDelete.Location = new System.Drawing.Point(196, 406);
+            this.btnDelete.Location = new System.Drawing.Point(194, 406);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(103, 29);
+            this.btnDelete.Size = new System.Drawing.Size(102, 29);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Verwijderen";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -622,9 +622,9 @@
             this.lblNavigation.AutoSize = true;
             this.lblNavigation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNavigation.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.lblNavigation.Location = new System.Drawing.Point(838, 33);
+            this.lblNavigation.Location = new System.Drawing.Point(834, 33);
             this.lblNavigation.Name = "lblNavigation";
-            this.lblNavigation.Size = new System.Drawing.Size(250, 29);
+            this.lblNavigation.Size = new System.Drawing.Size(254, 29);
             this.lblNavigation.TabIndex = 38;
             this.lblNavigation.Text = "▼";
             this.lblNavigation.TextAlign = System.Drawing.ContentAlignment.TopCenter;

@@ -19,5 +19,6 @@ namespace DeWaaiBeheer
         public int InstructorID { get; set; }
         public int CourseID { get; set; }
         public string Status { get; set; }
+        public int Year { get; set; }
     }
 }

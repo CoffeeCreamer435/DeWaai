@@ -18,7 +18,8 @@ namespace DeWaaiBeheer
         public int FleetID { get; set; }
         public System.DateTime Date { get; set; }
         public int UserID { get; set; }
-        public int InstructorID { get; set; }
+        public Nullable<int> InstructorID { get; set; }
         public int CoursesID { get; set; }
+        public string InvoiceID { get; set; }
     }
 }

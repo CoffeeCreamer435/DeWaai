@@ -42,12 +42,14 @@ namespace DeWaaiBeheer
                 txtName.DataBindings.Clear();
                 txtDescription.DataBindings.Clear();
                 txtPrice.DataBindings.Clear();
+                txtAmount.DataBindings.Clear();
                 //dtpDate.DataBindings.Clear();
 
                 txtCoursenumber.DataBindings.Add("Text", course, "ID");
                 txtName.DataBindings.Add("Text", course, "Name");
                 txtDescription.DataBindings.Add("Text", course, "Description");
                 txtPrice.DataBindings.Add("Text", course, "Price");
+                txtAmount.DataBindings.Add("Text", course, "Amount");
                 //dtpDate.DataBindings.Add("Text", course, "Date");
             }                 
         }   
@@ -70,7 +72,7 @@ namespace DeWaaiBeheer
         #region User methods
         private void btnNew_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             frmNewCourse frmNewCourse = new frmNewCourse();
             frmNewCourse.Show();
         }
@@ -105,6 +107,7 @@ namespace DeWaaiBeheer
             foreach (Courses co in db.GetCoursesbyID(id))
             {
                 co.Date = date;
+                co.Updated = DateTime.Now;
                 db.SaveChanges();
                 break;
             }

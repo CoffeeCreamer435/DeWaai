@@ -59,8 +59,9 @@ namespace DeWaaiBeheer.Inschrijvingen
         #region menu buttons   
         private void BtnHome_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Program.home.Show();
+            this.Hide();
+            frmHome home = new frmHome();
+            home.Show();
         }
         #endregion
         #region selected index changed
