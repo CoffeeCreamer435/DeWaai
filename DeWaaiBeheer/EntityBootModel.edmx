@@ -31,6 +31,7 @@
           <Property Name="Created" Type="date" />
           <Property Name="Updated" Type="date" />
           <Property Name="FleedID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="bool" Nullable="false" />
         </EntityType>
         <EntityType Name="CustomerFeedback">
           <Key>
@@ -208,6 +209,7 @@
           <Property Name="Created" Type="DateTime" />
           <Property Name="Updated" Type="DateTime" />
           <Property Name="FleedID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="CustomerFeedback">
           <Key>
@@ -351,6 +353,7 @@
           <EntitySetMapping Name="Courses">
             <EntityTypeMapping TypeName="u480787545_dewaaModel.Courses">
               <MappingFragment StoreEntitySet="Courses">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="FleedID" ColumnName="FleedID" />
                 <ScalarProperty Name="Updated" ColumnName="Updated" />
                 <ScalarProperty Name="Created" ColumnName="Created" />

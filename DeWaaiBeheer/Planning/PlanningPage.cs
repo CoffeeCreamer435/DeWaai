@@ -34,5 +34,7 @@ namespace DeWaaiBeheer.Planning
             //MonthCalendar.DataBindings = courses;
         }
         #endregion
+
+
     }
 }

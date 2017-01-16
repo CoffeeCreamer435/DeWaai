@@ -93,16 +93,16 @@
     <Compile Include="Fleet.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Home\HomePage.cs">
+    <Compile Include="Overzicht\Home\HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home\HomePage.Designer.cs">
+    <Compile Include="Overzicht\Home\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home\LoginPage.cs">
+    <Compile Include="Overzicht\Home\LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home\LoginPage.Designer.cs">
+    <Compile Include="Overzicht\Home\LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\MyAccount.cs">
@@ -186,10 +186,10 @@
     <EmbeddedResource Include="Course\NewCoursePage.resx">
       <DependentUpon>NewCoursePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home\HomePage.resx">
+    <EmbeddedResource Include="Overzicht\Home\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home\LoginPage.resx">
+    <EmbeddedResource Include="Overzicht\Home\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\MyAccount.resx">
