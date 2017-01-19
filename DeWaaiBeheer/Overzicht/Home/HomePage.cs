@@ -102,12 +102,12 @@ namespace DeWaaiBeheer
             lblNewTenderDate.Text = DateTime.Now.ToShortDateString();
 
             
-            user.NewUserDate = Convert.ToDateTime(lblNewUserDate.Text);
-            if (user.NewUserDate < DateTime.Now)
-            {
-                lblPreviousUserDate.Text = Convert.ToString(user.NewUserDate.ToShortDateString());
-                lblNewUserDate.Text = DateTime.Now.ToShortDateString();
-            }
+            //user.NewUserDate = Convert.ToDateTime(lblNewUserDate.Text);
+            //if (user.NewUserDate < DateTime.Now)
+            //{
+            //    lblPreviousUserDate.Text = Convert.ToString(user.NewUserDate.ToShortDateString());
+            //    lblNewUserDate.Text = DateTime.Now.ToShortDateString();
+            //}
 
         }
 

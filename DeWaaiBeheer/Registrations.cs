@@ -38,6 +38,8 @@ public partial class Registrations
 
     public int Accepted { get; set; }
 
+    public System.DateTime Date { get; set; }
+
 }
 
 }

@@ -95,5 +95,15 @@ namespace DeWaaiBeheer
         {
             
         }
+
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFleet_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

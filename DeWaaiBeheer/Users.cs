@@ -54,8 +54,6 @@ public partial class Users
 
     public string Sex { get; set; }
 
-    public System.DateTime NewUserDate { get; set; }
-
 }
 
 }

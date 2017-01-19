@@ -148,6 +148,9 @@
     <Compile Include="Registrations.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="SliderIMG.cs">
+      <DependentUpon>EntityBootModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Status.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>

@@ -31,7 +31,7 @@
           <Property Name="Created" Type="date" />
           <Property Name="Updated" Type="date" />
           <Property Name="FleedID" Type="int" Nullable="false" />
-          <Property Name="Status" Type="bool" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="CustomerFeedback">
           <Key>
@@ -78,6 +78,7 @@
           <Property Name="Created" Type="date" />
           <Property Name="Updated" Type="date" />
           <Property Name="Level" Type="int" Nullable="false" />
+          <Property Name="Sex" Type="varchar" MaxLength="11" Nullable="false" />
         </EntityType>
         <EntityType Name="InstructorsAvailability">
           <Key>
@@ -113,6 +114,14 @@
           <Property Name="Created" Type="date" />
           <Property Name="Updated" Type="date" />
           <Property Name="Accepted" Type="int" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SliderIMG">
+          <Key>
+            <PropertyRef Name="IMGID" />
+          </Key>
+          <Property Name="IMGID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IMGLink" Type="text" Nullable="false" />
         </EntityType>
         <EntityType Name="Status">
           <Key>
@@ -150,8 +159,7 @@
           <Property Name="Updated" Type="date" />
           <Property Name="Function" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Passreset" Type="bool" Nullable="false" />
-          <Property Name="Sex" Type="char" MaxLength="11" Nullable="false" />
-          <Property Name="NewUserDate" Type="date" Nullable="false" />
+          <Property Name="Sex" Type="varchar" MaxLength="11" Nullable="false" />
         </EntityType>
         <EntityContainer Name="u480787545_dewaaModelStoreContainer">
           <EntitySet Name="BookedCursus" EntityType="Self.BookedCursus" Schema="u480787545_dewaa" store:Type="Tables" />
@@ -162,6 +170,7 @@
           <EntitySet Name="InstructorsAvailability" EntityType="Self.InstructorsAvailability" Schema="u480787545_dewaa" store:Type="Tables" />
           <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="u480787545_dewaa" store:Type="Tables" />
           <EntitySet Name="Registrations" EntityType="Self.Registrations" Schema="u480787545_dewaa" store:Type="Tables" />
+          <EntitySet Name="SliderIMG" EntityType="Self.SliderIMG" Schema="u480787545_dewaa" store:Type="Tables" />
           <EntitySet Name="Status" EntityType="Self.Status" Schema="u480787545_dewaa" store:Type="Tables" />
           <EntitySet Name="Types" EntityType="Self.Types" Schema="u480787545_dewaa" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="u480787545_dewaa" store:Type="Tables" />
@@ -179,6 +188,7 @@
           <EntitySet Name="InstructorsAvailability" EntityType="u480787545_dewaaModel.InstructorsAvailability" />
           <EntitySet Name="Invoice" EntityType="u480787545_dewaaModel.Invoice" />
           <EntitySet Name="Registrations" EntityType="u480787545_dewaaModel.Registrations" />
+          <EntitySet Name="SliderIMG" EntityType="u480787545_dewaaModel.SliderIMG" />
           <EntitySet Name="Status" EntityType="u480787545_dewaaModel.Status" />
           <EntitySet Name="Types" EntityType="u480787545_dewaaModel.Types" />
           <EntitySet Name="Users" EntityType="u480787545_dewaaModel.Users" />
@@ -209,7 +219,7 @@
           <Property Name="Created" Type="DateTime" />
           <Property Name="Updated" Type="DateTime" />
           <Property Name="FleedID" Type="Int32" Nullable="false" />
-          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="CustomerFeedback">
           <Key>
@@ -256,6 +266,7 @@
           <Property Name="Created" Type="DateTime" />
           <Property Name="Updated" Type="DateTime" />
           <Property Name="Level" Type="Int32" Nullable="false" />
+          <Property Name="Sex" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="InstructorsAvailability">
           <Key>
@@ -291,6 +302,14 @@
           <Property Name="Created" Type="DateTime" />
           <Property Name="Updated" Type="DateTime" />
           <Property Name="Accepted" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SliderIMG">
+          <Key>
+            <PropertyRef Name="IMGID" />
+          </Key>
+          <Property Name="IMGID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IMGLink" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Status">
           <Key>
@@ -329,7 +348,6 @@
           <Property Name="Function" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Passreset" Type="Boolean" Nullable="false" />
           <Property Name="Sex" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
-          <Property Name="NewUserDate" Type="DateTime" Nullable="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -394,6 +412,7 @@
           <EntitySetMapping Name="Instructors">
             <EntityTypeMapping TypeName="u480787545_dewaaModel.Instructors">
               <MappingFragment StoreEntitySet="Instructors">
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
                 <ScalarProperty Name="Level" ColumnName="Level" />
                 <ScalarProperty Name="Updated" ColumnName="Updated" />
                 <ScalarProperty Name="Created" ColumnName="Created" />
@@ -441,6 +460,7 @@
           <EntitySetMapping Name="Registrations">
             <EntityTypeMapping TypeName="u480787545_dewaaModel.Registrations">
               <MappingFragment StoreEntitySet="Registrations">
+                <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Accepted" ColumnName="Accepted" />
                 <ScalarProperty Name="Updated" ColumnName="Updated" />
                 <ScalarProperty Name="Created" ColumnName="Created" />
@@ -451,6 +471,14 @@
                 <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SliderIMG">
+            <EntityTypeMapping TypeName="u480787545_dewaaModel.SliderIMG">
+              <MappingFragment StoreEntitySet="SliderIMG">
+                <ScalarProperty Name="IMGLink" ColumnName="IMGLink" />
+                <ScalarProperty Name="IMGID" ColumnName="IMGID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -474,7 +502,6 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="u480787545_dewaaModel.Users">
               <MappingFragment StoreEntitySet="Users">
-                <ScalarProperty Name="NewUserDate" ColumnName="NewUserDate" />
                 <ScalarProperty Name="Sex" ColumnName="Sex" />
                 <ScalarProperty Name="Passreset" ColumnName="Passreset" />
                 <ScalarProperty Name="Function" ColumnName="Function" />

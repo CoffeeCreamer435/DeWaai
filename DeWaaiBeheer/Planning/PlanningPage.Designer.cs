@@ -45,8 +45,22 @@
             this.btnInschrijvingen = new System.Windows.Forms.Button();
             this.btnInstrucors = new System.Windows.Forms.Button();
             this.MonthCalendar = new System.Windows.Forms.MonthCalendar();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtNaam = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtInvoice = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbCursus = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtGeboektemaand = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tblNavigation.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnUsers
@@ -92,6 +106,10 @@
             this.tableLayoutPanel1.Controls.Add(this.label12, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.tblNavigation, 8, 2);
             this.tableLayoutPanel1.Controls.Add(this.MonthCalendar, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 4, 6);
+            this.tableLayoutPanel1.Controls.Add(this.txtGeboektemaand, 6, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -310,13 +328,151 @@
             // 
             // MonthCalendar
             // 
-            this.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 2);
             this.tableLayoutPanel1.SetColumnSpan(this.MonthCalendar, 3);
             this.MonthCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MonthCalendar.Location = new System.Drawing.Point(377, 75);
+            this.MonthCalendar.MaxSelectionCount = 1;
             this.MonthCalendar.Name = "MonthCalendar";
-            this.tableLayoutPanel1.SetRowSpan(this.MonthCalendar, 5);
+            this.tableLayoutPanel1.SetRowSpan(this.MonthCalendar, 2);
             this.MonthCalendar.TabIndex = 44;
+            this.MonthCalendar.TabStop = false;
+            this.MonthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.MonthCalendar_DateChanged);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel2, 3);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel2.Controls.Add(this.txtNaam, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtInvoice, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(371, 267);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(408, 60);
+            this.tableLayoutPanel2.TabIndex = 47;
+            // 
+            // txtNaam
+            // 
+            this.txtNaam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNaam.Location = new System.Drawing.Point(105, 3);
+            this.txtNaam.Name = "txtNaam";
+            this.txtNaam.ReadOnly = true;
+            this.txtNaam.Size = new System.Drawing.Size(300, 20);
+            this.txtNaam.TabIndex = 34;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 30);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Invoice";
+            // 
+            // txtInvoice
+            // 
+            this.txtInvoice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtInvoice.Location = new System.Drawing.Point(105, 33);
+            this.txtInvoice.Name = "txtInvoice";
+            this.txtInvoice.ReadOnly = true;
+            this.txtInvoice.Size = new System.Drawing.Size(300, 20);
+            this.txtInvoice.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(3, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 20);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "Naam";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel3, 3);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel3.Controls.Add(this.label5, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.cmbCursus, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 1, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(371, 333);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(408, 60);
+            this.tableLayoutPanel3.TabIndex = 48;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 20);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Datum";
+            // 
+            // cmbCursus
+            // 
+            this.cmbCursus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbCursus.FormattingEnabled = true;
+            this.cmbCursus.Location = new System.Drawing.Point(105, 3);
+            this.cmbCursus.Name = "cmbCursus";
+            this.cmbCursus.Size = new System.Drawing.Size(300, 21);
+            this.cmbCursus.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Cursus";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePicker1.Location = new System.Drawing.Point(105, 33);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(300, 20);
+            this.dateTimePicker1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label2, 2);
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(371, 396);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(270, 66);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "Geboekte maand";
+            // 
+            // txtGeboektemaand
+            // 
+            this.txtGeboektemaand.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtGeboektemaand.Location = new System.Drawing.Point(647, 399);
+            this.txtGeboektemaand.Name = "txtGeboektemaand";
+            this.txtGeboektemaand.ReadOnly = true;
+            this.txtGeboektemaand.Size = new System.Drawing.Size(132, 20);
+            this.txtGeboektemaand.TabIndex = 46;
             // 
             // PlanningPage
             // 
@@ -329,6 +485,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tblNavigation.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -352,5 +512,17 @@
         private System.Windows.Forms.Button btnInschrijvingen;
         private System.Windows.Forms.Button btnInstrucors;
         private System.Windows.Forms.MonthCalendar MonthCalendar;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TextBox txtNaam;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtInvoice;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbCursus;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtGeboektemaand;
     }
 }

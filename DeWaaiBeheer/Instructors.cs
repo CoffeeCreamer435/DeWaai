@@ -56,6 +56,8 @@ public partial class Instructors
 
     public int Level { get; set; }
 
+    public string Sex { get; set; }
+
 }
 
 }

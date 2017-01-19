@@ -78,11 +78,6 @@ namespace DeWaaiBeheer
         #endregion
 
         #region Courses Methods
-
-        /// <summary>
-        /// Method that gets courses
-        /// </summary>
-        /// <returns>Returns a list users of a course</returns>
         public object getCourse()
         {
             var result = (from x in ef.Registrations
@@ -163,19 +158,11 @@ namespace DeWaaiBeheer
             return new ObservableCollection<Instructors>(ef.Instructors);
         }
 
-        /// <summary>
-        /// Method that sets users into database
-        /// </summary>
-        /// <param name="user">Parameter of user</param>
         public void AddInstructor(Instructors instructor)
         {
             ef.Instructors.Add(instructor);
         }
 
-        /// <summary>
-        /// Method that removes a user of the database table
-        /// </summary>
-        /// <param name="userId">Parameter of userId</param>
         public void RemoveInstructor(int intstructorId)
         {
             ef.Instructors.Remove(getInstructors().First(x => x.ID == intstructorId));
@@ -183,23 +170,12 @@ namespace DeWaaiBeheer
         #endregion
 
         #region Inschrijvingen
+        //get alle inschrijvingen
         public ObservableCollection<Registrations> getInschrijvingen()
         {
             return new ObservableCollection<Registrations>(ef.Registrations);
         }
-
-        public object getAcceptRegistrations()
-        {
-            var result = (from re in ef.Registrations
-                          join us in ef.Users
-                          on re.UserID equals us.ID
-                          join co in ef.Courses
-                          on re.CourseID equals co.ID
-                          where re.Accepted.Equals(1)
-                          select new { Display = us.Firstname + " " + us.Surname + " " + co.Name + " Cursus - Datum:" + co.Date, re.ID }).ToList();
-            return result;
-        }
-
+        
         //Alle users + cursuss voor in list box.
         public object getUsersAndCoursesbyRegistration()
         {
@@ -213,16 +189,19 @@ namespace DeWaaiBeheer
             return result;
         }
 
+        //return alle registrations by id
         public Registrations GetRegistrationsByID(int ID)
         {
            return ef.Registrations.FirstOrDefault(x => x.ID == ID);
         }
 
+        //delete inschrijven by id
         public void RemoveRegistrationByID(int RegistrationID)
         {
             ef.Registrations.Remove(getInschrijvingen().First(x => x.ID == RegistrationID));
         }
 
+        //return alle users by id
         public Users getRegistrationUsersByID(int UserID)
         {
             return ef.Users.FirstOrDefault(x => x.ID == UserID);
@@ -238,18 +217,7 @@ namespace DeWaaiBeheer
         public object getNotApprovedFeedback()
         {
             var result = (from x in ef.CustomerFeedback
-                         where x.Approved == false
                           select x).ToList();
-            //var result = 
-            //          (from x in ef.Registrations
-            //            join cd in ef.Users
-            //            on x.UserID equals cd.ID
-            //            join xd in ef.Courses
-            //             on x.CourseID equals xd.ID
-            //            join c in ef.Courses
-            //             on x.CourseID equals c.ID
-                   
-            //  select cd.Firstname + " " + cd.Surname + " - " + xd.Name + " - " + xd.Date).Distinct().ToList();
             return result;
         }
 
@@ -262,6 +230,27 @@ namespace DeWaaiBeheer
         public ObservableCollection<CustomerFeedback> getFeedbackById(int ID)
         {
             return new ObservableCollection<CustomerFeedback>(ef.CustomerFeedback.Where(x => x.ID == ID));
+        }
+        #endregion
+
+        #region Planning
+        public object getAcceptRegistrations()
+        {
+            var result = (from re in ef.Registrations
+                          join us in ef.Users
+                          on re.UserID equals us.ID
+                          join co in ef.Courses
+                          on re.CourseID equals co.ID
+                          where re.Accepted.Equals(1)
+                          select new { Display = us.Firstname + " " + us.Surname + " " + co.Name + " Cursus - Datum:" + co.Date, re.ID }).ToList();
+            return result;
+        }
+
+        public Registrations getRegistrationByDate(System.DateTime Date)
+        {
+            string format = "yyyy-MM-dd";
+            string Datetime = Date.ToString(format);
+            return ef.Registrations.FirstOrDefault(x => x.Date == Date);
         }
         #endregion
     }

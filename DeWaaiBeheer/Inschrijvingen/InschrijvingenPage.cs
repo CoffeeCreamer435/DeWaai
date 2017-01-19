@@ -56,6 +56,13 @@ namespace DeWaaiBeheer
             frmHome home = new frmHome();
             home.Show();
         }
+
+        private void btnPlanning_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Planning.PlanningPage planning = new Planning.PlanningPage();
+            planning.Show();
+        }
         #endregion
         #region selected index changed
         private void lstInschrijvingen_MouseClick(object sender, MouseEventArgs e)
@@ -69,7 +76,6 @@ namespace DeWaaiBeheer
             FillInschrijvingenList();
         }
         #endregion
-
         #region filling txtboxes with data
         private void  FillRegistration(Registrations registration)
         {
@@ -91,7 +97,7 @@ namespace DeWaaiBeheer
             }
         }
         #endregion
-
+        #region Buttons
         private void btnAccepteren_Click(object sender, EventArgs e)
         {
             int ID = Convert.ToInt32(lstInschrijvingen.SelectedValue);
@@ -107,5 +113,7 @@ namespace DeWaaiBeheer
             db.SaveChanges();
             FillInschrijvingenList();
         }
+
+        #endregion
     }
 }

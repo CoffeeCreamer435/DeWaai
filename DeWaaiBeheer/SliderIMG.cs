@@ -15,30 +15,12 @@ namespace DeWaaiBeheer
 using System;
     using System.Collections.Generic;
     
-public partial class Courses
+public partial class SliderIMG
 {
 
-    public int ID { get; set; }
+    public int IMGID { get; set; }
 
-    public string Name { get; set; }
-
-    public string Description { get; set; }
-
-    public string Date { get; set; }
-
-    public int Price { get; set; }
-
-    public int Amount { get; set; }
-
-    public string Color { get; set; }
-
-    public Nullable<System.DateTime> Created { get; set; }
-
-    public Nullable<System.DateTime> Updated { get; set; }
-
-    public int FleedID { get; set; }
-
-    public int Status { get; set; }
+    public string IMGLink { get; set; }
 
 }
 

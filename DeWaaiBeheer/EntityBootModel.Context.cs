@@ -48,6 +48,8 @@ public partial class EntityFramework : DbContext
 
     public DbSet<Registrations> Registrations { get; set; }
 
+    public DbSet<SliderIMG> SliderIMG { get; set; }
+
     public DbSet<Status> Status { get; set; }
 
     public DbSet<Types> Types { get; set; }
