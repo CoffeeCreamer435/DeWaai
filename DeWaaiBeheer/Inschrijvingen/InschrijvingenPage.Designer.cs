@@ -94,6 +94,7 @@
             this.lstInschrijvingen.Size = new System.Drawing.Size(339, 456);
             this.lstInschrijvingen.TabIndex = 0;
             this.lstInschrijvingen.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstInschrijvingen_MouseClick);
+            this.lstInschrijvingen.SelectedIndexChanged += new System.EventHandler(this.lstInschrijvingen_SelectedIndexChanged);
             // 
             // label9
             // 

@@ -57,10 +57,14 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.txtGeboektemaand = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtVloot = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tblNavigation.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnUsers
@@ -108,8 +112,9 @@
             this.tableLayoutPanel1.Controls.Add(this.MonthCalendar, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 4, 4);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 4, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 4, 6);
-            this.tableLayoutPanel1.Controls.Add(this.txtGeboektemaand, 6, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 4, 7);
+            this.tableLayoutPanel1.Controls.Add(this.txtGeboektemaand, 6, 7);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 4, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -173,6 +178,7 @@
             this.lblNavigation.TabIndex = 39;
             this.lblNavigation.Text = "▼";
             this.lblNavigation.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblNavigation.Click += new System.EventHandler(this.lblNavigation_Click);
             // 
             // label1
             // 
@@ -198,6 +204,7 @@
             this.tableLayoutPanel1.SetRowSpan(this.lstPlanning, 7);
             this.lstPlanning.Size = new System.Drawing.Size(339, 456);
             this.lstPlanning.TabIndex = 0;
+            this.lstPlanning.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstPlanning_MouseClick);
             // 
             // label9
             // 
@@ -459,7 +466,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.label2, 2);
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(371, 396);
+            this.label2.Location = new System.Drawing.Point(371, 462);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(270, 66);
             this.label2.TabIndex = 45;
@@ -468,11 +475,46 @@
             // txtGeboektemaand
             // 
             this.txtGeboektemaand.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtGeboektemaand.Location = new System.Drawing.Point(647, 399);
+            this.txtGeboektemaand.Location = new System.Drawing.Point(647, 465);
             this.txtGeboektemaand.Name = "txtGeboektemaand";
             this.txtGeboektemaand.ReadOnly = true;
             this.txtGeboektemaand.Size = new System.Drawing.Size(132, 20);
             this.txtGeboektemaand.TabIndex = 46;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel4, 3);
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel4.Controls.Add(this.txtVloot, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(371, 399);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(408, 60);
+            this.tableLayoutPanel4.TabIndex = 49;
+            // 
+            // txtVloot
+            // 
+            this.txtVloot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtVloot.Location = new System.Drawing.Point(105, 3);
+            this.txtVloot.Name = "txtVloot";
+            this.txtVloot.ReadOnly = true;
+            this.txtVloot.Size = new System.Drawing.Size(300, 20);
+            this.txtVloot.TabIndex = 36;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Vloot";
             // 
             // PlanningPage
             // 
@@ -489,6 +531,8 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -524,5 +568,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtGeboektemaand;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TextBox txtVloot;
+        private System.Windows.Forms.Label label6;
     }
 }

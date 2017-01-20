@@ -133,6 +133,11 @@ namespace DeWaaiBeheer
                            select t.Name).Distinct().ToList();
             return results;
         }
+
+        public Fleet getFleetByID(int ID)
+        {
+            return ef.Fleet.First(x => x.ID == ID);
+        }
         #endregion
 
         #region BoatTypes
@@ -185,7 +190,7 @@ namespace DeWaaiBeheer
                           join co in ef.Courses
                           on re.CourseID equals co.ID
                           where re.Accepted.Equals(0)
-                          select new { Display = us.Firstname + " " + us.Surname + " - " + co.Name + " - " + co.Date, re.ID }).Distinct().ToList();                         
+                          select new { Display = us.Firstname + " " + us.Surname + " - " + co.Name , re.ID }).Distinct().ToList();                         
             return result;
         }
 
@@ -234,15 +239,19 @@ namespace DeWaaiBeheer
         #endregion
 
         #region Planning
-        public object getAcceptRegistrations()
+        public object getAcceptRegistrations(System.DateTime Date)
         {
+            string format = "yyyy-MM-dd";
+            string Datetime = Date.ToString(format);
+
             var result = (from re in ef.Registrations
+                          where re.Date == Date
                           join us in ef.Users
                           on re.UserID equals us.ID
                           join co in ef.Courses
                           on re.CourseID equals co.ID
                           where re.Accepted.Equals(1)
-                          select new { Display = us.Firstname + " " + us.Surname + " " + co.Name + " Cursus - Datum:" + co.Date, re.ID }).ToList();
+                          select new { Display = us.Firstname + " " + us.Surname + " " + co.Name + " Cursus", re.ID }).ToList();
             return result;
         }
 

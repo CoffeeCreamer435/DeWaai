@@ -115,5 +115,10 @@ namespace DeWaaiBeheer
         }
 
         #endregion
+
+        private void lstInschrijvingen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

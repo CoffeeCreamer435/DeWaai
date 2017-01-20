@@ -63,13 +63,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tblNavigation = new System.Windows.Forms.TableLayoutPanel();
+            this.btnPlanning = new System.Windows.Forms.Button();
             this.BtnHome = new System.Windows.Forms.Button();
             this.btnCourses = new System.Windows.Forms.Button();
             this.btnInschrijvingen = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnInstrucors = new System.Windows.Forms.Button();
             this.btnFleet = new System.Windows.Forms.Button();
-            this.btnPlanning = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -572,6 +572,17 @@
             this.tblNavigation.Size = new System.Drawing.Size(270, 384);
             this.tblNavigation.TabIndex = 42;
             // 
+            // btnPlanning
+            // 
+            this.btnPlanning.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPlanning.Location = new System.Drawing.Point(3, 327);
+            this.btnPlanning.Name = "btnPlanning";
+            this.btnPlanning.Size = new System.Drawing.Size(264, 54);
+            this.btnPlanning.TabIndex = 43;
+            this.btnPlanning.Text = "Planning";
+            this.btnPlanning.UseVisualStyleBackColor = true;
+            this.btnPlanning.Click += new System.EventHandler(this.btnPlanning_Click);
+            // 
             // BtnHome
             // 
             this.BtnHome.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -637,17 +648,6 @@
             this.btnFleet.Text = "Vloten";
             this.btnFleet.UseVisualStyleBackColor = true;
             this.btnFleet.Click += new System.EventHandler(this.btnFleet_Click);
-            // 
-            // btnPlanning
-            // 
-            this.btnPlanning.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPlanning.Location = new System.Drawing.Point(3, 327);
-            this.btnPlanning.Name = "btnPlanning";
-            this.btnPlanning.Size = new System.Drawing.Size(264, 54);
-            this.btnPlanning.TabIndex = 43;
-            this.btnPlanning.Text = "Planning";
-            this.btnPlanning.UseVisualStyleBackColor = true;
-            this.btnPlanning.Click += new System.EventHandler(this.btnPlanning_Click);
             // 
             // VlotenPage
             // 

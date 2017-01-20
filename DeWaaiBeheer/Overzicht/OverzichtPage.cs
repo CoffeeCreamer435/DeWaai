@@ -91,19 +91,58 @@ namespace DeWaaiBeheer
             }
         }
 
-        private void btnPlanning_Click(object sender, EventArgs e)
+        #region SideMenu Buttons
+
+        private void btnUsers_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
+            frmUsersPage frmUsers = new frmUsersPage();
+            frmUsers.Show();
+        }
+
+        private void btnCourses_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmCoursesPage frmCourses = new frmCoursesPage();
+            frmCourses.Show();
+        }
+
+        private void btnInstrucors_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmInstructorsPage frmInstructors = new frmInstructorsPage();
+            frmInstructors.Show();
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
         {
+            this.Close();
+            frmHome home = new frmHome();
+            home.Show();
+        }
 
+        private void btnInschrijvingen_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmInstructorsPage inschrijvingen = new frmInstructorsPage();
+            inschrijvingen.Show();
         }
 
         private void btnFleet_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            VlotenPage vloten = new VlotenPage();
+            vloten.Show();
         }
+
+        private void btnPlanning_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Planning.PlanningPage planning = new Planning.PlanningPage();
+            planning.Show();
+        }
+    }
+
+        #endregion
     }
 }
