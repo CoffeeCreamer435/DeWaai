@@ -69,7 +69,6 @@
             this.btnInschrijvingen = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnInstrucors = new System.Windows.Forms.Button();
-            this.btnFleet = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -551,33 +550,32 @@
             this.tblNavigation.ColumnCount = 1;
             this.tableLayoutPanel1.SetColumnSpan(this.tblNavigation, 2);
             this.tblNavigation.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblNavigation.Controls.Add(this.btnPlanning, 0, 6);
+            this.tblNavigation.Controls.Add(this.btnPlanning, 0, 5);
             this.tblNavigation.Controls.Add(this.BtnHome, 0, 0);
             this.tblNavigation.Controls.Add(this.btnCourses, 0, 1);
             this.tblNavigation.Controls.Add(this.btnInschrijvingen, 0, 2);
             this.tblNavigation.Controls.Add(this.btnUsers, 0, 3);
             this.tblNavigation.Controls.Add(this.btnInstrucors, 0, 4);
-            this.tblNavigation.Controls.Add(this.btnFleet, 0, 5);
             this.tblNavigation.Location = new System.Drawing.Point(808, 135);
             this.tblNavigation.Name = "tblNavigation";
-            this.tblNavigation.RowCount = 7;
+            this.tblNavigation.RowCount = 6;
             this.tableLayoutPanel1.SetRowSpan(this.tblNavigation, 6);
-            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
-            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
-            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
-            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
-            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
-            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
-            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28816F));
+            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66611F));
+            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66611F));
+            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66611F));
+            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66611F));
+            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66611F));
+            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66944F));
+            this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblNavigation.Size = new System.Drawing.Size(270, 384);
             this.tblNavigation.TabIndex = 42;
             // 
             // btnPlanning
             // 
             this.btnPlanning.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPlanning.Location = new System.Drawing.Point(3, 327);
+            this.btnPlanning.Location = new System.Drawing.Point(3, 318);
             this.btnPlanning.Name = "btnPlanning";
-            this.btnPlanning.Size = new System.Drawing.Size(264, 54);
+            this.btnPlanning.Size = new System.Drawing.Size(264, 63);
             this.btnPlanning.TabIndex = 43;
             this.btnPlanning.Text = "Planning";
             this.btnPlanning.UseVisualStyleBackColor = true;
@@ -588,7 +586,7 @@
             this.BtnHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnHome.Location = new System.Drawing.Point(3, 3);
             this.BtnHome.Name = "BtnHome";
-            this.BtnHome.Size = new System.Drawing.Size(264, 48);
+            this.BtnHome.Size = new System.Drawing.Size(264, 57);
             this.BtnHome.TabIndex = 41;
             this.BtnHome.Text = "Home";
             this.BtnHome.UseVisualStyleBackColor = true;
@@ -597,9 +595,9 @@
             // btnCourses
             // 
             this.btnCourses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCourses.Location = new System.Drawing.Point(3, 57);
+            this.btnCourses.Location = new System.Drawing.Point(3, 66);
             this.btnCourses.Name = "btnCourses";
-            this.btnCourses.Size = new System.Drawing.Size(264, 48);
+            this.btnCourses.Size = new System.Drawing.Size(264, 57);
             this.btnCourses.TabIndex = 18;
             this.btnCourses.Text = "Overzicht";
             this.btnCourses.UseVisualStyleBackColor = true;
@@ -608,9 +606,9 @@
             // btnInschrijvingen
             // 
             this.btnInschrijvingen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnInschrijvingen.Location = new System.Drawing.Point(3, 111);
+            this.btnInschrijvingen.Location = new System.Drawing.Point(3, 129);
             this.btnInschrijvingen.Name = "btnInschrijvingen";
-            this.btnInschrijvingen.Size = new System.Drawing.Size(264, 48);
+            this.btnInschrijvingen.Size = new System.Drawing.Size(264, 57);
             this.btnInschrijvingen.TabIndex = 40;
             this.btnInschrijvingen.Text = "Inschrijvingen";
             this.btnInschrijvingen.UseVisualStyleBackColor = true;
@@ -619,9 +617,9 @@
             // btnUsers
             // 
             this.btnUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUsers.Location = new System.Drawing.Point(3, 165);
+            this.btnUsers.Location = new System.Drawing.Point(3, 192);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(264, 48);
+            this.btnUsers.Size = new System.Drawing.Size(264, 57);
             this.btnUsers.TabIndex = 21;
             this.btnUsers.Text = "Klanten";
             this.btnUsers.UseVisualStyleBackColor = true;
@@ -630,24 +628,13 @@
             // btnInstrucors
             // 
             this.btnInstrucors.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnInstrucors.Location = new System.Drawing.Point(3, 219);
+            this.btnInstrucors.Location = new System.Drawing.Point(3, 255);
             this.btnInstrucors.Name = "btnInstrucors";
-            this.btnInstrucors.Size = new System.Drawing.Size(264, 48);
+            this.btnInstrucors.Size = new System.Drawing.Size(264, 57);
             this.btnInstrucors.TabIndex = 19;
             this.btnInstrucors.Text = "Instructeurs";
             this.btnInstrucors.UseVisualStyleBackColor = true;
             this.btnInstrucors.Click += new System.EventHandler(this.btnInstrucors_Click);
-            // 
-            // btnFleet
-            // 
-            this.btnFleet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnFleet.Location = new System.Drawing.Point(3, 273);
-            this.btnFleet.Name = "btnFleet";
-            this.btnFleet.Size = new System.Drawing.Size(264, 48);
-            this.btnFleet.TabIndex = 20;
-            this.btnFleet.Text = "Vloten";
-            this.btnFleet.UseVisualStyleBackColor = true;
-            this.btnFleet.Click += new System.EventHandler(this.btnFleet_Click);
             // 
             // VlotenPage
             // 
@@ -693,7 +680,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnCourses;
         private System.Windows.Forms.Button btnInstrucors;
-        private System.Windows.Forms.Button btnFleet;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnNewType;
         private System.Windows.Forms.Button btnSaveTypes;

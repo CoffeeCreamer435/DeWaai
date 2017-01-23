@@ -63,6 +63,41 @@ namespace DeWaaiBeheer
             Planning.PlanningPage planning = new Planning.PlanningPage();
             planning.Show();
         }
+
+        private void btnCourses_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmCoursesPage courses = new frmCoursesPage();
+            courses.Show();
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmUsersPage users = new frmUsersPage();
+            users.Show();
+        }
+
+        private void btnInstrucors_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmInstructorsPage instructors = new frmInstructorsPage();
+            instructors.Show();
+        }
+
+        private void btnFleet_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            VlotenPage vloten = new VlotenPage();
+            vloten.Show();
+        }
+
+        private void btnRecensies_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmReviews reviews = new frmReviews();
+            reviews.Show();
+        }
         #endregion
         #region selected index changed
         private void lstInschrijvingen_MouseClick(object sender, MouseEventArgs e)
@@ -118,7 +153,6 @@ namespace DeWaaiBeheer
 
         private void lstInschrijvingen_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
     }
 }
