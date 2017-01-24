@@ -17,7 +17,6 @@ namespace DeWaaiBeheer
         {
             InitializeComponent();
             FillInschrijvingenList();
-            FillCursusBox();
         }
         #region side menu lbl
         private void lblNavigation_Click(object sender, EventArgs e)
@@ -40,13 +39,6 @@ namespace DeWaaiBeheer
             lstInschrijvingen.ValueMember = "ID";
             lstInschrijvingen.DisplayMember = "Display";
             
-        }
-
-        public void FillCursusBox()
-        {
-            cmbCursus.DataSource = db.getCourses();
-            cmbCursus.ValueMember = "ID";
-            cmbCursus.DisplayMember = "Name";
         }
         #endregion
         #region menu buttons   
@@ -108,7 +100,6 @@ namespace DeWaaiBeheer
             {
                 FillRegistration(db.GetRegistrationsByID(ID));
             }
-            FillInschrijvingenList();
         }
         #endregion
         #region filling txtboxes with data
@@ -150,9 +141,5 @@ namespace DeWaaiBeheer
         }
 
         #endregion
-
-        private void lstInschrijvingen_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
     }
 }

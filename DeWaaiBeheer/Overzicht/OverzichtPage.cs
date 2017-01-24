@@ -141,6 +141,18 @@ namespace DeWaaiBeheer
             Planning.PlanningPage planning = new Planning.PlanningPage();
             planning.Show();
         }
+
+        private void lblNavigation_Click(object sender, EventArgs e)
+        {
+            if (tblNavigation.Visible == false)
+            {
+                tblNavigation.Visible = true;
+            }
+            else
+            {
+                tblNavigation.Visible = false;
+            }
+        }
     }
 
         #endregion

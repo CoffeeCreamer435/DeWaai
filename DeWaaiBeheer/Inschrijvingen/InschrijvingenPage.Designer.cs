@@ -36,10 +36,11 @@
             this.tblNavigation = new System.Windows.Forms.TableLayoutPanel();
             this.btnPlanning = new System.Windows.Forms.Button();
             this.BtnHome = new System.Windows.Forms.Button();
-            this.btnCourses = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnInstrucors = new System.Windows.Forms.Button();
             this.btnFleet = new System.Windows.Forms.Button();
+            this.btnRecensies = new System.Windows.Forms.Button();
+            this.btnCourses = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblNavigation = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.lblCursus = new System.Windows.Forms.Label();
             this.btnAccepteren = new System.Windows.Forms.Button();
             this.lblRegID = new System.Windows.Forms.Label();
-            this.btnRecensies = new System.Windows.Forms.Button();
             this.tblNavigation.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -94,7 +94,6 @@
             this.lstInschrijvingen.Size = new System.Drawing.Size(339, 456);
             this.lstInschrijvingen.TabIndex = 0;
             this.lstInschrijvingen.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstInschrijvingen_MouseClick);
-            this.lstInschrijvingen.SelectedIndexChanged += new System.EventHandler(this.lstInschrijvingen_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -181,16 +180,6 @@
             this.BtnHome.UseVisualStyleBackColor = true;
             this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
-            // btnCourses
-            // 
-            this.btnCourses.Location = new System.Drawing.Point(3, 327);
-            this.btnCourses.Name = "btnCourses";
-            this.btnCourses.Size = new System.Drawing.Size(264, 48);
-            this.btnCourses.TabIndex = 18;
-            this.btnCourses.Text = "Cursussen";
-            this.btnCourses.UseVisualStyleBackColor = true;
-            this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
-            // 
             // btnUsers
             // 
             this.btnUsers.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -223,6 +212,27 @@
             this.btnFleet.Text = "Vloten";
             this.btnFleet.UseVisualStyleBackColor = true;
             this.btnFleet.Click += new System.EventHandler(this.btnFleet_Click);
+            // 
+            // btnRecensies
+            // 
+            this.btnRecensies.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRecensies.Location = new System.Drawing.Point(3, 57);
+            this.btnRecensies.Name = "btnRecensies";
+            this.btnRecensies.Size = new System.Drawing.Size(264, 48);
+            this.btnRecensies.TabIndex = 43;
+            this.btnRecensies.Text = "Recensies";
+            this.btnRecensies.UseVisualStyleBackColor = true;
+            this.btnRecensies.Click += new System.EventHandler(this.btnRecensies_Click);
+            // 
+            // btnCourses
+            // 
+            this.btnCourses.Location = new System.Drawing.Point(3, 327);
+            this.btnCourses.Name = "btnCourses";
+            this.btnCourses.Size = new System.Drawing.Size(264, 48);
+            this.btnCourses.TabIndex = 18;
+            this.btnCourses.Text = "Cursussen";
+            this.btnCourses.UseVisualStyleBackColor = true;
+            this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
             // 
             // label12
             // 
@@ -537,17 +547,6 @@
             this.lblRegID.TabIndex = 45;
             this.lblRegID.Text = "label6";
             this.lblRegID.Visible = false;
-            // 
-            // btnRecensies
-            // 
-            this.btnRecensies.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRecensies.Location = new System.Drawing.Point(3, 57);
-            this.btnRecensies.Name = "btnRecensies";
-            this.btnRecensies.Size = new System.Drawing.Size(264, 48);
-            this.btnRecensies.TabIndex = 43;
-            this.btnRecensies.Text = "Recensies";
-            this.btnRecensies.UseVisualStyleBackColor = true;
-            this.btnRecensies.Click += new System.EventHandler(this.btnRecensies_Click);
             // 
             // frmTenders
             // 

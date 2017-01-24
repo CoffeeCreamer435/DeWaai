@@ -114,6 +114,7 @@
             this.lblNavigation.TabIndex = 39;
             this.lblNavigation.Text = "▼";
             this.lblNavigation.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblNavigation.Click += new System.EventHandler(this.lblNavigation_Click);
             // 
             // btnDecline
             // 

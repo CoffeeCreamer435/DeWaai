@@ -36,11 +36,11 @@ namespace DeWaaiBeheer.Planning
                 txtNaam.DataBindings.Clear();
                 txtInvoice.DataBindings.Clear();
                 txtGeboektemaand.DataBindings.Clear();
-                cmbCursus.DataBindings.Clear();
+                txtCursus.DataBindings.Clear();
                 txtVloot.DataBindings.Clear();
 
                 int CourseID = registration.CourseID.Value;
-                cmbCursus.DataBindings.Add("Text", db.GetCoursesbyID(registration.CourseID.Value), "Name");
+                txtCursus.DataBindings.Add("Text", db.GetCoursesbyID(registration.CourseID.Value), "Name");
                 txtNaam.DataBindings.Add("Text", db.getRegistrationUsersByID(registration.UserID.Value), "Firstname");
                 txtInvoice.DataBindings.Add("Text", registration, "InvoiceID");
                 txtVloot.DataBindings.Add("Text", db.getFleetByID(CourseID), "Name");
@@ -115,6 +115,14 @@ namespace DeWaaiBeheer.Planning
             //
         }
 
+        private void btnRecensies_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmReviews reviews = new frmReviews();
+            reviews.Show();
+        }
+
         #endregion
+
     }
 }
