@@ -10,13 +10,18 @@ namespace DeWaaiBeheer
 
         #region User Methods
 
+        public ObservableCollection<Users> GetUsersById(int userID)
+        {
+            return new ObservableCollection<Users>(ef.Users.Where(x => x.ID == userID));
+        }
+
         /// <summary>
         /// Method to get all users
         /// </summary>
         /// <returns></returns>
         public ObservableCollection<Users> getUsers()
         {
-            return new ObservableCollection<Users>(ef.Users);
+            return new ObservableCollection<Users>(ef.Users.OrderByDescending(x => x.Created));
         }
 
         //Alle users + cursuss voor in list box.
@@ -41,12 +46,9 @@ namespace DeWaaiBeheer
             ef.Users.Add(user);
         }
      
-        public object getUserByID(int ID)
+        public ObservableCollection<Users> GetUserByID(int userID)
         {
-            var result = (from us in ef.Users
-                          where us.ID.Equals(ID)
-                          select us.Firstname + " " + us.Surname);
-                return result;
+            return new ObservableCollection<Users>(ef.Users.Where(x => x.ID == userID));
         }
      
         /// <summary>
@@ -90,7 +92,7 @@ namespace DeWaaiBeheer
 
         public ObservableCollection<Courses> getCourses()
         {
-            return new ObservableCollection<Courses>(ef.Courses);
+            return new ObservableCollection<Courses>(ef.Courses.Where(x => x.Status == 1).OrderByDescending(x => x.Created));
         }
 
         public ObservableCollection<Courses> GetCoursesbyID(int courseID)
@@ -158,11 +160,31 @@ namespace DeWaaiBeheer
         #endregion
 
         #region Instructor Methods
+        public object getCoursesByInstructors()
+        {
+            var result = (from b in ef.BookedCursus
+                          join i in ef.Instructors
+                          on b.InstructorID equals i.ID
+                          join co in ef.Courses
+                          on b.CoursesID equals co.ID
+                          select co.Name + " - " +  co.Date).Distinct().ToList();
+            return result;
+        }
+
         public ObservableCollection<Instructors> getInstructors()
         {
             return new ObservableCollection<Instructors>(ef.Instructors);
         }
 
+        public ObservableCollection<Instructors> GetInstructorById(int instructorID)
+        {
+            return new ObservableCollection<Instructors>(ef.Instructors.Where(x => x.ID == instructorID));
+        }
+
+        /// <summary>
+        /// Method that sets users into database
+        /// </summary>
+        /// <param name="user">Parameter of user</param>
         public void AddInstructor(Instructors instructor)
         {
             ef.Instructors.Add(instructor);
@@ -180,7 +202,7 @@ namespace DeWaaiBeheer
         {
             return new ObservableCollection<Registrations>(ef.Registrations);
         }
-        
+
         //Alle users + cursuss voor in list box.
         public object getUsersAndCoursesbyRegistration()
         {

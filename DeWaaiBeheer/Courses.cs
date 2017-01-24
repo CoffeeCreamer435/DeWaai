@@ -12,34 +12,34 @@
 namespace DeWaaiBeheer
 {
 
-using System;
+    using System;
     using System.Collections.Generic;
     
-public partial class Courses
-{
+    public partial class Courses
+    {
 
-    public int ID { get; set; }
+        public int ID { get; set; }
 
-    public string Name { get; set; }
+        public string Name { get; set; }
 
-    public string Description { get; set; }
+        public string Description { get; set; }
 
-    public string Date { get; set; }
+        public string Date { get; set; }
 
-    public int Price { get; set; }
+        public int Price { get; set; }
 
-    public int Amount { get; set; }
+        public int Amount { get; set; }
 
-    public string Color { get; set; }
+        public string Color { get; set; }
 
-    public Nullable<System.DateTime> Created { get; set; }
+        public Nullable<System.DateTime> Created { get; set; }
 
-    public Nullable<System.DateTime> Updated { get; set; }
+        public Nullable<System.DateTime> Updated { get; set; }
 
-    public int FleedID { get; set; }
+        public int FleedID { get; set; }
 
     public int Status { get; set; }
 
-}
+    }
 
 }

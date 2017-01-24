@@ -28,12 +28,7 @@ namespace DeWaaiBeheer
             lstUsers.ValueMember = "ID";
             lstUsers.DisplayMember = "Fullname";
         }
-      
-        private void frmInstructorsPage_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
+     
         private void lblNavigation_MouseEnter(object sender, EventArgs e)
         {
             lblNavigation.Font = new Font(lblNavigation.Font.Name, lblNavigation.Font.SizeInPoints, FontStyle.Underline);
@@ -117,8 +112,12 @@ namespace DeWaaiBeheer
 
         private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Instructors instructor = lstUsers.SelectedItem as Instructors;
+            Instructors instructor = lstUsers.SelectedItem as Instructors;          
+            BindingSource course = new BindingSource { DataSource = db.getCoursesByInstructors() };
+            lstCourses.DataSource = course;
+            lstCourses.DisplayMember = "Name";
             resetInstructorsBySelected(instructor);
+
         }
 
         private void resetInstructorsBySelected(Instructors instructor)
@@ -162,6 +161,18 @@ namespace DeWaaiBeheer
             lstUsers.DataSource = null;
             lstUsers.DataSource = db.getInstructors();
             lstUsers.DisplayMember = "Fullname";
+        }
+
+        private void btnRegistrations_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmTenders form = new frmTenders();
+            form.Show();
+        }
+
+        private void lstCourses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

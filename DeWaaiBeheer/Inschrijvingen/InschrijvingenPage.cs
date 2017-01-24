@@ -31,6 +31,7 @@ namespace DeWaaiBeheer
             }
         }
         #endregion
+
         #region FillListboxes
         public void FillInschrijvingenList()
         {
@@ -41,6 +42,7 @@ namespace DeWaaiBeheer
             
         }
         #endregion
+
         #region menu buttons   
         private void BtnHome_Click(object sender, EventArgs e)
         {
@@ -91,6 +93,7 @@ namespace DeWaaiBeheer
             reviews.Show();
         }
         #endregion
+
         #region selected index changed
         private void lstInschrijvingen_MouseClick(object sender, MouseEventArgs e)
         {

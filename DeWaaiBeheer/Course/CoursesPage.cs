@@ -31,8 +31,7 @@ namespace DeWaaiBeheer
         {       
             Courses course = lstCourses.SelectedItem as Courses;
             ResetList(course);          
-        }
-                 
+        }                
 
         public void ResetList(Courses course)
         {
@@ -43,14 +42,14 @@ namespace DeWaaiBeheer
                 txtDescription.DataBindings.Clear();
                 txtPrice.DataBindings.Clear();
                 txtAmount.DataBindings.Clear();
-                //dtpDate.DataBindings.Clear();
+                dtpDate.DataBindings.Clear();
 
                 txtCoursenumber.DataBindings.Add("Text", course, "ID");
                 txtName.DataBindings.Add("Text", course, "Name");
                 txtDescription.DataBindings.Add("Text", course, "Description");
                 txtPrice.DataBindings.Add("Text", course, "Price");
                 txtAmount.DataBindings.Add("Text", course, "Amount");
-                //dtpDate.DataBindings.Add("Text", course, "Date");
+                dtpDate.DataBindings.Add("Text", course, "Date");
             }                 
         }   
 
@@ -78,7 +77,7 @@ namespace DeWaaiBeheer
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
-        {
+        {          
             int id = Convert.ToInt32(txtCoursenumber.Text);
 
             if (MessageBox.Show("Weet u zeker dat u '" + txtName.Text + "' wilt verwijderen?", "Informatie", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -87,9 +86,13 @@ namespace DeWaaiBeheer
                 {
                     if (lstCourses.SelectedItem != null)
                     {
-                        db.RemoveCourse(id);
-                        db.SaveChanges();
-
+                        foreach (Courses co in db.GetCoursesbyID(id))
+                        {
+                            co.Status = 0;
+                            db.SaveChanges();
+                            break;
+                        }      
+                                 
                         lstCourses.DataSource = null;
                         courses = new BindingSource { DataSource = db.getCourses() };
                         lstCourses.DataSource = courses;
@@ -124,14 +127,11 @@ namespace DeWaaiBeheer
             home.Show();
         }
 
-        private void btnCharts_Click(object sender, EventArgs e)
+        private void btnTenders_Click(object sender, EventArgs e)
         {
-            //
-        }
-
-        private void btnRegistrations_Click(object sender, EventArgs e)
-        {
-            //
+            this.Close();
+            frmTenders form = new frmTenders();
+            form.Show();
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
@@ -153,6 +153,20 @@ namespace DeWaaiBeheer
             this.Hide();
             VlotenPage frmFleets = new VlotenPage();
             frmFleets.Show();
+        }
+
+        private void btnPlanning_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            PlanningPage form = new PlanningPage();
+            form.Show();
+        }
+
+        private void btnReviews_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmReviews form = new frmReviews();
+            form.Show();
         }
         #endregion
 
@@ -186,5 +200,6 @@ namespace DeWaaiBeheer
             lstCourses.DisplayMember = "Name";
         }
         #endregion
+  
     }
 }

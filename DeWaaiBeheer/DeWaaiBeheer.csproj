@@ -37,6 +37,11 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -56,6 +61,10 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\WindowsBase.4.6.1055.0\lib\WindowsBase.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BookedCursus.cs">
@@ -75,6 +84,7 @@
     <Compile Include="CustomerFeedback.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Email\EmailMethod.cs" />
     <Compile Include="EntityBootModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,19 +100,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityBootModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Excel\CreateExcelFile.cs" />
     <Compile Include="Fleet.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Overzicht\Home\HomePage.cs">
+    <Compile Include="ForgottenPassword\ForgottenPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Overzicht\Home\HomePage.Designer.cs">
+    <Compile Include="ForgottenPassword\ForgottenPassword.Designer.cs">
+      <DependentUpon>ForgottenPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home\HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Overzicht\Home\LoginPage.cs">
+    <Compile Include="Login\LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Overzicht\Home\LoginPage.Designer.cs">
+    <Compile Include="Login\LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\MyAccount.cs">
@@ -148,9 +165,6 @@
     <Compile Include="Registrations.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="SliderIMG.cs">
-      <DependentUpon>EntityBootModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Status.cs">
       <DependentUpon>EntityBootModel.tt</DependentUpon>
     </Compile>
@@ -189,10 +203,13 @@
     <EmbeddedResource Include="Course\NewCoursePage.resx">
       <DependentUpon>NewCoursePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Overzicht\Home\HomePage.resx">
+    <EmbeddedResource Include="ForgottenPassword\ForgottenPassword.resx">
+      <DependentUpon>ForgottenPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Overzicht\Home\LoginPage.resx">
+    <EmbeddedResource Include="Login\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\MyAccount.resx">
@@ -271,6 +288,8 @@
       <DependentUpon>EntityBootModel.edmx</DependentUpon>
       <LastGenOutput>EntityBootModel.cs</LastGenOutput>
     </Content>
+    <Content Include="lib\DocumentFormat.OpenXml.dll" />
+    <Content Include="lib\WindowsBase.dll" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
