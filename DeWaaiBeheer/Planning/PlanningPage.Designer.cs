@@ -53,8 +53,8 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtCursus = new System.Windows.Forms.TextBox();
+            this.txtDate = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtGeboektemaand = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -182,6 +182,7 @@
             this.btnInschrijvingen.TabIndex = 42;
             this.btnInschrijvingen.Text = "Inschrijvingen";
             this.btnInschrijvingen.UseVisualStyleBackColor = true;
+            this.btnInschrijvingen.Click += new System.EventHandler(this.btnInschrijvingen_Click);
             // 
             // BtnHome
             // 
@@ -192,6 +193,7 @@
             this.BtnHome.TabIndex = 41;
             this.BtnHome.Text = "Home";
             this.BtnHome.UseVisualStyleBackColor = true;
+            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
             // btnUsers
             // 
@@ -202,6 +204,7 @@
             this.btnUsers.TabIndex = 21;
             this.btnUsers.Text = "Klanten";
             this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnInstrucors
             // 
@@ -212,6 +215,7 @@
             this.btnInstrucors.TabIndex = 19;
             this.btnInstrucors.Text = "Instructeurs";
             this.btnInstrucors.UseVisualStyleBackColor = true;
+            this.btnInstrucors.Click += new System.EventHandler(this.btnInstrucors_Click);
             // 
             // btnFleet
             // 
@@ -222,6 +226,7 @@
             this.btnFleet.TabIndex = 20;
             this.btnFleet.Text = "Vloten";
             this.btnFleet.UseVisualStyleBackColor = true;
+            this.btnFleet.Click += new System.EventHandler(this.btnFleet_Click);
             // 
             // btnRecensies
             // 
@@ -232,7 +237,7 @@
             this.btnRecensies.TabIndex = 43;
             this.btnRecensies.Text = "Recensies";
             this.btnRecensies.UseVisualStyleBackColor = true;
-            this.btnRecensies.Click += new System.EventHandler(this.btnRecensies_Click);
+            this.btnRecensies.Click += new System.EventHandler(this.btnRcensies_Click);
             // 
             // btnCourses
             // 
@@ -242,6 +247,7 @@
             this.btnCourses.TabIndex = 18;
             this.btnCourses.Text = "Cursussen";
             this.btnCourses.UseVisualStyleBackColor = true;
+            this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
             // 
             // lblNavigation
             // 
@@ -411,8 +417,8 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel3.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.txtCursus, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txtDate, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(371, 333);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -443,14 +449,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Cursus";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker1.Location = new System.Drawing.Point(105, 33);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(300, 20);
-            this.dateTimePicker1.TabIndex = 4;
-            // 
             // txtCursus
             // 
             this.txtCursus.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -459,6 +457,15 @@
             this.txtCursus.ReadOnly = true;
             this.txtCursus.Size = new System.Drawing.Size(300, 20);
             this.txtCursus.TabIndex = 5;
+            // 
+            // txtDate
+            // 
+            this.txtDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDate.Location = new System.Drawing.Point(105, 33);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.ReadOnly = true;
+            this.txtDate.Size = new System.Drawing.Size(300, 20);
+            this.txtDate.TabIndex = 6;
             // 
             // label2
             // 
@@ -556,7 +563,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtGeboektemaand;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
@@ -571,5 +577,6 @@
         private System.Windows.Forms.Button btnRecensies;
         private System.Windows.Forms.Button btnCourses;
         private System.Windows.Forms.TextBox txtCursus;
+        private System.Windows.Forms.TextBox txtDate;
     }
 }

@@ -38,6 +38,7 @@ namespace DeWaaiBeheer.Planning
                 txtGeboektemaand.DataBindings.Clear();
                 txtCursus.DataBindings.Clear();
                 txtVloot.DataBindings.Clear();
+                txtDate.DataBindings.Clear();
 
                 int CourseID = registration.CourseID.Value;
                 txtCursus.DataBindings.Add("Text", db.GetCoursesbyID(registration.CourseID.Value), "Name");
@@ -45,6 +46,7 @@ namespace DeWaaiBeheer.Planning
                 txtInvoice.DataBindings.Add("Text", registration, "InvoiceID");
                 txtVloot.DataBindings.Add("Text", db.getFleetByID(CourseID), "Name");
                 txtGeboektemaand.DataBindings.Add("Text", registration, "Booking_month");
+                txtDate.DataBindings.Add("Text", registration, "Date");
             }
         }
         private void MonthCalendar_DateChanged(object sender, DateRangeEventArgs e)
@@ -67,28 +69,6 @@ namespace DeWaaiBeheer.Planning
         }
 
         #region SideMenu Buttons
-
-        private void btnUsers_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            frmUsersPage frmUsers = new frmUsersPage();
-            frmUsers.Show();
-        }
-
-        private void btnCourses_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            frmCoursesPage frmCourses = new frmCoursesPage();
-            frmCourses.Show();
-        }
-
-        private void btnInstrucors_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            frmInstructorsPage frmInstructors = new frmInstructorsPage();
-            frmInstructors.Show();
-        }
-
         private void BtnHome_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -96,11 +76,32 @@ namespace DeWaaiBeheer.Planning
             home.Show();
         }
 
-        private void btnInschrijvingen_Click(object sender, EventArgs e)
+        private void btnRecensies_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmInstructorsPage inschrijvingen = new frmInstructorsPage();
-            inschrijvingen.Show();
+            frmReviews reviews = new frmReviews();
+            this.Close();
+        }
+
+        private void btnRcensies_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmReviews reviews = new frmReviews();
+            this.Close();
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmUsersPage users = new frmUsersPage();
+            users.Show();
+        }
+
+        private void btnInstrucors_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmInstructorsPage instructors = new frmInstructorsPage();
+            instructors.Show();
         }
 
         private void btnFleet_Click(object sender, EventArgs e)
@@ -110,19 +111,22 @@ namespace DeWaaiBeheer.Planning
             vloten.Show();
         }
 
-        private void btnPlanning_Click(object sender, EventArgs e)
-        {
-            //
-        }
-
-        private void btnRecensies_Click(object sender, EventArgs e)
+        private void btnInschrijvingen_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmReviews reviews = new frmReviews();
-            reviews.Show();
+            frmTenders inschrijvingen = new frmTenders();
+            inschrijvingen.Show();
+        }
+
+        private void btnCourses_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmCoursesPage cursus = new frmCoursesPage();
+            cursus.Show();
         }
 
         #endregion
+
 
     }
 }

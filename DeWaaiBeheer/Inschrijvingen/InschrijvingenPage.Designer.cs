@@ -55,13 +55,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cmbCursus = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtGeboektemaand = new System.Windows.Forms.TextBox();
             this.lblCursus = new System.Windows.Forms.Label();
             this.btnAccepteren = new System.Windows.Forms.Button();
             this.lblRegID = new System.Windows.Forms.Label();
+            this.txtDate = new System.Windows.Forms.TextBox();
             this.tblNavigation.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -156,7 +156,6 @@
             this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28817F));
             this.tblNavigation.Size = new System.Drawing.Size(270, 384);
             this.tblNavigation.TabIndex = 42;
-            this.tblNavigation.Visible = false;
             // 
             // btnPlanning
             // 
@@ -430,7 +429,7 @@
             this.tableLayoutPanel3.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.cmbCursus, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.txtDate, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(371, 201);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -469,14 +468,6 @@
             this.label4.Size = new System.Drawing.Size(59, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Cursus";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker1.Location = new System.Drawing.Point(105, 33);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(300, 20);
-            this.dateTimePicker1.TabIndex = 4;
             // 
             // tableLayoutPanel4
             // 
@@ -548,6 +539,15 @@
             this.lblRegID.Text = "label6";
             this.lblRegID.Visible = false;
             // 
+            // txtDate
+            // 
+            this.txtDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDate.Location = new System.Drawing.Point(105, 33);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.ReadOnly = true;
+            this.txtDate.Size = new System.Drawing.Size(300, 20);
+            this.txtDate.TabIndex = 4;
+            // 
             // frmTenders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -596,7 +596,6 @@
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnInstrucors;
         private System.Windows.Forms.Button btnFleet;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtGeboektemaand;
@@ -605,5 +604,6 @@
         private System.Windows.Forms.Label lblRegID;
         private System.Windows.Forms.Button btnPlanning;
         private System.Windows.Forms.Button btnRecensies;
+        private System.Windows.Forms.TextBox txtDate;
     }
 }

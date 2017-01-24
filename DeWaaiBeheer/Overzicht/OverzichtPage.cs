@@ -65,7 +65,6 @@ namespace DeWaaiBeheer
         private void lstRecensies_SelectedIndexChanged(object sender, EventArgs e)
         {
             CustomerFeedback feedback = lstRecensies.SelectedItem as CustomerFeedback;
-            lstRecensies.DataSource = db.getNotApprovedFeedback();
             FillRecensies(feedback);
         }
 
@@ -141,6 +140,7 @@ namespace DeWaaiBeheer
             Planning.PlanningPage planning = new Planning.PlanningPage();
             planning.Show();
         }
+        #endregion
 
         private void lblNavigation_Click(object sender, EventArgs e)
         {
@@ -155,6 +155,6 @@ namespace DeWaaiBeheer
         }
     }
 
-        #endregion
+ 
     }
 
