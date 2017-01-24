@@ -55,13 +55,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cmbCursus = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtDate = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtGeboektemaand = new System.Windows.Forms.TextBox();
             this.lblCursus = new System.Windows.Forms.Label();
             this.btnAccepteren = new System.Windows.Forms.Button();
             this.lblRegID = new System.Windows.Forms.Label();
-            this.txtDate = new System.Windows.Forms.TextBox();
             this.tblNavigation.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -469,6 +469,15 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Cursus";
             // 
+            // txtDate
+            // 
+            this.txtDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDate.Location = new System.Drawing.Point(105, 33);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.ReadOnly = true;
+            this.txtDate.Size = new System.Drawing.Size(300, 20);
+            this.txtDate.TabIndex = 4;
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 3;
@@ -538,15 +547,6 @@
             this.lblRegID.TabIndex = 45;
             this.lblRegID.Text = "label6";
             this.lblRegID.Visible = false;
-            // 
-            // txtDate
-            // 
-            this.txtDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDate.Location = new System.Drawing.Point(105, 33);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.ReadOnly = true;
-            this.txtDate.Size = new System.Drawing.Size(300, 20);
-            this.txtDate.TabIndex = 4;
             // 
             // frmTenders
             // 
