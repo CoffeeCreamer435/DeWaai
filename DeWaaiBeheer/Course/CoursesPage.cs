@@ -49,7 +49,7 @@ namespace DeWaaiBeheer
                 txtDescription.DataBindings.Add("Text", course, "Description");
                 txtPrice.DataBindings.Add("Text", course, "Price");
                 txtAmount.DataBindings.Add("Text", course, "Amount");
-                dtpDate.DataBindings.Add("Text", course, "Date");
+                //dtpDate.DataBindings.Add("Text", course, "Date");
             }                 
         }   
 

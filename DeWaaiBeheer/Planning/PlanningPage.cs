@@ -80,14 +80,14 @@ namespace DeWaaiBeheer
         {
             this.Close();
             frmReviews reviews = new frmReviews();
-            this.Close();
+            reviews.Show();
         }
 
         private void btnRcensies_Click(object sender, EventArgs e)
         {
             this.Close();
             frmReviews reviews = new frmReviews();
-            this.Close();
+            reviews.Show();
         }
 
         private void btnUsers_Click(object sender, EventArgs e)

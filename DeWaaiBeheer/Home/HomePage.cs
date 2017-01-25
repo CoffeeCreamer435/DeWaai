@@ -96,9 +96,9 @@ namespace DeWaaiBeheer
             PlanningPage form = new PlanningPage();
             form.Show();
         }
-        #endregion   
+        #endregion
 
-        
+
 
         private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -123,5 +123,6 @@ namespace DeWaaiBeheer
             //registration.Accepted = 1;
             //db.SaveChanges();
         }
+
     }
 }

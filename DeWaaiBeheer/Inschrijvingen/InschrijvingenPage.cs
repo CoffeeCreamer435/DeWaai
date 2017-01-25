@@ -135,6 +135,7 @@ namespace DeWaaiBeheer
             Registrations registration = db.GetRegistrationsByID(ID);
             registration.Accepted = 1;
             db.SaveChanges();
+            FillInschrijvingenList();
         }
 
         private void btnWeigeren_Click(object sender, EventArgs e)

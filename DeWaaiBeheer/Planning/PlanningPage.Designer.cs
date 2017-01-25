@@ -171,7 +171,6 @@
             this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28817F));
             this.tblNavigation.Size = new System.Drawing.Size(270, 384);
             this.tblNavigation.TabIndex = 50;
-            this.tblNavigation.Visible = false;
             // 
             // btnInschrijvingen
             // 

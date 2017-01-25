@@ -44,10 +44,10 @@
             this.btnFleets = new System.Windows.Forms.Button();
             this.tlpDashboard = new System.Windows.Forms.TableLayoutPanel();
             this.lstUsers = new System.Windows.Forms.ListBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.btnPlanning = new System.Windows.Forms.Button();
             this.tlpMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -149,7 +149,7 @@
             this.logoutToolStripMenuItem});
             this.nameToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.nameToolStripMenuItem.Name = "nameToolStripMenuItem";
-            this.nameToolStripMenuItem.Size = new System.Drawing.Size(64, 21);
+            this.nameToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
             this.nameToolStripMenuItem.Text = "Name";
             // 
             // myAccountToolStripMenuItem
@@ -250,7 +250,7 @@
             this.tlpDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.29749F));
             this.tlpDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.48148F));
             this.tlpDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.14478F));
-            this.tlpDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
+            this.tlpDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
             this.tlpDashboard.Controls.Add(this.lstUsers, 0, 0);
             this.tlpDashboard.Controls.Add(this.btnAccept, 3, 0);
             this.tlpDashboard.Controls.Add(this.btnDelete, 3, 1);
@@ -277,8 +277,37 @@
             this.lstUsers.Location = new System.Drawing.Point(3, 3);
             this.lstUsers.Name = "lstUsers";
             this.tlpDashboard.SetRowSpan(this.lstUsers, 4);
-            this.lstUsers.Size = new System.Drawing.Size(402, 364);
+            this.lstUsers.Size = new System.Drawing.Size(399, 364);
             this.lstUsers.TabIndex = 2;
+            // 
+            // btnAccept
+            // 
+            this.btnAccept.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAccept.Location = new System.Drawing.Point(408, 3);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(177, 66);
+            this.btnAccept.TabIndex = 3;
+            this.btnAccept.Text = "Accepteren";
+            this.btnAccept.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelete.Location = new System.Drawing.Point(408, 75);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(177, 70);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Weigeren";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(591, 227);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(35, 13);
+            this.lblId.TabIndex = 5;
+            this.lblId.Text = "label3";
             // 
             // label17
             // 
@@ -291,35 +320,6 @@
             this.label17.Size = new System.Drawing.Size(12, 320);
             this.label17.TabIndex = 13;
             // 
-            // btnAccept
-            // 
-            this.btnAccept.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAccept.Location = new System.Drawing.Point(411, 3);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(178, 66);
-            this.btnAccept.TabIndex = 3;
-            this.btnAccept.Text = "Accepteren";
-            this.btnAccept.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDelete.Location = new System.Drawing.Point(411, 75);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(178, 70);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "Weigeren";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(595, 227);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(35, 13);
-            this.lblId.TabIndex = 5;
-            this.lblId.Text = "label3";
-            // 
             // btnPlanning
             // 
             this.btnPlanning.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -329,6 +329,7 @@
             this.btnPlanning.TabIndex = 14;
             this.btnPlanning.Text = "Planning";
             this.btnPlanning.UseVisualStyleBackColor = true;
+            this.btnPlanning.Click += new System.EventHandler(this.btnPlanning_Click);
             // 
             // frmHome
             // 
