@@ -54,8 +54,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbFunction = new System.Windows.Forms.ComboBox();
-            this.txtDescription = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -295,6 +295,7 @@
             this.btnEdit.TabIndex = 13;
             this.btnEdit.Text = "Wijzigen";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -391,6 +392,17 @@
             this.cmbFunction.Size = new System.Drawing.Size(320, 21);
             this.cmbFunction.TabIndex = 15;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Location = new System.Drawing.Point(3, 341);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(106, 31);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Indien instructeur, beschrijving*:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // txtDescription
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtDescription, 3);
@@ -403,17 +415,6 @@
             this.txtDescription.Size = new System.Drawing.Size(320, 56);
             this.txtDescription.TabIndex = 17;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Location = new System.Drawing.Point(3, 341);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 31);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Indien instructeur, beschrijving*:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // frmMyAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,6 +424,7 @@
             this.Name = "frmMyAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mijn account";
+            this.Load += new System.EventHandler(this.frmMyAccount_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

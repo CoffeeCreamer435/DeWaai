@@ -187,6 +187,8 @@
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(251, 20);
             this.dtpDate.TabIndex = 33;
+            this.dtpDate.Value = new System.DateTime(2017, 1, 18, 8, 51, 19, 0);
+            this.dtpDate.ValueChanged += new System.EventHandler(this.dtpDate_ValueChanged);
             // 
             // frmNewCourse
             // 

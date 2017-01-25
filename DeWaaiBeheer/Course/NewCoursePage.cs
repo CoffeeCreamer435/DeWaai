@@ -35,9 +35,11 @@ namespace DeWaaiBeheer
                     course.Name = txtName.Text;
                     course.Description = txtDescription.Text;
                     course.Date = date;
+                    course.Color = "ok";
                     course.Price = Convert.ToInt32(txtPrice.Text);
                     course.Amount = Convert.ToInt32(txtAmount.Text);
                     course.Created = DateTime.Now;
+                    course.Status = 1;
 
                     db.AddCourse(course);
                     db.SaveChanges();
@@ -79,6 +81,17 @@ namespace DeWaaiBeheer
             {
                 e.Handled = true;
             }
+        }
+
+        private void dtpDate_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime pickedDate = new DateTime(dtpDate.Value.Year, dtpDate.Value.Month, dtpDate.Value.Day);
+            pickedDate.ToShortDateString();
+
+            if(pickedDate.Month >= 10 || pickedDate.Month < 4 && pickedDate.DayOfWeek != DayOfWeek.Monday)
+            {
+                MessageBox.Show("Tussen 1 oktober en 1 april kunt u geen cursus selecteren & u kunt alleen een cursus op maandag boeken!!");
+            }      
         }
     }
 }

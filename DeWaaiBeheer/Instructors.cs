@@ -33,5 +33,6 @@ namespace DeWaaiBeheer
         public Nullable<System.DateTime> Created { get; set; }
         public Nullable<System.DateTime> Updated { get; set; }
         public int Level { get; set; }
+        public string Sex { get; set; }
     }
 }

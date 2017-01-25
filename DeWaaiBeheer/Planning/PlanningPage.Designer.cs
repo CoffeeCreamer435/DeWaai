@@ -1,4 +1,4 @@
-﻿namespace DeWaaiBeheer.Planning
+﻿namespace DeWaaiBeheer
 {
     partial class PlanningPage
     {
@@ -310,7 +310,7 @@
             // 
             // MonthCalendar
             // 
-            this.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 2);
+            this.MonthCalendar.CalendarDimensions = new System.Drawing.Size(2, 2);
             this.tableLayoutPanel1.SetColumnSpan(this.MonthCalendar, 3);
             this.MonthCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MonthCalendar.Location = new System.Drawing.Point(377, 75);

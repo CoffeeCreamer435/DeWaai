@@ -14,39 +14,33 @@ namespace DeWaaiBeheer
     public partial class frmHome : Form
     {
         private DatabaseMethods db = new DatabaseMethods();
+        private BindingSource registrations;
 
         public frmHome()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
             myAccountToolStripMenuItem.Text = ("Mijn account");
             logoutToolStripMenuItem.Text = ("Uitloggen");
-            nameToolStripMenuItem.Text = ("Admin");
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            nameToolStripMenuItem.Text = string.Format("{0}", Program.username);
+           
+            registrations = new BindingSource { DataSource = db.getUsersByRegistration() };
+            lstUsers.ValueMember = "ID";
+            lstUsers.DataSource = registrations;
         }
 
-        /// <summary>
-        /// Gets the my account form
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void myAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.account.ShowDialog();
         }
 
-        /// <summary>
-        /// Logs out from user
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        #region SideMenu buttons
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
             frmLogin frmLogin = new frmLogin();
             frmLogin.Show();
         }
-
-        #region SideMenu buttons
         private void btnCourses_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -89,27 +83,6 @@ namespace DeWaaiBeheer
             VlotenPage frmFleets = new VlotenPage();
             frmFleets.Show();
         }
-        #endregion
-
-        private void frmHome_Load(object sender, EventArgs e)
-        {
-            Users user = new Users();
-
-            BindingSource registrations = new BindingSource { DataSource = db.getUsersByRegistration() };
-            lstUsers.DataSource = registrations;
-
-            lblNewUserDate.Text = DateTime.Now.ToShortDateString();
-            lblNewTenderDate.Text = DateTime.Now.ToShortDateString();
-
-            
-            user.NewUserDate = Convert.ToDateTime(lblNewUserDate.Text);
-            if (user.NewUserDate < DateTime.Now)
-            {
-                lblPreviousUserDate.Text = Convert.ToString(user.NewUserDate.ToShortDateString());
-                lblNewUserDate.Text = DateTime.Now.ToShortDateString();
-            }
-
-        }
 
         private void btnTenders_Click(object sender, EventArgs e)
         {
@@ -117,10 +90,35 @@ namespace DeWaaiBeheer
             frmTenders frm = new frmTenders();
             frm.Show();
         }
+        private void btnPlanning_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            PlanningPage form = new PlanningPage();
+            form.Show();
+        }
+        #endregion   
+
+        
+
+        private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Registrations re = lstUsers.SelectedItem as Registrations;
+            ResetId(re);
+        }
+
+        public void ResetId(Registrations r)
+        {
+            if(r != null)
+            {
+                lblId.DataBindings.Clear();
+
+                lblId.DataBindings.Add("Text", r, "ID");
+            }         
+        }
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            //int ID = Convert.ToInt32(lstUsers.SelectedValue);
+            //int ID = Convert.ToInt32(lblId.Text);
             //Registrations registration = db.GetRegistrationsByID(ID);
             //registration.Accepted = 1;
             //db.SaveChanges();

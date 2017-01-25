@@ -24,5 +24,6 @@ namespace DeWaaiBeheer
         public Nullable<System.DateTime> Created { get; set; }
         public Nullable<System.DateTime> Updated { get; set; }
         public int FleedID { get; set; }
+        public int Status { get; set; }
     }
 }

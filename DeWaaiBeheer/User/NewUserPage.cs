@@ -40,7 +40,7 @@ namespace DeWaaiBeheer
             Users user = new Users();
             Instructors instructor = new Instructors();
 
-            if (!String.IsNullOrEmpty(txtFirstname.Text) && !String.IsNullOrEmpty(txtSurname.Text) && !String.IsNullOrEmpty(txtStreet.Text) && !String.IsNullOrEmpty(txtHousenr.Text) && !String.IsNullOrEmpty(txtZip.Text) && !String.IsNullOrEmpty(txtCity.Text) && !String.IsNullOrEmpty(txtCountry.Text) && !String.IsNullOrEmpty(txtMobile.Text) && !String.IsNullOrEmpty(txtEmail.Text) && !String.IsNullOrEmpty(txtPass.Text))
+            if (!String.IsNullOrEmpty(txtFirstname.Text) && !String.IsNullOrEmpty(txtSurname.Text) && !String.IsNullOrEmpty(txtStreet.Text) && !String.IsNullOrEmpty(txtHousenr.Text) && !String.IsNullOrEmpty(txtZip.Text) && !String.IsNullOrEmpty(txtCity.Text) && !String.IsNullOrEmpty(txtCountry.Text) && !String.IsNullOrEmpty(txtMobile.Text) && !String.IsNullOrEmpty(txtEmail.Text) && !String.IsNullOrEmpty(txtPass.Text) && (rdbMan.Checked == true || rdbWoman.Checked == true))
             {
                 if (input != user.Email || input != instructor.Email)
                 {
@@ -62,10 +62,24 @@ namespace DeWaaiBeheer
                             user.Created = DateTime.Now;
                             user.Function = "Cursist";
 
+                            if (rdbMan.Checked == true)
+                            {
+                                user.Sex = "M";
+                            }
+                            else if(rdbWoman.Checked == true)
+                            {
+                                user.Sex = "V";
+                            }
+
                             //Save user to database
                             db.AddUser(user);
                             db.SaveChanges();
                             Program.users.updateListbox();
+
+                            this.Close();
+                            frmUsersPage frmUser = new frmUsersPage();
+                            frmUser.Show();
+
                             break;
 
                         case "Instructeur":
@@ -83,12 +97,26 @@ namespace DeWaaiBeheer
                                 instructor.Mobile = txtMobile.Text;
                                 instructor.Email = txtEmail.Text;
                                 instructor.Password = txtPass.Text;
-                                instructor.Description = txtDescription.Text;                      
+                                instructor.Description = txtDescription.Text;
+                                instructor.Created = DateTime.Now;
+
+                                if (rdbMan.Checked == true)
+                                {
+                                    instructor.Sex = "M";
+                                }
+                                else if (rdbWoman.Checked == true)
+                                {
+                                    instructor.Sex = "V";
+                                }
 
                                 //Save instructor to database
                                 db.AddInstructor(instructor);
                                 db.SaveChanges();
                                 Program.instructors.updateListbox();
+
+                                this.Close();
+                                frmInstructorsPage frmInstructor = new frmInstructorsPage();
+                                frmInstructor.Show();
                             }                      
                             else
                             {
@@ -111,16 +139,29 @@ namespace DeWaaiBeheer
                             user.Password = txtPass.Text;
                             user.Created = DateTime.Now;
                             user.Function = "Admin";
+                            if (rdbMan.Checked == true)
+                            {
+                                user.Sex = "M";
+                            }
+                            else if (rdbWoman.Checked == true)
+                            {
+                                user.Sex = "V";
+                            }
 
                             //Save user to database
                             db.AddUser(user);
-                            db.SaveChanges();
+                            db.SaveChanges();                      
                             Program.users.updateListbox();
+
+                            MessageBox.Show("Gebruiker is succesvol toegevoegd!");
+
+                            this.Close();
+                            frmUsersPage form = new frmUsersPage();
+                            form.Show();
+
                             break;
                             
-                    }
-                    MessageBox.Show("Gebruiker is succesvol toegevoegd!");
-                    this.Close();
+                    }           
                 }
                 else
                 {
