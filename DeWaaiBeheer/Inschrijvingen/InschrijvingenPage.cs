@@ -116,6 +116,7 @@ namespace DeWaaiBeheer
                 lblCursus.DataBindings.Clear();
                 lblRegID.DataBindings.Clear();
                 cmbCursus.DataBindings.Clear();
+                txtDate.DataBindings.Clear();       
 
                 cmbCursus.DataBindings.Add("Text", db.GetCoursesbyID(registration.CourseID.Value), "Name");
                 lblRegID.DataBindings.Add("Text", registration, "ID");
@@ -123,6 +124,7 @@ namespace DeWaaiBeheer
                 txtNaam.DataBindings.Add("Text", db.getRegistrationUsersByID(registration.UserID.Value), "Firstname");
                 txtInvoice.DataBindings.Add("Text", registration, "InvoiceID");
                 txtGeboektemaand.DataBindings.Add("Text", registration, "Booking_month");
+                txtDate.DataBindings.Add("Text", registration, "Date");
             }
         }
         #endregion

@@ -261,7 +261,6 @@
             this.tblNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
             this.tblNavigation.Size = new System.Drawing.Size(270, 384);
             this.tblNavigation.TabIndex = 42;
-            this.tblNavigation.Visible = false;
             // 
             // btnPlanning
             // 
@@ -359,9 +358,9 @@
             this.tableLayoutPanel1.Controls.Add(this.label10, 7, 1);
             this.tableLayoutPanel1.Controls.Add(this.label11, 8, 0);
             this.tableLayoutPanel1.Controls.Add(this.label12, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tblNavigation, 8, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 4, 4);
             this.tableLayoutPanel1.Controls.Add(this.lbltest, 6, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tblNavigation, 8, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
