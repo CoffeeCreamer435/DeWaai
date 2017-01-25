@@ -1,4 +1,4 @@
-﻿namespace DeWaaiBeheer.Planning
+﻿namespace DeWaaiBeheer
 {
     partial class PlanningPage
     {

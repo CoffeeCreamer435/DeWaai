@@ -138,7 +138,7 @@ namespace DeWaaiBeheer
         private void btnPlanning_Click(object sender, EventArgs e)
         {
             this.Close();
-            Planning.PlanningPage planning = new Planning.PlanningPage();
+            PlanningPage planning = new PlanningPage();
             planning.Show();
         }
 
