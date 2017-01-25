@@ -81,11 +81,6 @@ namespace DeWaaiBeheer
             lstRecensies_SelectedIndexChanged(this, EventArgs.Empty);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void btnDecline_Click(object sender, EventArgs e)
         {
             int ID = int.Parse(lbltest.Text);
@@ -95,5 +90,71 @@ namespace DeWaaiBeheer
                 lstRecensies_SelectedIndexChanged(this, EventArgs.Empty);
             }
         }
+
+        #region SideMenu Buttons
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmUsersPage frmUsers = new frmUsersPage();
+            frmUsers.Show();
+        }
+
+        private void btnCourses_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmCoursesPage frmCourses = new frmCoursesPage();
+            frmCourses.Show();
+        }
+
+        private void btnInstrucors_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmInstructorsPage frmInstructors = new frmInstructorsPage();
+            frmInstructors.Show();
+        }
+
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmHome home = new frmHome();
+            home.Show();
+        }
+
+        private void btnInschrijvingen_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmInstructorsPage inschrijvingen = new frmInstructorsPage();
+            inschrijvingen.Show();
+        }
+
+        private void btnFleet_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            VlotenPage vloten = new VlotenPage();
+            vloten.Show();
+        }
+
+        private void btnPlanning_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Planning.PlanningPage planning = new Planning.PlanningPage();
+            planning.Show();
+        }
+
+        private void lblNavigation_Click(object sender, EventArgs e)
+        {
+            if (tblNavigation.Visible == false)
+            {
+                tblNavigation.Visible = true;
+            }
+            else
+            {
+                tblNavigation.Visible = false;
+            }
+        }
     }
-}
+
+        #endregion
+    }
+

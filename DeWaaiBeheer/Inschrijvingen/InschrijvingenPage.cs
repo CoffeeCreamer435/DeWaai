@@ -17,7 +17,6 @@ namespace DeWaaiBeheer
         {
             InitializeComponent();
             FillInschrijvingenList();
-            FillCursusBox();
         }
         #region side menu lbl
         private void lblNavigation_Click(object sender, EventArgs e)
@@ -42,13 +41,6 @@ namespace DeWaaiBeheer
             lstInschrijvingen.DisplayMember = "Display";
             
         }
-
-        public void FillCursusBox()
-        {
-            cmbCursus.DataSource = db.getCourses();
-            cmbCursus.ValueMember = "ID";
-            cmbCursus.DisplayMember = "Name";
-        }
         #endregion
 
         #region menu buttons   
@@ -57,6 +49,48 @@ namespace DeWaaiBeheer
             this.Close();
             frmHome home = new frmHome();
             home.Show();
+        }
+
+        private void btnPlanning_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Planning.PlanningPage planning = new Planning.PlanningPage();
+            planning.Show();
+        }
+
+        private void btnCourses_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmCoursesPage courses = new frmCoursesPage();
+            courses.Show();
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmUsersPage users = new frmUsersPage();
+            users.Show();
+        }
+
+        private void btnInstrucors_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmInstructorsPage instructors = new frmInstructorsPage();
+            instructors.Show();
+        }
+
+        private void btnFleet_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            VlotenPage vloten = new VlotenPage();
+            vloten.Show();
+        }
+
+        private void btnRecensies_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmReviews reviews = new frmReviews();
+            reviews.Show();
         }
         #endregion
 
@@ -69,10 +103,8 @@ namespace DeWaaiBeheer
             {
                 FillRegistration(db.GetRegistrationsByID(ID));
             }
-            FillInschrijvingenList();
         }
         #endregion
-
         #region filling txtboxes with data
         private void  FillRegistration(Registrations registration)
         {
@@ -94,7 +126,7 @@ namespace DeWaaiBeheer
             }
         }
         #endregion
-
+        #region Buttons
         private void btnAccepteren_Click(object sender, EventArgs e)
         {
             int ID = Convert.ToInt32(lstInschrijvingen.SelectedValue);
@@ -110,5 +142,7 @@ namespace DeWaaiBeheer
             db.SaveChanges();
             FillInschrijvingenList();
         }
+
+        #endregion
     }
 }

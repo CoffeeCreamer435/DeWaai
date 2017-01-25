@@ -114,6 +114,7 @@
             this.lblNavigation.TabIndex = 39;
             this.lblNavigation.Text = "▼";
             this.lblNavigation.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblNavigation.Click += new System.EventHandler(this.lblNavigation_Click);
             // 
             // btnDecline
             // 
@@ -169,7 +170,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(339, 66);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Inschrijvingen";
+            this.label1.Text = "Recensies";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lstRecensies
@@ -281,6 +282,7 @@
             this.BtnHome.TabIndex = 41;
             this.BtnHome.Text = "Home";
             this.BtnHome.UseVisualStyleBackColor = true;
+            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
             // btnCourses
             // 
@@ -331,6 +333,7 @@
             this.btnFleet.TabIndex = 20;
             this.btnFleet.Text = "Vloten";
             this.btnFleet.UseVisualStyleBackColor = true;
+            this.btnFleet.Click += new System.EventHandler(this.btnFleet_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -483,6 +486,7 @@
             this.ClientSize = new System.Drawing.Size(1084, 661);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmReviews";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OverzichtPage";
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
